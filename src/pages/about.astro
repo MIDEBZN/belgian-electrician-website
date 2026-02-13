@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="À Propos de Nous | BE-ELEC">
+	<main style="padding-top: 4rem; padding-bottom: 6rem;">
+        <div class="container">
+             <div style="text-align: center; margin-bottom: 4rem;">
+                <span style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem;">L'équipe</span>
+                <h1 class="section-title">Rencontrez Nos Experts</h1>
+                <p style="color: #6b7280; max-width: 40rem; margin: 0 auto;">
+                    Une équipe passionnée et certifiée, dédiée à votre sécurité électrique.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(1, 1fr); md:grid-template-columns: repeat(2, 1fr); lg:grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <!-- Expert 1 -->
+                <div class="expert-card">
+                    <div class="image-wrapper">
+                         <div style="width: 100%; height: 100%; background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b;">
+                            <span class="material-icons" style="font-size: 3rem;">person</span>
+                        </div>
+                    </div>
+                    <h3 class="expert-name">Marc Peeters</h3>
+                    <p class="expert-role">Expert Certifié</p>
+                    <p class="expert-exp">15 ans d'expérience</p>
+                    <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                        <span class="expert-tag">Industriel</span>
+                        <span class="expert-tag">Domotique</span>
+                    </div>
+                </div>
+
+                <!-- Expert 2 -->
+                <div class="expert-card">
+                    <div class="image-wrapper">
+                         <div style="width: 100%; height: 100%; background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b;">
+                            <span class="material-icons" style="font-size: 3rem;">person</span>
+                        </div>
+                    </div>
+                    <h3 class="expert-name">Lucas Dubois</h3>
+                    <p class="expert-role">Technicien Senior</p>
+                    <p class="expert-exp">10 ans d'expérience</p>
+                    <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                        <span class="expert-tag">Dépannage</span>
+                        <span class="expert-tag">Sécurité</span>
+                    </div>
+                </div>
+
+                <!-- Expert 3 -->
+                <div class="expert-card">
+                    <div class="image-wrapper">
+                         <div style="width: 100%; height: 100%; background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b;">
+                            <span class="material-icons" style="font-size: 3rem;">person</span>
+                        </div>
+                    </div>
+                    <h3 class="expert-name">Sophie Martin</h3>
+                    <p class="expert-role">Ingénieure Élec.</p>
+                    <p class="expert-exp">8 ans d'expérience</p>
+                    <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                        <span class="expert-tag">Conformité</span>
+                        <span class="expert-tag">Plans</span>
+                    </div>
+                </div>
+
+                <!-- Expert 4 -->
+                <div class="expert-card">
+                    <div class="image-wrapper">
+                         <div style="width: 100%; height: 100%; background-color: #cbd5e1; display: flex; align-items: center; justify-content: center; color: #64748b;">
+                            <span class="material-icons" style="font-size: 3rem;">person</span>
+                        </div>
+                    </div>
+                    <h3 class="expert-name">Thomas Lambert</h3>
+                    <p class="expert-role">Installateur PV</p>
+                    <p class="expert-exp">6 ans d'expérience</p>
+                    <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                        <span class="expert-tag">Solaire</span>
+                        <span class="expert-tag">Bornes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .expert-card {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        text-align: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    
+    html.dark .expert-card {
+        background-color: var(--color-navy-light);
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .expert-card:hover {
+        transform: translateY(-0.5rem);
+    }
+
+    .image-wrapper {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 1.5rem;
+        border: 4px solid rgba(253, 186, 18, 0.2);
+    }
+    
+    .expert-card:hover .image-wrapper {
+        border-color: var(--color-primary);
+    }
+
+    .expert-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-navy);
+        margin-bottom: 0.25rem;
+    }
+    
+    html.dark .expert-name {
+        color: white;
+    }
+
+    .expert-role {
+        color: var(--color-primary);
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        margin-bottom: 0.5rem;
+    }
+
+    .expert-exp {
+        font-style: italic;
+        color: #9ca3af;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+
+    .expert-tag {
+        background-color: rgba(255,255,255,0.1);
+        color: #64748b;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    html.dark .expert-tag {
+        color: white;
+        background-color: rgba(255,255,255,0.1);
+        border-color: rgba(255,255,255,0.1);
+    }
+</style>

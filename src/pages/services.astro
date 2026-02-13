@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nos Services | BE-ELEC">
+	<main style="padding-top: 4rem; padding-bottom: 6rem;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem;">Nos Expertises</span>
+                <h1 class="section-title">Services Électriques Complets</h1>
+                <p style="color: #6b7280; max-width: 40rem; margin: 0 auto;">
+                    Découvrez notre gamme complète de services pour particuliers et professionnels. De l'installation à la rénovation, nous couvrons tous vos besoins.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(1, 1fr); md:grid-template-columns: repeat(2, 1fr); lg:grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons" style="font-size: 2rem;">bolt</span>
+                    </div>
+                    <h3 class="service-title">Dépannage d'Urgence</h3>
+                    <p class="service-desc">Coupure de courant, court-circuit ou panne générale. Intervention immédiate 24h/24 et 7j/7.</p>
+                    <a href="/contact" class="service-link">Demander une intervention <span class="material-icons" style="font-size: 1rem;">arrow_forward</span></a>
+                </div>
+                
+                 <!-- Service 2 -->
+                 <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons" style="font-size: 2rem;">home</span>
+                    </div>
+                    <h3 class="service-title">Installation Domestique</h3>
+                    <p class="service-desc">Rénovation électrique complète, ajout de prises, tableaux électriques et câblage neuf.</p>
+                    <a href="/contact" class="service-link">Demander un devis <span class="material-icons" style="font-size: 1rem;">arrow_forward</span></a>
+                </div>
+
+                 <!-- Service 3 -->
+                 <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons" style="font-size: 2rem;">check_circle</span>
+                    </div>
+                    <h3 class="service-title">Mise en Conformité</h3>
+                    <p class="service-desc">Préparation aux contrôles, schémas unifilaires et mise aux normes RGIE pour la vente.</p>
+                    <a href="/contact" class="service-link">En savoir plus <span class="material-icons" style="font-size: 1rem;">arrow_forward</span></a>
+                </div>
+
+                 <!-- Service 4 -->
+                 <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons" style="font-size: 2rem;">lightbulb</span>
+                    </div>
+                    <h3 class="service-title">Éclairage LED</h3>
+                    <p class="service-desc">Solutions d'éclairage intérieur et extérieur économiques et esthétiques pour votre habitat.</p>
+                    <a href="/contact" class="service-link">Voir les options <span class="material-icons" style="font-size: 1rem;">arrow_forward</span></a>
+                </div>
+
+                 <!-- Service 5 -->
+                 <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons" style="font-size: 2rem;">router</span>
+                    </div>
+                    <h3 class="service-title">Domotique</h3>
+                    <p class="service-desc">Installation de systèmes intelligents pour le contrôle à distance de votre maison.</p>
+                    <a href="/contact" class="service-link">Découvrir <span class="material-icons" style="font-size: 1rem;">arrow_forward</span></a>
+                </div>
+
+                 <!-- Service 6 -->
+                 <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons" style="font-size: 2rem;">electric_car</span>
+                    </div>
+                    <h3 class="service-title">Bornes de Recharge</h3>
+                    <p class="service-desc">Installation certifiée de bornes de recharge pour véhicules électriques à domicile.</p>
+                    <a href="/contact" class="service-link">Installer ma borne <span class="material-icons" style="font-size: 1rem;">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .service-card {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e7eb;
+        transition: all 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    html.dark .service-card {
+        background-color: var(--color-navy);
+        border-color: rgba(255,255,255,0.05);
+    }
+
+    .service-card:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-color: var(--color-primary);
+    }
+
+    .service-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: var(--color-primary);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-navy);
+        margin-bottom: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--color-navy);
+    }
+    
+    html.dark .service-title {
+        color: white;
+    }
+
+    .service-desc {
+        color: #6b7280;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+    
+    html.dark .service-desc {
+        color: #9ca3af;
+    }
+
+    .service-link {
+        color: var(--color-accent-blue);
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+    
+    .service-link:hover {
+        text-decoration: underline;
+    }
+</style>

@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Zones d'Intervention | BE-ELEC">
+	<main style="padding-top: 4rem; padding-bottom: 6rem;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr; lg:grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div>
+                    <h1 class="section-title">Où intervenons-nous ?</h1>
+                    <p style="color: #6b7280; font-size: 1.125rem; margin-bottom: 2rem;">
+                        Nos équipes sont réparties stratégiquement pour couvrir l'ensemble du territoire belge rapidement.
+                        <br><br>
+                        <strong style="color: var(--color-primary);">Zone Prioritaire (< 45min):</strong> Bruxelles et périphérie.
+                    </p>
+                    
+                    <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <li class="location-item"><span class="material-icons">location_on</span> Bruxelles-Capitale</li>
+                        <li class="location-item"><span class="material-icons">location_on</span> Brabant Wallon</li>
+                        <li class="location-item"><span class="material-icons">location_on</span> Namur</li>
+                        <li class="location-item"><span class="material-icons">location_on</span> Liège</li>
+                        <li class="location-item"><span class="material-icons">location_on</span> Hainaut</li>
+                        <li class="location-item"><span class="material-icons">location_on</span> Gand</li>
+                        <li class="location-item"><span class="material-icons">location_on</span> Anvers</li>
+                        <li class="location-item"><span class="material-icons">location_on</span> Charleroi</li>
+                    </ul>
+                </div>
+                
+                <div style="background-color: var(--color-navy-light); border-radius: 1rem; overflow: hidden; height: 400px; position: relative; border: 1px solid rgba(255,255,255,0.1);">
+                    <!-- Map Placeholder -->
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #1e293b;">
+                        <span style="color: white; font-weight: 700;">Carte de la Belgique (Placeholder)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    .location-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        color: var(--color-navy);
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+    
+    html.dark .location-item {
+        background-color: var(--color-navy);
+        color: white;
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .location-item .material-icons {
+        color: var(--color-primary);
+    }
+</style>

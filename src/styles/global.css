@@ -1,0 +1,102 @@
+:root {
+  --color-primary: #fdba12;
+  --color-primary-hover: #e5a70d;
+  --color-navy: #1a1a4d;
+  --color-navy-light: #2a2a6d;
+  --color-background-light: #f8f7f5;
+  --color-background-dark: #231d0f;
+  --color-accent-blue: #3b9ff3;
+  --color-text-main: #334155; /* slate-800 */
+  --color-text-inverse: #f1f5f9; /* slate-100 */
+  --font-display: 'Work Sans', sans-serif;
+}
+
+html.dark {
+  --color-text-main: #f1f5f9;
+  --color-background-light: #231d0f; /* Use dark bg in dark mode */
+}
+
+html {
+  font-family: var(--font-display);
+  background-color: var(--color-background-light);
+  color: var(--color-text-main);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Utility classes similar to Tailwind based on usage */
+.container {
+  max-width: 80rem; /* 7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.text-primary { color: var(--color-primary); }
+.bg-primary { background-color: var(--color-primary); }
+.bg-navy { background-color: var(--color-navy); }
+.text-white { color: white; }
+.font-bold { font-weight: 700; }
+.text-center { text-align: center; }
+.flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.items-center { align-items: center; }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.p-4 { padding: 1rem; }
+.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+
+/* Custom components */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-navy);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+html.dark .section-title {
+  color: white;
+}
