@@ -1,0 +1,104 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ça sent le poisson pourri dans la pièce, c'est quoi ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est l'odeur caractéristique de la bakélite ou du plastique des composants électriques qui surchauffe. Même si vous ne voyez pas de fumée, un accessoire électrique est en train de fondre quelque part (douille, prise, tableau)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire en urgence ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cherchez la source (touchez les interrupteurs/prises avec le dos de la main pour voir s'ils sont chauds - ATTENTION). Coupez le courant général au moindre doute. Appelez les pompiers si vous voyez de la fumée noire." }
+    },
+    {
+      "@type": "Question",
+      "name": "La prise a fondu, je peux la changer moi-même ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non. Si elle a fondu, les fils derrière sont probablement brûlés sur plusieurs centimètres. Il faut recouper les câbles sains, ce qui nécessite souvent une réparation plus complexe qu'un simple échange standard." }
+    }
+  ]
+};
+---
+
+<Layout title="Odeur de Brûlé Prise Électrique ? Danger Immédiat !" description="Une odeur de plastique brûlé ou de poisson venant d'une prise ? C'est le signe d'une surchauffe grave. Guide d'urgence pour éviter l'incendie électrique." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Odeur Brûlé</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-red-600 bg-red-600/10 px-3 py-1 rounded-full animate-pulse">URGENCE FEU</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Odeur de Brûlé dans une Prise : Réagissez avant l'Incendie !
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>5 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Parmi tous les signaux d'alerte électrique, l'<strong>odeur de brûlé</strong> est le plus grave. Si vous sentez une odeur âcre, chimique, qui pique la gorge ou rappelle le poisson avarié, vous n'avez que quelques minutes pour réagir avant que les flammes n'apparaissent.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Procédure d'Urgence</h2>
+        <div class="bg-red-900/40 p-6 rounded-xl border border-red-500 my-6">
+            <ol class="list-decimal pl-6 space-y-4 text-white font-bold">
+                <li>NE JETEZ PAS D'EAU. Jamais. Même s'il y a de la fumée.</li>
+                <li>COUPEZ LE COURANT GÉNÉRAL. Allez au compteur et baissez la manette principale.</li>
+                <li>ÉVACUEZ si la fumée est épaisse ou noire.</li>
+                <li>APPELEZ LES POMPIERS (112) s'il y a des flammes hors de contrôle.</li>
+            </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Pourquoi ça pue ?</h2>
+        <p>Les prises et câbles électriques sont isolés avec des plastiques (PVC) traités pour résister au feu. Quand il y a un mauvais contact ou une surchauffe extrême, ce plastique ne brûle pas tout de suite avec une flamme, il se <strong>consume</strong> lentement.</p>
+        <p>C'est cette décomposition du plastique qui dégage cette odeur forte et toxique. C'est le signe que la température à l'intérieur du mur dépasse les 200°C.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Et après ? Le diagnostic</h2>
+        <p>Une fois le courant coupé et le danger écarté, il faut trouver la source. Souvent, la prise coupable aura des traces brunâtres sur la façade. Parfois, elle sera chaude.</p>
+        <p>N'essayez pas de rebrancher le courant "pour voir". Le plastique carbonisé devient conducteur ! En remettant le courant, vous pouvez créer un court-circuit franc qui fera exploser le reste de l'installation.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">La réparation</h2>
+        <p>Un électricien doit intervenir pour :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Ouvrir le mur et supprimer toute la partie des fils qui a chauffé (l'isolant est cuit, il cassera comme du verre).</li>
+            <li>Remplacer la prise par un modèle neuf.</li>
+            <li>Vérifier que le disjoncteur a bien joué son rôle (s'il n'a pas sauté alors que ça brûlait, il est peut-être défectueux aussi).</li>
+        </ul>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Intervention Post-Incendie</h3>
+            <p class="mb-4">Nous intervenons pour sécuriser l'installation après un début d'incendie et remplacer les éléments fondus.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Sécurisation Urgente</span>
+                    <span class="block text-white font-bold">Appel 24/7</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment savoir si une prise est HS ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si le disjoncteur est enclenché (ON), que les autres prises de la pièce fonctionnent et que votre appareil fonctionne ailleurs, alors la prise est probablement défectueuse (mécanisme cassé ou fil déconnecté)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je changer une prise moi-même ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, si vous respectez les règles de sécurité : coupez impérativement le courant au tableau avant d'ouvrir la prise. Vérifiez l'absence de tension avec un testeur. Si vous n'êtes pas sûr, ne prenez pas de risque." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte le remplacement d'une prise à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le remplacement d'une prise standard coûte environ 80€ à 120€ (déplacement et main-d'œuvre inclus), selon le modèle et la complexité." }
+    }
+  ]
+};
+---
+
+<Layout title="Prise Électrique ne Fonctionne Plus ? Guide Dépannage (2025)" description="Une prise HS dans le salon ou la cuisine ? Fusible sauté, fil déconnecté ou prise à changer ? Suivez notre diagnostic étape par étape pour retrouver du courant." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Prise en Panne</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full">Dépannage</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Prise Électrique ne Fonctionne Plus : 5 Étapes pour Trouver la Panne
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>6 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Vous branchez votre chargeur de téléphone ou votre aspirateur, et... rien ne se passe. Une <strong>prise électrique qui ne fonctionne plus</strong> est un problème courant mais frustrant. Est-ce la prise qui est morte ? Un fusible qui a sauté ? Ou pire, un fil coupé dans le mur ?</p>
+        
+        <p>Avant d'appeler un électricien, voici les 5 vérifications que vous pouvez faire vous-même en toute sécurité.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Étape 1 : Vérifiez le Tableau Électrique (Le B-A-BA)</h2>
+        <p>La première chose à faire est d'aller voir votre tableau électrique. Regardez si un disjoncteur est en position "OFF" (manette baissée) ou si un fusible est grillé (sur les très vieilles installations).</p>
+        <p><strong>Si un disjoncteur a sauté :</strong> Essayez de le réenclencher. S'il tient, c'était peut-être une surcharge passagère. S'il ressaute tout de suite, il y a un court-circuit sur la ligne (voir notre guide sur les courts-circuits).</p>
+        <p><strong>Si tout est "ON" :</strong> Le problème est plus localisé.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Étape 2 : Testez l'Appareil</h2>
+        <p>Parfois, ce n'est pas la prise, c'est l'appareil ! Branchez une lampe de chevet (dont vous êtes sûr qu'elle fonctionne) sur la prise suspecte.</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Si la lampe s'allume : C'était votre premier appareil qui était en panne.</li>
+            <li>Si la lampe ne s'allume pas : La prise a vraiment un problème.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Étape 3 : La Sécurité Enfant Bloquée ?</h2>
+        <p>Sur les prises modernes, il y a un mécanisme de protection (les petits volets en plastique rouge ou noir dans les trous) pour empêcher les enfants d'y insérer des objets. Parfois, ce mécanisme se grippe.</p>
+        <p><strong>Astuce :</strong> Essayez d'insérer la fiche en forçant un tout petit peu (raisonnablement !) tout en faisant de légers mouvements de gauche à droite. Si ça rentre et que le courant passe, c'était juste mécanique.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Étape 4 : Les Autres Prises de la Pièce</h2>
+        <p>Vérifiez les prises voisines. Si <strong>plusieurs prises</strong> ne fonctionnent plus dans la même pièce (alors que le disjoncteur est ON), le problème vient probablement d'une connexion desserrée dans la première prise de la série (les prises sont souvent repiquées les unes sur les autres).</p>
+        <p>La panne se situe souvent au niveau de la dernière prise qui fonctionne, ou de la première qui ne fonctionne plus.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Étape 5 : Le Fil Déconnecté (Diagnostic Avancé)</h2>
+        <p>Si vous êtes bricoleur, vous pouvez vérifier l'intérieur de la prise. <strong class="text-red-500">ATTENTION : Coupez impérativement le courant général avant de toucher à quoi que ce soit !</strong></p>
+        
+        <ol class="list-decimal pl-6 space-y-2">
+            <li>Dévissez la façade de la prise.</li>
+            <li>Sortez le bloc prise du mur.</li>
+            <li>Vérifiez si un fil (bleu ou rouge/brun) ne s'est pas détaché de sa borne.</li>
+            <li>Si un fil flotte, remettez-le et resserrez la vis.</li>
+        </ol>
+
+        <p>Si tout semble bien branché mais qu'il n'y a toujours pas de courant, le fil est peut-être coupé ailleurs dans le mur ou dans une boîte de dérivation cachée. Là, il faut un électricien avec des appareils de mesure.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Quand appeler un professionnel ?</h2>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Si vous avez senti une odeur de brûlé (la prise a fondu à l'intérieur).</li>
+            <li>Si les fils sont noirs ou cassants.</li>
+            <li>Si vous ne trouvez pas l'origine de la panne.</li>
+            <li>Si le disjoncteur saute dès que vous touchez à la prise.</li>
+        </ul>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Remplacement de Prise à Bruxelles</h3>
+            <p class="mb-4">Nos électriciens remplacent vos prises défectueuses rapidement et en toute sécurité. Forfait dépannage clair et sans surprise.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Prise standard ou spécialisée</span>
+                    <span class="block text-white font-bold">Intervention Journée : 45€/h + Déplacement</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

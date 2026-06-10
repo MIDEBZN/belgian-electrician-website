@@ -1,0 +1,118 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Sibelga doit-il couper le courant dans la rue pour changer mon tableau ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Généralement, non. L'électricien privé peut couper le disjoncteur de branchement pour travailler en toute sécurité sur votre tableau de répartition, sans faire intervenir les agents de Sibelga." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire si je n'ai pas assez de place pour un nouveau tableau ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si la niche dans le mur est trop étroite, l'électricien devra soit créer une saignée pour l'agrandir, soit installer le nouveau coffret en saillie (posé contre le mur) en rallongeant proprement les fils." }
+    },
+    {
+      "@type": "Question",
+      "name": "Dois-je refaire certifier mon installation (RGIE) après le remplacement du tableau ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le remplacement complet du tableau est considéré par le RGIE comme une modification importante. Vous devrez refaire des schémas unifilaires mis à jour et faire passer un organisme agréé pour recevoir votre certificat de conformité." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte le remplacement d'un tableau électrique à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pour une maison bruxelloise standard (3 à 4 chambres), le coût complet du remplacement (main-d'œuvre et matériel de qualité inclus) varie entre 800€ et 1 500€ HTVA, selon le nombre de circuits à protéger." }
+    }
+  ]
+};
+---
+
+<Layout title="5 Signes pour Remplacer Votre Vieux Tableau Électrique | Allo Electricien" description="Fusibles en céramique, disjoncteur qui chauffe ou absence de différentiel ? Découvrez les 5 signes alarmants indiquant qu'il faut changer de tableau électrique à Bruxelles." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Tableau Électrique Vétuste</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Sécurité</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        5 signes qui prouvent que vous devez remplacer votre vieux tableau électrique
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Votre tableau électrique est le centre névralgique de votre maison. S'il date d'il y a plus de 30 ans, il présente un <strong class="text-white">risque majeur d'incendie</strong>. Présence d'anciens fusibles à broches, tableau en bois, absence de protection différentielle ou odeurs suspectes : autant de signaux d'alarme qui prouvent que le remplacement de votre coffret est devenu urgent.</p>
+
+        <div class="bg-navy-light border border-primary/20 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2 flex items-center gap-2"><span class="material-icons">info</span>Les 5 signes d'alarme</p>
+          <ul class="space-y-1 text-sm">
+            <li>• <strong class="text-white">Fusibles en porcelaine ou à broches</strong> (pas de disjoncteurs automatiques)</li>
+            <li>• <strong class="text-white">Absence d'interrupteur différentiel</strong> (pas de bouton "T")</li>
+            <li>• <strong class="text-white">Tableau ou disjoncteurs chauds au toucher</strong></li>
+            <li>• <strong class="text-white">Bruits de grésillement</strong> provenant du coffret</li>
+            <li>• <strong class="text-white">Coffret en bois ou en métal nu</strong></li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. Il fonctionne encore avec des fusibles en porcelaine (ou à broches)</h2>
+        <p>C'est le signal visuel le plus évident. Si en ouvrant la porte de votre tableau, vous faites face à de vieux fusibles ronds en céramique ou des coupe-circuits à broches, votre installation est obsolète.</p>
+        <p><strong class="text-white">Pourquoi c'est dangereux ?</strong> Ces vieux fusibles réagissent beaucoup trop lentement en cas de surchauffe ou de court-circuit. Les tableaux modernes sont équipés de <strong class="text-white">disjoncteurs magnéto-thermiques automatiques</strong> qui coupent le courant en quelques millisecondes.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. L'absence d'interrupteur différentiel (Le bouton "Test")</h2>
+        <p>L'interrupteur différentiel est le composant le plus important de votre installation : c'est celui qui protège la vie humaine. Vous devriez voir au moins un gros module doté d'un petit bouton portant la lettre "T" (pour Test). C'est le différentiel général de 300 mA.</p>
+        <p><strong class="text-white">Pourquoi c'est urgent ?</strong> Sans interrupteur différentiel couplé à une bonne mise à la terre, l'électrocution est presque garantie en cas de contact avec une fuite de courant. Si votre vieux tableau ne possède pas ce module, il est hors norme RGIE et extrêmement dangereux.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. Le tableau ou les disjoncteurs sont chauds au toucher</h2>
+        <p>Approchez votre main de la façade du tableau. La température du plastique doit être ambiante. Si vous sentez que certains disjoncteurs sont anormalement chauds, ou pire, qu'ils commencent à jaunir ou à se déformer, il y a urgence.</p>
+        <p><strong class="text-white">Pourquoi c'est dangereux ?</strong> La chaleur indique qu'un composant est soumis à un courant trop élevé, créant des micro-arcs électriques. Cette surchauffe va inévitablement faire fondre la gaine isolante et déclencher un incendie au niveau du coffret.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">4. Vous entendez des bruits de grésillement</h2>
+        <p>Un tableau électrique en bon état est un tableau totalement silencieux. Si vous entendez des bruits de "grésillement" ou des crépitements intermittents, c'est grave.</p>
+        <p><strong class="text-white">D'où vient le bruit ?</strong> Ce bruit caractéristique signifie que le courant saute littéralement dans le vide entre deux points de contact mal vissés à l'intérieur d'un disjoncteur. Il ne faut surtout pas tenter de resserrer les vis sous tension. <strong class="text-white">Coupez immédiatement l'interrupteur général si vous entendez ce bruit.</strong></p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">5. Le coffret est fabriqué en bois ou en métal nu</h2>
+        <p>Regardez l'enveloppe extérieure de votre tableau. Aujourd'hui, les coffrets de répartition doivent être fabriqués dans des matières <strong class="text-white">plastiques ignifugées et auto-extinguibles</strong>. Si votre tableau est encastré dans une ancienne caisse en bois (très fréquent dans les maisons de maître de Bruxelles), c'est une hérésie en matière de sécurité incendie.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Remplacer son tableau électrique : à quel prix ?</h2>
+        <p>Pour une maison bruxelloise standard (3 à 4 chambres), le coût complet du remplacement (main-d'œuvre et matériel de qualité comme Niko ou Legrand inclus) varie entre <strong class="text-white">800€ et 1 500€ HTVA</strong>, selon le nombre de circuits à protéger. C'est un investissement dérisoire en comparaison du coût d'un incendie destructeur.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Remplacement du tableau électrique</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Sibelga doit-il couper le courant dans la rue pour changer mon tableau ?</h3>
+        <p>Généralement, non. L'électricien privé peut couper le disjoncteur de branchement pour travailler en toute sécurité sur votre tableau de répartition, sans faire intervenir les agents de Sibelga.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Que faire si je n'ai pas assez de place pour un nouveau tableau ?</h3>
+        <p>Si la niche dans le mur de votre couloir est trop étroite, l'électricien devra soit créer une saignée pour l'agrandir, soit installer le nouveau coffret en "saillie" (posé contre le mur) en rallongeant proprement les fils.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Dois-je refaire certifier mon installation (RGIE) ?</h3>
+        <p>Oui. Le remplacement complet du tableau de répartition est considéré par le RGIE comme une "modification importante". Vous devrez donc refaire faire des schémas unifilaires mis à jour et faire passer un organisme agréé pour recevoir votre certificat de conformité.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">🔒 Ne laissez pas le hasard gérer votre sécurité</p>
+          <p class="text-sm">Si votre tableau présente l'un de ces symptômes, agissez avant qu'il ne soit trop tard. Nos électriciens remplacent votre vieux coffret par une installation certifiée et sécurisée en moins de 24h. <a href="/contact" class="text-primary underline font-bold">Demandez un devis →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

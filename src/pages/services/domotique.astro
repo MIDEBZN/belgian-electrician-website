@@ -1,0 +1,700 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte une installation domotique à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le prix d'une installation domotique Bruxelles varie selon l'ampleur du projet. Pack éclairage intelligent : 500€ à 1 500€. Pack confort (éclairage + chauffage + volets) : 2 000€ à 5 000€. Maison complète (KNX/Loxone) : 5 000€ à 15 000€+. Consultation et devis gratuit chez Allo Electricien." }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on domotiser une maison ancienne sans gros travaux ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui ! Les solutions sans fil (Zigbee, Z-Wave, WiFi) permettent de rendre une maison ancienne intelligente sans casser les murs. Interrupteurs connectés, prises intelligentes, thermostats WiFi : tout se pose en remplacement de l'existant. Allo Electricien adapte chaque installation domotique Bruxelles au type de logement." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre KNX, Loxone et Niko Home Control ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "KNX est le standard industriel câblé, ultra-fiable, idéal pour les constructions neuves et les grands projets. Loxone est une solution intégrée tout-en-un avec serveur dédié. Niko Home Control est la solution belge, simple et efficace, compatible avec l'écosystème Niko. Allo Electricien installe et programme les trois systèmes." }
+    },
+    {
+      "@type": "Question",
+      "name": "La domotique permet-elle de faire des économies d'énergie ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, une installation domotique bien configurée permet d'économiser 20% à 35% sur la facture d'énergie. Chauffage intelligent par zones, extinction automatique des lumières, gestion des volets selon le soleil, suivi de consommation en temps réel : chaque automatisation contribue aux économies." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je contrôler ma maison à distance avec la domotique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, toutes nos installations incluent le pilotage à distance via smartphone (iOS et Android). Vous pouvez contrôler l'éclairage, le chauffage, les volets, la sécurité et visualiser vos caméras depuis n'importe où dans le monde via une application sécurisée." }
+    },
+    {
+      "@type": "Question",
+      "name": "La domotique est-elle compatible avec les assistants vocaux ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui ! Nos installations sont compatibles avec Apple HomeKit/Siri, Google Home/Assistant et Amazon Alexa. Contrôlez votre maison à la voix : 'Ok Google, éteins les lumières du salon', 'Alexa, ferme les volets'. Nous configurons l'intégration complète." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure l'installation domotique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "L'installation domotique Bruxelles varie selon le projet. Éclairage connecté : 1 journée. Pack confort complet : 2-3 jours. Maison complète KNX/Loxone : 3-5 jours. La programmation des scénarios et l'optimisation sont incluses." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que se passe-t-il en cas de panne Internet ou de courant ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Les systèmes professionnels (KNX, Loxone, Niko) fonctionnent localement, sans Internet. En cas de coupure Internet, votre domotique continue de fonctionner normalement — seul le pilotage à distance est temporairement indisponible. Après une coupure de courant, le système redémarre automatiquement." }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Installation Domotique et Maison Intelligente",
+  "provider": { "@type": "Electrician", "name": "Allo Electricien", "telephone": "+32465732348" },
+  "areaServed": { "@type": "City", "name": "Bruxelles" },
+  "offers": [
+    { "@type": "Offer", "name": "Pack Éclairage Intelligent", "price": "500", "priceCurrency": "EUR", "description": "Éclairage connecté, à partir de 500€" },
+    { "@type": "Offer", "name": "Pack Confort", "price": "2000", "priceCurrency": "EUR", "description": "Éclairage + chauffage + volets, à partir de 2 000€" },
+    { "@type": "Offer", "name": "Maison Complète", "price": "5000", "priceCurrency": "EUR", "description": "Système intégral KNX/Loxone, à partir de 5 000€" }
+  ]
+};
+---
+
+<Layout title="Installation Domotique Bruxelles — Maison Intelligente & Connectée | Allo Electricien" description="Installation domotique Bruxelles : maison intelligente sur mesure. KNX, Loxone, Niko Home Control. Éclairage, chauffage, volets, sécurité. Devis gratuit. ☎ 0465 73 23 48. Économisez 20-35% d'énergie." schema={faqSchema}>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+  <!-- HERO -->
+  <header class="relative bg-navy overflow-hidden pt-12 pb-28 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-purple-500/5 to-transparent"></div>
+    <div class="absolute left-0 bottom-0 w-1/4 h-1/2 bg-gradient-to-t from-primary/5 to-transparent"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/services">Services</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Domotique</li>
+        </ol>
+      </nav>
+      <div class="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 text-purple-400 text-sm font-bold px-4 py-2 rounded-full mb-6">
+        <span class="material-icons text-base">touch_app</span>MAISON INTELLIGENTE — SUR MESURE
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+        Installation <span class="text-primary">Domotique</span> Bruxelles
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
+        <strong class="text-white">Installation domotique Bruxelles</strong> sur mesure : éclairage intelligent, chauffage connecté, volets automatisés, sécurité, commande vocale. KNX, Loxone, Niko Home Control. Devis gratuit.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="/contact" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 text-lg">
+          <span class="material-icons text-2xl">description</span>Consultation Gratuite
+        </a>
+        <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 transition-all hover:-translate-y-1">
+          <span class="material-icons">call</span>0465 73 23 48
+        </a>
+        <a href="https://wa.me/32465732348" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-1">
+          <span class="material-icons">chat</span>WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-20 -mt-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+    <!-- KEY STATS -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-purple-500/30 transition-colors">
+        <span class="material-icons text-purple-400 text-3xl mb-2">energy_savings_leaf</span>
+        <p class="text-3xl font-bold text-purple-400">-35%</p>
+        <p class="text-gray-400 text-sm mt-1">Économies d'énergie</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-purple-500/30 transition-colors">
+        <span class="material-icons text-purple-400 text-3xl mb-2">phone_iphone</span>
+        <p class="text-3xl font-bold text-purple-400">24/7</p>
+        <p class="text-gray-400 text-sm mt-1">Contrôle à distance</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">record_voice_over</span>
+        <p class="text-3xl font-bold text-primary">Vocal</p>
+        <p class="text-gray-400 text-sm mt-1">Siri, Google, Alexa</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">trending_up</span>
+        <p class="text-3xl font-bold text-primary">+10%</p>
+        <p class="text-gray-400 text-sm mt-1">Plus-value immobilière</p>
+      </div>
+    </div>
+
+    <!-- SECTION 1: WHAT'S INCLUDED -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Service Complet</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Ce Que Comprend Notre Installation Domotique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <span class="material-icons text-purple-400 text-3xl mb-4">lightbulb</span>
+          <h3 class="text-lg font-bold text-white mb-2">Éclairage Intelligent</h3>
+          <p class="text-gray-400 text-sm">Interrupteurs connectés, variateurs, scénarios lumineux (lecture, cinéma, dîner), détection de présence, programmation horaire. Philips Hue, Niko, DALI.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <span class="material-icons text-purple-400 text-3xl mb-4">thermostat</span>
+          <h3 class="text-lg font-bold text-white mb-2">Chauffage Connecté</h3>
+          <p class="text-gray-400 text-sm">Thermostat intelligent par zone, programmation hebdomadaire, géolocalisation (chauffe avant votre arrivée), suivi de consommation en temps réel. Tado, Nest, Netatmo.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <span class="material-icons text-purple-400 text-3xl mb-4">blinds</span>
+          <h3 class="text-lg font-bold text-white mb-2">Volets & Stores Automatisés</h3>
+          <p class="text-gray-400 text-sm">Motorisation des volets roulants et stores, fermeture automatique au coucher du soleil, ouverture selon météo, intégration dans les scénarios. Somfy, Velux.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <span class="material-icons text-purple-400 text-3xl mb-4">security</span>
+          <h3 class="text-lg font-bold text-white mb-2">Sécurité & Alarme</h3>
+          <p class="text-gray-400 text-sm">Alarme connectée, caméras IP, détecteurs de mouvement/ouverture, simulation de présence (lumières aléatoires pendant les vacances), alertes smartphone temps réel.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <span class="material-icons text-purple-400 text-3xl mb-4">record_voice_over</span>
+          <h3 class="text-lg font-bold text-white mb-2">Commande Vocale</h3>
+          <p class="text-gray-400 text-sm">Intégration Apple Siri, Google Assistant et Amazon Alexa. Contrôlez votre maison à la voix : « Ok Google, éteins tout » ou « Alexa, lance le scénario cinéma ».</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <span class="material-icons text-purple-400 text-3xl mb-4">music_note</span>
+          <h3 class="text-lg font-bold text-white mb-2">Audio Multi-Room</h3>
+          <p class="text-gray-400 text-sm">Son distribué dans toute la maison via Sonos, Loxone Audio ou systèmes encastrés. Musique dans chaque pièce, volume indépendant, synchronisation multi-zone.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <span class="material-icons text-purple-400 text-3xl mb-4">videocam</span>
+          <h3 class="text-lg font-bold text-white mb-2">Vidéophonie Connectée</h3>
+          <p class="text-gray-400 text-sm">Interphone vidéo connecté au smartphone. Voyez et parlez à vos visiteurs à distance. Ouverture de porte depuis l'application, historique des visites.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <span class="material-icons text-purple-400 text-3xl mb-4">energy_savings_leaf</span>
+          <h3 class="text-lg font-bold text-white mb-2">Gestion Énergie</h3>
+          <p class="text-gray-400 text-sm">Suivi de consommation en temps réel, gestion des panneaux solaires, optimisation de la recharge véhicule électrique, alertes surconsommation.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <span class="material-icons text-purple-400 text-3xl mb-4">auto_awesome</span>
+          <h3 class="text-lg font-bold text-white mb-2">Scénarios & Automatisations</h3>
+          <p class="text-gray-400 text-sm">Création de scénarios personnalisés : « Bonjour » (volets + lumières + chauffage), « Bonne nuit » (tout éteindre), « Vacances » (simulation de présence). Illimités.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: COMMON PROBLEMS WE SOLVE -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Solutions</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Les Problèmes Que la Domotique Résout</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Notre <strong class="text-white">installation domotique Bruxelles</strong> apporte des solutions concrètes aux problèmes quotidiens de votre habitation.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">payments</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Facture d'Énergie Trop Élevée</h3>
+            <p class="text-gray-400 text-sm">Le chauffage tourne quand personne n'est là ? Les lumières restent allumées ? La domotique optimise automatiquement votre consommation : <strong class="text-white">-20% à -35% sur la facture d'énergie</strong>.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : chauffage intelligent + extinction automatique</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">security</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Sentiment d'Insécurité</h3>
+            <p class="text-gray-400 text-sm">Inquiet pendant vos absences ? La domotique simule votre présence (lumières aléatoires), envoie des alertes intrusion, et vous permet de surveiller votre maison en temps réel via caméras.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : alarme connectée + simulation de présence</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-orange-400 text-2xl">thermostat</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Confort Thermique Insuffisant</h3>
+            <p class="text-gray-400 text-sm">Certaines pièces trop chaudes, d'autres trop froides ? Le chauffage par zone avec thermostat intelligent ajuste la température pièce par pièce selon vos habitudes.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : thermostat multi-zones + géolocalisation</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-orange-400 text-2xl">blinds_closed</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Gestion Manuelle Fastidieuse</h3>
+            <p class="text-gray-400 text-sm">Fermer tous les volets un par un le soir ? Éteindre toutes les lumières ? Un seul bouton « Bonne nuit » fait tout automatiquement. Plus de routine répétitive.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : scénarios automatisés un bouton</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-yellow-400 text-2xl">elderly</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Accessibilité & Mobilité Réduite</h3>
+            <p class="text-gray-400 text-sm">La domotique facilite le quotidien des personnes à mobilité réduite : commande vocale, automatisation, pas besoin de se déplacer pour allumer ou éteindre.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : commande vocale + automatisation complète</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-purple-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-yellow-400 text-2xl">water_damage</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Fuites & Dégâts des Eaux</h3>
+            <p class="text-gray-400 text-sm">Détecteurs de fuite connectés qui vous alertent immédiatement sur votre smartphone et peuvent couper automatiquement l'arrivée d'eau. Prévenir les dégâts coûteux.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : capteurs de fuite + vanne automatique</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR PROCESS -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Étape par Étape</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Processus d'Installation Domotique</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="relative">
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2 z-0 border-t-2 border-dotted border-gray-600"></div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-purple-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-purple-400 font-bold text-xl">1</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Consultation Gratuite</h3>
+            <p class="text-gray-400 text-xs">Discussion de vos besoins, style de vie, budget. Nous identifions les fonctionnalités les plus utiles pour vous.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-purple-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-purple-400 font-bold text-xl">2</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Visite & Diagnostic</h3>
+            <p class="text-gray-400 text-xs">Visite de votre logement, analyse de l'installation existante, repérage des emplacements. Rapport technique complet.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-purple-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-purple-400 font-bold text-xl">3</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Conception & Devis</h3>
+            <p class="text-gray-400 text-xs">Conception du système sur mesure. Devis détaillé avec schéma de l'<strong class="text-white">installation domotique</strong>. Sans engagement.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-purple-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-purple-400 font-bold text-xl">4</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Installation</h3>
+            <p class="text-gray-400 text-xs"><strong class="text-white">Installation domotique Bruxelles</strong> : câblage, pose des équipements, programmation des scénarios et automatisations.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-purple-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-purple-400 font-bold text-xl">5</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Formation & Support</h3>
+            <p class="text-gray-400 text-xs">Formation complète à l'utilisation. Configuration des apps sur vos appareils. Support technique inclus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PRICING -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Formules</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Tarifs Installation Domotique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Trois formules adaptées à vos besoins et votre budget. Chaque <strong class="text-white">installation domotique Bruxelles</strong> est personnalisée.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-2xl border border-white/10 p-8 hover:border-purple-500/30 transition-colors">
+          <div class="text-center mb-6">
+            <span class="material-icons text-purple-400 text-4xl mb-2">lightbulb</span>
+            <h3 class="text-2xl font-bold text-white">Starter</h3>
+            <p class="text-gray-400 text-sm mt-1">Éclairage Intelligent</p>
+          </div>
+          <p class="text-center text-4xl font-bold text-primary mb-2">500€</p>
+          <p class="text-center text-gray-400 text-sm mb-6">à partir de</p>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Interrupteurs connectés (5-10)</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Scénarios lumineux</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Contrôle smartphone</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Commande vocale</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Installation 1 journée</li>
+          </ul>
+          <div class="border-t border-white/10 pt-4 text-center">
+            <p class="text-gray-400 text-xs mb-3">Idéal pour : découvrir la domotique</p>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary font-bold px-6 py-3 rounded-xl transition-colors border border-primary/30">Devis Gratuit</a>
+          </div>
+        </div>
+        <div class="bg-navy rounded-2xl border-2 border-primary p-8 relative shadow-lg shadow-primary/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-navy text-xs font-bold px-4 py-1 rounded-full">LE PLUS POPULAIRE</div>
+          <div class="text-center mb-6">
+            <span class="material-icons text-primary text-4xl mb-2">home</span>
+            <h3 class="text-2xl font-bold text-white">Confort</h3>
+            <p class="text-gray-400 text-sm mt-1">Éclairage + Chauffage + Volets</p>
+          </div>
+          <p class="text-center text-4xl font-bold text-primary mb-2">2 000€</p>
+          <p class="text-center text-gray-400 text-sm mb-6">à partir de</p>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Tout le Pack Starter</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Thermostat intelligent multi-zones</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Volets automatisés</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Scénarios avancés</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Programmation horaire</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Installation 2-3 jours</li>
+          </ul>
+          <div class="border-t border-primary/30 pt-4 text-center">
+            <p class="text-gray-400 text-xs mb-3">Idéal pour : confort quotidien + économies</p>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-6 py-3 rounded-xl transition-colors shadow-lg shadow-primary/20">Devis Gratuit</a>
+          </div>
+        </div>
+        <div class="bg-navy rounded-2xl border border-white/10 p-8 hover:border-purple-500/30 transition-colors">
+          <div class="text-center mb-6">
+            <span class="material-icons text-purple-400 text-4xl mb-2">villa</span>
+            <h3 class="text-2xl font-bold text-white">Premium</h3>
+            <p class="text-gray-400 text-sm mt-1">Maison Complète KNX / Loxone</p>
+          </div>
+          <p class="text-center text-4xl font-bold text-primary mb-2">5 000€</p>
+          <p class="text-center text-gray-400 text-sm mb-6">à partir de</p>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Tout le Pack Confort</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Système KNX ou Loxone</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Sécurité & alarme connectée</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Audio multi-room</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Vidéophonie connectée</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Gestion énergie avancée</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-purple-400 text-base mt-0.5">check</span>Installation 3-5 jours</li>
+          </ul>
+          <div class="border-t border-white/10 pt-4 text-center">
+            <p class="text-gray-400 text-xs mb-3">Idéal pour : villas & constructions neuves</p>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary font-bold px-6 py-3 rounded-xl transition-colors border border-primary/30">Devis Gratuit</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-navy-light border border-purple-500/20 rounded-xl p-6 mt-6 text-center">
+        <p class="text-gray-300"><strong class="text-white">💡 Bon à savoir :</strong> Pour les logements de <strong class="text-white">plus de 10 ans</strong>, l'<strong class="text-white">installation domotique Bruxelles</strong> bénéficie de la TVA réduite à <strong class="text-primary">6% au lieu de 21%</strong> sur la main-d'œuvre. <a href="/contact" class="text-primary font-bold hover:underline">Demandez un devis gratuit →</a></p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE US -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Engagements</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Pourquoi Choisir Allo Electricien pour Votre Domotique ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-purple-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-purple-400 text-2xl">engineering</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Expertise Multi-Systèmes</h3>
+          </div>
+          <p class="text-gray-400">Nous maîtrisons <strong class="text-white">KNX, Loxone, Niko Home Control</strong> et les solutions sans fil. Quel que soit votre logement (neuf, ancien, appartement, villa), nous trouvons la solution adaptée.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-purple-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-purple-400 text-2xl">tune</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Sur Mesure, Pas Standard</h3>
+          </div>
+          <p class="text-gray-400">Chaque <strong class="text-white">installation domotique Bruxelles</strong> est unique. Nous concevons le système autour de votre style de vie, pas l'inverse. Scénarios personnalisés, automatisations sur mesure.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-purple-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-purple-400 text-2xl">school</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Formation Complète Incluse</h3>
+          </div>
+          <p class="text-gray-400">Nous ne partons pas avant que vous maîtrisiez votre système. Formation de toute la famille, configuration des apps sur tous les appareils, documentation personnalisée remise.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-purple-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-purple-400 text-2xl">support_agent</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Support & Évolution</h3>
+          </div>
+          <p class="text-gray-400">Support technique post-installation. Ajout de fonctionnalités, nouveaux scénarios, intégration de nouveaux appareils. Votre système domotique évolue avec vos besoins.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: AVAILABILITY -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Disponibilité</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Disponibilité Pour Votre Projet Domotique</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-3">schedule</span>
+          <h3 class="text-white font-bold mb-1">Disponible 24/7</h3>
+          <p class="text-gray-400 text-sm">Tous les jours, toute l'année</p>
+          <span class="inline-block mt-3 bg-green-400/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full">7j/7 — 24h/24</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">bolt</span>
+          <h3 class="text-white font-bold mb-1">Urgence Immédiate</h3>
+          <p class="text-gray-400 text-sm">Intervention en -45 min</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Panne domotique</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">event_available</span>
+          <h3 class="text-white font-bold mb-1">Consultation Gratuite</h3>
+          <p class="text-gray-400 text-sm">Disponible 7j/7</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Installation planifiée</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">support_agent</span>
+          <h3 class="text-white font-bold mb-1">Support Technique</h3>
+          <p class="text-gray-400 text-sm">24h/24 — 7j/7</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Assistance à distance</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FAQ -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Questions Fréquentes — Installation Domotique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien coûte une installation domotique à Bruxelles ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Le prix d'une <strong class="text-white">installation domotique Bruxelles</strong> varie selon l'ampleur du projet. <strong class="text-white">Pack éclairage intelligent</strong> : 500€ à 1 500€. <strong class="text-white">Pack confort</strong> (éclairage + chauffage + volets) : 2 000€ à 5 000€. <strong class="text-white">Maison complète KNX/Loxone</strong> : 5 000€ à 15 000€+. Consultation et devis gratuit.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Peut-on domotiser une maison ancienne sans gros travaux ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui ! Les solutions <strong class="text-white">sans fil</strong> (Zigbee, Z-Wave, WiFi) permettent de rendre une maison ancienne intelligente <strong class="text-white">sans casser les murs</strong>. Interrupteurs connectés en remplacement, prises intelligentes, thermostats WiFi — tout se pose facilement. Allo Electricien adapte chaque installation au type de logement.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Quelle est la différence entre KNX, Loxone et Niko Home Control ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p><strong class="text-white">KNX</strong> : standard industriel câblé, ultra-fiable, idéal pour constructions neuves et grands projets. <strong class="text-white">Loxone</strong> : solution intégrée tout-en-un avec serveur dédié, excellente pour les villas. <strong class="text-white">Niko Home Control</strong> : solution belge, simple et efficace, écosystème Niko complet. Allo Electricien installe et programme les trois systèmes.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>La domotique permet-elle de faire des économies d'énergie ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, une <strong class="text-white">installation domotique</strong> bien configurée permet d'économiser <strong class="text-white">20% à 35% sur la facture d'énergie</strong>. Chauffage intelligent par zones, extinction automatique des lumières, gestion des volets selon le soleil, suivi de consommation en temps réel : chaque automatisation contribue aux économies.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Puis-je contrôler ma maison à distance ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, toutes nos installations incluent le <strong class="text-white">pilotage à distance via smartphone</strong> (iOS et Android). Contrôlez l'éclairage, le chauffage, les volets, la sécurité et visualisez vos caméras depuis n'importe où dans le monde via une application sécurisée.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>La domotique est-elle compatible avec les assistants vocaux ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui ! Nos installations sont compatibles avec <strong class="text-white">Apple HomeKit/Siri, Google Home/Assistant et Amazon Alexa</strong>. Contrôlez votre maison à la voix : « Ok Google, éteins les lumières du salon », « Alexa, ferme les volets ». Nous configurons l'intégration complète lors de l'installation.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien de temps dure l'installation domotique ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>L'<strong class="text-white">installation domotique Bruxelles</strong> varie selon le projet. <strong class="text-white">Éclairage connecté</strong> : 1 journée. <strong class="text-white">Pack confort complet</strong> : 2-3 jours. <strong class="text-white">Maison complète KNX/Loxone</strong> : 3-5 jours. La programmation des scénarios et l'optimisation sont toujours incluses.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Que se passe-t-il en cas de panne Internet ou de courant ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Les systèmes professionnels (<strong class="text-white">KNX, Loxone, Niko</strong>) fonctionnent <strong class="text-white">localement, sans Internet</strong>. En cas de coupure Internet, votre domotique continue normalement — seul le pilotage à distance est temporairement indisponible. Après une coupure de courant, le système redémarre automatiquement.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SERVICE AREA -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Zone de Couverture</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Installation Domotique dans les 19 Communes de Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Notre service d'<strong class="text-white">installation domotique Bruxelles</strong> couvre l'intégralité de la Région de Bruxelles-Capitale. Consultation gratuite sur rendez-vous dans les 48h.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <a href="/electricien-anderlecht" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Anderlecht</span>
+        </a>
+        <a href="/electricien-auderghem" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Auderghem</span>
+        </a>
+        <a href="/electricien-berchem-sainte-agathe" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Berchem-Ste-Agathe</span>
+        </a>
+        <a href="/electricien-bruxelles-ville" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Bruxelles-Ville</span>
+        </a>
+        <a href="/electricien-etterbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Etterbeek</span>
+        </a>
+        <a href="/electricien-evere" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Evere</span>
+        </a>
+        <a href="/electricien-forest" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Forest</span>
+        </a>
+        <a href="/electricien-ganshoren" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Ganshoren</span>
+        </a>
+        <a href="/electricien-ixelles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Ixelles</span>
+        </a>
+        <a href="/electricien-jette" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Jette</span>
+        </a>
+        <a href="/electricien-koekelberg" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Koekelberg</span>
+        </a>
+        <a href="/electricien-molenbeek-saint-jean" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Molenbeek</span>
+        </a>
+        <a href="/electricien-saint-gilles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Saint-Gilles</span>
+        </a>
+        <a href="/electricien-saint-josse-ten-noode" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Saint-Josse</span>
+        </a>
+        <a href="/electricien-schaerbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Schaerbeek</span>
+        </a>
+        <a href="/electricien-uccle" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Uccle</span>
+        </a>
+        <a href="/electricien-watermael-boitsfort" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Watermael-Boitsfort</span>
+        </a>
+        <a href="/electricien-woluwe-saint-lambert" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Woluwe-St-Lambert</span>
+        </a>
+        <a href="/electricien-woluwe-saint-pierre" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-purple-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-purple-400 transition-colors font-medium">Woluwe-St-Pierre</span>
+        </a>
+      </div>
+      <p class="text-center text-gray-400 mt-6">Nous intervenons aussi en <strong class="text-white">périphérie de Bruxelles</strong> : Zaventem, Tervuren, Waterloo, Nivelles, Wavre, Vilvoorde. <a href="/zones" class="text-primary hover:underline">Voir toutes nos zones →</a></p>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="bg-gradient-to-r from-purple-500/10 to-navy-light rounded-2xl border border-purple-500/20 p-8 md:p-12 mb-16">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-purple-500 text-white text-sm font-bold px-4 py-2 rounded-full mb-4">
+            <span class="material-icons text-base">touch_app</span>PRÊT POUR LA MAISON DU FUTUR ?
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Consultation Gratuite — Installation Domotique</h2>
+          <p class="text-gray-300 text-lg max-w-xl"><strong class="text-white">Installation domotique Bruxelles</strong> sur mesure à partir de 500€. Consultation gratuite, devis sous 48h, formation incluse. Économisez 20-35% sur votre facture d'énergie.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="/contact" class="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-navy font-black text-lg px-8 py-5 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 whitespace-nowrap">
+            <span class="material-icons text-2xl">description</span>Consultation Gratuite
+          </a>
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-3 rounded-xl border border-white/20 transition-all text-center">
+            <span class="material-icons">phone</span>0465 73 23 48
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKS -->
+    <section class="mb-16">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Nos Autres Services Électriques</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="/services/depannage-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">bolt</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Dépannage Urgent 24/7</p>
+            <p class="text-gray-400 text-sm">Intervention en 45 min</p>
+          </div>
+        </a>
+        <a href="/services/mise-en-conformite" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">verified_user</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Mise en Conformité</p>
+            <p class="text-gray-400 text-sm">Remise aux normes RGIE</p>
+          </div>
+        </a>
+        <a href="/services/tableau-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">settings_input_component</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Tableau Électrique</p>
+            <p class="text-gray-400 text-sm">Installation & remplacement</p>
+          </div>
+        </a>
+        <a href="/services/borne-de-recharge" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">ev_station</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Borne de Recharge</p>
+            <p class="text-gray-400 text-sm">Voiture électrique</p>
+          </div>
+        </a>
+        <a href="/services/installation-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">lightbulb</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Éclairage LED</p>
+            <p class="text-gray-400 text-sm">Intérieur & extérieur</p>
+          </div>
+        </a>
+        <a href="/blog" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">article</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Blog & Guides</p>
+            <p class="text-gray-400 text-sm">Conseils électricité</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+</Layout>

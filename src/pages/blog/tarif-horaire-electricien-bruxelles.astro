@@ -1,0 +1,136 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le tarif horaire d'un électricien à Bruxelles en 2025 ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En 2025, le tarif horaire d'un électricien agréé à Bruxelles varie entre 55€ et 80€ hors TVA. À cela s'ajoutent des frais de déplacement (entre 40€ et 60€) et la TVA de 6% ou 21%. Pour un dépannage d'urgence le soir ou le week-end, le taux horaire est souvent doublé, pouvant atteindre 120€ à 150€." }
+    },
+    {
+      "@type": "Question",
+      "name": "L'électricien a-t-il le droit de facturer le devis ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, l'établissement d'un devis peut être payant, particulièrement si l'artisan doit se déplacer et réaliser une étude approfondie. Ce montant (généralement le prix d'un déplacement) est très souvent déduit de la facture finale si vous acceptez le devis." }
+    },
+    {
+      "@type": "Question",
+      "name": "Le tarif est-il plus cher à Bruxelles qu'en Wallonie ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Globalement oui. Les charges fixes d'une entreprise, le coût du stationnement et la complexité des déplacements dans la capitale font que le taux horaire bruxellois est en moyenne 10% à 15% supérieur à celui pratiqué en province." }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il payer l'électricien si la panne n'est pas trouvée ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "S'il s'agit d'une intervention en régie (à l'heure), l'électricien facture son temps passé à chercher la panne, même si la solution requiert des travaux plus lourds. L'obligation de l'électricien est une 'obligation de moyens' et non de résultat immédiat." }
+    }
+  ]
+};
+---
+
+<Layout title="Tarif Horaire Électricien Bruxelles 2025 : Prix & Majorations" description="Découvrez le tarif horaire moyen d'un électricien à Bruxelles en 2025. Frais de déplacement, urgences, dépannage : tout ce que vous devez savoir pour éviter les arnaques." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Tarif Horaire Électricien</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Guide Tarifs</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Quel est le tarif horaire d'un électricien à Bruxelles en 2025 ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">En 2025, le <strong class="text-white">tarif horaire d'un électricien agréé à Bruxelles varie entre 55€ et 80€ hors TVA</strong>. À cela s'ajoutent des frais de déplacement (entre 40€ et 60€) et la TVA de 6% ou 21%. Pour un dépannage d'urgence le soir ou le week-end, le taux horaire est souvent doublé, pouvant atteindre 120€ à 150€. Méfiez-vous toujours des tarifs trop alléchants par téléphone.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le tarif horaire de base : que comprend-il ?</h2>
+        <p>Le tarif de base d'un électricien indépendant ou d'une entreprise générale s'applique lors d'une prestation classique en semaine, pendant les heures ouvrables (généralement entre 8h00 et 17h00). En 2025, la fourchette moyenne constatée à Bruxelles se situe entre <strong class="text-white">55€ et 80€ hors TVA par heure</strong>.</p>
+        <ul class="space-y-2 mt-4">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">L'expertise :</strong> Un électricien spécialisé (domotique, bornes de recharge) facturera plus cher qu'un électricien de maintenance générale.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Le statut :</strong> Une grande entreprise a souvent un taux horaire légèrement supérieur à celui d'un indépendant.</span></li>
+        </ul>
+        <p class="mt-4">Il est important de noter que <strong class="text-white">toute heure entamée est généralement due</strong>. Si l'électricien reste 1h15, il est probable que la facture comptabilise 2 heures de main-d'œuvre.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les frais supplémentaires qui gonflent la facture</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">1. Les frais de déplacement</h3>
+        <p>Les électriciens facturent systématiquement un forfait de déplacement. En moyenne, comptez <strong class="text-white">entre 40€ et 60€ HTVA</strong> pour un déplacement dans les 19 communes (Schaerbeek, Uccle, Ixelles, etc.).</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">2. Le matériel et les fournitures</h3>
+        <p>Le taux horaire couvre uniquement le temps de travail. Le matériel (câbles, prises, disjoncteurs différentiels) est facturé en sus. Un électricien applique une marge sur la revente du matériel (généralement entre 15% et 30%).</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">3. La TVA (6% ou 21%)</h3>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">info</span><span><strong class="text-white">TVA à 6% :</strong> Si votre habitation a plus de 10 ans et que le travail y est facturé à vous (le propriétaire ou locataire occupant).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">info</span><span><strong class="text-white">TVA à 21% :</strong> Si la maison a moins de 10 ans, ou s'il s'agit d'un local commercial.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le tarif de dépannage d'urgence : la règle des majorations</h2>
+        <p>Les <a href="/services/depannage-electrique" class="text-primary hover:underline">dépannages électriques d'urgence</a> suivent une logique de tarification différente avec des majorations légales :</p>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Créneau</th><th class="text-right p-4 text-white">Tarif horaire (HTVA)</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Heures ouvrables (semaine)</td><td class="p-4 text-right text-primary font-bold">55€ — 80€</td></tr>
+              <tr><td class="p-4">Soirée (après 18h) et samedi</td><td class="p-4 text-right text-primary font-bold">90€ — 120€</td></tr>
+              <tr><td class="p-4">Nuit, dimanche et jours fériés</td><td class="p-4 text-right text-primary font-bold">110€ — 160€</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bg-navy-light border border-yellow-500/20 rounded-xl p-6 my-8">
+          <p class="text-yellow-400 font-bold mb-2 flex items-center gap-2"><span class="material-icons">warning</span>Attention aux arnaques</p>
+          <p class="text-sm">Ne tombez pas dans le piège des publicités annonçant "Déplacement à 20€ !". Exigez toujours une estimation téléphonique du coût global (déplacement + première heure) avant d'accepter qu'ils ne se mettent en route.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Tarif à l'heure ou forfait : que choisir ?</h2>
+        <p>La facturation à l'heure (en régie) est la norme pour les dépannages. Pour les travaux planifiés, l'électricien vous proposera toujours un <strong class="text-white">forfait (un devis fixe)</strong>. Quelques exemples de prix forfaitaires moyens à Bruxelles en 2025 :</p>
+        <ul class="space-y-2 mt-4">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Mise à la terre (piquets et raccordement) : <strong class="text-white">200€ à 400€</strong></span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Remplacement d'un vieux tableau électrique : <strong class="text-white">800€ à 1 500€</strong></span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Dessin des schémas unifilaires pour le contrôle RGIE : <strong class="text-white">250€ à 400€</strong></span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Installation d'une prise de courant supplémentaire : <strong class="text-white">80€ à 150€</strong></span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Les tarifs des électriciens</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Un électricien a-t-il le droit de facturer le devis ?</h3>
+        <p>Oui, l'établissement d'un devis peut être payant, particulièrement si l'artisan doit se déplacer et réaliser une étude approfondie. Ce montant est très souvent déduit de la facture finale si vous acceptez le devis.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Le tarif est-il plus cher à Bruxelles qu'en Wallonie ?</h3>
+        <p>Globalement oui. Les charges fixes d'une entreprise, le coût du stationnement et la complexité des déplacements dans la capitale font que le taux horaire bruxellois est en moyenne 10% à 15% supérieur à celui pratiqué en province.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Faut-il payer l'électricien si la panne n'est pas trouvée ?</h3>
+        <p>S'il s'agit d'une intervention en régie (à l'heure), l'électricien facture son temps passé à chercher la panne, même si la solution requiert des travaux plus lourds. L'obligation de l'électricien est une "obligation de moyens" et non de résultat immédiat.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">L'électricien refuse de me donner son tarif par téléphone, est-ce normal ?</h3>
+        <p>Pour un gros chantier de rénovation, c'est normal, une visite est indispensable. Par contre, pour un dépannage d'urgence, s'il refuse de vous donner au moins son tarif de base pour le déplacement et la première heure, raccrochez immédiatement.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">💡 Chez Allo Electricien, nos tarifs sont clairs et communiqués avant toute intervention</p>
+          <p class="text-sm">Nous vous communiquons nos tarifs exacts par téléphone avant notre intervention. Pas de mauvaise surprise. <a href="/contact" class="text-primary underline font-bold">Demandez votre devis →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

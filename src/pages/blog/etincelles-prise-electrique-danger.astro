@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Est-ce normal d'avoir une petite étincelle bleue en branchant ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, si c'est petit et bleu, c'est l'arc de connexion (la charge s'équilibre). C'est fréquent avec les chargeurs d'ordinateur ou les fers à repasser branchés sur ON. Ce n'est pas grave." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quand faut-il s'inquiéter ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si l'étincelle est JAUNE ou ORANGE, grosse, fait du bruit (POP !), sent le brûlé ou laisse des traces noires sur la prise. Là, c'est un court-circuit ou un défaut grave." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment éviter les étincelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Éteignez toujours l'appareil avant de le brancher. Si l'interrupteur est sur OFF, il n'y a pas d'appel de courant, donc pas d'étincelle." }
+    }
+  ]
+};
+---
+
+<Layout title="Étincelles Prise Électrique : Est-ce Dangereux ?" description="Vous voyez un flash bleu en branchant votre chargeur ? Quand est-ce normal et quand est-ce un signe de danger ? Tout savoir sur les étincelles électriques." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Étincelles</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full">Sécurité</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Étincelles dans la Prise Électrique : Danger ou Pas ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>5 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Vous allez brancher votre fer à repasser et ZAP ! Un petit flash bleu sort de la prise. Ça surprend, ça fait un peu peur. Mais est-ce vraiment dangereux ? Faut-il appeler un électricien en catastrophe ?</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">L'Étincelle "Normale" (Bleue et Brève)</h2>
+        <p>L'électricité circule très vite. Quand vous approchez la fiche mâle de la prise, juste avant que le métal ne touche, l'électricité "saute" le dernier millimètre pour passer. Cela ionise l'air et crée un petit plasma bleu.</p>
+        <p>C'est tout à fait normal si :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Vous branchez un appareil puissant (aspirateur, fer repasser).</li>
+            <li>Vous branchez une alimentation à découpage (chargeur PC portable) qui a des condensateurs à remplir.</li>
+            <li>L'étincelle est à peine visible et sans odeur.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">L'Étincelle "Dangereuse" (Jaune, Orange, Bruyante)</h2>
+        <p>Là, on ne rigole plus. Si l'étincelle ressemble à un feu d'artifice miniature, dure plus d'une fraction de seconde, ou laisse des traces noires sur la prise, c'est un problème.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Cause 1 : Le court-circuit</h3>
+        <p>L'isolant de la fiche est abîmé, les fils se touchent. Le flash est violent, et normalement le disjoncteur saute dans la foulée.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Cause 2 : La prise usée</h3>
+        <p>Les contacts à l'intérieur de la prise sont lâches. La fiche "nage" dedans. Le contact est mauvais, ça crépite. C'est le début de l'incendie (voir notre article sur les prises qui chauffent).</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Cause 3 : L'humidité</h3>
+        <p>De l'eau est entrée dans la prise. L'étincelle est le signe que l'eau conduit le courant là où elle ne devrait pas.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Quand remplacer la prise ?</h2>
+        <p>Inspectez la façade de la prise. Si vous voyez des petites piqûres noires autour des trous, ou si le plastique a l'air un peu fondu, IL FAUT LA CHANGER. Ces dommages augmentent la résistance et créeront plus de chaleur à l'avenir.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Remplacement Prise Abîmée</h3>
+            <p class="mb-4">Une prise noircie est une prise risquée. Nous la remplaçons en quelques minutes par un modèle neuf et sûr.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Petit Entretien</span>
+                    <span class="block text-white font-bold">Intervention à la demande</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

@@ -1,0 +1,705 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le tarif d'un dépannage électrique à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le tarif dépannage électrique Bruxelles chez Allo Electricien est de 45€/h en journée (24h/24 â€” 7j/7) + 30€ de déplacement. Soirée et samedi : 75€/h + 40€. Nuit, dimanche et jours fériés : 95€/h + 50€. Devis clair avant toute intervention, sans frais cachés." }
+    },
+    {
+      "@type": "Question",
+      "name": "Un électricien peut-il intervenir la nuit ou le dimanche à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, Allo Electricien propose un service d'électricien urgent Bruxelles nuit, dimanche et jours fériés. Notre équipe d'électriciens 24h/24 Bruxelles est disponible 365 jours par an. Appelez le 0465 73 23 48 pour une intervention électrique urgente Bruxelles à toute heure." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire en cas de coupure de courant dans ma maison à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si vous n'avez plus d'électricité maison Bruxelles : 1) Vérifiez le disjoncteur principal et les fusibles. 2) Vérifiez si vos voisins sont touchés (panne réseau Sibelga). 3) Si la panne est isolée, appelez Allo Electricien au 0465 73 23 48 pour un dépannage coupure de courant Bruxelles rapide en moins de 45 minutes." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure un dépannage électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La plupart des dépannages sont résolus en 1 à 2 heures. Pannes simples (panne disjoncteur Bruxelles, prise défectueuse) : environ 45 min. Court-circuit Bruxelles dépannage ou recherche de défaut : jusqu'à 3 heures. Notre électricien rapide Bruxelles vous donne une estimation précise sur place." }
+    },
+    {
+      "@type": "Question",
+      "name": "Intervenez-vous les jours fériés à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, notre service d'électricien jour férié Bruxelles fonctionne 365 jours par an. Noël, Nouvel An, 21 juillet — nous sommes toujours disponibles pour un SOS électricien Bruxelles. Le tarif est identique à celui du dimanche : 95€/h + 50€ de déplacement." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles pannes électriques dépannez-vous en urgence ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nous intervenons pour tout type de panne électrique Bruxelles : coupure de courant totale ou partielle, court-circuit, disjoncteur qui saute, odeur de brûlé, étincelles, prise ou interrupteur défectueux, dépannage tableau électrique Bruxelles, dégât des eaux électrique, surcharge électrique." }
+    },
+    {
+      "@type": "Question",
+      "name": "Dans quelles communes de Bruxelles intervenez-vous ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Allo Electricien intervient dans les 19 communes de Bruxelles-Capitale : Bruxelles-Ville, Ixelles, Uccle, Schaerbeek, Anderlecht, Etterbeek, Saint-Gilles, Forest, Watermael-Boitsfort, Woluwe-Saint-Lambert, Woluwe-Saint-Pierre, Auderghem, Jette, Evere, Koekelberg, Molenbeek, Ganshoren, Berchem-Sainte-Agathe, Saint-Josse-ten-Noode, ainsi que la périphérie." }
+    },
+    {
+      "@type": "Question",
+      "name": "Y a-t-il un supplément pour une intervention le week-end ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Notre service d'électricien week-end Bruxelles applique un tarif soirée/samedi de 75€/h + 40€ de déplacement. Le dimanche, le tarif est de 95€/h + 50€. Ces tarifs sont fixes et annoncés avant toute intervention — pas de surprise." }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Dépannage Électrique Urgent",
+  "provider": { "@type": "Electrician", "name": "Allo Electricien", "telephone": "+32465732348" },
+  "areaServed": { "@type": "City", "name": "Bruxelles" },
+  "availableChannel": { "@type": "ServiceChannel", "servicePhone": { "@type": "ContactPoint", "telephone": "+32465732348", "contactType": "customer service", "availableLanguage": ["French", "Dutch"] } },
+  "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
+  "offers": [
+    { "@type": "Offer", "name": "Dépannage Journée", "price": "45", "priceCurrency": "EUR", "description": "Tarif horaire 24h/24 â€” 7j/7" },
+    { "@type": "Offer", "name": "Dépannage Soirée/Week-end", "price": "75", "priceCurrency": "EUR", "description": "Tarif horaire soirée et week-end" },
+    { "@type": "Offer", "name": "Dépannage Nuit/Dimanche/Férié", "price": "95", "priceCurrency": "EUR", "description": "Tarif horaire 22h-8h, dimanche et jours fériés" }
+  ]
+};
+---
+
+<Layout title="Dépannage Électrique Bruxelles — Électricien Urgence 24/7 | Allo Electricien" description="Dépannage électrique Bruxelles : électricien urgence 24h/24, 7j/7. Panne de courant, court-circuit, disjoncteur qui saute. Intervention en 45 min. ☎ 0465 73 23 48. Nuit, week-end, jours fériés." schema={faqSchema}>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+  <!-- HERO -->
+  <header class="relative bg-navy overflow-hidden pt-12 pb-28 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-red-500/10 to-transparent"></div>
+    <div class="absolute left-0 bottom-0 w-1/4 h-1/2 bg-gradient-to-t from-primary/5 to-transparent"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/services">Services</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Dépannage Électrique</li>
+        </ol>
+      </nav>
+      <div class="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 text-red-400 text-sm font-bold px-4 py-2 rounded-full mb-6 animate-pulse">
+        <span class="material-icons text-base">emergency</span>URGENCE 24H/24 — ÉLECTRICIEN DISPONIBLE MAINTENANT
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+        Dépannage <span class="text-primary">Électrique</span> Bruxelles
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
+        <strong class="text-white">Électricien urgence Bruxelles</strong> — Intervention en moins de 45 minutes, 24h/24 et 7j/7 dans les 19 communes. Pannes de courant, courts-circuits, disjoncteurs, tableaux électriques.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 text-lg">
+          <span class="material-icons text-2xl">call</span>0465 73 23 48
+        </a>
+        <a href="https://wa.me/32465732348" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-1">
+          <span class="material-icons">chat</span>WhatsApp Urgence
+        </a>
+        <a href="/contact" class="flex items-center justify-center gap-2 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-all">
+          <span class="material-icons">description</span>Devis Gratuit
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-20 -mt-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+    <!-- KEY STATS -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">schedule</span>
+        <p class="text-3xl font-bold text-primary">45 min</p>
+        <p class="text-gray-400 text-sm mt-1">Temps d'arrivée moyen</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">access_time</span>
+        <p class="text-3xl font-bold text-primary">24/7</p>
+        <p class="text-gray-400 text-sm mt-1">Nuit, week-end, fériés</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">verified</span>
+        <p class="text-3xl font-bold text-primary">2 ans</p>
+        <p class="text-gray-400 text-sm mt-1">Garantie travaux</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">star</span>
+        <p class="text-3xl font-bold text-primary">4.9/5</p>
+        <p class="text-gray-400 text-sm mt-1">Note Google (127 avis)</p>
+      </div>
+    </div>
+
+    <!-- SECTION 1: WHAT'S INCLUDED -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Service Complet</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Ce Que Comprend Notre Dépannage Électrique à Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">search</span>
+          <h3 class="text-lg font-bold text-white mb-2">Diagnostic Complet</h3>
+          <p class="text-gray-400 text-sm">Analyse approfondie de votre installation avec appareils de mesure professionnels. Identification précise de la cause de la panne avant toute intervention.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">build</span>
+          <h3 class="text-lg font-bold text-white mb-2">Réparation Sur Place</h3>
+          <p class="text-gray-400 text-sm">Nos véhicules atelier contiennent tout le matériel nécessaire : câbles, disjoncteurs, différentiels, prises, interrupteurs. 90% des pannes résolues en une seule visite.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">security</span>
+          <h3 class="text-lg font-bold text-white mb-2">Mise en Sécurité</h3>
+          <p class="text-gray-400 text-sm">Sécurisation immédiate de l'installation en cas de danger : isolation du circuit défectueux, coupure du courant dans la zone à risque, protection contre l'électrocution.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">description</span>
+          <h3 class="text-lg font-bold text-white mb-2">Devis Transparent</h3>
+          <p class="text-gray-400 text-sm">Prix annoncé avant le début des travaux. Aucun frais caché, aucune surprise sur la facture. Vous validez le montant avant que nous commencions.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">receipt_long</span>
+          <h3 class="text-lg font-bold text-white mb-2">Attestation TVA 6%</h3>
+          <p class="text-gray-400 text-sm">Pour les logements de plus de 10 ans, bénéficiez du taux réduit de TVA à 6% au lieu de 21%. Nous préparons l'attestation pour vous.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">shield</span>
+          <h3 class="text-lg font-bold text-white mb-2">Garantie 2 Ans</h3>
+          <p class="text-gray-400 text-sm">Tous nos travaux de dépannage sont garantis 2 ans pièces et main-d'œuvre. En cas de récidive du même problème, nous revenons gratuitement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: COMMON PROBLEMS -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Interventions</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Pannes Électriques Que Nous Résolvons à Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">power_off</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Coupure de Courant Totale</h3>
+            <p class="text-gray-400 text-sm">Plus d'électricité dans votre maison à Bruxelles ? Nous diagnostiquons rapidement si la panne vient de votre installation ou du réseau Sibelga, et rétablissons le courant.</p>
+            <p class="text-primary text-xs mt-2 font-semibold">⏱ Résolu en ~45 min</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-orange-400 text-2xl">flash_on</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Court-Circuit</h3>
+            <p class="text-gray-400 text-sm">Court-circuit Bruxelles dépannage : localisation précise du défaut avec appareils de mesure, isolation du circuit endommagé et réparation définitive du câblage.</p>
+            <p class="text-primary text-xs mt-2 font-semibold">⏱ Résolu en 1-2h</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-yellow-400 text-2xl">toggle_off</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Disjoncteur Qui Saute</h3>
+            <p class="text-gray-400 text-sm">Panne disjoncteur Bruxelles : surcharge, défaut d'isolement, appareil défectueux ? Nous identifions la cause exacte et corrigeons le problème pour éviter toute récidive.</p>
+            <p class="text-primary text-xs mt-2 font-semibold">⏱ Résolu en ~45 min</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">local_fire_department</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Odeur de Brûlé / Étincelles</h3>
+            <p class="text-gray-400 text-sm">SOS électricien Bruxelles pour situation dangereuse : mise en sécurité immédiate, identification de la source (câble fondu, connexion oxydée) et réparation d'urgence.</p>
+            <p class="text-primary text-xs mt-2 font-semibold">⏱ Intervention immédiate</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-blue-400 text-2xl">settings_input_component</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Tableau Électrique Défaillant</h3>
+            <p class="text-gray-400 text-sm">Dépannage tableau électrique Bruxelles : remplacement de disjoncteurs grillés, ajout de différentiels 30mA, remise en service après coupure. <a href="/services/tableau-electrique" class="text-primary hover:underline">En savoir plus →</a></p>
+            <p class="text-primary text-xs mt-2 font-semibold">⏱ Résolu en 1-2h</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-cyan-400 text-2xl">water_damage</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Dégât des Eaux Électrique</h3>
+            <p class="text-gray-400 text-sm">Infiltration d'eau dans votre installation ? Intervention électrique urgente Bruxelles : coupure sécurisée, séchage, test d'isolation et remise sous tension circuit par circuit.</p>
+            <p class="text-primary text-xs mt-2 font-semibold">⏱ Résolu en 2-3h</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-purple-400 text-2xl">electrical_services</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Prise / Interrupteur HS</h3>
+            <p class="text-gray-400 text-sm">Prise qui chauffe, interrupteur qui grésille, raccordement défectueux ? Remplacement rapide avec du matériel aux normes RGIE et test de sécurité.</p>
+            <p class="text-primary text-xs mt-2 font-semibold">⏱ Résolu en ~30 min</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-green-400 text-2xl">bolt</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Surcharge Électrique</h3>
+            <p class="text-gray-400 text-sm">Câblage sous-dimensionné, trop d'appareils sur un circuit ? Nous rééquilibrons vos circuits et ajoutons des lignes dédiées si nécessaire pour un fonctionnement sûr.</p>
+            <p class="text-primary text-xs mt-2 font-semibold">⏱ Résolu en 1-3h</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR PROCESS -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Étape par Étape</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Processus de Dépannage Électricité Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="relative">
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2 z-0 border-t-2 border-dotted border-gray-600"></div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">1</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Votre Appel</h3>
+            <p class="text-gray-400 text-sm">Appelez le <strong class="text-white">0465 73 23 48</strong>. Décrivez votre panne à notre opérateur. Disponible 24h/24, même la nuit et le dimanche.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">2</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Dispatch Immédiat</h3>
+            <p class="text-gray-400 text-sm">L'électricien rapide Bruxelles le plus proche est envoyé chez vous. Temps d'arrivée moyen : <strong class="text-white">45 minutes</strong>.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">3</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Diagnostic</h3>
+            <p class="text-gray-400 text-sm">Sur place, diagnostic complet avec appareils de mesure professionnels. Vous recevez un devis clair <strong class="text-white">avant toute réparation</strong>.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">4</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Réparation</h3>
+            <p class="text-gray-400 text-sm">Intervention avec matériel professionnel embarqué. <strong class="text-white">90% des pannes résolues en une visite</strong>. Pièces de rechange incluses.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">5</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Test & Garantie</h3>
+            <p class="text-gray-400 text-sm">Vérification complète de l'installation, rapport d'intervention et <strong class="text-white">garantie 2 ans</strong> sur les travaux effectués.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: WHY CHOOSE US -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Engagements</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Pourquoi Choisir Allo Electricien Pour Votre Dépannage Électrique ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">speed</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Électricien Disponible Maintenant</h3>
+          </div>
+          <p class="text-gray-400">Pas d'attente. Notre service d'électricien disponible maintenant Bruxelles garantit un départ immédiat du technicien le plus proche. Arrivée en 45 minutes maximum, que ce soit en pleine journée, la nuit ou le week-end.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">payments</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Tarifs Fixes & Transparents</h3>
+          </div>
+          <p class="text-gray-400">Nos tarifs de dépannage électrique Bruxelles sont annoncés avant intervention. Pas de frais cachés, pas de majoration surprise. Vous connaissez le prix exact avant que nous commencions à travailler.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">workspace_premium</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Électriciens Agréés & Certifiés</h3>
+          </div>
+          <p class="text-gray-400">Tous nos techniciens sont des électriciens certifiés avec accès aux registres professionnels. Travaux conformes aux normes RGIE belges. Certification Vinçotte disponible.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">inventory_2</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Véhicules Atelier Équipés</h3>
+          </div>
+          <p class="text-gray-400">Chaque véhicule est un atelier roulant avec plus de 500 pièces de rechange : disjoncteurs, différentiels, câbles, prises, interrupteurs, connecteurs. Résolution en une seule visite dans 90% des cas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EMERGENCY AVAILABILITY -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Toujours Disponibles</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Électricien 24h/24 Bruxelles — Disponibilité Complète</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Allo Electricien est votre partenaire pour tout dépannage électricité Bruxelles urgent. Nos électriciens sont disponibles 365 jours par an, sans exception.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-navy rounded-xl border border-green-500/30 p-6 text-center">
+          <span class="material-icons text-green-400 text-3xl mb-3">schedule</span>
+          <h3 class="text-lg font-bold text-white mb-2">Disponible 24/7</h3>
+          <p class="text-gray-400 text-sm mb-1">Tous les jours, toute l'année</p>
+          <p class="text-white font-bold">24h/24 — 7j/7</p>
+          <div class="mt-3 inline-flex items-center gap-1 bg-green-500/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full">
+            <span class="w-2 h-2 bg-green-400 rounded-full"></span>Toujours disponible
+          </div>
+        </div>
+        <div class="bg-navy rounded-xl border border-primary/30 p-6 text-center">
+          <span class="material-icons text-primary text-3xl mb-3">bolt</span>
+          <h3 class="text-lg font-bold text-white mb-2">Intervention Rapide</h3>
+          <p class="text-gray-400 text-sm mb-1">Dépannage urgent Bruxelles</p>
+          <p class="text-white font-bold">Moins de 45 min</p>
+          <div class="mt-3 inline-flex items-center gap-1 bg-green-500/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full">
+            <span class="w-2 h-2 bg-green-400 rounded-full"></span>Départ immédiat
+          </div>
+        </div>
+        <div class="bg-navy rounded-xl border border-primary/30 p-6 text-center">
+          <span class="material-icons text-primary text-3xl mb-3">nightlight</span>
+          <h3 class="text-lg font-bold text-white mb-2">Nuit & Week-end</h3>
+          <p class="text-gray-400 text-sm mb-1">Électricien nuit Bruxelles</p>
+          <p class="text-white font-bold">Sans interruption</p>
+          <div class="mt-3 inline-flex items-center gap-1 bg-green-500/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full">
+            <span class="w-2 h-2 bg-green-400 rounded-full"></span>Disponible
+          </div>
+        </div>
+        <div class="bg-navy rounded-xl border border-purple-500/30 p-6 text-center">
+          <span class="material-icons text-purple-400 text-3xl mb-3">celebration</span>
+          <h3 class="text-lg font-bold text-white mb-2">Dimanche & Fériés</h3>
+          <p class="text-gray-400 text-sm mb-1">Électricien jour férié Bruxelles</p>
+          <p class="text-white font-bold">365 jours par an</p>
+          <div class="mt-3 inline-flex items-center gap-1 bg-green-500/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full">
+            <span class="w-2 h-2 bg-green-400 rounded-full"></span>Disponible
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="bg-navy-light border border-primary/20 rounded-xl p-6 mt-6 text-center">
+        <p class="text-gray-300"><strong class="text-white">💡 Bon à savoir :</strong> Électricien dimanche Bruxelles et jours fériés — nous intervenons <strong class="text-white">365 jours par an</strong>, y compris Noël, Nouvel An et le 21 juillet. Un seul numéro : <a href="tel:+32465732348" class="text-primary font-bold hover:underline">0465 73 23 48</a></p>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PRICING -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Tarifs Transparents</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Tarif Dépannage Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-navy border border-white/10 rounded-xl p-8 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-4xl mb-3">light_mode</span>
+          <h3 class="text-xl font-bold text-white mb-2">Standard</h3>
+          <p class="text-gray-400 text-sm mb-4">Lun-Ven • 8h-18h</p>
+          <p class="text-5xl font-bold text-primary mb-1">65€<span class="text-lg text-gray-400 font-normal">/h</span></p>
+          <p class="text-gray-400 text-sm mb-6">+ 45€ déplacement</p>
+          <ul class="space-y-2 text-sm text-gray-300 text-left mb-6">
+            <li class="flex items-center gap-2"><span class="material-icons text-green-500 text-sm">check</span>Diagnostic inclus</li>
+            <li class="flex items-center gap-2"><span class="material-icons text-green-500 text-sm">check</span>Petites fournitures incluses</li>
+            <li class="flex items-center gap-2"><span class="material-icons text-green-500 text-sm">check</span>Attestation TVA 6%</li>
+            <li class="flex items-center gap-2"><span class="material-icons text-green-500 text-sm">check</span>Garantie 2 ans</li>
+          </ul>
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-navy font-bold rounded-lg hover:bg-primary-hover transition-all">
+            <span class="material-icons">phone</span>Appeler
+          </a>
+        </div>
+        <div class="bg-navy border-2 border-primary rounded-xl p-8 text-center relative transform md:-translate-y-3 shadow-2xl shadow-primary/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-navy text-xs font-bold px-4 py-1 rounded-full">SOIRÉE / WEEK-END</div>
+          <span class="material-icons text-primary text-4xl mb-3">dark_mode</span>
+          <h3 class="text-xl font-bold text-white mb-2">Soirée & Week-end</h3>
+          <p class="text-gray-400 text-sm mb-4">Tarif soirée et week-end</p>
+          <p class="text-5xl font-bold text-primary mb-1">95€<span class="text-lg text-gray-400 font-normal">/h</span></p>
+          <p class="text-gray-400 text-sm mb-6">+ 45€ déplacement</p>
+          <ul class="space-y-2 text-sm text-gray-300 text-left mb-6">
+            <li class="flex items-center gap-2"><span class="material-icons text-primary text-sm">check</span>Intervention prioritaire</li>
+            <li class="flex items-center gap-2"><span class="material-icons text-primary text-sm">check</span>Diagnostic inclus</li>
+            <li class="flex items-center gap-2"><span class="material-icons text-primary text-sm">check</span>Tout type de panne</li>
+            <li class="flex items-center gap-2"><span class="material-icons text-primary text-sm">check</span>Garantie 2 ans</li>
+          </ul>
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-navy font-bold rounded-lg hover:bg-primary-hover transition-all">
+            <span class="material-icons">phone</span>Appeler
+          </a>
+        </div>
+        <div class="bg-navy border border-white/10 rounded-xl p-8 text-center hover:border-red-500/30 transition-colors">
+          <span class="material-icons text-red-400 text-4xl mb-3">nightlight</span>
+          <h3 class="text-xl font-bold text-white mb-2">Nuit / Dimanche / Férié</h3>
+          <p class="text-gray-400 text-sm mb-4">22h-8h • Dim • Fériés</p>
+          <p class="text-5xl font-bold text-primary mb-1">130€<span class="text-lg text-gray-400 font-normal">/h</span></p>
+          <p class="text-gray-400 text-sm mb-6">+ 45€ déplacement</p>
+          <ul class="space-y-2 text-sm text-gray-300 text-left mb-6">
+            <li class="flex items-center gap-2"><span class="material-icons text-red-500 text-sm">check</span>Départ immédiat</li>
+            <li class="flex items-center gap-2"><span class="material-icons text-red-500 text-sm">check</span>Mise en sécurité</li>
+            <li class="flex items-center gap-2"><span class="material-icons text-red-500 text-sm">check</span>Assistance téléphonique</li>
+            <li class="flex items-center gap-2"><span class="material-icons text-red-500 text-sm">check</span>Garantie 2 ans</li>
+          </ul>
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-navy font-bold rounded-lg hover:bg-primary-hover transition-all">
+            <span class="material-icons">phone</span>Appeler
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FAQ -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Questions Fréquentes — Dépannage Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Quel est le tarif d'un dépannage électrique à Bruxelles ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Le <strong class="text-white">tarif dépannage électrique Bruxelles</strong> chez Allo Electricien est transparent et fixe : <strong class="text-white">65€/h</strong> en journée (24h/24 â€” 7j/7) + 45€ de déplacement. Soirée et samedi : <strong class="text-white">95€/h</strong>. Nuit, dimanche et jours fériés : <strong class="text-white">130€/h</strong>. Toujours 45€ de déplacement. Devis clair avant toute intervention.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Peut-on avoir un électricien la nuit ou le dimanche à Bruxelles ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui ! Allo Electricien propose un service d'<strong class="text-white">électricien urgent Bruxelles nuit</strong> et un service d'<strong class="text-white">électricien dimanche Bruxelles</strong>. Notre équipe est disponible <strong class="text-white">24h/24, 365 jours par an</strong>. Appelez le 0465 73 23 48 à n'importe quelle heure pour une intervention rapide.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Que faire si je n'ai plus d'électricité dans ma maison ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Si vous n'avez <strong class="text-white">plus d'électricité maison Bruxelles</strong>, suivez ces étapes : 1) Vérifiez votre disjoncteur principal — il est peut-être simplement déclenché. 2) Vérifiez si vos voisins sont aussi coupés (panne Sibelga). 3) Si la panne est isolée chez vous, appelez Allo Electricien pour un <strong class="text-white">dépannage coupure de courant Bruxelles</strong> en moins de 45 minutes.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Mon disjoncteur saute sans arrêt, que faire ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Une <strong class="text-white">panne disjoncteur Bruxelles</strong> qui se répète indique : une surcharge (trop d'appareils), un court-circuit dans le câblage, ou un appareil défectueux. Débranchez les appareils un par un pour identifier le coupable. Si le problème persiste, appelez Allo Electricien pour un diagnostic professionnel et une réparation définitive.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Intervenez-vous les jours fériés ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, notre <strong class="text-white">électricien jour férié Bruxelles</strong> est disponible 365 jours par an : Noël, Nouvel An, Pâques, 21 juillet, 1er mai, 11 novembre... Tarif identique au dimanche : 130€/h + 45€ de déplacement.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>En combien de temps arrivez-vous sur place ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Notre <strong class="text-white">électricien rapide Bruxelles</strong> arrive en moyenne en <strong class="text-white">45 minutes</strong>. Grâce à nos techniciens répartis dans toutes les communes, nous assurons une <strong class="text-white">intervention électrique urgente Bruxelles</strong> la plus rapide possible. En heure de pointe, comptez maximum 60 minutes.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Pouvez-vous dépanner mon tableau électrique ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, le <strong class="text-white">dépannage tableau électrique Bruxelles</strong> est l'une de nos spécialités. Remplacement de disjoncteurs défectueux, ajout de différentiels, remise en service après coupure, mise aux normes RGIE. <a href="/services/tableau-electrique" class="text-primary hover:underline">Voir notre page Tableau Électrique →</a></p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Quel est le numéro pour un SOS électricien à Bruxelles ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Pour un <strong class="text-white">SOS électricien Bruxelles</strong>, appelez le <a href="tel:+32465732348" class="text-primary font-bold hover:underline">0465 73 23 48</a>. Ce numéro unique fonctionne 24h/24, 7j/7, y compris nuits, week-ends et jours fériés. Vous pouvez aussi nous contacter via <a href="https://wa.me/32465732348" class="text-primary hover:underline">WhatsApp</a>.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SERVICE AREA -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Zone de Couverture</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Dépannage Électrique dans les 19 Communes de Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Notre service de <strong class="text-white">dépannage électricité Bruxelles urgent</strong> couvre l'intégralité de la Région de Bruxelles-Capitale et ses alentours. Temps d'arrivée moyen : 45 minutes.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <a href="/electricien-anderlecht" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Anderlecht</span>
+        </a>
+        <a href="/electricien-auderghem" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Auderghem</span>
+        </a>
+        <a href="/electricien-berchem-sainte-agathe" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Berchem-Ste-Agathe</span>
+        </a>
+        <a href="/electricien-bruxelles-ville" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Bruxelles-Ville</span>
+        </a>
+        <a href="/electricien-etterbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Etterbeek</span>
+        </a>
+        <a href="/electricien-evere" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Evere</span>
+        </a>
+        <a href="/electricien-forest" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Forest</span>
+        </a>
+        <a href="/electricien-ganshoren" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Ganshoren</span>
+        </a>
+        <a href="/electricien-ixelles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Ixelles</span>
+        </a>
+        <a href="/electricien-jette" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Jette</span>
+        </a>
+        <a href="/electricien-koekelberg" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Koekelberg</span>
+        </a>
+        <a href="/electricien-molenbeek-saint-jean" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Molenbeek</span>
+        </a>
+        <a href="/electricien-saint-gilles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Saint-Gilles</span>
+        </a>
+        <a href="/electricien-saint-josse-ten-noode" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Saint-Josse</span>
+        </a>
+        <a href="/electricien-schaerbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Schaerbeek</span>
+        </a>
+        <a href="/electricien-uccle" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Uccle</span>
+        </a>
+        <a href="/electricien-watermael-boitsfort" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Watermael-Boitsfort</span>
+        </a>
+        <a href="/electricien-woluwe-saint-lambert" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Woluwe-St-Lambert</span>
+        </a>
+        <a href="/electricien-woluwe-saint-pierre" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Woluwe-St-Pierre</span>
+        </a>
+      </div>
+      <p class="text-center text-gray-400 mt-6">Nous intervenons aussi en <strong class="text-white">périphérie de Bruxelles</strong> : Zaventem, Tervuren, Waterloo, Nivelles, Wavre, Vilvoorde. <a href="/zones" class="text-primary hover:underline">Voir toutes nos zones →</a></p>
+    </section>
+
+    <!-- URGENCY CTA BANNER -->
+    <section class="bg-gradient-to-r from-red-900/30 to-navy-light rounded-2xl border border-red-500/20 p-8 md:p-12 mb-16">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-red-600 text-white text-sm font-bold px-4 py-2 rounded-full mb-4 animate-pulse">
+            <span class="material-icons text-base">warning</span>PANNE ÉLECTRIQUE MAINTENANT ?
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">SOS Électricien Bruxelles</h2>
+          <p class="text-gray-300 text-lg max-w-xl">Ne restez pas dans le noir. Nos techniciens certifiés sont prêts à intervenir <strong class="text-white">en moins de 45 minutes</strong>, 24h/24 et 7j/7. Un seul appel suffit.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-navy font-black text-xl md:text-2xl px-8 py-5 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 whitespace-nowrap">
+            <span class="material-icons text-3xl">phone_in_talk</span>0465 73 23 48
+          </a>
+          <a href="https://wa.me/32465732348" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-xl transition-all text-center">
+            <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            WhatsApp Urgence
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKS -->
+    <section class="mb-16">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Nos Autres Services Électriques</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="/services/mise-en-conformite" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">verified_user</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Mise en Conformité RGIE</p>
+            <p class="text-gray-400 text-sm">Remise aux normes obligatoire</p>
+          </div>
+        </a>
+        <a href="/services/tableau-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">settings_input_component</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Tableau Électrique</p>
+            <p class="text-gray-400 text-sm">Remplacement & installation</p>
+          </div>
+        </a>
+        <a href="/services/borne-de-recharge" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">ev_station</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Borne de Recharge</p>
+            <p class="text-gray-400 text-sm">Voiture électrique</p>
+          </div>
+        </a>
+        <a href="/services/domotique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">touch_app</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Domotique</p>
+            <p class="text-gray-400 text-sm">Maison intelligente</p>
+          </div>
+        </a>
+        <a href="/services/installation-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">lightbulb</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Éclairage LED</p>
+            <p class="text-gray-400 text-sm">Intérieur & extérieur</p>
+          </div>
+        </a>
+        <a href="/blog" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">article</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Blog & Guides</p>
+            <p class="text-gray-400 text-sm">Conseils électricité</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+</Layout>

@@ -1,0 +1,700 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte une installation électrique complète à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le prix d'une installation électrique Bruxelles dépend de la taille du logement et de la complexité. Studio/1 chambre : 3 000€ à 5 000€. Appartement 2-3 chambres : 5 000€ à 8 000€. Maison complète : 8 000€ à 15 000€+. Rénovation partielle : à partir de 1 500€. TVA 6% pour logements de plus de 10 ans. Devis gratuit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il refaire toute l'installation électrique lors d'une rénovation ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pas toujours. Après un diagnostic complet, nous déterminons ce qui peut être conservé et ce qui doit être remplacé. Si l'installation a plus de 30 ans, un remplacement complet est souvent recommandé pour la sécurité et la conformité RGIE. Pour les installations plus récentes, une mise à jour partielle peut suffire." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure une installation électrique complète ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La durée d'une installation électrique Bruxelles varie selon le projet. Studio : 2-3 jours. Appartement : 3-5 jours. Maison : 5-10 jours. Rénovation partielle : 1-3 jours. Nous planifions soigneusement pour minimiser les perturbations." }
+    },
+    {
+      "@type": "Question",
+      "name": "L'installation sera-t-elle conforme au RGIE ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, absolument. Toute installation électrique Bruxelles réalisée par Allo Electricien est conforme au RGIE (Règlement Général sur les Installations Électriques). Nous préparons le dossier pour le contrôle par un organisme agréé (Vinçotte, AIB, BTV) et garantissons la conformité — 98% de réussite au premier passage." }
+    },
+    {
+      "@type": "Question",
+      "name": "Proposez-vous un service de dépannage après l'installation ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, Allo Electricien assure un suivi post-installation complet. Garantie 2 ans sur la main-d'œuvre, dépannage prioritaire 24/7 pour nos clients, et assistance technique par téléphone. En cas de problème, nous intervenons en priorité." }
+    },
+    {
+      "@type": "Question",
+      "name": "Pouvez-vous installer des prises et interrupteurs design ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui ! Nous travaillons avec les marques premium : Niko (marque belge), Legrand, Schneider, Bticino, Gira. Du classique blanc au design moderne en verre, aluminium ou bois. Nous vous conseillons sur les finitions adaptées à votre intérieur." }
+    },
+    {
+      "@type": "Question",
+      "name": "L'installation inclut-elle le tableau électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, une installation électrique complète inclut toujours le tableau électrique avec tous les disjoncteurs, différentiels et protections nécessaires. Nous dimensionnons le tableau en fonction de vos besoins actuels et futurs (borne de recharge, domotique, etc.)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on prévoir la domotique dans une nouvelle installation ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est même le moment idéal ! Lors d'une nouvelle installation électrique, nous pouvons prévoir le précâblage pour la domotique (KNX, Loxone, Niko Home Control) à moindre coût. Cela évite de devoir tout refaire plus tard." }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Installation Électrique Résidentielle et Commerciale",
+  "provider": { "@type": "Electrician", "name": "Allo Electricien", "telephone": "+32465732348" },
+  "areaServed": { "@type": "City", "name": "Bruxelles" },
+  "offers": [
+    { "@type": "Offer", "name": "Rénovation Partielle", "price": "1500", "priceCurrency": "EUR", "description": "Rénovation électrique partielle, à partir de 1 500€" },
+    { "@type": "Offer", "name": "Appartement Complet", "price": "5000", "priceCurrency": "EUR", "description": "Installation complète appartement, à partir de 5 000€" },
+    { "@type": "Offer", "name": "Maison Complète", "price": "8000", "priceCurrency": "EUR", "description": "Installation complète maison, à partir de 8 000€" }
+  ]
+};
+---
+
+<Layout title="Installation Électrique Bruxelles — Neuf & Rénovation | Allo Electricien" description="Installation électrique Bruxelles : neuf, rénovation, extension. Câblage structuré, prises, interrupteurs, tableau, éclairage LED. Conformité RGIE garantie. Devis gratuit. ☎ 0465 73 23 48" schema={faqSchema}>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+  <!-- HERO -->
+  <header class="relative bg-navy overflow-hidden pt-12 pb-28 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-amber-500/5 to-transparent"></div>
+    <div class="absolute left-0 bottom-0 w-1/4 h-1/2 bg-gradient-to-t from-primary/5 to-transparent"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/services">Services</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Installation Électrique</li>
+        </ol>
+      </nav>
+      <div class="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/30 text-amber-400 text-sm font-bold px-4 py-2 rounded-full mb-6">
+        <span class="material-icons text-base">home</span>NEUF • RÉNOVATION • EXTENSION
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+        Installation <span class="text-primary">Électrique</span> Bruxelles
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
+        <strong class="text-white">Installation électrique Bruxelles</strong> complète pour nouvelles constructions, rénovations et extensions. Câblage structuré, prises, interrupteurs, tableau, éclairage LED. Conformité RGIE garantie.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="/contact" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 text-lg">
+          <span class="material-icons text-2xl">description</span>Devis Gratuit
+        </a>
+        <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 transition-all hover:-translate-y-1">
+          <span class="material-icons">call</span>0465 73 23 48
+        </a>
+        <a href="https://wa.me/32465732348" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-1">
+          <span class="material-icons">chat</span>WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-20 -mt-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+    <!-- KEY STATS -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-amber-500/30 transition-colors">
+        <span class="material-icons text-amber-400 text-3xl mb-2">verified</span>
+        <p class="text-3xl font-bold text-amber-400">RGIE</p>
+        <p class="text-gray-400 text-sm mt-1">Conformité garantie</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-amber-500/30 transition-colors">
+        <span class="material-icons text-amber-400 text-3xl mb-2">percent</span>
+        <p class="text-3xl font-bold text-amber-400">98%</p>
+        <p class="text-gray-400 text-sm mt-1">Réussite contrôle</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">workspace_premium</span>
+        <p class="text-3xl font-bold text-primary">2 ans</p>
+        <p class="text-gray-400 text-sm mt-1">Garantie main-d'œuvre</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">savings</span>
+        <p class="text-3xl font-bold text-primary">TVA 6%</p>
+        <p class="text-gray-400 text-sm mt-1">Logements +10 ans</p>
+      </div>
+    </div>
+
+    <!-- SECTION 1: WHAT'S INCLUDED -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Service Complet</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Ce Que Comprend Notre Installation Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <span class="material-icons text-amber-400 text-3xl mb-4">cable</span>
+          <h3 class="text-lg font-bold text-white mb-2">Câblage Structuré Complet</h3>
+          <p class="text-gray-400 text-sm">Câblage en cuivre de qualité professionnelle (XVB, VOB). Passage en gaines encastrées ou apparentes. Respect des sections normatives selon le RGIE.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <span class="material-icons text-amber-400 text-3xl mb-4">power</span>
+          <h3 class="text-lg font-bold text-white mb-2">Prises & Interrupteurs</h3>
+          <p class="text-gray-400 text-sm">Pose de prises de courant, prises USB, interrupteurs simples/double allumage/va-et-vient. Marques premium : Niko, Legrand, Schneider, Bticino.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <span class="material-icons text-amber-400 text-3xl mb-4">settings_input_component</span>
+          <h3 class="text-lg font-bold text-white mb-2">Tableau Électrique</h3>
+          <p class="text-gray-400 text-sm">Installation ou remplacement du tableau de distribution. Disjoncteurs, différentiels 30mA type A/AC, répartition des circuits optimisée. Dimensionné pour l'avenir.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <span class="material-icons text-amber-400 text-3xl mb-4">lightbulb</span>
+          <h3 class="text-lg font-bold text-white mb-2">Éclairage LED</h3>
+          <p class="text-gray-400 text-sm">Points lumineux, spots encastrés, rubans LED, appliques, suspensions. Variateurs et détecteurs de présence pour les économies d'énergie.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <span class="material-icons text-amber-400 text-3xl mb-4">grounding</span>
+          <h3 class="text-lg font-bold text-white mb-2">Mise à la Terre</h3>
+          <p class="text-gray-400 text-sm">Installation ou vérification de la prise de terre. Liaison équipotentielle salle de bain. Mesure de résistance de terre. Indispensable pour la sécurité.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <span class="material-icons text-amber-400 text-3xl mb-4">router</span>
+          <h3 class="text-lg font-bold text-white mb-2">Réseau Data & Multimédia</h3>
+          <p class="text-gray-400 text-sm">Câblage réseau RJ45 Cat.6, prises TV/SAT, pré-câblage fibre optique. Coffret de communication pour centraliser vos connexions.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <span class="material-icons text-amber-400 text-3xl mb-4">ev_station</span>
+          <h3 class="text-lg font-bold text-white mb-2">Pré-câblage Spécialisé</h3>
+          <p class="text-gray-400 text-sm">Pré-câblage pour borne de recharge, climatisation, panneaux solaires, domotique (KNX/Loxone). Anticipez vos besoins futurs à moindre coût.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <span class="material-icons text-amber-400 text-3xl mb-4">description</span>
+          <h3 class="text-lg font-bold text-white mb-2">Schéma Unifilaire & Dossier</h3>
+          <p class="text-gray-400 text-sm">Réalisation du schéma unifilaire et du plan de position obligatoires. Dossier complet prêt pour le contrôle par organisme agréé.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <span class="material-icons text-amber-400 text-3xl mb-4">fact_check</span>
+          <h3 class="text-lg font-bold text-white mb-2">Contrôle & Attestation</h3>
+          <p class="text-gray-400 text-sm">Préparation et accompagnement pour le contrôle RGIE (Vinçotte, AIB, BTV). Attestation de conformité délivrée. 98% de réussite au premier passage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: COMMON PROBLEMS WE SOLVE -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Situations</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Quand Faut-il une Nouvelle Installation Électrique ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Notre service d'<strong class="text-white">installation électrique Bruxelles</strong> répond à toutes les situations nécessitant une installation neuve ou une rénovation complète.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-amber-400 text-2xl">construction</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Nouvelle Construction</h3>
+            <p class="text-gray-400 text-sm">Construction neuve ou extension ? Nous concevons et réalisons l'<strong class="text-white">installation électrique complète</strong> : du compteur au dernier interrupteur, en passant par le tableau et tous les circuits.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : installation complète clé en main</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-amber-400 text-2xl">home_repair_service</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Rénovation Complète</h3>
+            <p class="text-gray-400 text-sm">Vous rénovez votre maison ou appartement ? C'est le moment idéal pour refaire l'installation électrique. Remplacement complet du câblage, du tableau et de tous les points.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : rénovation électrique totale + conformité RGIE</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">warning</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Installation Vétuste (+30 ans)</h3>
+            <p class="text-gray-400 text-sm">Câblage en aluminium, fusibles anciens, absence de différentiel, prises sans terre — une installation de plus de 30 ans présente des <strong class="text-white">risques d'incendie et d'électrocution</strong>.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : remplacement complet aux normes actuelles</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">do_not_disturb</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Contrôle RGIE Refusé</h3>
+            <p class="text-gray-400 text-sm">Votre installation a échoué au contrôle périodique ? Non-conformités sévères détectées ? Nous corrigeons toutes les infractions et préparons le recontrôle.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : mise en conformité + nouveau contrôle</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-orange-400 text-2xl">electrical_services</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Manque de Prises / Circuits</h3>
+            <p class="text-gray-400 text-sm">Multiprises partout ? Disjoncteur qui saute régulièrement ? Votre installation n'est plus adaptée à vos besoins modernes (appareils, cuisine équipée, bureau).</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : extension & ajout de circuits dédiés</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-amber-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-orange-400 text-2xl">real_estate_agent</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Vente / Achat Immobilier</h3>
+            <p class="text-gray-400 text-sm">Mise en vente ou achat d'un bien ? Le contrôle électrique est obligatoire. Si l'installation est non conforme, nous la rénovons avant la transaction.</p>
+            <p class="text-green-400 text-xs mt-2 font-semibold">✓ Solution : mise aux normes avant vente/achat</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR PROCESS -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Étape par Étape</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Processus d'Installation Électrique</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="relative">
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2 z-0 border-t-2 border-dotted border-gray-600"></div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-amber-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-amber-400 font-bold text-xl">1</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Visite & Diagnostic</h3>
+            <p class="text-gray-400 text-xs">Visite gratuite sur place. Analyse de vos besoins, relevé des mesures, étude de l'existant. Plan de l'installation proposé.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-amber-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-amber-400 font-bold text-xl">2</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Devis Détaillé</h3>
+            <p class="text-gray-400 text-xs">Devis complet avec plan de position, nombre de points, choix des finitions. Prix <strong class="text-white">installation électrique Bruxelles</strong> tout compris.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-amber-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-amber-400 font-bold text-xl">3</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Installation</h3>
+            <p class="text-gray-400 text-xs">Passage des câbles, pose du tableau, raccordement des circuits, installation des prises et interrupteurs. Travail soigné et propre.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-amber-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-amber-400 font-bold text-xl">4</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Tests & Schémas</h3>
+            <p class="text-gray-400 text-xs">Tests de chaque circuit, mesure d'isolement, vérification des différentiels. Réalisation du schéma unifilaire et plan de position.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-amber-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-amber-400 font-bold text-xl">5</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Contrôle RGIE</h3>
+            <p class="text-gray-400 text-xs">Planification du contrôle par organisme agréé (Vinçotte, AIB, BTV). Accompagnement le jour du contrôle. Attestation de conformité.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PRICING -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Tarifs</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Prix Installation Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Tarifs indicatifs pour une <strong class="text-white">installation électrique Bruxelles</strong> complète. Chaque projet est unique — devis gratuit personnalisé sous 48h.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-2xl border border-white/10 p-8 hover:border-amber-500/30 transition-colors">
+          <div class="text-center mb-6">
+            <span class="material-icons text-amber-400 text-4xl mb-2">handyman</span>
+            <h3 class="text-2xl font-bold text-white">Rénovation Partielle</h3>
+            <p class="text-gray-400 text-sm mt-1">Extension ou mise à jour</p>
+          </div>
+          <p class="text-center text-4xl font-bold text-primary mb-2">1 500€</p>
+          <p class="text-center text-gray-400 text-sm mb-6">à partir de</p>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Ajout de circuits dédiés</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Remplacement partiel câblage</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Ajout de prises / éclairages</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Mise à jour tableau</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Durée : 1-3 jours</li>
+          </ul>
+          <div class="border-t border-white/10 pt-4 text-center">
+            <p class="text-gray-400 text-xs mb-3">Idéal pour : mises à jour ciblées</p>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary font-bold px-6 py-3 rounded-xl transition-colors border border-primary/30">Devis Gratuit</a>
+          </div>
+        </div>
+        <div class="bg-navy rounded-2xl border-2 border-primary p-8 relative shadow-lg shadow-primary/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-navy text-xs font-bold px-4 py-1 rounded-full">LE PLUS DEMANDÉ</div>
+          <div class="text-center mb-6">
+            <span class="material-icons text-primary text-4xl mb-2">apartment</span>
+            <h3 class="text-2xl font-bold text-white">Appartement Complet</h3>
+            <p class="text-gray-400 text-sm mt-1">Installation neuve ou totale</p>
+          </div>
+          <p class="text-center text-4xl font-bold text-primary mb-2">5 000€</p>
+          <p class="text-center text-gray-400 text-sm mb-6">à partir de</p>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Câblage complet neuf</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Tableau électrique neuf</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Prises & interrupteurs premium</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Éclairage LED complet</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Schéma unifilaire + contrôle</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Garantie 2 ans</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Durée : 3-5 jours</li>
+          </ul>
+          <div class="border-t border-primary/30 pt-4 text-center">
+            <p class="text-gray-400 text-xs mb-3">Idéal pour : rénovation appartement</p>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-6 py-3 rounded-xl transition-colors shadow-lg shadow-primary/20">Devis Gratuit</a>
+          </div>
+        </div>
+        <div class="bg-navy rounded-2xl border border-white/10 p-8 hover:border-amber-500/30 transition-colors">
+          <div class="text-center mb-6">
+            <span class="material-icons text-amber-400 text-4xl mb-2">villa</span>
+            <h3 class="text-2xl font-bold text-white">Maison Complète</h3>
+            <p class="text-gray-400 text-sm mt-1">Villa / maison unifamiliale</p>
+          </div>
+          <p class="text-center text-4xl font-bold text-primary mb-2">8 000€</p>
+          <p class="text-center text-gray-400 text-sm mb-6">à partir de</p>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Tout le pack Appartement</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Pré-câblage domotique</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Pré-câblage borne recharge</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Réseau data RJ45</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Éclairage extérieur</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-amber-400 text-base mt-0.5">check</span>Durée : 5-10 jours</li>
+          </ul>
+          <div class="border-t border-white/10 pt-4 text-center">
+            <p class="text-gray-400 text-xs mb-3">Idéal pour : constructions & grandes rénovations</p>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary font-bold px-6 py-3 rounded-xl transition-colors border border-primary/30">Devis Gratuit</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-navy-light border border-amber-500/20 rounded-xl p-6 mt-6 text-center">
+        <p class="text-gray-300"><strong class="text-white">💡 Bon à savoir :</strong> Pour les logements de <strong class="text-white">plus de 10 ans</strong>, l'<strong class="text-white">installation électrique Bruxelles</strong> bénéficie de la TVA réduite à <strong class="text-primary">6% au lieu de 21%</strong> sur la main-d'œuvre et les matériaux. <a href="/contact" class="text-primary font-bold hover:underline">Demandez un devis gratuit →</a></p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE US -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Engagements</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Pourquoi Choisir Allo Electricien pour Votre Installation ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-amber-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-amber-400 text-2xl">verified</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Conformité RGIE Garantie</h3>
+          </div>
+          <p class="text-gray-400">Chaque <strong class="text-white">installation électrique Bruxelles</strong> est réalisée dans le strict respect du RGIE. 98% de réussite au premier contrôle. Nous préparons le dossier complet et accompagnons le contrôleur.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-amber-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-amber-400 text-2xl">clean_hands</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Travail Soigné & Propre</h3>
+          </div>
+          <p class="text-gray-400">Nous protégeons votre intérieur pendant les travaux. Câbles rangés, finitions impeccables, nettoyage quotidien du chantier. Votre satisfaction est notre priorité absolue.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-amber-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-amber-400 text-2xl">update</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Vision Long Terme</h3>
+          </div>
+          <p class="text-gray-400">Nous dimensionnons votre installation pour l'avenir : pré-câblage domotique, borne de recharge, panneaux solaires. Pas besoin de tout refaire dans 5 ans. Un investissement intelligent.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-amber-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-amber-400 text-2xl">euro</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Prix Transparent & TVA 6%</h3>
+          </div>
+          <p class="text-gray-400">Devis détaillé sans surprise. Prix tout compris : matériel, main-d'œuvre, schémas, contrôle. TVA 6% pour logements de plus de 10 ans. Paiement échelonné possible.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: AVAILABILITY -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Disponibilité</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Disponibilité Pour Votre Installation</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-3">schedule</span>
+          <h3 class="text-white font-bold mb-1">Disponible 24/7</h3>
+          <p class="text-gray-400 text-sm">Tous les jours, toute l'année</p>
+          <span class="inline-block mt-3 bg-green-400/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full">7j/7 — 24h/24</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">bolt</span>
+          <h3 class="text-white font-bold mb-1">Urgence Immédiate</h3>
+          <p class="text-gray-400 text-sm">Intervention en -45 min</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Panne électrique</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">event_available</span>
+          <h3 class="text-white font-bold mb-1">Rendez-vous Rapide</h3>
+          <p class="text-gray-400 text-sm">Disponible 7j/7</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Chantier planifié</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">speed</span>
+          <h3 class="text-white font-bold mb-1">Diagnostic Gratuit</h3>
+          <p class="text-gray-400 text-sm">48h maximum</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Devis offert</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FAQ -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Questions Fréquentes — Installation Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien coûte une installation électrique complète à Bruxelles ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Le prix d'une <strong class="text-white">installation électrique Bruxelles</strong> dépend de la taille et complexité. <strong class="text-white">Studio/1 chambre</strong> : 3 000€ à 5 000€. <strong class="text-white">Appartement 2-3 chambres</strong> : 5 000€ à 8 000€. <strong class="text-white">Maison complète</strong> : 8 000€ à 15 000€+. <strong class="text-white">Rénovation partielle</strong> : à partir de 1 500€. TVA 6% pour logements de plus de 10 ans.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Faut-il refaire toute l'installation lors d'une rénovation ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Pas toujours. Après un <strong class="text-white">diagnostic complet</strong>, nous déterminons ce qui peut être conservé et ce qui doit être remplacé. Si l'installation a <strong class="text-white">plus de 30 ans</strong>, un remplacement complet est souvent recommandé. Pour les installations plus récentes, une mise à jour partielle peut suffire.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien de temps dure une installation électrique complète ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>La durée d'une <strong class="text-white">installation électrique Bruxelles</strong> varie selon le projet. <strong class="text-white">Studio</strong> : 2-3 jours. <strong class="text-white">Appartement</strong> : 3-5 jours. <strong class="text-white">Maison</strong> : 5-10 jours. <strong class="text-white">Rénovation partielle</strong> : 1-3 jours. Nous planifions soigneusement pour minimiser les perturbations.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>L'installation sera-t-elle conforme au RGIE ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, absolument. Toute <strong class="text-white">installation électrique Bruxelles</strong> réalisée par Allo Electricien est conforme au <strong class="text-white">RGIE</strong>. Nous préparons le dossier pour le contrôle par un organisme agréé (Vinçotte, AIB, BTV) et garantissons la conformité — <strong class="text-white">98% de réussite au premier passage</strong>.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Proposez-vous un service de dépannage après l'installation ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui ! Allo Electricien assure un <strong class="text-white">suivi post-installation complet</strong>. Garantie 2 ans sur la main-d'œuvre, dépannage prioritaire 24/7 pour nos clients, et assistance technique par téléphone. En cas de problème, nous intervenons en priorité.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Pouvez-vous installer des prises et interrupteurs design ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui ! Nous travaillons avec les <strong class="text-white">marques premium</strong> : <strong class="text-white">Niko</strong> (marque belge), <strong class="text-white">Legrand, Schneider, Bticino, Gira</strong>. Du classique blanc au design moderne en verre, aluminium ou bois. Nous vous conseillons les finitions adaptées à votre intérieur.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>L'installation inclut-elle le tableau électrique ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, une installation complète inclut toujours le <strong class="text-white">tableau électrique</strong> avec tous les disjoncteurs, différentiels et protections nécessaires. Nous le dimensionnons en fonction de vos besoins actuels et futurs (borne de recharge, domotique, etc.).</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Peut-on prévoir la domotique dans une nouvelle installation ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, c'est même le <strong class="text-white">moment idéal</strong> ! Lors d'une nouvelle <strong class="text-white">installation électrique</strong>, nous pouvons prévoir le précâblage pour la <strong class="text-white">domotique</strong> (KNX, Loxone, Niko Home Control) à moindre coût. Cela évite de devoir tout refaire plus tard.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SERVICE AREA -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Zone de Couverture</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Installation Électrique dans les 19 Communes de Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Notre service d'<strong class="text-white">installation électrique Bruxelles</strong> couvre l'intégralité de la Région de Bruxelles-Capitale. Visite gratuite et devis sous 48h.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <a href="/electricien-anderlecht" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Anderlecht</span>
+        </a>
+        <a href="/electricien-auderghem" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Auderghem</span>
+        </a>
+        <a href="/electricien-berchem-sainte-agathe" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Berchem-Ste-Agathe</span>
+        </a>
+        <a href="/electricien-bruxelles-ville" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Bruxelles-Ville</span>
+        </a>
+        <a href="/electricien-etterbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Etterbeek</span>
+        </a>
+        <a href="/electricien-evere" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Evere</span>
+        </a>
+        <a href="/electricien-forest" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Forest</span>
+        </a>
+        <a href="/electricien-ganshoren" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Ganshoren</span>
+        </a>
+        <a href="/electricien-ixelles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Ixelles</span>
+        </a>
+        <a href="/electricien-jette" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Jette</span>
+        </a>
+        <a href="/electricien-koekelberg" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Koekelberg</span>
+        </a>
+        <a href="/electricien-molenbeek-saint-jean" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Molenbeek</span>
+        </a>
+        <a href="/electricien-saint-gilles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Saint-Gilles</span>
+        </a>
+        <a href="/electricien-saint-josse-ten-noode" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Saint-Josse</span>
+        </a>
+        <a href="/electricien-schaerbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Schaerbeek</span>
+        </a>
+        <a href="/electricien-uccle" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Uccle</span>
+        </a>
+        <a href="/electricien-watermael-boitsfort" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Watermael-Boitsfort</span>
+        </a>
+        <a href="/electricien-woluwe-saint-lambert" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Woluwe-St-Lambert</span>
+        </a>
+        <a href="/electricien-woluwe-saint-pierre" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-amber-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-amber-400 transition-colors font-medium">Woluwe-St-Pierre</span>
+        </a>
+      </div>
+      <p class="text-center text-gray-400 mt-6">Nous intervenons aussi en <strong class="text-white">périphérie de Bruxelles</strong> : Zaventem, Tervuren, Waterloo, Nivelles, Wavre, Vilvoorde. <a href="/zones" class="text-primary hover:underline">Voir toutes nos zones →</a></p>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="bg-gradient-to-r from-amber-500/10 to-navy-light rounded-2xl border border-amber-500/20 p-8 md:p-12 mb-16">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-amber-500 text-navy text-sm font-bold px-4 py-2 rounded-full mb-4">
+            <span class="material-icons text-base">home</span>VOTRE PROJET ÉLECTRIQUE
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Devis Gratuit — Installation Électrique</h2>
+          <p class="text-gray-300 text-lg max-w-xl"><strong class="text-white">Installation électrique Bruxelles</strong> complète à partir de 1 500€. Visite gratuite, devis sous 48h, conformité RGIE garantie. TVA 6% pour logements +10 ans.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="/contact" class="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-navy font-black text-lg px-8 py-5 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 whitespace-nowrap">
+            <span class="material-icons text-2xl">description</span>Devis Gratuit
+          </a>
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-3 rounded-xl border border-white/20 transition-all text-center">
+            <span class="material-icons">phone</span>0465 73 23 48
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKS -->
+    <section class="mb-16">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Nos Autres Services Électriques</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="/services/depannage-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">bolt</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Dépannage Urgent 24/7</p>
+            <p class="text-gray-400 text-sm">Intervention en 45 min</p>
+          </div>
+        </a>
+        <a href="/services/mise-en-conformite" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">verified_user</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Mise en Conformité</p>
+            <p class="text-gray-400 text-sm">Remise aux normes RGIE</p>
+          </div>
+        </a>
+        <a href="/services/tableau-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">settings_input_component</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Tableau Électrique</p>
+            <p class="text-gray-400 text-sm">Installation & remplacement</p>
+          </div>
+        </a>
+        <a href="/services/borne-de-recharge" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">ev_station</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Borne de Recharge</p>
+            <p class="text-gray-400 text-sm">Voiture électrique</p>
+          </div>
+        </a>
+        <a href="/services/domotique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">smart_toy</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Domotique</p>
+            <p class="text-gray-400 text-sm">Maison intelligente</p>
+          </div>
+        </a>
+        <a href="/blog" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">article</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Blog & Guides</p>
+            <p class="text-gray-400 text-sm">Conseils électricité</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+</Layout>

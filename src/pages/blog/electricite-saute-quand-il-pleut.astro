@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi mon disjoncteur saute dès qu'il pleut fort ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est une infiltration d'eau. L'eau de pluie pénètre dans une prise extérieure, un luminaire de jardin ou une boîte de dérivation mal étanche. L'eau crée un pont entre la phase et la terre, ce qui déclenche le différentiel." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment trouver la fuite électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Coupez le disjoncteur qui alimente l'extérieur. Si le courant revient dans la maison, c'est bien l'extérieur le coupable. Si ça saute toujours, l'infiltration peut être dans le toit ou la cave." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire en attendant la réparation ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Laissez le disjoncteur du circuit incriminé (souvent marqué 'Jardin' ou 'Extérieur') baissé. Vous pouvez ainsi réenclencher le général et avoir du courant à l'intérieur." }
+    }
+  ]
+};
+---
+
+<Layout title="Électricité qui Saute Quand il Pleut : Causes et Solutions" description="Votre courant coupe à chaque averse ? C'est une infiltration d'eau dans le circuit électrique. Découvrez comment localiser la fuite et sécuriser votre installation." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Panne Pluie</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full">Problème d'Humidité</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        L'Électricité Saute Quand il Pleut : Que Faire ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>5 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Dès que le ciel bruxellois se couvre et que la pluie commence à tomber, <strong>clac</strong>, vous êtes dans le noir. C'est un grand classique des pannes électriques en Belgique. Votre installation électrique n'aime pas l'eau, et votre différentiel fait son travail en coupant tout.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le Coupable : Le Circuit Extérieur</h2>
+        <p>Dans 95% des cas, le problème vient du jardin, de la terrasse ou de la façade. Les coupables habituels sont :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Les luminaires de sol (spots enterrés) :</strong> Avec le temps, les joints sèchent et l'eau s'infiltre.</li>
+            <li><strong>Les prises extérieures :</strong> Le clapet est cassé ou de l'eau est entrée par le câble.</li>
+            <li><strong>La sonnette ou le portail électrique :</strong> L'électronique a pris l'eau.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comment rétablir le courant (Solution provisoire)</h2>
+        <p>Vous n'allez pas réparer l'étanchéité sous la pluie battante. L'objectif est d'isoler le problème pour ravoir du chauffage et de la lumière.</p>
+        <ol class="list-decimal pl-6 space-y-2">
+            <li>Allez au tableau.</li>
+            <li>Baissez tous les disjoncteurs.</li>
+            <li>Réenclenchez le Différentiel.</li>
+            <li>Remontez les disjoncteurs un par un.</li>
+            <li>Celui qui fait sauter le différentiel est le circuit qui prend l'eau. Laissez-le baissé (OFF).</li>
+            <li>Remontez tous les autres.</li>
+        </ol>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Que faire si je n'ai pas de circuit extérieur ?</h2>
+        <p>Si vous n'avez pas de jardin, l'eau vient peut-être d'ailleurs :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Infiltration en toiture :</strong> L'eau coule dans une boîte de dérivation dans le grenier.</li>
+            <li><strong>Humidité ascensionnelle :</strong> Un mur humide dans la cave touche une prise.</li>
+            <li><strong>Condensation :</strong> Dans la véranda.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">La réparation définitive</h2>
+        <p>Une fois qu'il ne pleut plus, il faut ouvrir le boîtier incriminé, sécher le tout, refaire les connexions oxydées et surtout remplacer les joints ou le matériel complet par du matériel IP55 (étanche) de qualité.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Dépannage Électrique Extérieur</h3>
+            <p class="mb-4">Nous remplaçons vos éclairages et prises extérieures par du matériel étanche garanti.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Étanchéité circuits</span>
+                    <span class="block text-white font-bold">Intervention Rapide</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Faut-il faire une demande à la commune ou à la Région pour les primes RENOLUTION ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Les Primes RENOLUTION sont régionales (pour toute la Région de Bruxelles-Capitale). Cependant, vérifiez toujours auprès de votre administration communale : certaines communes octroient parfois de petites primes complémentaires locales." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps pour recevoir l'argent de la prime RENOLUTION ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Une fois le dossier complet soumis sur IRISbox, il faut compter en moyenne entre 3 et 6 mois pour voir le versement effectif sur votre compte bancaire. Vous devez donc pouvoir avancer les fonds." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je acheter moi-même le matériel électrique pour économiser et obtenir la prime ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est une mauvaise idée. La prime RENOLUTION ne couvre que les travaux facturés par l'entrepreneur. De plus, vous paierez la TVA à 21% au magasin, alors que l'électricien vous facturera le matériel à 6% de TVA si la maison a plus de 10 ans." }
+    }
+  ]
+};
+---
+
+<Layout title="Primes RENOLUTION 2025 : Financer Vos Travaux Électriques à Bruxelles" description="Mise en conformité, nouveau tableau, domotique : découvrez comment obtenir les primes RENOLUTION 2025 pour financer la rénovation électrique de votre logement." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Primes RENOLUTION 2025</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Aides Financières</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Primes RENOLUTION 2025 : comment financer vos travaux électriques à Bruxelles
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">La rénovation de votre installation électrique coûte cher, mais la Région de Bruxelles-Capitale vous aide ! Grâce aux <strong class="text-white">Primes RENOLUTION 2025</strong>, vous pouvez récupérer une partie significative du montant de vos travaux électriques (mise en conformité du tableau, remplacement des vieux câbles, mise à la terre). Le montant varie selon votre catégorie de revenus (I, II ou III).</p>
+
+        <div class="bg-navy-light border border-primary/20 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-3 flex items-center gap-2"><span class="material-icons">info</span>Attention : Règle absolue</p>
+          <p class="text-sm">La demande doit être introduite <strong class="text-white">APRÈS</strong> la fin des travaux. Et les travaux doivent impérativement être facturés par un entrepreneur enregistré à la BCE — pas de travaux DIY subsidiés.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Quels travaux électriques donnent droit à la prime ?</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">La rénovation du tableau électrique :</strong> Remplacement complet du coffret, installation de nouveaux disjoncteurs et interrupteurs différentiels (300mA et 30mA).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">La réfection du câblage :</strong> Arrachage des anciennes canalisations en plomb ou tissu et tirage de nouveaux fils VOB.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">La création ou l'amélioration de la prise de terre :</strong> Enfoncement de piquets, boucle de terre et raccordement au sectionneur.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">L'adaptation au compteur communicant (Smart Meter) :</strong> Les travaux nécessaires dans le coffret pour préparer l'arrivée des compteurs intelligents Sibelga.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Le certificat de conformité :</strong> Les frais liés au contrôle officiel par un organisme agréé (Vinçotte, BTV).</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Combien pouvez-vous recevoir ? (Les catégories de revenus)</h2>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Catégorie de revenus</th><th class="text-right p-4 text-white">% de la facture remboursé</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Catégorie I (Revenus élevés)</td><td class="p-4 text-right text-primary font-bold">~30%</td></tr>
+              <tr><td class="p-4">Catégorie II (Revenus moyens)</td><td class="p-4 text-right text-primary font-bold">~40%</td></tr>
+              <tr><td class="p-4">Catégorie III (Revenus faibles)</td><td class="p-4 text-right text-primary font-bold">~50%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-gray-400">Ces pourcentages sont donnés à titre indicatif pour 2025. Un plafond d'aide maximum s'applique toujours. Consultez le simulateur officiel sur <strong class="text-white">renolution.brussels</strong>.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les 3 règles d'or pour ne pas rater votre prime</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Règle N°1 : Faire appel à un entrepreneur enregistré</h3>
+        <p>C'est la règle absolue. La facture doit provenir d'un électricien dûment inscrit à la BCE et assujetti à la TVA. De plus, il est crucial que la facture <strong class="text-white">détaille très clairement les fournitures et la main-d'œuvre</strong>. Une facture qui indique simplement "Travaux électricité - 5000€" sera rejetée.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Règle N°2 : Réunir les bonnes pièces justificatives</h3>
+        <ul class="space-y-2 mt-3">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">description</span><span>La facture finale détaillée et acquittée (preuve de paiement).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">description</span><span>L'attestation de l'entrepreneur (formulaire téléchargeable sur le portail Renolution, que l'électricien doit remplir et signer).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">description</span><span><strong class="text-white">Le certificat de conformité RGIE positif</strong> — preuve que les travaux ont bien permis d'atteindre la sécurité requise.</span></li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Règle N°3 : Introduire la demande au bon moment</h3>
+        <p>Introduisez votre demande de prime <strong class="text-white">uniquement APRÈS la fin des travaux</strong> et le paiement intégral de la facture, via la plateforme en ligne IRISbox. Vous disposez généralement de 12 mois après la date de la dernière facture.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Et si je rénove toute la maison ? (Le bonus global)</h2>
+        <p>Si vous combinez au moins 3 primes différentes dans la même demande (ex: Électricité + Isolation Toiture + Châssis), la Région bruxelloise accorde souvent un <strong class="text-white">"Bonus multi-primes"</strong> de 10% à 20% supplémentaires sur le montant total des aides.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Primes électricité Bruxelles</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Faut-il faire une demande à la commune ou à la Région ?</h3>
+        <p>Les Primes RENOLUTION sont régionales (pour toute la Région de Bruxelles-Capitale). Cependant, vérifiez toujours auprès de votre administration communale — certaines communes octroient parfois de petites primes complémentaires locales.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Puis-je acheter moi-même le matériel électrique pour économiser ?</h3>
+        <p>C'est une mauvaise idée. La prime RENOLUTION ne couvre que les travaux facturés par l'entrepreneur. De plus, vous paierez la TVA à 21% au magasin, alors que l'électricien vous facturera le matériel à 6% de TVA si la maison a plus de 10 ans.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Le passage au triphasé est-il subsidié ?</h3>
+        <p>Le renforcement du compteur par Sibelga (passage du monophasé au triphasé) n'est généralement pas couvert par la prime de rénovation intérieure G1. Les frais facturés par Sibelga pour l'intervention sur le réseau restent à votre charge.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Combien de temps pour recevoir l'argent de la prime ?</h3>
+        <p>Une fois le dossier complet soumis sur IRISbox, il faut compter en moyenne entre <strong class="text-white">3 et 6 mois</strong> pour voir le versement effectif sur votre compte bancaire. Vous devez donc pouvoir avancer les fonds.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">💶 Un projet de rénovation conforme aux critères RENOLUTION ?</p>
+          <p class="text-sm">Nos devis et factures sont toujours détaillés et conformes aux exigences de l'administration bruxelloise. Nous vous accompagnons pour que vous puissiez bénéficier de vos aides. <a href="/contact" class="text-primary underline font-bold">Contactez Allo Electricien →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

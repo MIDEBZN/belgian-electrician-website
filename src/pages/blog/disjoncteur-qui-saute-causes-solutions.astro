@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi mon disjoncteur saute-t-il sans raison apparente ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un disjoncteur ne saute jamais sans raison. Les causes principales sont : une surcharge électrique (trop d'appareils branchés), un court-circuit franc, une fuite de courant vers la terre (défaut d'isolement) ou un disjoncteur vétuste/défectueux." }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-il dangereux de réenclencher un disjoncteur qui a sauté ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, si vous n'avez pas identifié la cause. Si le problème est un court-circuit, réenclencher peut provoquer des étincelles ou un début d'incendie. Si le disjoncteur ressaute immédiatement, n'insistez pas et appelez un électricien." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte le remplacement d'un disjoncteur à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le remplacement d'un disjoncteur coûte généralement entre 100€ et 200€ (pièce et main-d'œuvre), selon le modèle et l'accessibilité du tableau électrique. Un diagnostic préalable est souvent nécessaire." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre un disjoncteur qui saute et un différentiel ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le disjoncteur protège contre les surcharges et courts-circuits (protection du matériel). L'interrupteur différentiel saute en cas de fuite de courant (protection des personnes). Si tout le tableau se coupe, c'est souvent le différentiel général qui a déclenché." }
+    }
+  ]
+};
+---
+
+<Layout title="Disjoncteur qui Saute à Bruxelles ? Causes & Solutions (Guide 2025)" description="Votre disjoncteur saute tout le temps ? Découvrez les 5 causes principales (surcharge, court-circuit...) et nos solutions d'expert à Bruxelles. Dépannage 24/7." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Disjoncteur qui saute</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Dépannage Électrique</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Disjoncteur qui Saute : Les 5 Causes Principales et Comment Réagir
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>10 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">C'est une situation que nous avons tous connue à Bruxelles : vous êtes tranquillement installé chez vous, vous allumez le four ou la machine à laver, et soudain... <strong>plus de lumière</strong>. Le "plomb a sauté".</p>
+        
+        <p>Un <strong class="text-white">disjoncteur qui saute</strong> n'est jamais anodin. C'est le signe que votre installation électrique a détecté une anomalie et a coupé le courant pour vous protéger, vous et votre habitation, d'un risque d'incendie ou d'électrocution. Mais quelle est cette anomalie ? Est-ce grave ? Pouvez-vous régler le problème vous-même ?</p>
+
+        <div class="bg-red-900/20 border border-red-500/30 rounded-xl p-6 my-8">
+          <p class="text-red-400 font-bold mb-2 flex items-center gap-2"><span class="material-icons">warning</span>Sécurité avant tout</p>
+          <p class="text-sm">Si votre disjoncteur saute, ne le forcez <strong>jamais</strong> en position "ON" (marche) sans avoir identifié la cause. Si vous sentez une odeur de brûlé, entendez des grésillements ou voyez de la fumée, coupez l'alimentation générale et appelez immédiatement un électricien agréé au <a href="tel:+32465732348" class="text-white underline font-bold">0465 73 23 48</a>.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. La Surcharge Électrique : Trop d'appareils gourmands</h2>
+        <p>C'est la cause la plus fréquente à Bruxelles, surtout en hiver. Chaque circuit de votre maison est conçu pour supporter une certaine intensité (exprimée en Ampères). Si vous demandez plus de courant que le disjoncteur ne peut en laisser passer, il coupe pour éviter que les fils ne chauffent et ne fondent.</p>
+        
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Comment savoir si c'est une surcharge ?</h3>
+        <p>Le scénario typique :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Vous utilisiez plusieurs appareils énergivores en même temps (ex: Four + Lave-vaisselle + Bouilloire).</li>
+            <li>Le disjoncteur saute après quelques minutes d'utilisation (pas instantanément).</li>
+            <li>Le disjoncteur est chaud au toucher.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">La solution</h3>
+        <p>Débranchez l'appareil que vous veniez d'allumer et essayez de réenclencher le disjoncteur. Si cela tient, c'était bien une surcharge. Vous devrez à l'avenir éviter de faire fonctionner ces appareils simultanément sur le même circuit, ou demander à un professionnel de tirer une ligne dédiée pour vos gros électroménagers.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. Le Court-Circuit : Le contact interdit</h2>
+        <p>Plus violent et plus dangereux que la surcharge, le <strong>court-circuit</strong> se produit lorsque le fil de phase (conducteur) touche le fil neutre. L'intensité grimpe instantanément à des niveaux énormes, et le disjoncteur doit couper en une fraction de seconde (déclenchement magnétique).</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Les symptômes d'un court-circuit</h3>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Le disjoncteur saute <strong>immédiatement</strong> et violemment (bruit "CLAC").</li>
+            <li>Impossible de le réenclencher, il retombe instantanément.</li>
+            <li>Il peut y avoir eu une étincelle ou un bruit de pétard au niveau d'une prise ou d'un appareil.</li>
+        </ul>
+
+        <p>Les causes classiques incluent un câble d'alimentation écrasé, une prise arrachée du mur, ou de l'eau qui a pénétré dans un appareil électrique.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. La Fuite à la Terre : Danger d'électrocution</h2>
+        <p>Si c'est votre <strong>différentiel</strong> (le gros interrupteur avec un bouton "Test") qui saute, et non un petit disjoncteur divisionnaire, c'est qu'il y a une fuite de courant vers la terre. Cela signifie qu'un fil dénudé touche la carcasse métallique d'un appareil (machine à laver, frigo). Si vous touchiez cet appareil, vous pourriez être électrocuté. Le différentiel vous sauve la vie en coupant le courant.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Le coupable fréquent : l'humidité</h3>
+        <p>L'eau et l'électricité ne font pas bon ménage. Une infiltration d'eau dans une prise extérieure, ou de la condensation dans un luminaire de salle de bain sont des causes très fréquentes de déclenchement du différentiel.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">4. Un Appareil Électrique Défectueux</h2>
+        <p>Parfois, l'installation électrique va très bien, c'est l'appareil branché dessus qui pose problème. Un grille-pain dont la résistance est abîmée, un fer à repasser qui fuit, ou une vieille multiprise peuvent faire sauter les plombs.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Comment identifier l'appareil fautif ? (Méthode par élimination)</h3>
+        <ol class="list-decimal pl-6 space-y-2">
+            <li>Baissez tous les disjoncteurs du tableau.</li>
+            <li>Débranchez <strong>tous</strong> les appareils de la zone concernée.</li>
+            <li>Réenclenchez le disjoncteur principal, puis les petits disjoncteurs un par un.</li>
+            <li>Si le disjoncteur tient, rebranchez les appareils un par un jusqu'à ce que ça saute. Le dernier appareil branché est le coupable !</li>
+        </ol>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">5. Le Disjoncteur est Vétuste ou Défectueux</h2>
+        <p>Enfin, il arrive que le disjoncteur lui-même soit en cause. Après des années de service, le mécanisme interne peut s'user et devenir trop sensible (il saute même sans surcharge) ou au contraire se bloquer (danger !).</p>
+        <p>Si votre tableau électrique date des années 70 ou 80, ou s'il fait un bruit de bourdonnement constant, il est temps de faire appel à un expert pour un remplacement et une mise en conformité RGIE.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Que faire si je n'arrive pas à rétablir le courant ?</h2>
+        <p>Si malgré vos tests, la panne persiste, ne prenez aucun risque. L'électricité est dangereuse et peut causer des incendies invisibles à l'intérieur des murs.</p>
+        
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8">
+            <h3 class="text-xl font-bold text-white mb-4">Tarifs Dépannage Bruxelles (Allo Electricien)</h3>
+            <table class="w-full text-sm">
+                <tbody class="divide-y divide-white/5">
+                    <tr><td class="py-2">Déplacement Standard</td><td class="text-right font-bold text-primary">30€</td></tr>
+                    <tr><td class="py-2">Main d'œuvre (Journée)</td><td class="text-right font-bold text-primary">45€/h</td></tr>
+                    <tr><td class="py-2">Recherche de Panne Complexe</td><td class="text-right font-bold text-primary">Sur Devis</td></tr>
+                </tbody>
+            </table>
+            <div class="mt-6 text-center">
+                <a href="tel:+32465732348" class="inline-flex items-center justify-center gap-2 bg-primary text-navy font-bold px-6 py-3 rounded-lg hover:bg-primary-hover transition-colors">
+                    <span class="material-icons">call</span>
+                    Appeler un électricien (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+        <p>Nos électriciens interviennent dans les 19 communes de Bruxelles (Ixelles, Uccle, Saint-Gilles, Anderlecht, Schaerbeek...) en moins de 45 minutes pour diagnostiquer et réparer votre panne.</p>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

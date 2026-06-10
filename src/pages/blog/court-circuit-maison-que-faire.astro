@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre une surcharge et un court-circuit ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Une surcharge survient quand trop d'appareils tirent du courant (échauffement lent). Un court-circuit est un contact direct entre deux fils (explosion, étincelle, coupure immédiate)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Un court-circuit peut-il provoquer un incendie ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est une cause majeure d'incendie. L'arc électrique généré par le court-circuit peut atteindre plusieurs milliers de degrés et enflammer les matériaux environnants (isolants, bois, poussière)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment trouver l'appareil responsable du court-circuit ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Débranchez TOUS les appareils du circuit concerné. Remontez le disjoncteur. S'il tient, rebranchez les appareils un par un. Celui qui fait sauter le disjoncteur est le coupable." }
+    }
+  ]
+};
+---
+
+<Layout title="Court-Circuit Maison : Que Faire ? Causes et Solutions (2025)" description="Panne de courant brutale ? Odeur de brûlé ? C'est sûrement un court-circuit. Apprenez à identifier la cause, à sécuriser votre installation et à rétablir l'électricité en toute sécurité." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Court-Circuit</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-red-500 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">Urgence Électrique</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Court-Circuit à la Maison : Causes, Dangers et Solutions
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>9 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Un bruit sec ("CLAC !"), une étincelle, et soudain le noir complet. Vous venez probablement de subir un <strong>court-circuit</strong>. Contrairement à une simple panne de courant, le court-circuit est un incident violent qui signale un défaut majeur dans votre installation ou vos appareils.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Qu'est-ce qu'un court-circuit exactement ?</h2>
+        <p>En termes simples, l'électricité est "fainéante" : elle cherche toujours le chemin le plus court (d'où le nom) pour aller de la phase au neutre. Normalement, elle traverse vos appareils (ampoule, four...) qui offrent une résistance et transforment l'énergie en lumière ou chaleur.</p>
+        <p>Lors d'un court-circuit, les deux fils se touchent directement sans passer par un appareil. La résistance tombe à zéro, l'intensité devient infinie, et cela crée une surchauffe instantanée.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les 3 Causes Principales</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">1. L'Isolation des Fils Abîmée</h3>
+        <p>C'est la cause la plus fréquente dans les vieilles maisons bruxelloises. Les gaines en plastique ou en tissu (sur les très vieilles installations) sèchent et s'effritent. Les fils de cuivre finissent par se toucher à l'intérieur des tubes.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">2. L'Eau et l'Humidité</h3>
+        <p>L'eau est conductrice. Si une fuite d'eau atteint une prise ou une boîte de dérivation, elle crée un pont entre les fils. C'est le classique court-circuit "dégât des eaux" qui fait souvent aussi sauter le différentiel.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">3. Un Appareil Électroménager Défectueux</h3>
+        <p>Un grille-pain où une miette carbonisée touche les résistances, un câble d'aspirateur qui s'est coincé sous une porte et s'est dénudé... L'appareil crée lui-même le court-circuit dès qu'on le branche.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comment réagir face à un court-circuit ? (Méthode Pas à Pas)</h2>
+        <p><strong>Ne paniquez pas.</strong> Votre disjoncteur a joué son rôle et a coupé le courant pour éviter l'incendie.</p>
+
+        <ol class="list-decimal pl-6 space-y-2">
+            <li><strong>Identifiez la zone :</strong> Allez au tableau électrique. Repérez le disjoncteur qui est baissé. Lisez l'étiquette (ex: "Cuisine" ou "Prises Salon").</li>
+            <li><strong>Isolez le circuit :</strong> Laissez ce disjoncteur baissé pour l'instant. Remontez le disjoncteur différentiel général s'il a sauté aussi. Vous devriez avoir du courant dans le reste de la maison.</li>
+            <li><strong>Débranchez tout :</strong> Dans la pièce concernée par la panne, débranchez absolument tous les appareils. N'oubliez pas ceux qui sont cachés (hotte, frigo, radio-réveil).</li>
+            <li><strong>Le test :</strong> Remontez le disjoncteur du circuit.
+                <ul class="list-disc pl-6 mt-2">
+                    <li><strong>S'il tient :</strong> Le problème venait d'un des appareils que vous avez débranchés. Rebranchez-les un par un jusqu'à trouver le coupable.</li>
+                    <li><strong>S'il ressaute aussitôt (CLAC !) :</strong> Le court-circuit est dans le mur (fils, prises, interrupteurs). C'est plus grave. <strong>N'insistez pas !</strong> Laissez le disjoncteur coupé et appelez un électricien.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Quand le court-circuit est "franc" (Dead Short)</h2>
+        <p>Si le disjoncteur refuse catégoriquement de remonter, même avec tout débranché, c'est ce qu'on appelle un court-circuit franc. Cela signifie que les fils sont soudés ensemble quelque part.</p>
+        <p>Il ne faut surtout pas forcer le disjoncteur ou tenter de le scotcher en position haute (cela s'est déjà vu et c'est incendie garanti !). La seule solution est d'utiliser un appareil de mesure (ohmmètre/mégohemètre) pour localiser l'endroit exact du défaut dans les murs.</p>
+
+        <div class="bg-red-900/20 border border-red-500/30 rounded-xl p-6 my-8">
+            <h3 class="text-xl font-bold text-red-400 mb-2">🔥 DANGER ARC ÉLECTRIQUE</h3>
+            <p>Un court-circuit peut dégager une énergie énorme. Si vous voyez des traces noires autour d'une prise ou d'un interrupteur, ne touchez à rien. L'isolant a brûlé et des gaz toxiques peuvent s'être dégagés.</p>
+        </div>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Recherche de Court-Circuit à Bruxelles</h3>
+            <p class="mb-4">Nos électriciens sont équipés pour localiser précisément les défauts sans casser tous les murs. Intervention urgente possible 24/7.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Forfait Recherche de Panne</span>
+                    <span class="block text-white font-bold">Diagnostic précis & Réparation</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

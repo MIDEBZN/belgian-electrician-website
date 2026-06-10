@@ -1,68 +1,267 @@
----
+﻿---
 interface Props {
   title: string;
   description?: string;
+  schema?: any;
 }
 
-const { title, description = "BE-ELEC - Votre électricien de confiance à Bruxelles. Dépannage, installation et mise en conformité électrique." } = Astro.props;
+import '../styles/global.css';
+
+const { title, description = "Allo Electricien - Électricien agréé à Bruxelles. Dépannage urgent 24/7, mise en conformité RGIE, installation électrique, bornes de recharge. Intervention en moins de 45 minutes.", schema } = Astro.props;
 const currentPath = Astro.url.pathname;
+const canonicalURL = new URL(currentPath, 'https://www.allo-electricien.be');
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "name": "Allo Electricien",
+  "description": "Électricien professionnel agréé à Bruxelles. Dépannage urgent 24/7, installation électrique, mise en conformité RGIE, domotique, bornes de recharge.",
+  "url": "https://www.allo-electricien.be",
+  "telephone": "+32465732348",
+  "email": "contact@allo-electricien.be",
+  "areaServed": {
+    "@type": "City",
+    "name": "Bruxelles",
+    "sameAs": "https://fr.wikipedia.org/wiki/R%C3%A9gion_de_Bruxelles-Capitale"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "50.8503",
+    "longitude": "4.3517"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bruxelles",
+    "addressRegion": "Bruxelles-Capitale",
+    "addressCountry": "BE"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "00:00", "closes": "23:59", "description": "Urgences uniquement" }
+  ],
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+  "image": "https://www.allo-electricien.be/favicon.svg",
+  "sameAs": [
+    "https://www.google.com/maps?cid=7761265323273078199",
+    "https://www.google.com/maps/d/edit?mid=1TMDECr9bWNolKRNKdIfqWBhQfz4PDgY",
+    "https://sites.google.com/view/alloelectricienbruxelles",
+    "https://docs.google.com/document/d/1YGEhbjYz2lKE9M0gX3UtB8SCTAVOKUYoONPXQ6karsA",
+    "https://docs.google.com/spreadsheets/d/12OY-cs-7Zg4JcsDqdA1ChD4ztFI5WOwvM-aPoU0Blcc",
+    "https://docs.google.com/presentation/d/1-w288lFLp1X98z6TGI88fEL_gK8yyM-y_OLcHZ5dmjU",
+    "https://drive.google.com/drive/folders/1wvYstiVkstpwCNQjPq6oC5njB1t0oSRT",
+    "https://www.facebook.com/alloelectricienbxl/",
+    "https://www.instagram.com/alloelectricienbxl/",
+    "https://www.tiktok.com/@alloelectricienbxl",
+    "https://www.youtube.com/@AlloElectricienBruxelles"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services Électriques",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dépannage Électrique Urgent 24/7", "url": "https://www.allo-electricien.be/services/depannage-electrique" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mise en Conformité RGIE", "url": "https://www.allo-electricien.be/services/mise-en-conformite" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation Tableau Électrique", "url": "https://www.allo-electricien.be/services/tableau-electrique" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Borne de Recharge Véhicule Électrique", "url": "https://www.allo-electricien.be/services/borne-de-recharge" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation Domotique", "url": "https://www.allo-electricien.be/services/domotique" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation Électrique Complète", "url": "https://www.allo-electricien.be/services/installation-electrique" } }
+    ]
+  }
+};
+
+const breadcrumbItems = currentPath === '/' ? [] : currentPath.split('/').filter(Boolean).map((segment, index, arr) => ({
+  "@type": "ListItem",
+  "position": index + 2,
+  "name": segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+  "item": `https://www.allo-electricien.be/${arr.slice(0, index + 1).join('/')}`
+}));
+
+const breadcrumbSchema = breadcrumbItems.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.allo-electricien.be/" },
+    ...breadcrumbItems
+  ]
+} : null;
 ---
 
 <!doctype html>
 <html lang="fr" class="dark">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL.href} />
+    <!-- Bilingual hreflang -->
+    <link rel="alternate" hreflang="fr" href={canonicalURL.href} />
+    <link rel="alternate" hreflang="nl" href={canonicalURL.href} />
+    <link rel="alternate" hreflang="x-default" href={canonicalURL.href} />
+    <!-- Geo meta tags -->
+    <meta name="geo.region" content="BE-BRU" />
+    <meta name="geo.placename" content="Bruxelles" />
+    <meta name="geo.position" content="50.8503;4.3517" />
+    <meta name="ICBM" content="50.8503, 4.3517" />
+    <!-- Open Graph -->
+    <meta property="og:title" content={`${title} | Allo Electricien Électricien Bruxelles`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:locale" content="fr_BE" />
+    <meta property="og:site_name" content="Allo Electricien" />
+    <!-- Keywords -->
+    <meta name="keywords" content="électricien bruxelles, dépannage électrique, mise en conformité RGIE, installation électrique, borne de recharge, domotique, tableau électrique, électricien urgent, 24/7" />
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <title>{title} | BE-ELEC Bruxelles</title>
+    <title>{title} | Allo Electricien Électricien Bruxelles</title>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+	
+	<!-- Allo Electricien tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17956303054"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17956303054');
+</script>
+
+<!-- Event snippet for Click to call conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17956303054/9Q2kCLzco_kbEM7hnfJC',
+      'value': 1.0,
+      'currency': 'EUR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+  
   </head>
   <body class="font-display bg-bg-dark text-slate-100 antialiased overflow-x-hidden">
     <!-- Floating buttons -->
-    <a href="https://wa.me/32470000000" target="_blank" class="fixed bottom-24 right-6 z-[60] flex items-center gap-3 group">
+    <a href="https://wa.me/32465732348" target="_blank" class="fixed bottom-24 right-6 z-[60] flex items-center gap-3 group">
       <span class="bg-white text-navy text-xs font-bold py-2 px-4 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block border border-gray-100">Des questions? Contactez-nous</span>
       <div class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer border-2 border-white">
         <svg fill="currentColor" height="30" viewBox="0 0 24 24" width="30"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
       </div>
     </a>
-    <a href="tel:+32470000000" class="fixed bottom-6 right-6 z-[60] flex items-center gap-3 group">
+    <a href="tel:+32465732348" class="fixed bottom-6 right-6 z-[60] flex items-center gap-3 group">
       <span class="bg-white text-navy text-xs font-bold py-2 px-4 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">Besoin d'aide ?</span>
       <div class="bg-accent-blue text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
         <span class="material-icons text-2xl">call</span>
       </div>
     </a>
 
-    <!-- Urgency banner -->
-    <div class="sticky top-0 z-50 bg-primary text-navy font-bold py-3 shadow-lg flex justify-center items-center gap-2 animate-pulse">
-      <span class="material-icons text-xl">bolt</span>
-      <span>URGENCE 24/7 : +32 470 00 00 00</span>
-      <span class="material-icons text-xl">bolt</span>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="bg-navy border-b border-white/10 relative z-40">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20">
-          <div class="flex items-center">
-            <a href="/" class="flex items-center gap-2">
-              <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span class="material-icons text-navy text-2xl">electric_bolt</span>
-              </div>
-              <span class="font-bold text-xl text-white tracking-tight">BE-ELEC</span>
+    <!-- Live Chat Widget -->
+    <div id="chat-widget" class="fixed bottom-44 right-6 z-[60] hidden">
+      <div class="bg-navy border border-white/10 rounded-2xl shadow-2xl w-80 overflow-hidden">
+        <div class="bg-primary text-navy p-4 flex justify-between items-center">
+          <div class="flex items-center gap-2">
+            <span class="material-icons">chat</span>
+            <span class="font-bold">Chat en Direct</span>
+          </div>
+          <button id="chat-close" class="hover:bg-navy/20 rounded-full p-1 transition-colors">
+            <span class="material-icons text-sm">close</span>
+          </button>
+        </div>
+        <div class="p-4 bg-navy-light space-y-3 max-h-48 overflow-y-auto">
+          <div class="flex gap-2">
+            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-navy text-sm">electric_bolt</span>
+            </div>
+            <div class="bg-navy p-3 rounded-lg rounded-tl-none text-sm text-gray-300">
+              <p>Bonjour ! 👋 Comment pouvons-nous vous aider ?</p>
+              <p class="text-xs text-gray-500 mt-1">Temps de réponse : ~2 min</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-3 bg-navy border-t border-white/10">
+          <div class="flex gap-2 mb-2">
+            <a href="tel:+32465732348" class="flex-1 flex items-center justify-center gap-1 bg-primary hover:bg-primary-hover text-navy font-bold py-2 rounded-lg text-sm transition-colors">
+              <span class="material-icons text-base">call</span>Appeler
+            </a>
+            <a href="https://wa.me/32465732348" target="_blank" class="flex-1 flex items-center justify-center gap-1 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-2 rounded-lg text-sm transition-colors">
+              <span class="material-icons text-base">chat</span>WhatsApp
             </a>
           </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <a href="/" class:list={[currentPath === '/' ? 'text-primary font-medium' : 'text-gray-300 hover:text-primary', 'transition-colors']}>Accueil</a>
-            <a href="/services" class:list={[currentPath.startsWith('/services') ? 'text-primary font-medium' : 'text-gray-300 hover:text-primary', 'transition-colors']}>Services</a>
-            <a href="/zones" class:list={[currentPath.startsWith('/zones') ? 'text-primary font-medium' : 'text-gray-300 hover:text-primary', 'transition-colors']}>Zones</a>
-            <a href="/a-propos" class:list={[currentPath.startsWith('/a-propos') ? 'text-primary font-medium' : 'text-gray-300 hover:text-primary', 'transition-colors']}>À propos</a>
-            <a href="/contact" class="bg-primary hover:bg-primary-hover text-navy px-5 py-2.5 rounded-lg font-bold transition-all shadow-md hover:shadow-lg">Devis Gratuit</a>
+          <a href="/contact" class="block text-center text-xs text-gray-400 hover:text-primary transition-colors">Ou envoyez-nous un message →</a>
+        </div>
+      </div>
+    </div>
+    <button id="chat-toggle" class="fixed bottom-44 right-6 z-[59] bg-navy border-2 border-primary text-primary w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
+      <span class="material-icons text-2xl">chat</span>
+    </button>
+
+    <!-- Emergency Hotline Banner -->
+    <div class="sticky top-0 z-50 bg-gradient-to-r from-red-600 via-primary to-red-600 text-navy font-bold shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-2">
+        <div class="flex items-center gap-2">
+          <span class="material-icons text-lg animate-pulse">bolt</span>
+          <span class="text-sm font-extrabold">URGENCE ÉLECTRIQUE 24/7</span>
+        </div>
+        <a href="tel:+32465732348" class="flex items-center gap-2 bg-navy text-primary px-4 py-1.5 rounded-full font-bold text-sm hover:bg-navy-light transition-colors">
+          <span class="material-icons text-base">call</span>
+          0465 73 23 48
+        </a>
+        <div class="hidden md:flex items-center gap-1 text-sm">
+          <span class="material-icons text-base">timer</span>
+          <span class="font-bold">Intervention en -45min</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Navigation with Phone -->
+    <nav class="sticky top-[44px] bg-navy/95 backdrop-blur-md border-b border-white/10 z-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="flex items-center gap-2">
+              <div class="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
+                <span class="material-icons text-navy text-xl">electric_bolt</span>
+              </div>
+              <span class="font-bold text-lg text-white tracking-tight">Allo Electricien</span>
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="/" class:list={[currentPath === '/' ? 'text-primary font-medium' : 'text-gray-300 hover:text-primary', 'transition-colors text-sm']}>Accueil</a>
+            <a href="/services" class:list={[currentPath.startsWith('/services') ? 'text-primary font-medium' : 'text-gray-300 hover:text-primary', 'transition-colors text-sm']}>Services</a>
+            <a href="/zones" class:list={[currentPath.startsWith('/zones') || currentPath.startsWith('/electricien-') ? 'text-primary font-medium' : 'text-gray-300 hover:text-primary', 'transition-colors text-sm']}>Zones</a>
+            <a href="/blog" class:list={[currentPath.startsWith('/blog') ? 'text-primary font-medium' : 'text-gray-300 hover:text-primary', 'transition-colors text-sm']}>Blog</a>
+            <a href="/a-propos" class:list={[currentPath.startsWith('/a-propos') ? 'text-primary font-medium' : 'text-gray-300 hover:text-primary', 'transition-colors text-sm']}>À propos</a>
+            <a href="tel:+32465732348" class="flex items-center gap-1 text-primary font-bold text-sm hover:text-white transition-colors">
+              <span class="material-icons text-base">call</span>0465 73 23 48
+            </a>
+            <a href="/contact" class="bg-primary hover:bg-primary-hover text-navy px-5 py-2 rounded-lg font-bold transition-all shadow-md hover:shadow-lg text-sm">Devis Gratuit</a>
           </div>
           <!-- Mobile menu button -->
-          <div class="md:hidden flex items-center">
+          <div class="md:hidden flex items-center gap-3">
+            <a href="tel:+32465732348" class="bg-primary text-navy w-9 h-9 rounded-full flex items-center justify-center">
+              <span class="material-icons text-lg">call</span>
+            </a>
             <button id="mobile-menu-btn" class="text-white" aria-label="Menu">
               <span class="material-icons text-3xl">menu</span>
             </button>
@@ -74,14 +273,148 @@ const currentPath = Astro.url.pathname;
         <a href="/" class="block py-3 text-gray-300 hover:text-primary">Accueil</a>
         <a href="/services" class="block py-3 text-gray-300 hover:text-primary">Services</a>
         <a href="/zones" class="block py-3 text-gray-300 hover:text-primary">Zones</a>
+        <a href="/blog" class="block py-3 text-gray-300 hover:text-primary">Blog</a>
         <a href="/a-propos" class="block py-3 text-gray-300 hover:text-primary">À propos</a>
+        <a href="tel:+32465732348" class="flex items-center gap-2 py-3 text-primary font-bold">
+          <span class="material-icons">call</span>0465 73 23 48
+        </a>
         <a href="/contact" class="block py-3 mt-2 bg-primary text-navy text-center font-bold rounded-lg">Devis Gratuit</a>
       </div>
     </nav>
 
+    <!-- Trust Badges Bar (every page) -->
+    <div class="bg-navy-light border-b border-white/5 py-3 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between gap-4 overflow-x-auto scrollbar-hide">
+          <div class="flex items-center gap-2 whitespace-nowrap">
+            <span class="material-icons text-primary text-lg">workspace_premium</span>
+            <span class="text-xs text-gray-300 font-medium"><strong class="text-white">15+ ans</strong> d'expérience</span>
+          </div>
+          <div class="w-px h-4 bg-white/10 hidden sm:block"></div>
+          <div class="flex items-center gap-2 whitespace-nowrap">
+            <span class="material-icons text-primary text-lg">verified</span>
+            <span class="text-xs text-gray-300 font-medium"><strong class="text-white">Certifié RGIE</strong> & Agréé</span>
+          </div>
+          <div class="w-px h-4 bg-white/10 hidden sm:block"></div>
+          <div class="flex items-center gap-2 whitespace-nowrap">
+            <span class="material-icons text-primary text-lg">shield</span>
+            <span class="text-xs text-gray-300 font-medium"><strong class="text-white">Garantie 2 ans</strong> main-d'œuvre</span>
+          </div>
+          <div class="w-px h-4 bg-white/10 hidden sm:block"></div>
+          <div class="flex items-center gap-2 whitespace-nowrap">
+            <span class="material-icons text-primary text-lg">timer</span>
+            <span class="text-xs text-gray-300 font-medium"><strong class="text-white">&lt;45 min</strong> d'intervention</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <main>
       <slot />
     </main>
+
+    <!-- Sitewide Quick Contact + Trust Section (before footer) -->
+    <section class="bg-navy-light border-t border-white/5 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Inline Contact Form -->
+          <div class="bg-navy rounded-2xl p-8 border border-white/10 shadow-xl">
+            <h3 class="text-2xl font-bold text-white mb-2">Demandez Votre Devis Gratuit</h3>
+            <p class="text-gray-400 text-sm mb-6">Réponse garantie sous 2h — 7j/7</p>
+            <form action="https://formsubmit.co/midebzn@gmail.com" method="POST" class="space-y-4">
+              <input type="hidden" name="_next" value="https://www.allo-electricien.be/thank-you">
+              <input type="hidden" name="_subject" value="Nouveau contact footer via Allo-Electricien.be">
+              <input type="hidden" name="_captcha" value="false">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="text" name="name" placeholder="Votre nom" class="w-full rounded-lg border border-white/10 bg-navy-light/50 text-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                <input type="tel" name="phone" placeholder="0465 XX XX XX" class="w-full rounded-lg border border-white/10 bg-navy-light/50 text-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+              </div>
+              <select name="service" class="w-full rounded-lg border border-white/10 bg-navy-light/50 text-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
+                <option value="">Type de service...</option>
+                <option>Dépannage Urgent</option>
+                <option>Installation Électrique</option>
+                <option>Mise en Conformité RGIE</option>
+                <option>Tableau Électrique</option>
+                <option>Borne de Recharge</option>
+                <option>Domotique</option>
+                <option>Autre</option>
+              </select>
+              <textarea name="message" placeholder="Décrivez votre besoin..." rows="3" class="w-full rounded-lg border border-white/10 bg-navy-light/50 text-white px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+              <button type="submit" class="w-full bg-primary hover:bg-primary-hover text-navy font-bold py-3 rounded-lg text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+                <span class="material-icons text-lg">send</span>Envoyer ma Demande de Devis
+              </button>
+            </form>
+          </div>
+
+          <!-- Trust Badges + Business Info -->
+          <div class="space-y-6">
+            <h3 class="text-2xl font-bold text-white mb-2">Pourquoi Nous Faire Confiance ?</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-navy rounded-xl p-5 border border-white/10 flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="material-icons text-primary text-2xl">workspace_premium</span>
+                </div>
+                <div>
+                  <p class="text-white font-bold">15+ Ans d'Expérience</p>
+                  <p class="text-gray-400 text-xs">Depuis 2009, au service des Bruxellois</p>
+                </div>
+              </div>
+              <div class="bg-navy rounded-xl p-5 border border-white/10 flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="material-icons text-primary text-2xl">verified</span>
+                </div>
+                <div>
+                  <p class="text-white font-bold">Certifié RGIE</p>
+                  <p class="text-gray-400 text-xs">Agréé, assuré RC Pro, normes belges</p>
+                </div>
+              </div>
+              <div class="bg-navy rounded-xl p-5 border border-white/10 flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="material-icons text-primary text-2xl">shield</span>
+                </div>
+                <div>
+                  <p class="text-white font-bold">Garantie 2 Ans</p>
+                  <p class="text-gray-400 text-xs">Main-d'œuvre et matériel garantis</p>
+                </div>
+              </div>
+              <div class="bg-navy rounded-xl p-5 border border-white/10 flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="material-icons text-primary text-2xl">timer</span>
+                </div>
+                <div>
+                  <p class="text-white font-bold">Intervention &lt;45 min</p>
+                  <p class="text-gray-400 text-xs">Urgences traitées en priorité 24/7</p>
+                </div>
+              </div>
+              <div class="bg-navy rounded-xl p-5 border border-white/10 flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="material-icons text-primary text-2xl">star</span>
+                </div>
+                <div>
+                  <p class="text-white font-bold">4.9/5 — 127 Avis</p>
+                  <p class="text-gray-400 text-xs">Avis Google vérifiés</p>
+                </div>
+              </div>
+            </div>
+            <!-- Review Badge -->
+            <div class="bg-navy rounded-xl p-4 border border-white/10 flex items-center gap-4">
+              <div class="flex text-primary">
+                <span class="material-icons">star</span>
+                <span class="material-icons">star</span>
+                <span class="material-icons">star</span>
+                <span class="material-icons">star</span>
+                <span class="material-icons">star</span>
+              </div>
+              <div>
+                <p class="text-white font-bold text-sm">Noté 4.9/5 sur Google</p>
+                <p class="text-gray-400 text-xs">Basé sur 127 avis vérifiés</p>
+              </div>
+              <a href="https://share.google/kubeOS15Yixt4p093" target="_blank" rel="noopener noreferrer" class="ml-auto text-primary text-xs font-bold hover:underline">Voir les avis →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-navy border-t border-white/10 pt-16 pb-8">
@@ -92,39 +425,79 @@ const currentPath = Astro.url.pathname;
               <div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
                 <span class="material-icons text-navy text-lg">electric_bolt</span>
               </div>
-              <span class="font-bold text-xl text-white tracking-tight">BE-ELEC</span>
+              <span class="font-bold text-xl text-white tracking-tight">Allo Electricien</span>
             </div>
-            <p class="text-gray-400 text-sm mb-6">Votre partenaire de confiance pour tous travaux d'électricité à Bruxelles. Service rapide, agréé et garanti.</p>
+            <p class="text-gray-400 text-sm mb-4">Votre partenaire de confiance pour tous travaux d'électricité à Bruxelles. 15+ ans d'expérience, certifié RGIE, garantie 2 ans.</p>
+            <div class="space-y-3 text-sm">
+              <a href="https://share.google/kubeOS15Yixt4p093" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
+                <span class="material-icons text-primary text-base">location_on</span>
+                Rue Froebel 3, 1000 Bruxelles
+              </a>
+              <a href="tel:+32465732348" class="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
+                <span class="material-icons text-primary text-base">phone</span>
+                0465 73 23 48
+              </a>
+              <a href="mailto:contact@allo-electricien.be" class="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
+                <span class="material-icons text-primary text-base">email</span>
+                contact@allo-electricien.be
+              </a>
+            </div>
+            <!-- Footer Trust Badges -->
+            <div class="flex items-center gap-3 mt-4 pt-4 border-t border-white/10">
+              <div class="flex items-center gap-1 text-xs text-gray-400">
+                <span class="material-icons text-primary text-sm">verified</span>RGIE
+              </div>
+              <div class="flex items-center gap-1 text-xs text-gray-400">
+                <span class="material-icons text-primary text-sm">shield</span>Assuré
+              </div>
+              <div class="flex items-center gap-1 text-xs text-gray-400">
+                <span class="material-icons text-primary text-sm">workspace_premium</span>15+ ans
+              </div>
+            </div>
           </div>
           <div>
-            <h4 class="text-white font-bold mb-6">Liens Rapides</h4>
-            <ul class="space-y-3 text-sm text-gray-400">
+            <h3 class="text-white font-bold mb-6">Liens Rapides</h4>
+            <ul class="space-y-3 text-sm text-gray-300">
               <li><a class="hover:text-primary transition-colors" href="/">Accueil</a></li>
               <li><a class="hover:text-primary transition-colors" href="/services">Nos Services</a></li>
               <li><a class="hover:text-primary transition-colors" href="/zones">Zones d'Intervention</a></li>
               <li><a class="hover:text-primary transition-colors" href="/a-propos">À propos</a></li>
               <li><a class="hover:text-primary transition-colors" href="/contact">Contact</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/blog">Blog</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="text-white font-bold mb-6">Services</h4>
-            <ul class="space-y-3 text-sm text-gray-400">
-              <li><a class="hover:text-primary transition-colors" href="/services">Dépannage Urgence</a></li>
-              <li><a class="hover:text-primary transition-colors" href="/services">Mise en Conformité</a></li>
-              <li><a class="hover:text-primary transition-colors" href="/services">Domotique</a></li>
-              <li><a class="hover:text-primary transition-colors" href="/services">Bornes de Recharge</a></li>
+            <h3 class="text-white font-bold mb-6">Services</h4>
+            <ul class="space-y-3 text-sm text-gray-300">
+              <li><a class="hover:text-primary transition-colors" href="/services/depannage-electrique">Dépannage Urgent 24/7</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/services/mise-en-conformite">Mise en Conformité</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/services/tableau-electrique">Tableau Électrique</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/services/borne-de-recharge">Bornes de Recharge</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/services/domotique">Domotique</a></li>
+              <li><a class="hover:text-primary transition-colors" href="/services/installation-electrique">Installation Électrique</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="text-white font-bold mb-6">Urgence 24/7</h4>
-            <p class="text-gray-400 text-sm mb-4">Une panne ? Nous intervenons dans l'heure.</p>
-            <a href="tel:+32470000000" class="block w-full text-center bg-primary hover:bg-primary-hover text-navy font-bold py-3 rounded-lg transition-colors">
-              Appeler maintenant
+            <h3 class="text-white font-bold mb-4">Urgence 24/7</h4>
+            <p class="text-gray-300 text-sm mb-4">Une panne ? Intervention en moins de 45 minutes, 24h/24.</p>
+            <a href="tel:+32465732348" class="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary-hover text-navy font-bold py-3 rounded-lg transition-colors mb-3">
+              <span class="material-icons">call</span>Appeler maintenant
             </a>
+            <a href="/contact" class="flex items-center justify-center gap-2 w-full bg-white/10 hover:bg-white/20 text-white font-bold py-3 rounded-lg border border-white/20 transition-colors text-sm">
+              <span class="material-icons text-base">description</span>Devis en ligne
+            </a>
+            <div class="mt-4 bg-navy-light rounded-lg p-3 border border-white/10">
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <span class="material-icons text-primary text-sm">schedule</span>
+                <div>
+                  <p class="text-white font-medium">Disponible 24h/24 â€” 7j/7</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} BE-ELEC Bruxelles. Tous droits réservés.</p>
+        <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <p>&copy; {new Date().getFullYear()} Allo Electricien — Électricien Bruxelles. Tous droits réservés.</p>
           <div class="flex gap-6 mt-4 md:mt-0">
             <a class="hover:text-white transition-colors" href="#">Mentions Légales</a>
             <a class="hover:text-white transition-colors" href="#">Politique de Confidentialité</a>
@@ -134,11 +507,27 @@ const currentPath = Astro.url.pathname;
     </footer>
 
     <script>
+      // Mobile menu toggle
       const btn = document.getElementById('mobile-menu-btn');
       const menu = document.getElementById('mobile-menu');
       if (btn && menu) {
         btn.addEventListener('click', () => menu.classList.toggle('hidden'));
       }
+      // Chat widget toggle
+      const chatToggle = document.getElementById('chat-toggle');
+      const chatWidget = document.getElementById('chat-widget');
+      const chatClose = document.getElementById('chat-close');
+      if (chatToggle && chatWidget && chatClose) {
+        chatToggle.addEventListener('click', () => {
+          chatWidget.classList.toggle('hidden');
+          chatToggle.classList.toggle('hidden');
+        });
+        chatClose.addEventListener('click', () => {
+          chatWidget.classList.add('hidden');
+          chatToggle.classList.remove('hidden');
+        });
+      }
     </script>
   </body>
 </html>
+

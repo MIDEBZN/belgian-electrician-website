@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi ma prise fait-elle 'Bizzz' ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ce bruit (grésillement) est le son de l'électricité qui saute entre deux conducteurs mal connectés. C'est un arc électrique continu. Cela dégage énormément de chaleur et peut mettre le feu." }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce urgent si ma prise bourdonne ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est une URGENCE ABSOLUE. Arrêtez d'utiliser la prise immédiatement. Coupez le disjoncteur concerné. Si vous continuez, le plastique va fondre et l'incendie est proche." }
+    },
+    {
+      "@type": "Question",
+      "name": "Un chargeur peut-il faire du bruit ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, parfois le transformateur d'un chargeur de téléphone siffle ou bourdonne légèrement. Si le bruit s'arrête quand vous débranchez le chargeur, c'est le chargeur. Si le bruit vient du mur même sans rien branché (ou avec autre chose), c'est la prise." }
+    }
+  ]
+};
+---
+
+<Layout title="Prise Électrique qui fait du Bruit (Grésillement) : DANGER !" description="Votre prise électrique bourdonne, siffle ou grésille ? Attention, c'est le signe d'un arc électrique dangereux. Risque d'incendie imminent à Bruxelles." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Prise qui Bruit</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-red-500 bg-red-500/10 px-3 py-1 rounded-full animate-pulse">ALERTE INCENDIE</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Ma Prise Électrique fait du Bruit (Grésillement) : Que Faire ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>6 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Une prise électrique doit être silencieuse. Si vous entendez un bruit venant de votre prise — que ce soit un <strong>bourdonnement</strong> sourd, un <strong>sifflement</strong> ou un <strong>grésillement</strong> (comme du bacon qui cuit) — vous avez un problème sérieux.</p>
+        
+        <p><strong class="text-white bg-red-600/20 px-2 py-1 rounded">Ce bruit n'est pas "normal". C'est le son d'un incendie qui se prépare.</strong></p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le Grésillement = Arc Électrique</h2>
+        <p>Le bruit de "friture" ou de crépitement que vous entendez est provoqué par des <strong>arcs électriques</strong> (micro-étincelles) à l'intérieur du mécanisme de la prise. Cela arrive quand :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Un fil est mal serré dans sa borne.</li>
+            <li>Le fil est cassé ou oxydé.</li>
+            <li>Les lamelles de la prise sont détendues et ne touchent pas bien la fiche de l'appareil.</li>
+        </ul>
+        <p>L'électricité essaie de "sauter" le vide. Cet arc atteint des températures très élevées (plus de 1000°C localement), ce qui fait fondre le plastique et peut enflammer les matériaux proches.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le Bourdonnement (Hum)</h2>
+        <p>Un bourdonnement grave et continu peut indiquer une <strong>surcharge</strong>. Le courant qui passe est trop fort pour la prise, et les composants entrent en vibration magnétique. Cela chauffe également.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Que faire immédiatement ?</h2>
+        <ol class="list-decimal pl-6 space-y-2 font-bold text-white">
+            <li>DÉBRANCHEZ l'appareil connecté à cette prise.</li>
+            <li>ÉCOUTEZ. Si le bruit s'arrête, la prise est défectueuse ou surchargée. Ne l'utilisez plus.</li>
+            <li>SI LE BRUIT CONTINUE même sans rien branché : COUPEZ LE DISJONCTEUR au tableau général. C'est un court-circuit interne dans le mur ou la prise, c'est très dangereux.</li>
+            <li>APPELEZ UN ÉLECTRICIEN pour remplacer la prise et vérifier la ligne.</li>
+        </ol>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Ne tentez pas le diable</h2>
+        <p>Ignorer une prise qui grésille, c'est comme ignorer une odeur de gaz. Le problème ne va pas disparaître, il va s'aggraver jusqu'à la panne totale ou l'incendie. Le remplacement d'une prise est une intervention rapide et peu coûteuse comparée aux dégâts potentiels.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Intervention Urgente Prise Défectueuse</h3>
+            <p class="mb-4">Nous intervenons dans l'heure à Bruxelles pour sécuriser et remplacer vos prises dangereuses.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Dépannage Sécurité</span>
+                    <span class="block text-white font-bold">Bruxelles & Périphérie</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    0465 73 23 48
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

@@ -1,0 +1,121 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qui paie l'installation de la borne de recharge en copropriété ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si vous faites la demande pour votre usage personnel, l'intégralité des frais (la borne, le câblage, et l'éventuelle adaptation du réseau) est à votre charge exclusive." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je brancher ma voiture sur une prise classique dans mon box ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est extrêmement dangereux et fortement déconseillé par les pompiers de Bruxelles. Une prise classique n'est pas conçue pour délivrer 10 ou 16 ampères en continu pendant 10 heures. Le risque de surchauffe et d'incendie est très élevé." }
+    },
+    {
+      "@type": "Question",
+      "name": "Le load balancing (gestion dynamique), c'est quoi ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si plusieurs voisins installent des bornes, le load balancing est une fonctionnalité intelligente qui répartit la puissance électrique disponible entre toutes les voitures connectées, évitant ainsi la surcharge du réseau de l'immeuble." }
+    }
+  ]
+};
+---
+
+<Layout title="Borne de Recharge en Copropriété à Bruxelles : Guide Complet Sibelga" description="Comment installer une borne de recharge électrique dans un parking d'immeuble à Bruxelles ? Suivez notre guide pas à pas avec Sibelga et le syndic." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Borne Recharge Copropriété</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Véhicules Électriques</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Installer une borne de recharge en copropriété à Bruxelles : le guide Sibelga
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Installer une borne de recharge dans le parking souterrain de votre immeuble à Bruxelles peut sembler complexe. Pourtant, la loi belge a évolué grâce au <strong class="text-white">"droit à la prise"</strong>. Pour réussir, vous devez obtenir l'accord du syndic, demander un raccordement à Sibelga si nécessaire, et confier les travaux à un <a href="/urgence/bruxelles/" class="text-primary hover:underline">électricien certifié</a>.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le "Droit à la prise" : ce que dit la loi belge</h2>
+        <p>Tout copropriétaire a le droit d'installer à ses propres frais une borne de recharge sur son emplacement de parking privé. Cependant, vous avez l'obligation d'en informer le syndic et l'Assemblée Générale par <strong class="text-white">lettre recommandée au moins 2 mois avant</strong> le début des travaux. L'AG ne peut plus refuser votre demande sans "motif légitime".</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les 3 solutions techniques pour se raccorder en immeuble</h2>
+
+        <div class="space-y-4 my-6">
+          <div class="bg-navy-light border border-white/10 rounded-xl p-5">
+            <p class="text-primary font-bold mb-2">Solution 1 : Raccordement direct sur votre compteur privé</p>
+            <p class="text-sm">La plus simple si votre compteur individuel est situé près du parking. L'électricien tire un nouveau câble directement de votre compteur jusqu'à votre place. L'électricité est ajoutée à votre facture d'appartement.</p>
+          </div>
+          <div class="bg-navy-light border border-white/10 rounded-xl p-5">
+            <p class="text-primary font-bold mb-2">Solution 2 : Raccordement sur les parties communes</p>
+            <p class="text-sm">Si votre compteur est à l'étage, impossible de tirer un câble jusqu'au parking. L'installation se branche alors sur le compteur des parties communes avec une "borne intelligente" à décompteur. Nécessite un accord solide de la copropriété.</p>
+          </div>
+          <div class="bg-navy-light border border-white/10 rounded-xl p-5">
+            <p class="text-primary font-bold mb-2">Solution 3 : Nouveau raccordement Sibelga</p>
+            <p class="text-sm">La solution favorisée dans les grands complexes résidentiels. Une nouvelle armoire de comptage dédiée exclusivement aux bornes de recharge est installée dans le parking. La plus évolutive grâce au <em>load balancing</em>.</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les étapes de votre projet</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_one</span><span><strong class="text-white">Étude de faisabilité :</strong> Un électricien qualifié visite le parking et analyse les chemins de câbles et la puissance disponible.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_two</span><span><strong class="text-white">Dossier pour le syndic :</strong> Transmettez le devis détaillé (précisant les normes incendie) au syndic par recommandé.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_3</span><span><strong class="text-white">Demande à Sibelga (si nécessaire) :</strong> Si la puissance de votre compteur doit être augmentée, introduisez une demande sur le portail de Sibelga.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_4</span><span><strong class="text-white">Installation de la borne :</strong> L'électricien tire les câbles (souvent dans des goulottes métalliques au plafond), fixe la borne et configure le système de facturation.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_5</span><span><strong class="text-white">Contrôle de conformité obligatoire :</strong> Un organisme agréé (Vinçotte, BTV) doit vérifier l'installation avant la première mise sous tension. Sans ce certificat, l'assurance de l'immeuble ne couvrira rien en cas d'incendie.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le point critique : la sécurité incendie dans les parkings</h2>
+        <p>Pour rassurer votre copropriété, votre devis doit garantir :</p>
+        <ul class="space-y-2 mt-4">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">shield</span><span><strong class="text-white">Une ligne dédiée</strong> exclusivement réservée à la borne.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">shield</span><span><strong class="text-white">Disjoncteur différentiel Type A ou B</strong> (spécifique aux fuites de courant continu des véhicules).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">shield</span><span><strong class="text-white">Une coupure d'urgence</strong> (bouton coup-de-poing à l'entrée du parking pour les pompiers SIAMU).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">shield</span><span><strong class="text-white">Des câbles sans halogène</strong> (obligatoires dans les lieux publics bruxellois).</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Borne de recharge et copropriété</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Qui paie l'installation de la borne de recharge ?</h3>
+        <p>Si vous faites la demande pour votre usage personnel, l'intégralité des frais (borne, câblage, éventuelle adaptation du réseau) est à votre charge exclusive. Les autres copropriétaires n'ont pas à payer pour votre installation.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Puis-je brancher ma voiture sur une prise classique dans mon box fermé ?</h3>
+        <p>C'est extrêmement dangereux et fortement déconseillé par les pompiers de Bruxelles. Une prise classique n'est pas conçue pour délivrer 10 ou 16 ampères en continu pendant 10 heures. Optez toujours pour une borne (Wallbox) ou une prise renforcée installée par un professionnel.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Existe-t-il des primes à Bruxelles pour les particuliers ?</h3>
+        <p>En 2025, la Région de Bruxelles-Capitale se concentre sur les primes pour les professionnels et les réseaux publics. Au niveau fédéral, il existait une réduction d'impôt pour l'installation d'une borne intelligente — vérifiez les conditions fiscales actuelles auprès du SPF Finances.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Le load balancing (gestion dynamique), c'est quoi ?</h3>
+        <p>Si plusieurs voisins installent des bornes, le load balancing est une fonctionnalité intelligente qui répartit la puissance électrique disponible de l'immeuble entre toutes les voitures connectées, évitant ainsi la surcharge générale.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">🚗 Un projet de recharge électrique dans votre immeuble ?</p>
+          <p class="text-sm">Nos électriciens certifiés vous accompagnent : étude technique, rédaction du dossier pour le syndic, installation sécurisée et passage de l'organisme de contrôle. <a href="/contact" class="text-primary underline font-bold">Contactez-nous →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

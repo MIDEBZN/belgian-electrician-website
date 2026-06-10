@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment savoir si l'électricité de ma maison ancienne est dangereuse ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Les signes qui ne trompent pas : fils gainés de tissu, prises sans terre, fusibles en porcelaine, odeur de brûlé, ou picotements quand on touche les appareils." }
+    },
+    {
+      "@type": "Question",
+      "name": "La mise aux normes est-elle obligatoire pour une vieille maison ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En cas de vente, un contrôle électrique est obligatoire. Si le rapport est négatif (ce qui est le cas pour 90% des maisons anciennes), l'acheteur a 18 mois pour se mettre en conformité." }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il tout casser pour rénover l'électricité ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pas nécessairement. Nous pouvons souvent utiliser les conduits existants ou passer en apparent (goulottes discrètes) ou dans les faux plafonds pour limiter les saignées dans les murs." }
+    }
+  ]
+};
+---
+
+<Layout title="Problèmes Électriques Maison Ancienne : Risques et Rénovation" description="Vous habitez une maison ancienne à Bruxelles ? Fils en tissu, plombs qui sautent, absence de terre... Découvrez les dangers et comment rénover sans tout casser." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Maison Ancienne</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-orange-500 bg-orange-500/10 px-3 py-1 rounded-full">Rénovation</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Problèmes Électriques dans les Maisons Anciennes : Le Guide Survie
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>9 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Les maisons bruxelloises ont du charme : hauts plafonds, moulures, planchers d'époque... Mais derrière ce cachet se cache souvent une installation électrique digne d'un musée. Vivre dans une <strong>maison ancienne</strong> avec une électricité d'époque n'est pas seulement incommode, c'est dangereux.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. Les Fils Gainés de Tissu (Le danger n°1)</h2>
+        <p>Avant les années 50, les fils électriques étaient isolés avec du tissu et du caoutchouc. Avec le temps, le caoutchouc sèche et tombe en poussière, laissant le tissu (inflammable) en contact direct avec le fil de cuivre.</p>
+        <p>Au moindre court-circuit ou échauffement, ce tissu prend feu. Si vous voyez des fils entourés de tissu dans votre cave ou vos interrupteurs, le remplacement total est une urgence absolue.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. L'Absence de Mise à la Terre</h2>
+        <p>Dans les vieilles installations, la "terre" (le fil vert/jaune) est souvent inexistante, sauf peut-être à la cuisine. Or, la terre est votre protection contre l'électrocution. Sans elle, si un appareil a un défaut (ex: machine à laver), le courant reste dans la carcasse métallique. Si vous la touchez, c'est vous qui faites la terre...</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. Pas de Différentiel 300mA</h2>
+        <p>Le disjoncteur différentiel est obligatoire en tête d'installation depuis 1981. Il coupe tout le courant s'il détecte une fuite. Les maisons antérieures n'en ont souvent pas. C'est une lacune de sécurité majeure.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">4. Les Prises Trop Rares</h2>
+        <p>Il y a 60 ans, on avait une lampe et une radio dans le salon. Aujourd'hui, on a une TV, un décodeur, une console, un routeur, des chargeurs... Résultat : on abuse des multiprises en cascade.</p>
+        <p>Cela crée des <strong>surcharges</strong> permanentes sur des vieux fils qui ne sont pas dimensionnés pour ça. Risque de surchauffe garanti.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">5. Les Tubes Métalliques (Bergman)</h2>
+        <p>Les fils passaient souvent dans des tubes en métal fin (tubes Bergman). Le problème ? Si un fil se dénude à l'intérieur, tout le tube devient conducteur. Si le tube touche une poutrelle métallique de la maison, l'électricité peut voyager très loin.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Rénover l'électricité d'une maison ancienne</h2>
+        <p>La mise en conformité est inévitable. Mais rassurez-vous, nous avons l'habitude des maisons bruxelloises.</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Nous préservons les moulures en passant par les plinthes ou les vides techniques.</li>
+            <li>Nous remplaçons le tableau électrique par un modèle moderne avec différentiels.</li>
+            <li>Nous tirons de nouvelles terres vers les pièces d'eau et la cuisine.</li>
+        </ul>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Audit Électrique Maison Ancienne</h3>
+            <p class="mb-4">Vous venez d'acheter ou vous avez un doute ? Nos experts viennent vérifier l'état de votre installation et vous proposent un plan de rénovation adapté.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Diagnostic & Devis Rénovation</span>
+                    <span class="block text-white font-bold">Intervention Partout à Bruxelles</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

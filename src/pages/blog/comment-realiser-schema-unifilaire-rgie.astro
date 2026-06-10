@@ -1,0 +1,136 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qui doit signer le schéma unifilaire ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le document final doit obligatoirement être daté, signé par la personne qui a réalisé l'installation ET par le propriétaire de l'habitation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Mon installation date d'avant 1981, ai-je besoin de schémas complets ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui. Même si l'installation de votre maison date de 1960, le schéma de ce qui existe réellement doit être présent pour obtenir le certificat de conformité." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que faire des fils dont on ne trouve pas l'arrivée dans le mur ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La solution imposée par la sécurité est radicale : il faut déconnecter physiquement ces fils inconnus du tableau électrique. Vous ne pouvez pas inventer leur point de chute sur le schéma." }
+    }
+  ]
+};
+---
+
+<Layout title="Comment Réaliser un Schéma Unifilaire Conforme pour le RGIE" description="Le schéma unifilaire est obligatoire pour le contrôle électrique en Belgique. Découvrez comment le dessiner, quels symboles utiliser, et les erreurs à éviter." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Schéma Unifilaire RGIE</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Guide Technique</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Comment réaliser un schéma unifilaire conforme pour votre contrôle électrique (RGIE)
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>8 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Le <strong class="text-white">schéma unifilaire</strong> et le <strong class="text-white">plan de position</strong> sont les deux documents administratifs obligatoires sans lesquels aucun organisme de contrôle (BTV, Vinçotte) n'acceptera d'inspecter votre installation, entraînant un refus d'office.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Quelle est la différence entre schéma unifilaire et plan de position ?</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="bg-navy-light border border-white/10 rounded-xl p-5">
+            <p class="text-primary font-bold mb-2">📐 Le Plan de Position (Le "Où ?")</p>
+            <p class="text-sm">Le plan au sol de votre maison avec la position géographique exacte de chaque prise, interrupteur, point lumineux et tableau électrique dans chaque pièce.</p>
+          </div>
+          <div class="bg-navy-light border border-white/10 rounded-xl p-5">
+            <p class="text-primary font-bold mb-2">⚡ Le Schéma Unifilaire (Le "Comment ?")</p>
+            <p class="text-sm">La représentation logique de votre installation qui montre comment les éléments sont connectés électriquement au tableau. Il détaille le trajet du courant depuis le compteur jusqu'à la dernière prise.</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les étapes de réalisation du schéma unifilaire</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Étape 1 : Le repérage (Le "Test de la lampe")</h3>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_one</span><span>Attribuez une <strong class="text-white">lettre majuscule</strong> à chaque disjoncteur (A, B, C, D...).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_two</span><span>Baissez tous les disjoncteurs. Remontez uniquement le "A".</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_3</span><span>Promenez-vous dans la maison en branchant une petite lampe dans chaque prise et testant chaque interrupteur.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_4</span><span>Notez scrupuleusement tous les endroits où le courant passe. Recommencez pour chaque disjoncteur.</span></li>
+        </ul>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Étape 2 : Dessiner le plan de position</h3>
+        <p>Utilisez les symboles officiels du RGIE pour dessiner les prises et les interrupteurs sur le plan de la maison. À côté de chaque symbole, écrivez son code identifié lors du repérage (ex : "A3").</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Étape 3 : Dessiner le schéma unifilaire</h3>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Au sommet : le symbole de l'arrivée du réseau et le compteur.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>En dessous : le Disjoncteur Différentiel Général (300 mA) avec ses caractéristiques.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Ensuite : une ligne horizontale dont partent des branches verticales pour chaque circuit (A, B, C...).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Sur chaque branche : le disjoncteur avec sa valeur (ex: 20A) et la section des câbles (ex: 3G2.5mm²).</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les symboles incontournables du RGIE</h2>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Élément</th><th class="text-left p-4 text-white">Symbole normalisé</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Prise sans terre</td><td class="p-4 text-primary">Demi-cercle (bol retourné)</td></tr>
+              <tr><td class="p-4">Prise avec broche de terre</td><td class="p-4 text-primary">Demi-cercle + barre verticale (antenne)</td></tr>
+              <tr><td class="p-4">Interrupteur simple</td><td class="p-4 text-primary">Cercle + croix + trait oblique</td></tr>
+              <tr><td class="p-4">Point lumineux</td><td class="p-4 text-primary">Croix de Saint-André (X)</td></tr>
+              <tr><td class="p-4">Tableau de répartition</td><td class="p-4 text-primary">Rectangle divisé par une diagonale</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Logiciel informatique ou papier millimétré ?</h2>
+        <p>Rien dans la loi ne vous interdit de dessiner vos plans à la main. Pour les logiciels :</p>
+        <ul class="space-y-2 mt-4">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">star</span><span><strong class="text-white">Trikker :</strong> La référence absolue en Belgique, spécialement conçu pour le RGIE. Inclut tous les symboles officiels pré-programmés (licence payante).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">star</span><span><strong class="text-white">AutoCAD ou Visio :</strong> Pour les plus techniques, vous pouvez créer vos propres blocs.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">star</span><span><strong class="text-white">Outils gratuits en ligne :</strong> Vérifiez que la symbologie belge (pas française NF) est bien respectée.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Schémas électriques</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Qui doit signer le schéma unifilaire ?</h3>
+        <p>Le document final doit obligatoirement être daté et signé par la personne qui a réalisé l'installation ET par le propriétaire de l'habitation. Généralement établi en 3 exemplaires : un pour vous, un pour le tableau, un pour le contrôleur.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Mon installation date d'avant 1981, ai-je besoin de schémas complets ?</h3>
+        <p>Oui. Même si l'installation de votre maison date de 1960, le schéma de ce qui existe réellement <em>doit</em> être présent pour obtenir le certificat de conformité. C'est l'une des infractions les plus courantes lors de la vente de vieilles maisons.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Que faire des fils dont on ne trouve pas l'arrivée dans le mur ?</h3>
+        <p>La solution imposée par la sécurité est radicale : il faut <strong class="text-white">déconnecter physiquement ces fils inconnus du tableau électrique</strong>. Vous ne pouvez pas inventer leur point de chute sur le schéma.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">📋 Perdu dans vos câbles ?</p>
+          <p class="text-sm">Reconstituer le plan complet d'une maison habitée depuis 40 ans demande l'expertise d'un détective et la rigueur d'un dessinateur industriel. <a href="/contact" class="text-primary underline font-bold">Faites appel à Allo Electricien →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

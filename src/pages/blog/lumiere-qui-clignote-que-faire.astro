@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi mes ampoules LED clignotent-elles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Les LED sont très sensibles aux variations de tension. Si elles clignotent, c'est souvent à cause d'un variateur (dimmer) incompatible, d'une ampoule de mauvaise qualité, ou d'un courant résiduel dans le circuit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Une lumière qui clignote est-elle dangereuse ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pas toujours, mais cela peut l'être. Si le clignotement est dû à un fil desserré dans l'interrupteur ou au plafond, cela peut provoquer un arc électrique et un incendie. Si le problème persiste après avoir changé l'ampoule, faites vérifier votre installation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment savoir si c'est l'ampoule ou le luminaire ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le test le plus simple est d'interchanger l'ampoule avec une autre qui fonctionne ailleurs. Si le problème suit l'ampoule, c'est elle. Si le problème reste sur le luminaire avec une ampoule neuve, c'est le luminaire ou l'interrupteur." }
+    }
+  ]
+};
+---
+
+<Layout title="Lumière qui Clignote ? Causes & Solutions (Guide Dépannage 2025)" description="Vos lumières scintillent ou clignotent ? Ampoule mal vissée, LED incompatible ou problème de câblage dangereux ? Voici comment diagnostiquer et résoudre ce problème agaçant." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Lumière qui Clignote</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-yellow-500 bg-yellow-500/10 px-3 py-1 rounded-full">Diagnostic</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Lumière qui Clignote à la Maison : 5 Causes et Solutions
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Une <strong>lumière qui clignote</strong> (ou scintille) est l'un des problèmes électriques les plus agaçants. On se croirait dans un film d'horreur ! Au-delà de l'inconfort visuel, ce phénomène peut cacher un problème électrique sérieux nécessitant une intervention rapide.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. L'Ampoule Mal Vissée (La cause n°1)</h2>
+        <p>Cela semble évident, mais c'est la cause la plus fréquente. Avec les variations de température ou les vibrations (pas lourds à l'étage), une ampoule peut se dévisser légèrement.</p>
+        <p><strong>Solution :</strong> Éteignez la lumière, attendez que l'ampoule refroidisse, et assurez-vous qu'elle est bien vissée à fond dans la douille.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. Ampoules LED Incompatibles ou de Mauvaise Qualité</h2>
+        <p>Les ampoules LED modernes sont géniales pour l'économie d'énergie, mais elles sont capricieuses. Si vous utilisez un variateur d'intensité (dimmer) conçu pour les anciennes ampoules halogènes, vos LED vont clignoter, grésiller ou ne pas s'éteindre complètement.</p>
+        <p><strong>Le problème technique :</strong> Les vieux variateurs coupent la tension d'une manière que l'électronique de la LED ne supporte pas.</p>
+        <p><strong>Solution :</strong> Remplacez le variateur par un modèle "Spécial LED" ou achetez des ampoules LED "Dimmable" (c'est écrit sur la boîte).</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. Un Faux Contact dans l'Interrupteur</h2>
+        <p>Si l'ampoule est neuve et bien vissée, le problème vient peut-être de l'interrupteur lui-même. À force d'être manipulé, les bornes à l'intérieur peuvent se desserrer ou s'oxyder. Quand vous allumez, le contact se fait mal et le courant "saute", créant ce scintillement.</p>
+        <p><strong>Test :</strong> Si vous appuyez fermement sur l'interrupteur ou si vous le bougez un tout petit peu et que la lumière se stabilise (ou clignote pire), c'est l'interrupteur qui est en cause. <strong class="text-red-400">Attention, risque d'arc électrique ! Remplacer l'interrupteur.</strong></p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">4. Fluctuations de Tension sur le Réseau</h2>
+        <p>Si <strong>toutes</strong> les lumières de la maison clignotent en même temps, le problème ne vient pas de chez vous, mais du réseau de distribution (Sibelga à Bruxelles). Cela peut arriver lors de gros orages ou de travaux dans la rue.</p>
+        <p>Cependant, si les lumières ne baissent d'intensité que quand votre frigo ou votre machine à laver démarre, c'est que votre installation est <strong>surchargée</strong> ou que le câblage est trop faible pour supporter l'appel de courant.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">5. Connexion Desserrée dans le Tableau (Danger !)</h2>
+        <p>C'est le cas le plus dangereux. Si un fil neutre est desserré dans votre tableau électrique, cela peut provoquer des variations de tension destructrices dans toute la maison (surtension sur certains appareils, sous-tension sur d'autres).</p>
+        <p><strong>Signe d'alerte :</strong> Si vous entendez un "bizzzz" (grésillement) provenant du tableau électrique en même temps que les lumières clignotent, <strong>coupez tout immédiatement</strong> et appelez un électricien d'urgence.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Tableau de Diagnostic Rapide</h2>
+
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Symptôme</th><th class="text-left p-4 text-white">Cause Probable</th><th class="text-left p-4 text-white">Action</th></tr></thead>
+            <tbody class="divide-y divide-white/5 text-sm">
+              <tr><td class="p-4">Une seule ampoule clignote</td><td class="p-4">Ampoule HS ou mal vissée</td><td class="p-4 text-gray-300">Visser / Remplacer</td></tr>
+              <tr><td class="p-4">Clignote quand on touche l'interrupteur</td><td class="p-4">Interrupteur défectueux</td><td class="p-4 text-gray-300">Remplacer interrupteur</td></tr>
+              <tr><td class="p-4">Clignote avec variateur (dimmer)</td><td class="p-4">Incompatibilité LED/Variateur</td><td class="p-4 text-gray-300">Changer variateur ou ampoule</td></tr>
+              <tr><td class="p-4">Toutes les lumières de la pièce clignotent</td><td class="p-4">Faux contact au plafond ou boîte de dérivation</td><td class="p-4 text-red-400 font-bold">Appeler électricien (Danger)</td></tr>
+              <tr><td class="p-4">Lumière baisse quand le four s'allume</td><td class="p-4">Circuit surchargé</td><td class="p-4 text-gray-300">Vérifier tableau électrique</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Diagnostic Gratuit par Téléphone</h3>
+            <p class="mb-4">Vous n'êtes pas sûr de la cause ? Décrivez-nous le problème par téléphone. Nous pourrons souvent vous dire si c'est une simple ampoule ou s'il faut intervenir.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                 <div>
+                    <span class="block text-gray-400 text-sm">Électricien Bruxelles</span>
+                    <span class="block text-white font-bold">Conseil & Dépannage</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    0465 73 23 48
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

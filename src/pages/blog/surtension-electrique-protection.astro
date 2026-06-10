@@ -1,0 +1,104 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce qu'une surtension électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Une surtension est une augmentation brutale et brève de la tension électrique (au-delà de 230V). Elle peut griller vos appareils électroniques instantanément." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment protéger ma maison des surtensions ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La meilleure protection est l'installation d'un parafoudre (ou parasurtenseur) directement dans le tableau électrique. Les prises multiprises parafoudre offrent une protection secondaire pour les appareils sensibles." }
+    },
+    {
+      "@type": "Question",
+      "name": "L'assurance couvre-t-elle les dégâts liés à une surtension ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Souvent oui, via l'assurance habitation (garantie dommages électriques). Mais attention, l'assureur exige souvent la preuve qu'une installation aux normes était en place." }
+    }
+  ]
+};
+---
+
+<Layout title="Surtension Électrique Maison : Dangers et Protection (2025)" description="Vos appareils ont grillé après un orage ? C'est une surtension. Découvrez les causes, les risques et comment protéger efficacement votre maison à Bruxelles." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Surtension</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full">Protection Électrique</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Surtension Électrique : Comment Protéger vos Appareils ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>8 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Un ordinateur qui ne s'allume plus après un orage, une télé qui grille sans raison apparente... La <strong>surtension électrique</strong> est l'ennemi invisible de nos maisons modernes remplies d'électronique.</p>
+        
+        <p>À Bruxelles, le réseau est stable, mais personne n'est à l'abri d'un pic de tension destructeur. Comprendre ce phénomène est le premier pas pour éviter de perdre des milliers d'euros d'équipement.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Qu'est-ce qu'une surtension ?</h2>
+        <p>En Belgique, la tension standard est de 230 Volts. Une surtension survient quand ce voltage dépasse soudainement le seuil de tolérance des appareils (souvent > 253V). C'est comme envoyer un jet d'eau à haute pression dans un tuyau d'arrosage : ça éclate.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les 2 grands types de surtensions</h2>
+        
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">1. La Surtension Atmosphérique (La Foudre)</h3>
+        <p>C'est la plus violente. Si la foudre tombe sur votre maison ou sur une ligne électrique à proximité, des milliers de volts se propagent instantanément dans votre réseau. Aucun appareil branché ne survit sans protection adéquate.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">2. La Surtension de Manœuvre (Réseau)</h3>
+        <p>Moins spectaculaire mais plus fréquente. Elle est causée par des fluctuations sur le réseau Sibelga, ou même chez vous, lorsque de gros appareils (moteurs d'ascenseur, pompes à chaleur, machines industrielles voisines) s'arrêtent ou démarrent brutalement.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Quels sont les dégâts ?</h2>
+        <p>Les conséquences vont de l'usure prématurée à la destruction totale :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Destruction immédiate :</strong> Les composants électroniques des TV, ordinateurs, box internet fondent.</li>
+            <li><strong>Dégradation lente :</strong> Des petites surtensions répétées fatiguent les alimentations de vos appareils, réduisant leur durée de vie de moitié.</li>
+            <li><strong>Incendie :</strong> Dans les cas extrêmes (foudre), la surtension peut faire exploser des composants et mettre le feu à la maison.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">La Solution : Le Parafoudre</h2>
+        <p>Ne comptez pas uniquement sur les multiprises "parafoudre" du commerce. Elles sont utiles en bout de ligne, mais insuffisantes contre un gros choc.</p>
+        
+        <p>La vraie protection se joue au niveau du <strong>tableau électrique</strong>. L'installation d'un <strong>parafoudre modulaire</strong> (type 2) est fortement recommandée. Il agit comme une vanne de sécurité : s'il détecte une surtension, il la dérive instantanément vers la terre, protégeant ainsi toute l'installation en aval.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Protégez votre installation dès aujourd'hui</h3>
+            <p class="mb-4">Nos électriciens installent des parafoudres certifiés dans votre tableau électrique. Un petit investissement pour protéger tout votre électroménager.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Installation Parafoudre</span>
+                    <span class="block text-white font-bold">Devis Gratuit sur Photo</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

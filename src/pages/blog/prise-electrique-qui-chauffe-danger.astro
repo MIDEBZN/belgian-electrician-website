@@ -1,0 +1,140 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Est-ce normal qu'une prise électrique soit tiède ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Une légère tiédeur peut être normale si vous utilisez un appareil puissant (radiateur, four) pendant longtemps. Cependant, si la prise est brûlante au toucher ou si vous ne pouvez pas laisser votre main dessus, c'est un DANGER IMMÉDIAT. Débranchez tout." }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi ma prise électrique a-t-elle noirci ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Des traces noires ou brunâtres autour des trous de la prise indiqent qu'il y a eu un arc électrique ou une surchauffe interne. Le plastique a commencé à fondre ou à carboniser. Cette prise est HS et dangereuse, elle doit être remplacée d'urgence." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je continuer à utiliser une prise qui grésille ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ABSOLUMENT PAS. Un grésillement (bruit de friture) indique un mauvais contact (arc électrique) à l'intérieur du mur. C'est la cause n°1 des incendies électriques. Coupez le disjoncteur correspondant et appelez un électricien." }
+    }
+  ]
+};
+---
+
+<Layout title="Prise Électrique qui Chauffe : DANGER Incendie ! Que Faire ?" description="Une prise bouillante, noircie ou qui sent le brûlé ? C'est un signe avant-coureur d'incendie domestique. Découvrez pourquoi elle chauffe et comment réagir immédiatement." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Prise qui Chauffe</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-red-500 bg-red-500/10 px-3 py-1 rounded-full animate-pulse">URGENCE SÉCURITÉ</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Prise Électrique qui Chauffe : Attention Danger d'Incendie !
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>8 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Vous avez remarqué qu'une de vos prises murales est <strong>chaude au toucher</strong> ? Ou pire, vous sentez une odeur de plastique brûlé ? <strong class="text-red-500">N'ignorez surtout pas ce signe.</strong></p>
+        
+        <p>Contrairement à un disjoncteur qui saute (qui est une sécurité passive), une prise qui chauffe est une défaillance active qui peut mener directement à l'incendie de votre habitation. À Bruxelles, environ 30% des incendies domestiques sont d'origine électrique, et la "prise qui chauffe" est souvent la coupable.</p>
+
+        <div class="bg-red-900/40 border-l-4 border-red-600 p-6 my-8">
+          <h3 class="text-xl font-bold text-white mb-2">🛑 GESTES D'URGENCE</h3>
+          <ol class="list-decimal pl-6 space-y-2 text-white">
+            <li><strong>Débranchez immédiatement</strong> l'appareil connecté à cette prise (en tenant la fiche, pas le fil).</li>
+            <li>Posez votre main <strong>à plat sur le mur</strong> autour de la prise. Si le mur est chaud, coupez le courant au tableau électrique général.</li>
+            <li>N'utilisez plus cette prise jusqu'à l'intervention d'un professionnel.</li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Pourquoi ma prise chauffe-t-elle ? (Les 3 Causes)</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">1. Le Mauvais Contact (Connexion desserrée)</h3>
+        <p>C'est la cause la plus fréquente et la plus vicieuse. Avec le temps, les vibrations, les écarts de température ou simplement une mauvaise installation initiale peuvent faire que les fils électriques se desserrent dans les bornes de la prise.</p>
+        <p>Quand le contact n'est pas franc, l'électricité doit "sauter" un micro-espace pour passer. Cela crée des milliers de petits arcs électriques microscopiques par seconde. Ces arcs dégagent une chaleur intense (effet Joule) qui fait fondre le plastique et carbonise l'isolant des fils.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">2. La Surcharge (Multiprise sur Prise)</h3>
+        <p>Une prise murale standard (16A ou 20A) n'est pas faite pour alimenter toute la maison. Si vous branchez une multiprise, sur laquelle vous branchez trois radiateurs d'appoint et une raclette... la prise murale va souffrir.</p>
+        <p>Le métal des contacts internes va chauffer car il ne peut pas physiquement laisser passer autant d'électrons sans résistance. Cette chaleur se transmet au boîtier en plastique.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">3. La Vétusté (Usure mécanique)</h3>
+        <p>À force de brancher et débrancher des appareils, les lamelles métalliques à l'intérieur de la prise (qui pincent la fiche mâle) se détendent. Elles ne serrent plus assez fort les fiches de vos appareils.</p>
+        <p>Résultat : comme pour la vis desserrée, le contact est mauvais, la résistance augmente, et ça chauffe.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les signes qui ne trompent pas</h2>
+        <p>Outre la chaleur, inspectez vos prises à la recherche de ces indices visuels :</p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+            <li class="bg-navy-light p-4 rounded-lg border border-white/5">
+                <strong class="text-white block mb-1">Coloration Brune/Noire</strong>
+                Autour des trous de la prise. C'est de la suie ou du plastique brûlé.
+            </li>
+            <li class="bg-navy-light p-4 rounded-lg border border-white/5">
+                <strong class="text-white block mb-1">Déformation</strong>
+                La façade de la prise n'est plus plate, elle semble fondue ou gondolée.
+            </li>
+            <li class="bg-navy-light p-4 rounded-lg border border-white/5">
+                <strong class="text-white block mb-1">Odeur âcre</strong>
+                Une odeur caractéristique de poisson pourri ou de plastique chaud dans la pièce.
+            </li>
+            <li class="bg-navy-light p-4 rounded-lg border border-white/5">
+                <strong class="text-white block mb-1">Fiches chaudes</strong>
+                Quand vous débranchez un appareil, ses fiches métalliques sont brûlantes.
+            </li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Que faire ? Réparation ou Remplacement ?</h2>
+        <p>Il n'y a pas de "réparation" possible pour une prise qui a chauffé. <strong>Elle doit être remplacée impérativement.</strong></p>
+        
+        <p>Pourquoi ? Parce que la chaleur a modifié la structure moléculaire du métal (le rendant cassant et moins conducteur) et a rendu l'isolant des fils friable. Si vous vous contentez de resserrer les vis, le problème reviendra pire qu'avant.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">L'intervention de l'électricien</h3>
+        <p>Lorsque nous intervenons pour une "prise brûlée" à Bruxelles, nous ne nous contentons pas de changer le bloc prise :</p>
+        <ol class="list-decimal pl-6 space-y-2">
+            <li>Nous coupons le courant et sécurisons la zone.</li>
+            <li>Nous démontons la prise fondue.</li>
+            <li>Nous <strong class="text-primary">recoupons les fils brûlés</strong> jusqu'à retrouver du cuivre sain et brillant (c'est crucial !).</li>
+            <li>Si les fils sont trop courts ou trop abîmés dans le mur, nous devons parfois repasser une ligne neuve ou utiliser des connecteurs Wago spéciaux.</li>
+            <li>Nous installons une nouvelle prise de marque reconnue (Niko, Legrand) conforme aux normes belges.</li>
+            <li>Nous vérifions le serrage au couple dynamométrique.</li>
+        </ol>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Besoin d'un diagnostic rapide ?</h3>
+            <p class="mb-4">N'attendez pas que la fumée apparaisse. Si vous avez un doute sur une prise, appelez-nous. Mieux vaut prévenir que guérir.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Remplacement prise défectueuse</span>
+                    <span class="block text-white font-bold">Intervention forfaitaire</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

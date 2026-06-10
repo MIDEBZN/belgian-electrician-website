@@ -1,0 +1,118 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Un devis électricien avec visite est-il toujours gratuit ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dans la majorité des cas, oui. Les entreprises offrent cette visite dans un but commercial. Cependant, si le déplacement demande une étude très technique, certains artisans facturent les frais de déplacement, qui seront déduits si vous acceptez l'offre." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels éléments doivent obligatoirement figurer sur un devis ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un devis conforme doit comporter le nom et BCE de l'électricien, la date, la durée de validité de l'offre, le détail des prestations et du matériel avec quantités, le prix hors TVA, le taux de TVA (6% ou 21%), et les modalités de paiement." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de devis faut-il demander pour des travaux électriques ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La règle d'or est de demander 3 devis différents à trois entreprises de la région bruxelloise. Si un devis est 50% moins cher que les deux autres, c'est qu'il cache un problème." }
+    }
+  ]
+};
+---
+
+<Layout title="Devis Électricien Gratuit : Pourquoi la Visite sur Place est Indispensable" description="Demander un devis gratuit à un électricien à Bruxelles ? Découvrez pourquoi l'évaluation sur place est la seule garantie d'un prix juste et sans surprise." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Devis Électricien Gratuit</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Conseil</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Devis électricien gratuit : pourquoi une visite sur place est indispensable pour un prix juste
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>6 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Pour une rénovation ou une mise en conformité électrique, une <strong class="text-white">visite sur place par l'électricien est absolument indispensable</strong>. C'est le seul moyen d'évaluer l'état réel de vos murs, l'accès au tableau, et la faisabilité technique. Sans cela, votre devis gratuit risque de se transformer en facture exorbitante avec d'incessants suppléments.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les limites du "devis sur photos"</h2>
+        <p>S'il est possible de chiffrer précisément l'installation d'une simple prise sur base d'une photo, il en va tout autrement pour des travaux plus conséquents. Ce que les photos ne montrent pas :</p>
+        <ul class="space-y-3 mt-4">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">visibility_off</span><span><strong class="text-white">La nature de vos murs :</strong> Une saignée dans du gyproc prend 10 minutes. Dans du béton armé ou de la brique pleine d'une vieille maison à Schaerbeek, cela prend cinq fois plus de temps.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">visibility_off</span><span><strong class="text-white">L'encombrement des gaines existantes :</strong> Seule une visite sur place permettra de vérifier si les tuyaux encastrés coulissent ou s'ils sont bloqués.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">visibility_off</span><span><strong class="text-white">L'état de la prise de terre :</strong> Seule une mesure physique avec un telluromètre peut le confirmer.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les 3 avantages d'une visite sur place</h2>
+
+        <div class="space-y-4 my-6">
+          <div class="bg-navy-light border border-primary/20 rounded-xl p-5">
+            <p class="text-primary font-bold mb-2">1. Un devis transparent et sans suppléments</p>
+            <p class="text-sm">L'électricien mesure les distances, repère les obstacles architecturaux et évalue la puissance nécessaire. Le devis qui en résulte est contractuel : <strong class="text-white">le prix annoncé sera le prix payé</strong>, à l'euro près.</p>
+          </div>
+          <div class="bg-navy-light border border-primary/20 rounded-xl p-5">
+            <p class="text-primary font-bold mb-2">2. Le conseil personnalisé</p>
+            <p class="text-sm">L'expert observe votre mode de vie et vous conseille. Il peut également vous conseiller sur le passage en triphasé si vous comptez installer une pompe à chaleur ou une borne de recharge.</p>
+          </div>
+          <div class="bg-navy-light border border-primary/20 rounded-xl p-5">
+            <p class="text-primary font-bold mb-2">3. Évaluer le professionnalisme de l'artisan</p>
+            <p class="text-sm">La visite est aussi une occasion pour VOUS d'évaluer le prestataire. Est-il arrivé à l'heure ? A-t-il ouvert le tableau et posé des questions pertinentes ? A-t-il expliqué clairement la réglementation RGIE ?</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les arnaques aux devis "trop beaux pour être vrais"</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-yellow-400 text-sm mt-1">warning</span><span><strong class="text-white">L'oubli volontaire :</strong> L'entrepreneur fait un devis très bas pour "le remplacement du tableau", puis annonce en cours de chantier que les câbles ne sont pas aux normes et qu'il faut tout changer. Vous êtes bloqué car le chantier a déjà commencé.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-yellow-400 text-sm mt-1">warning</span><span><strong class="text-white">Le devis à tiroirs :</strong> Le devis de base est minime, mais chaque "difficulté" (percer un mur plus épais que prévu) entraîne la facturation d'un forfait additionnel non négociable.</span></li>
+        </ul>
+        <p class="mt-4">Un devis sérieux doit détailler précisément le nombre de points électriques, les longueurs de saignées estimées, les références du matériel (Niko, Vynckier, Legrand) et le taux de TVA applicable.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Et pour les urgences ?</h2>
+        <p>La règle de la visite préalable s'applique aux <strong class="text-white">travaux planifiés</strong>. En cas de <a href="/services/depannage-electrique" class="text-primary hover:underline">dépannage d'urgence</a>, l'électricien interviendra "en régie", c'est-à-dire qu'il vous facturera un forfait de déplacement et un taux horaire. Un professionnel honnête vous annoncera toujours ses tarifs de dépannage par téléphone avant de se mettre en route.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Le devis électricien à Bruxelles</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Un devis électricien avec visite est-il toujours gratuit ?</h3>
+        <p>Dans la majorité des cas, oui. Les entreprises offrent cette visite dans un but commercial. Cependant, si le déplacement demande une étude très technique et longue, certains artisans facturent les frais de déplacement, qui seront déduits de la facture finale si vous acceptez l'offre. Demandez toujours si la visite est gratuite lors de la prise de rendez-vous.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Quels éléments doivent obligatoirement figurer sur un devis ?</h3>
+        <p>Un devis conforme doit comporter le nom et le BCE de l'électricien, la date, la durée de validité de l'offre (souvent 30 jours), le détail des prestations et du matériel avec les quantités, le prix hors TVA, le taux de TVA (6% ou 21%), et les modalités de paiement.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Puis-je modifier mon projet après avoir signé le devis ?</h3>
+        <p>Oui, c'est courant. L'électricien établira un "avenant" au devis que vous devrez valider avant qu'il ne réalise les nouveaux travaux.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Combien de devis faut-il demander pour des travaux ?</h3>
+        <p>La règle d'or est de demander <strong class="text-white">3 devis différents</strong> à trois entreprises de la région bruxelloise. Si un devis est 50% moins cher que les deux autres, c'est qu'il cache un problème.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">💡 Vous souhaitez un prix juste et transparent ?</p>
+          <p class="text-sm">Chez Allo Electricien, nous nous déplaçons gratuitement chez vous partout dans les 19 communes de Bruxelles pour analyser votre installation. <a href="/contact" class="text-primary underline font-bold">Demandez votre visite technique gratuite →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

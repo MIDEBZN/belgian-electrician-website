@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi mon compteur saute alors que mes disjoncteurs restent enclenchés ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est que vous dépassez la puissance souscrite chez Sibelga. Si votre compteur est limité à 40A et que vous tirez 50A (four + plaques + chargeur voiture), le compteur général saute avant votre tableau." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment augmenter la puissance de mon compteur ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vous devez demander un 'renforcement de compteur' à Sibelga. Mais avant cela, votre installation électrique doit être réceptionnée (contrôle RGIE) pour la nouvelle puissance." }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce un défaut du compteur intelligent ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Les compteurs intelligents sont très précis. Ils ne tolèrent plus les dépassements que les vieux compteurs à disque laissaient parfois passer. Si ça saute, c'est que vous consommez vraiment trop." }
+    }
+  ]
+};
+---
+
+<Layout title="Compteur Électrique qui Disjoncte : Puissance ou Panne ?" description="C'est le compteur principal (Sibelga) qui saute, pas votre tableau ? Vous dépassez votre puissance max. Découvrez comment résoudre ce problème." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Compteur qui Saute</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full">Sibelga/Réseau</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Mon Compteur Électrique Disjoncte Général : Causes et Solutions
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>6 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Habituellement, quand on a une panne, on va voir son propre tableau électrique. Mais parfois, tout est ON chez vous, mais c'est le <strong>gros disjoncteur du compteur Sibelga</strong> (souvent à la cave ou dans le hall) qui a sauté. C'est le signe que vous en demandez trop.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">La consommation simultanée</h2>
+        <p>Votre abonnement électrique a une limite physique. Souvent, à Bruxelles, les habitations sont en monophasé 40 Ampères (soit environ 9.200 Watts max). C'est beaucoup, mais ça va vite :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Plaques induction à fond : 7.000 W</li>
+            <li>Four : 2.500 W</li>
+            <li>Lave-vaisselle : 2.000 W</li>
+            <li>Borne de recharge voiture : 3.700 W (ou plus)</li>
+        </ul>
+        <p>Si vous allumez tout ça en même temps le soir, vous dépassez les 9.200 W. Le compteur général se met en sécurité et coupe tout.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le problème des nouvelles technologies</h2>
+        <p>L'ajout d'une voiture électrique ou d'une pompe à chaleur est souvent le déclencheur. Ces appareils consomment beaucoup et longtemps. L'installation existante ne suffit plus.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Solution 1 : Le Délestage (Habitudes)</h2>
+        <p>La méthode gratuite : ne faites pas tourner le lave-linge en même temps que vous cuisinez. Rechargez la voiture la nuit quand le reste de la maison dort.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Solution 2 : Le Renforcement de Compteur (Durable)</h2>
+        <p>Si vous ne voulez pas calculer en permanence, il faut demander plus de puissance (ex: passer en Triphasé ou monter à 63A). La procédure est la suivante :</p>
+        <ol class="list-decimal pl-6 space-y-2">
+            <li>Un électricien (nous !) adapte votre tableau et votre câble de colonne pour supporter la nouvelle puissance.</li>
+            <li>Un organisme de contrôle (Vincotte, BTV...) passe vérifier la conformité (Schémas unifilaires obligatoires).</li>
+            <li>Avec l'attestation positive, vous demandez à Sibelga de venir changer le compteur.</li>
+        </ol>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Préparation Renforcement Compteur</h3>
+            <p class="mb-4">Nous préparons votre installation pour le passage de Sibelga : nouveau câble colonne, adaptation tableau, plans et schémas conformes.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Mise en conformité</span>
+                    <span class="block text-white font-bold">Dossier Sibelga complet</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

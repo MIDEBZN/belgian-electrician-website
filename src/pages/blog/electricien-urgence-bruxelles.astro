@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le prix moyen d'un électricien d'urgence à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En journée la semaine, comptez en moyenne entre 80€ et 120€ (déplacement + 1ère heure). En soirée, la nuit, les week-ends ou jours fériés, ce tarif varie entre 130€ et 180€." }
+    },
+    {
+      "@type": "Question",
+      "name": "L'assurance habitation couvre-t-elle le dépannage électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dans de nombreux cas, oui. Si la panne est consécutive à un événement couvert (foudre, surtension du réseau), votre assurance incendie/habitation prendra en charge les frais de dépannage. La facture détaillée de l'électricien sera indispensable." }
+    },
+    {
+      "@type": "Question",
+      "name": "Pouvez-vous intervenir pour une panne sur le compteur Sibelga ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si la panne se situe en amont de votre disjoncteur général, seul Sibelga est habilité à intervenir. Si le problème se situe après le compteur (dans votre tableau), c'est notre électricien privé qui s'en chargera." }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il remplacer tout le tableau après une panne majeure ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pas nécessairement. Si le problème provient d'un disjoncteur défectueux spécifique, seul celui-ci sera remplacé. Si la panne est due à la vétusté générale du coffret, le technicien devra remplacer le boîtier complet." }
+    }
+  ]
+};
+---
+
+<Layout title="Électricien d'Urgence Bruxelles 24h/24 : Intervention Rapide" description="Panne de courant ? Court-circuit ? Découvrez comment trouver un électricien d'urgence fiable à Bruxelles, disponible 24h/24, et éviter les arnaques au dépannage." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Urgence Électricien Bruxelles</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Urgence 24h/24</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Électricien d'urgence à Bruxelles : intervention rapide 24h/24
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>8 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Face à une coupure de courant totale, un tableau électrique qui fume ou une prise qui fait des étincelles, trouver un <strong class="text-white">électricien d'urgence à Bruxelles</strong> fiable est crucial. Privilégiez un professionnel certifié RGIE avec des avis clients vérifiés et exigez toujours une estimation téléphonique claire avant le déplacement. Un vrai spécialiste intervient en moins de 45 minutes dans les 19 communes.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les 3 situations qui exigent un électricien en urgence</h2>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">local_fire_department</span><span><strong class="text-white">Risque d'incendie :</strong> Odeur de plastique brûlé, grésillement au tableau, disjoncteurs chauds au toucher.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">electric_bolt</span><span><strong class="text-white">Risque d'électrocution :</strong> Picotements en touchant la carcasse de votre réfrigérateur ou machine à laver — fuite de courant dangereuse.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">power_off</span><span><strong class="text-white">Panne générale inexpliquée :</strong> Vos voisins ont du courant mais votre habitation est dans le noir, et le disjoncteur saute immédiatement quand vous le remontez.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les critères pour choisir un électricien d'urgence fiable</h2>
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">1. La transparence des tarifs</h3>
+        <p>Un électricien honnête doit être capable de vous annoncer ses tarifs de base par téléphone (frais de déplacement + tarif horaire pour la première heure). Méfiez-vous des professionnels qui refusent de donner un ordre de grandeur ou qui proposent un prix "à partir de 20€".</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">2. La certification et l'agrément</h3>
+        <p>Assurez-vous que l'entreprise est légalement enregistrée à la Banque-Carrefour des Entreprises (BCE) et que les techniciens respectent le RGIE (Règlement Général sur les Installations Électriques).</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">3. Le temps de réaction annoncé</h3>
+        <p>Pour un dépannage dans des communes comme Ixelles, Uccle, Schaerbeek ou Etterbeek, un dépanneur bien implanté devrait garantir une intervention sous <strong class="text-white">45 à 60 minutes</strong>.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">4. La réputation en ligne</h3>
+        <p>Vérifiez les avis Google. Des retours positifs récents sur la rapidité et la clarté des tarifs sont un gage de confiance inestimable. Visez minimum 4.5/5 avec 50+ avis.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comment éviter les arnaques ?</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">shield</span><span><strong class="text-white">Ne cédez pas à la pression :</strong> Une urgence consiste à sécuriser l'installation, pas à refaire une rénovation complète au tarif fort au milieu de la nuit.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">shield</span><span><strong class="text-white">Exigez un bon de commande avant travaux</strong> précisant le coût de l'intervention.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">shield</span><span><strong class="text-white">Refusez le paiement en liquide sans facture</strong> — indispensable pour votre assurance et pour la garantie de la réparation.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Que faire en attendant l'électricien ?</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Coupez le courant général</strong> si la panne s'accompagne de bruits ou d'odeurs suspectes.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Ne touchez à aucun fil dénudé</strong> — laissez le professionnel effectuer les tests.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Dégagez l'accès</strong> au tableau électrique pour que l'électricien puisse commencer immédiatement.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Préparez une lampe torche</strong> pour vous déplacer et aider le technicien.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Dépannages d'urgence</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Quel est le prix moyen d'un électricien d'urgence à Bruxelles ?</h3>
+        <p>En journée la semaine, comptez entre 80€ et 120€ (déplacement + 1ère heure). En soirée, la nuit, les week-ends ou jours fériés, ce tarif varie généralement entre 130€ et 180€. Demandez toujours confirmation par téléphone.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">L'assurance habitation couvre-t-elle le dépannage électrique ?</h3>
+        <p>Dans de nombreux cas, oui. Si la panne est consécutive à un événement couvert (foudre, surtension du réseau), votre assurance incendie/habitation prendra en charge les frais de dépannage. La facture détaillée de l'électricien sera indispensable.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Pouvez-vous intervenir pour une panne sur le compteur Sibelga ?</h3>
+        <p>Si la panne se situe en amont de votre disjoncteur général ou au niveau du compteur, seul Sibelga est habilité à intervenir. Si le problème se situe après le compteur (dans votre tableau), c'est notre électricien privé qui s'en charge.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Faut-il remplacer tout le tableau après une panne majeure ?</h3>
+        <p>Pas nécessairement. Si le problème provient d'un disjoncteur défectueux spécifique, seul celui-ci sera remplacé. Si la panne est due à la vétusté générale du coffret, le technicien devra remplacer le boîtier complet pour garantir votre sécurité.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">⚡ Une panne de courant à Bruxelles ?</p>
+          <p class="text-sm">Ne restez pas dans l'incertitude. Faites confiance à des experts agréés pour un dépannage rapide, sûr et transparent. Disponible 24h/24 et 7j/7. <a href="/contact" class="text-primary underline font-bold">Contactez-nous →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

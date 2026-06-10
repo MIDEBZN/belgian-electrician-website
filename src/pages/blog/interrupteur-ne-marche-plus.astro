@@ -1,0 +1,92 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mon interrupteur est bloqué, que faire ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si le bouton bascule mal ou reste coincé, le mécanisme à ressort interne est cassé. Il n'est pas réparable, il faut remplacer l'interrupteur complet." }
+    },
+    {
+      "@type": "Question",
+      "name": "L'interrupteur fait des étincelles quand j'appuie",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est le signe que les contacts sont usés (charbonnés). C'est dangereux car cela chauffe. Remplacez-le rapidement." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je changer un interrupteur moi-même ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, c'est une opération simple si vous coupez le courant. Attention toutefois aux va-et-vient (3 fils) qui sont plus complexes à brancher qu'un simple allumage (2 fils)." }
+    }
+  ]
+};
+---
+
+<Layout title="Interrupteur qui ne Marche Plus ? Diagnostic et Remplacement" description="Vous appuyez sur l'interrupteur et rien ne se passe ? Mécanisme cassé, fil déconnecté ou ampoule grillée ? Voici comment réparer votre éclairage." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Interrupteur HS</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full">Dépannage</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Mon Interrupteur ne Fonctionne Plus : Que Faire ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>5 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">C'est un geste qu'on fait vingt fois par jour sans y penser. Mais quand on appuie sur l'interrupteur et que la lumière reste éteinte (ou allumée !), c'est la tuile. Avant de vivre dans le noir, voici comment diagnostiquer la panne.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. L'Ampoule (Toujours vérifier en premier !)</h2>
+        <p>90% des "pannes d'interrupteur" sont en fait des pannes d'ampoule. Même si l'ampoule semble intacte (filament non visible sur les LED), elle peut être grillée. Testez avec une ampoule neuve avant de démonter le mur.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. Le Mécanisme Cassé (Le "Clic" mou)</h2>
+        <p>Si vous sentez que le bouton n'a plus son "clic" habituel, qu'il est mou ou qu'il ne tient pas en position, c'est mécanique. Une petite pièce en plastique ou un ressort a cassé à l'intérieur. Il n'y a rien à réparer, il faut acheter un nouvel interrupteur (Niko, Legrand, Bticino...).</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. Le Fil Déconnecté</h2>
+        <p>Les vibrations (claquages de portes) peuvent parfois desserrer les vis de l'interrupteur. Le fil de phase (le courant) ne touche plus le mécanisme.
+        <br><strong>Solution :</strong> Coupez le courant, dévissez la plaque, et vérifiez si les fils sont bien serrés dans leurs bornes.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">4. Le Cas du Va-et-Vient</h2>
+        <p>Si vous avez deux interrupteurs pour la même lampe (un en bas de l'escalier, un en haut) et que plus rien ne marche, c'est souvent un des deux interrupteurs qui a lâché, ou une "navette" (fil de liaison) qui est coupée.</p>
+        <p>Le câblage est plus complexe : il y a 3 fils par interrupteur. Si vous mélangez les fils en essayant de réparer, plus rien ne marchera. Prenez une photo avant de débrancher !</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Remplacement Interrupteur & Variateur</h3>
+            <p class="mb-4">Nous remplaçons vos interrupteurs défectueux par du matériel de qualité. Installation de variateurs (dimmers) compatibles LED possible.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Petit Dépannage</span>
+                    <span class="block text-white font-bold">Intervention Express</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

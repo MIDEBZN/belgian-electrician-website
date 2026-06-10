@@ -1,0 +1,687 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte l'installation d'un tableau électrique à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le coût installation tableau électrique dépend du nombre de circuits. Appartement (6-8 circuits) : 800€ à 1 200€. Maison (12-20 circuits) : 1 500€ à 2 500€. Grande maison (20+ circuits) : 2 500€ à 4 000€. Diagnostic et devis gratuit chez Allo Electricien. TVA 6% pour logements de +10 ans." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quand faut-il remplacer son tableau électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le remplacement tableau électrique Bruxelles est recommandé si : il a plus de 25 ans, il utilise encore des fusibles à cartouche, il n'a pas de différentiel 30mA, il disjoncte régulièrement, vous ajoutez de gros appareils (borne de recharge, pompe à chaleur), ou lors d'une vente avec rapport non conforme." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure l'installation d'un tableau électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "L'installation tableau électrique Bruxelles prend en moyenne 1 journée pour un remplacement standard. Appartement : 4 à 6 heures. Maison : 6 à 8 heures. Rénovation complète avec câblage : 2 à 3 jours. L'électricité est coupée uniquement pendant l'intervention." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre un disjoncteur et un différentiel ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le disjoncteur protège les circuits contre les surcharges et courts-circuits (protection des biens). Le différentiel 30mA protège les personnes contre l'électrocution en détectant les fuites de courant. Les deux sont obligatoires dans un tableau conforme au RGIE." }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on ajouter des circuits à un tableau existant ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, si le tableau dispose d'emplacements libres. Sinon, nous pouvons ajouter un coffret d'extension ou procéder au remplacement tableau électrique Bruxelles par un modèle plus grand. Coût ajout de circuit : 80€ à 150€ par circuit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Le remplacement du tableau bénéficie-t-il de la TVA à 6% ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, pour les logements de plus de 10 ans, l'installation tableau électrique Bruxelles bénéficie de la TVA réduite à 6% au lieu de 21%. Allo Electricien prépare l'attestation TVA pour vous. Économie significative sur le coût total." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles marques de tableaux installez-vous ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Allo Electricien travaille exclusivement avec des marques professionnelles reconnues : ABB, Schneider Electric, Hager et Legrand. Composants certifiés CE, garantie fabricant, disponibilité des pièces de rechange garantie pendant 10 ans minimum." }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il un contrôle après le remplacement du tableau ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, un contrôle par un organisme agréé (Vinçotte, AIB, BTV) est obligatoire après toute modification importante de l'installation. Allo Electricien planifie et accompagne ce contrôle. Nous garantissons la conformité — 98% de réussite au premier passage." }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Installation et Remplacement de Tableau Électrique",
+  "provider": { "@type": "Electrician", "name": "Allo Electricien", "telephone": "+32465732348" },
+  "areaServed": { "@type": "City", "name": "Bruxelles" },
+  "offers": [
+    { "@type": "Offer", "name": "Diagnostic + Devis", "price": "0", "priceCurrency": "EUR", "description": "Diagnostic gratuit" },
+    { "@type": "Offer", "name": "Tableau Appartement", "price": "800", "priceCurrency": "EUR", "description": "6-8 circuits, à partir de 800€" },
+    { "@type": "Offer", "name": "Tableau Maison", "price": "1500", "priceCurrency": "EUR", "description": "12-20 circuits, à partir de 1500€" }
+  ]
+};
+---
+
+<Layout title="Installation Tableau Électrique Bruxelles — Remplacement & Mise aux Normes | Allo Electricien" description="Installation tableau électrique Bruxelles : remplacement, mise aux normes RGIE, ajout de circuits. Marques ABB, Schneider, Hager. Devis gratuit. ☎ 0465 73 23 48. TVA 6% pour logements +10 ans." schema={faqSchema}>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+  <!-- HERO -->
+  <header class="relative bg-navy overflow-hidden pt-12 pb-28 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+    <div class="absolute left-0 bottom-0 w-1/4 h-1/2 bg-gradient-to-t from-blue-500/5 to-transparent"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/services">Services</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Tableau Électrique</li>
+        </ol>
+      </nav>
+      <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 text-primary text-sm font-bold px-4 py-2 rounded-full mb-6">
+        <span class="material-icons text-base">settings_input_component</span>INSTALLATION & REMPLACEMENT — NORMES RGIE
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+        Installation <span class="text-primary">Tableau Électrique</span> Bruxelles
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
+        <strong class="text-white">Remplacement tableau électrique Bruxelles</strong> par électricien agréé. Mise aux normes RGIE, disjoncteurs modulaires, différentiels 30mA. Marques ABB, Schneider Electric, Hager. Devis gratuit.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="/contact" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 text-lg">
+          <span class="material-icons text-2xl">description</span>Devis Gratuit
+        </a>
+        <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 transition-all hover:-translate-y-1">
+          <span class="material-icons">call</span>0465 73 23 48
+        </a>
+        <a href="https://wa.me/32465732348" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-1">
+          <span class="material-icons">chat</span>WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-20 -mt-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+    <!-- KEY STATS -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">engineering</span>
+        <p class="text-3xl font-bold text-primary">1 jour</p>
+        <p class="text-gray-400 text-sm mt-1">Installation standard</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">task_alt</span>
+        <p class="text-3xl font-bold text-primary">98%</p>
+        <p class="text-gray-400 text-sm mt-1">Conformité au 1er contrôle</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">savings</span>
+        <p class="text-3xl font-bold text-primary">TVA 6%</p>
+        <p class="text-gray-400 text-sm mt-1">Pour logements de +10 ans</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">shield</span>
+        <p class="text-3xl font-bold text-primary">2 ans</p>
+        <p class="text-gray-400 text-sm mt-1">Garantie pièces & main-d'œuvre</p>
+      </div>
+    </div>
+
+    <!-- SECTION 1: WHAT'S INCLUDED -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Service Complet</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Ce Que Comprend Notre Installation Tableau Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">search</span>
+          <h3 class="text-lg font-bold text-white mb-2">Diagnostic Gratuit</h3>
+          <p class="text-gray-400 text-sm">Inspection de votre tableau actuel et de l'ensemble des circuits. Évaluation des besoins : nombre de circuits, puissance nécessaire, ajouts futurs (borne de recharge, pompe à chaleur).</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">delete_sweep</span>
+          <h3 class="text-lg font-bold text-white mb-2">Démontage Ancien Tableau</h3>
+          <p class="text-gray-400 text-sm">Retrait propre et sécurisé de l'ancien tableau, des fusibles obsolètes et du câblage défectueux. Évacuation des déchets incluse dans le prix.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">dashboard_customize</span>
+          <h3 class="text-lg font-bold text-white mb-2">Coffret Neuf aux Normes</h3>
+          <p class="text-gray-400 text-sm">Installation d'un coffret de qualité professionnelle (ABB, Schneider Electric, Hager) dimensionné pour votre installation, avec emplacements de réserve pour vos futurs besoins.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">security</span>
+          <h3 class="text-lg font-bold text-white mb-2">Disjoncteurs & Différentiels</h3>
+          <p class="text-gray-400 text-sm">Disjoncteurs modulaires calibrés pour chaque circuit. Différentiels 30mA type A (obligatoire pour lave-linge, plaque induction) et type AC pour la protection des personnes.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">label</span>
+          <h3 class="text-lg font-bold text-white mb-2">Étiquetage & Repérage</h3>
+          <p class="text-gray-400 text-sm">Étiquetage clair de chaque circuit (cuisine, salon, chambre 1, etc.) conforme au RGIE. Identification rapide en cas de panne pour localiser le circuit concerné.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">architecture</span>
+          <h3 class="text-lg font-bold text-white mb-2">Schéma Unifilaire</h3>
+          <p class="text-gray-400 text-sm">Réalisation du schéma unifilaire et plan de position obligatoires. Documents à afficher à côté du tableau, indispensables pour le contrôle de conformité.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">bolt</span>
+          <h3 class="text-lg font-bold text-white mb-2">Circuits Dédiés</h3>
+          <p class="text-gray-400 text-sm">Ajout de circuits dédiés pour les gros consommateurs : four, lave-vaisselle, sèche-linge, borne de recharge, climatisation. Protection individuelle de chaque appareil.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">checklist</span>
+          <h3 class="text-lg font-bold text-white mb-2">Test Complet</h3>
+          <p class="text-gray-400 text-sm">Vérification de chaque circuit après installation : test de continuité, test d'isolement, déclenchement des différentiels, mesure de la résistance de terre.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">shield</span>
+          <h3 class="text-lg font-bold text-white mb-2">Garantie 2 Ans</h3>
+          <p class="text-gray-400 text-sm">Garantie de 2 ans sur le tableau, les composants et la main-d'œuvre. En cas de défaillance, nous remplaçons gratuitement les pièces défectueuses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: COMMON PROBLEMS -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Signes d'Alerte</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Quand Faut-Il Remplacer Votre Tableau Électrique ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Le <strong class="text-white">remplacement tableau électrique Bruxelles</strong> est nécessaire dans les situations suivantes. Chaque problème non traité augmente les risques d'incendie et d'électrocution.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-red-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">history</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Tableau de Plus de 25 Ans</h3>
+            <p class="text-gray-400 text-sm">Les composants électriques se dégradent avec le temps. Au-delà de 25 ans, les disjoncteurs perdent leur fiabilité, les connexions s'oxydent et le risque de défaillance augmente fortement.</p>
+            <p class="text-red-400 text-xs mt-2 font-semibold">⚠ Remplacement recommandé</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-red-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">cancel</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Fusibles à Cartouche / Fil</h3>
+            <p class="text-gray-400 text-sm">Technologie totalement obsolète. Les fusibles ne se réarment pas, ne protègent pas contre tous les types de défauts, et sont non conformes aux normes RGIE actuelles.</p>
+            <p class="text-red-400 text-xs mt-2 font-semibold">⚠ Non conforme RGIE</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-orange-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-orange-400 text-2xl">flash_off</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Disjonctions Fréquentes</h3>
+            <p class="text-gray-400 text-sm">Si votre disjoncteur saute régulièrement, votre tableau est probablement sous-dimensionné par rapport à votre consommation actuelle. L'ajout d'appareils modernes nécessite plus de circuits.</p>
+            <p class="text-orange-400 text-xs mt-2 font-semibold">⚠ Tableau sous-dimensionné</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-orange-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-orange-400 text-2xl">dangerous</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Absence de Différentiel 30mA</h3>
+            <p class="text-gray-400 text-sm">Votre tableau n'a pas de protection différentielle ? Vous n'êtes pas protégé contre l'électrocution. Le différentiel 30mA est obligatoire sur tous les circuits depuis les normes RGIE.</p>
+            <p class="text-orange-400 text-xs mt-2 font-semibold">⚠ Risque d'électrocution</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-yellow-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-yellow-400 text-2xl">ev_station</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Ajout de Gros Appareils</h3>
+            <p class="text-gray-400 text-sm">Borne de recharge, pompe à chaleur, plaque induction, climatisation : ces appareils nécessitent des circuits dédiés avec protections spécifiques (type A, ampérage adapté).</p>
+            <p class="text-yellow-400 text-xs mt-2 font-semibold">→ Circuit dédié obligatoire</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-yellow-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-yellow-400 text-2xl">home</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Vente Immobilière</h3>
+            <p class="text-gray-400 text-sm">Rapport de contrôle non conforme ? Le remplacement du tableau est souvent la correction la plus importante pour obtenir l'attestation de conformité nécessaire à la vente.</p>
+            <p class="text-yellow-400 text-xs mt-2 font-semibold">→ Obligatoire pour la vente</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR PROCESS -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Étape par Étape</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Processus d'Installation Tableau Électrique</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="relative">
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2 z-0 border-t-2 border-dotted border-gray-600"></div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">1</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Diagnostic Gratuit</h3>
+            <p class="text-gray-400 text-xs">Inspection de votre installation. Évaluation des besoins et dimensionnement du nouveau tableau.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">2</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Devis Détaillé</h3>
+            <p class="text-gray-400 text-xs"><strong class="text-white">Coût installation tableau électrique</strong> détaillé poste par poste. Sans engagement.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">3</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Installation</h3>
+            <p class="text-gray-400 text-xs">Démontage ancien tableau, <strong class="text-white">installation tableau électrique</strong> neuf avec composants professionnels.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">4</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Tests & Vérification</h3>
+            <p class="text-gray-400 text-xs">Test de chaque circuit, mesures d'isolement, déclenchement des protections. Schéma unifilaire remis.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">5</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Contrôle Agréé</h3>
+            <p class="text-gray-400 text-xs">Planification du contrôle par organisme agréé. 98% de conformité au 1er passage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TYPES OF TABLEAUX -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Solutions Adaptées</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Types d'Installation Tableau Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-2xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="material-icons text-primary text-3xl">apartment</span>
+            <h3 class="text-xl font-bold text-white">Appartement</h3>
+          </div>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>6 à 8 circuits standards</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Coffret 2 rangées</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>1 différentiel 30mA type AC</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>1 différentiel type A (plaque/lave-linge)</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Disjoncteurs calibrés</li>
+          </ul>
+          <div class="border-t border-white/10 pt-4">
+            <p class="text-gray-400 text-sm">Durée : <strong class="text-white">4-6 heures</strong></p>
+            <p class="text-primary font-bold text-xl mt-1">800€ — 1 200€</p>
+          </div>
+        </div>
+        <div class="bg-navy rounded-2xl border-2 border-primary p-8 relative shadow-lg shadow-primary/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-navy text-xs font-bold px-4 py-1 rounded-full">LE PLUS DEMANDÉ</div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="material-icons text-primary text-3xl">home</span>
+            <h3 class="text-xl font-bold text-white">Maison</h3>
+          </div>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>12 à 20 circuits</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Coffret 3-4 rangées</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>2-3 différentiels 30mA</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Circuits dédiés gros appareils</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Emplacements de réserve</li>
+          </ul>
+          <div class="border-t border-primary/30 pt-4">
+            <p class="text-gray-400 text-sm">Durée : <strong class="text-white">6-8 heures</strong></p>
+            <p class="text-primary font-bold text-xl mt-1">1 500€ — 2 500€</p>
+          </div>
+        </div>
+        <div class="bg-navy rounded-2xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="material-icons text-primary text-3xl">villa</span>
+            <h3 class="text-xl font-bold text-white">Grande Maison / Villa</h3>
+          </div>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>20+ circuits</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Coffret 4-5 rangées ou double</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>3-4 différentiels sélectifs</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Parafoudre intégré</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Borne de recharge & domotique ready</li>
+          </ul>
+          <div class="border-t border-white/10 pt-4">
+            <p class="text-gray-400 text-sm">Durée : <strong class="text-white">1-2 jours</strong></p>
+            <p class="text-primary font-bold text-xl mt-1">2 500€ — 4 000€</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-navy-light border border-primary/20 rounded-xl p-6 mt-6 text-center">
+        <p class="text-gray-300"><strong class="text-white">💡 Bon à savoir :</strong> Pour les logements de <strong class="text-white">plus de 10 ans</strong>, le <strong class="text-white">coût installation tableau électrique</strong> bénéficie de la TVA réduite à <strong class="text-primary">6% au lieu de 21%</strong>. Nous préparons l'attestation TVA. <a href="/contact" class="text-primary font-bold hover:underline">Demandez un devis gratuit →</a></p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE US -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Engagements</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Pourquoi Choisir Allo Electricien pour Votre Tableau ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">workspace_premium</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Marques Professionnelles</h3>
+          </div>
+          <p class="text-gray-400">Nous travaillons exclusivement avec <strong class="text-white">ABB, Schneider Electric, Hager et Legrand</strong>. Composants certifiés CE, garantie fabricant, pièces de rechange disponibles 10+ ans.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">task_alt</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">98% de Conformité au 1er Contrôle</h3>
+          </div>
+          <p class="text-gray-400">Notre expertise garantit le passage du contrôle par l'organisme agréé dès la première visite. Nous anticipons chaque point de vérification du RGIE et préparons les schémas unifilaires.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">euro</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Devis Transparent & TVA 6%</h3>
+          </div>
+          <p class="text-gray-400">Le <strong class="text-white">coût installation tableau électrique</strong> est détaillé poste par poste. Pas de surprise. Pour les logements de +10 ans, vous bénéficiez du taux de TVA réduit à 6%.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">bolt</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Installation Rapide & Propre</h3>
+          </div>
+          <p class="text-gray-400">L'<strong class="text-white">installation tableau électrique Bruxelles</strong> est réalisée en 1 journée. Nos techniciens protègent votre intérieur, évacuent les déchets, et minimisent le temps de coupure d'électricité.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: EMERGENCY AVAILABILITY -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Disponibilité</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Disponibilité Pour Votre Tableau Électrique</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-3">schedule</span>
+          <h3 class="text-white font-bold mb-1">Disponible 24/7</h3>
+          <p class="text-gray-400 text-sm">Tous les jours, toute l'année</p>
+          <span class="inline-block mt-3 bg-green-400/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full">7j/7 — 24h/24</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">bolt</span>
+          <h3 class="text-white font-bold mb-1">Urgence Immédiate</h3>
+          <p class="text-gray-400 text-sm">Intervention en -45 min</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Tableau en panne</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">event_available</span>
+          <h3 class="text-white font-bold mb-1">Rendez-vous Rapide</h3>
+          <p class="text-gray-400 text-sm">Disponible 7j/7</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Installation planifiée</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">speed</span>
+          <h3 class="text-white font-bold mb-1">Diagnostic Gratuit</h3>
+          <p class="text-gray-400 text-sm">48h maximum</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Devis offert</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FAQ -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Questions Fréquentes — Tableau Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien coûte l'installation d'un tableau électrique à Bruxelles ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Le <strong class="text-white">coût installation tableau électrique</strong> dépend du nombre de circuits. Appartement (6-8 circuits) : <strong class="text-white">800€ à 1 200€</strong>. Maison (12-20 circuits) : <strong class="text-white">1 500€ à 2 500€</strong>. Grande maison (20+ circuits) : <strong class="text-white">2 500€ à 4 000€</strong>. Diagnostic et devis gratuit. TVA 6% pour logements de +10 ans.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Quand faut-il remplacer son tableau électrique ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Le <strong class="text-white">remplacement tableau électrique Bruxelles</strong> est recommandé si : il a plus de 25 ans, il utilise encore des fusibles à cartouche, il n'a pas de différentiel 30mA, il disjoncte régulièrement, vous ajoutez de gros appareils (borne de recharge, pompe à chaleur), ou lors d'une vente avec rapport non conforme.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien de temps dure l'installation ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>L'<strong class="text-white">installation tableau électrique Bruxelles</strong> prend en moyenne 1 journée. Appartement : <strong class="text-white">4 à 6 heures</strong>. Maison : <strong class="text-white">6 à 8 heures</strong>. Rénovation complète avec câblage : <strong class="text-white">2 à 3 jours</strong>. L'électricité est coupée uniquement pendant l'intervention.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Quelle est la différence entre un disjoncteur et un différentiel ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Le <strong class="text-white">disjoncteur</strong> protège les circuits contre les surcharges et courts-circuits (protection des biens). Le <strong class="text-white">différentiel 30mA</strong> protège les personnes contre l'électrocution en détectant les fuites de courant. Les deux sont obligatoires dans un tableau conforme au RGIE.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Peut-on ajouter des circuits à un tableau existant ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, si le tableau dispose d'emplacements libres. Sinon, nous pouvons ajouter un coffret d'extension ou procéder au <strong class="text-white">remplacement tableau électrique Bruxelles</strong> par un modèle plus grand. Coût ajout de circuit : <strong class="text-white">80€ à 150€</strong> par circuit.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Le remplacement du tableau bénéficie-t-il de la TVA à 6% ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui ! Pour les logements de <strong class="text-white">plus de 10 ans</strong>, l'<strong class="text-white">installation tableau électrique Bruxelles</strong> bénéficie de la TVA réduite à <strong class="text-white">6% au lieu de 21%</strong>. Économie significative (~15%) sur le <strong class="text-white">coût installation tableau électrique</strong>. Nous préparons l'attestation TVA pour vous.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Quelles marques de tableaux installez-vous ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Allo Electricien travaille exclusivement avec des marques professionnelles : <strong class="text-white">ABB, Schneider Electric, Hager et Legrand</strong>. Composants certifiés CE, garantie fabricant, pièces de rechange disponibles pendant <strong class="text-white">10 ans minimum</strong>.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Faut-il un contrôle après le remplacement du tableau ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, un <strong class="text-white">contrôle par un organisme agréé</strong> (Vinçotte, AIB, BTV) est obligatoire après toute modification importante. Allo Electricien planifie et accompagne ce contrôle. <strong class="text-white">98% de réussite</strong> au premier passage.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SERVICE AREA -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Zone de Couverture</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Installation Tableau Électrique dans les 19 Communes de Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Notre service d'<strong class="text-white">installation tableau électrique Bruxelles</strong> couvre l'intégralité de la Région de Bruxelles-Capitale. Diagnostic gratuit sur rendez-vous dans les 48h.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <a href="/electricien-anderlecht" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Anderlecht</span>
+        </a>
+        <a href="/electricien-auderghem" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Auderghem</span>
+        </a>
+        <a href="/electricien-berchem-sainte-agathe" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Berchem-Ste-Agathe</span>
+        </a>
+        <a href="/electricien-bruxelles-ville" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Bruxelles-Ville</span>
+        </a>
+        <a href="/electricien-etterbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Etterbeek</span>
+        </a>
+        <a href="/electricien-evere" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Evere</span>
+        </a>
+        <a href="/electricien-forest" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Forest</span>
+        </a>
+        <a href="/electricien-ganshoren" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Ganshoren</span>
+        </a>
+        <a href="/electricien-ixelles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Ixelles</span>
+        </a>
+        <a href="/electricien-jette" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Jette</span>
+        </a>
+        <a href="/electricien-koekelberg" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Koekelberg</span>
+        </a>
+        <a href="/electricien-molenbeek-saint-jean" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Molenbeek</span>
+        </a>
+        <a href="/electricien-saint-gilles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Saint-Gilles</span>
+        </a>
+        <a href="/electricien-saint-josse-ten-noode" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Saint-Josse</span>
+        </a>
+        <a href="/electricien-schaerbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Schaerbeek</span>
+        </a>
+        <a href="/electricien-uccle" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Uccle</span>
+        </a>
+        <a href="/electricien-watermael-boitsfort" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Watermael-Boitsfort</span>
+        </a>
+        <a href="/electricien-woluwe-saint-lambert" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Woluwe-St-Lambert</span>
+        </a>
+        <a href="/electricien-woluwe-saint-pierre" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Woluwe-St-Pierre</span>
+        </a>
+      </div>
+      <p class="text-center text-gray-400 mt-6">Nous intervenons aussi en <strong class="text-white">périphérie de Bruxelles</strong> : Zaventem, Tervuren, Waterloo, Nivelles, Wavre, Vilvoorde. <a href="/zones" class="text-primary hover:underline">Voir toutes nos zones →</a></p>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="bg-gradient-to-r from-primary/10 to-navy-light rounded-2xl border border-primary/20 p-8 md:p-12 mb-16">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-primary text-navy text-sm font-bold px-4 py-2 rounded-full mb-4">
+            <span class="material-icons text-base">settings_input_component</span>DEVIS GRATUIT
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Besoin d'un Nouveau Tableau Électrique ?</h2>
+          <p class="text-gray-300 text-lg max-w-xl">Diagnostic gratuit, <strong class="text-white">installation tableau électrique Bruxelles</strong> en 1 journée, garantie 2 ans. Composants professionnels ABB, Schneider, Hager.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="/contact" class="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-navy font-black text-lg px-8 py-5 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 whitespace-nowrap">
+            <span class="material-icons text-2xl">description</span>Devis Gratuit
+          </a>
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-3 rounded-xl border border-white/20 transition-all text-center">
+            <span class="material-icons">phone</span>0465 73 23 48
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKS -->
+    <section class="mb-16">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Nos Autres Services Électriques</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="/services/depannage-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">bolt</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Dépannage Urgent 24/7</p>
+            <p class="text-gray-400 text-sm">Intervention en 45 min</p>
+          </div>
+        </a>
+        <a href="/services/mise-en-conformite" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">verified_user</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Mise en Conformité</p>
+            <p class="text-gray-400 text-sm">Remise aux normes RGIE</p>
+          </div>
+        </a>
+        <a href="/services/borne-de-recharge" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">ev_station</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Borne de Recharge</p>
+            <p class="text-gray-400 text-sm">Voiture électrique</p>
+          </div>
+        </a>
+        <a href="/services/domotique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">touch_app</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Domotique</p>
+            <p class="text-gray-400 text-sm">Maison intelligente</p>
+          </div>
+        </a>
+        <a href="/services/installation-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">lightbulb</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Éclairage LED</p>
+            <p class="text-gray-400 text-sm">Intérieur & extérieur</p>
+          </div>
+        </a>
+        <a href="/blog" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">article</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Blog & Guides</p>
+            <p class="text-gray-400 text-sm">Conseils électricité</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+</Layout>

@@ -1,0 +1,122 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte la création de nouveaux schémas électriques seuls ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un électricien facturera généralement entre 250€ et 400€ pour venir repérer l'installation et redessiner informatiquement le schéma unifilaire et le plan de position." }
+    },
+    {
+      "@type": "Question",
+      "name": "Rénover pièce par pièce, est-ce plus économique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non, c'est l'inverse. Faire venir l'électricien en plusieurs fois coûte plus cher en frais de déplacement, en gestion de chantier, et complique le raccordement au tableau principal. Si vous le pouvez, faites tout d'une traite." }
+    },
+    {
+      "@type": "Question",
+      "name": "Un électricien propose un prix beaucoup plus bas que les autres devis, est-ce normal ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Méfiez-vous. Un devis deux fois moins cher cache généralement des 'oublis' volontaires qui vous seront facturés en suppléments, l'utilisation de matériel non certifié CE, ou l'absence d'assurance responsabilité civile. Exigez un devis détaillé poste par poste." }
+    }
+  ]
+};
+---
+
+<Layout title="Prix d'une Rénovation Électrique Complète pour une Maison de 3 Chambres" description="Quel budget prévoir pour refaire toute l'électricité d'une maison de 3 chambres à Bruxelles ? Devis détaillé, prix au mètre carré et primes disponibles." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Prix Rénovation Électrique</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Guide Tarifs</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Prix d'une rénovation électrique complète : budget à prévoir pour une maison de 3 chambres
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Refaire l'électricité d'une maison unifamiliale de 3 chambres à Bruxelles représente un investissement important. Pour une rénovation électrique complète, comptez un budget moyen compris <strong class="text-white">entre 8 000€ et 14 000€ HTVA</strong>. Ce montant varie selon la surface, les finitions choisies, la complexité du câblage et la nécessité de tirer une nouvelle ligne de terre.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Rénovation partielle ou totale : quelle différence de prix ?</h2>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Type de rénovation</th><th class="text-right p-4 text-white">Budget estimé (HTVA)</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4"><strong>Mise en conformité simple</strong> — Installation saine mais hors normes (absence de schémas, manque de différentiels)</td><td class="p-4 text-right text-primary font-bold">1 500€ — 4 000€</td></tr>
+              <tr><td class="p-4"><strong>Rénovation totale à neuf</strong> — Tout est à refaire (câbles tissu, saignées, nouvelle mise à la terre, tableau neuf)</td><td class="p-4 text-right text-primary font-bold">8 000€ — 14 000€</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le détail du budget pour une maison de 3 chambres (120-150m²)</h2>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Poste</th><th class="text-right p-4 text-white">Fourchette</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Nouveau tableau électrique (coffret, différentiels, disjoncteurs)</td><td class="p-4 text-right text-primary font-bold">1 000€ — 1 800€</td></tr>
+              <tr><td class="p-4">Rainurage et rebouchage des murs</td><td class="p-4 text-right text-primary font-bold">2 000€ — 3 500€</td></tr>
+              <tr><td class="p-4">Tirage des câbles et installation</td><td class="p-4 text-right text-primary font-bold">3 000€ — 5 000€</td></tr>
+              <tr><td class="p-4">Appareillage : prises et interrupteurs</td><td class="p-4 text-right text-primary font-bold">1 500€ — 2 500€</td></tr>
+              <tr><td class="p-4">Mise à la terre (piquets en cuivre galvanisé)</td><td class="p-4 text-right text-primary font-bold">250€ — 600€</td></tr>
+              <tr><td class="p-4">Schémas unifilaires + contrôle de réception RGIE</td><td class="p-4 text-right text-primary font-bold">300€ — 500€</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comment estimer le prix au mètre carré ?</h2>
+        <div class="bg-navy-light border border-primary/20 rounded-xl p-6 my-6">
+          <ul class="space-y-2">
+            <li>• <strong class="text-white">Rénovation encastrée standard :</strong> 80€ à 110€ du m²</li>
+            <li>• <strong class="text-white">Rénovation haut de gamme (domotique, éclairage LED architectural) :</strong> 120€ à 180€ du m²</li>
+            <li>• <strong class="text-white">Pour 130m² :</strong> estimation entre 10 400€ et 14 300€</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comment réduire la facture sans compromettre la sécurité ?</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Faire les saignées soi-même :</strong> Le poste où vous pouvez réaliser les plus grosses économies (1 500€ à 3 000€). L'électricien trace les chemins sur les murs, vous creusez, puis il revient pour les câbles.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Garder la TVA à 6% :</strong> Si votre maison a plus de 10 ans, assurez-vous que l'entreprise vous facture bien la main-d'œuvre ET le matériel à 6% de TVA.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Demander les Primes RENOLUTION :</strong> La Région Bruxelloise octroie des primes pour la mise en conformité électrique. Selon votre catégorie de revenus, cette prime peut rembourser entre 30% et 50% des travaux éligibles.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Le budget électricité</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Combien coûte la création de nouveaux schémas électriques seuls ?</h3>
+        <p>Si votre installation est bonne mais que vous avez perdu les schémas, un électricien vous facturera généralement entre <strong class="text-white">250€ et 400€</strong> pour venir repérer l'installation et redessiner informatiquement le schéma unifilaire et le plan de position.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Rénover pièce par pièce, est-ce plus économique ?</h3>
+        <p>Non, c'est l'inverse. Faire venir l'électricien en plusieurs fois coûte plus cher en frais de déplacement et complique le raccordement au tableau principal. Si vous le pouvez, <strong class="text-white">faites tout d'une traite</strong>.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Un électricien propose un prix beaucoup plus bas que les autres devis, est-ce normal ?</h3>
+        <p>Méfiez-vous. Un devis deux fois moins cher cache généralement des "oublis" volontaires qui vous seront facturés en suppléments, l'utilisation de matériel non certifié CE, ou l'absence d'assurance responsabilité civile. Exigez un devis détaillé poste par poste.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">📊 Envie de connaître le vrai coût de votre projet ?</p>
+          <p class="text-sm">Chaque maison est unique. Pour avoir une idée précise du budget pour la rénovation électrique de votre habitation bruxelloise, rien ne remplace une visite sur place. <a href="/contact" class="text-primary underline font-bold">Contactez Allo Electricien pour un devis gratuit →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Dois-je être certifié pour remplacer une simple prise ou un interrupteur ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non. Le remplacement à l'identique de petit appareillage s'apparente à de l'entretien courant. Il n'est pas nécessaire de faire repasser un organisme de contrôle pour cela, à condition de travailler hors tension." }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on demander les Primes RENOLUTION si on fait les travaux soi-même ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non. À Bruxelles, les travaux réalisés par le propriétaire lui-même ne sont jamais subsidiés. Pour bénéficier des primes RENOLUTION, les travaux doivent impérativement être facturés par un entrepreneur enregistré à la BCE." }
+    },
+    {
+      "@type": "Question",
+      "name": "Un électricien peut-il vérifier mon travail et le valider pour moi ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non. La validation légale de conformité ne peut être délivrée que par un Organisme de Contrôle Agréé (OCA), et non par un électricien privé. L'approbation finale revient toujours à l'inspecteur indépendant mandaté par l'État." }
+    }
+  ]
+};
+---
+
+<Layout title="Faire Son Électricité Soi-Même en Belgique : Ce que Dit la Loi RGIE" description="Faire son électricité soi-même en Belgique, est-ce légal ? Découvrez les règles du RGIE, les limites du bricolage, et quand appeler un électricien agréé." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Électricité DIY Belgique</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Législation</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Peut-on faire son électricité soi-même en Belgique ? Ce que dit la loi
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">En Belgique, la loi vous autorise à <strong class="text-white">faire votre électricité vous-même</strong>. Aucun diplôme ni agrément n'est exigé pour tirer des câbles ou poser des prises chez soi. Cependant, cette liberté s'accompagne d'une obligation stricte : l'installation devra obligatoirement passer un contrôle par un organisme agréé (Vinçotte, BTV...) pour obtenir le certificat de conformité RGIE. Sans lui, Sibelga refusera d'ouvrir votre compteur.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Ce que la loi belge autorise formellement</h2>
+        <p>Que vous soyez propriétaire à Schaerbeek ou à Uccle, vous avez le droit de :</p>
+        <ul class="space-y-2 mt-4">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Faire les saignées dans les murs et y poser les canalisations (tuyaux flex).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Tirer les fils électriques (VOB, XVB) dans toute la maison.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Installer les prises, les interrupteurs et les points d'éclairage.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Assembler et raccorder le tableau de répartition complet (disjoncteurs, différentiels).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Dessiner vous-même vos plans et schémas unifilaires.</span></li>
+        </ul>
+        <p class="mt-4">Bref, <strong class="text-white">vous pouvez réaliser 100% de la rénovation électrique interne de votre logement</strong>.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">La contrepartie obligatoire : Le contrôle RGIE</h2>
+        <p>Le filet de sécurité de l'État est clair : une fois vos travaux terminés, et <strong class="text-white">AVANT la mise sous tension définitive</strong>, vous avez l'obligation légale de faire venir un organisme de contrôle externe et indépendant. Si le contrôleur constate la moindre entorse au RGIE, le rapport sera négatif et Sibelga refusera d'effectuer le raccordement.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les 3 limites du "Do It Yourself" en électricité</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">1. Le risque d'assurance (Incendie)</h3>
+        <p>En cas de sinistre causé par un défaut électrique, l'expert de votre assurance habitation demandera le certificat de conformité. En son absence, l'assurance peut <strong class="text-white">refuser de vous indemniser</strong> pour les dégâts.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">2. La responsabilité pénale</h3>
+        <p>En tant que réalisateur de l'installation, vous en portez la responsabilité technique. Si un invité ou un locataire s'électrocute à cause d'une prise de terre mal raccordée, votre responsabilité pénale pourrait être engagée.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">3. Ce que vous NE POUVEZ PAS faire</h3>
+        <p>Vous n'avez pas le droit d'ouvrir la borne de raccordement du réseau public ni d'intervenir sur le compteur lui-même (la boîte plombée Sibelga).</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">La solution hybride : la co-réalisation</h2>
+        <p>Si vous souhaitez faire des économies substantielles (jusqu'à 50% du budget) sans sacrifier la sécurité, optez pour la <strong class="text-white">co-réalisation avec un électricien</strong> :</p>
+        <ul class="space-y-2 mt-4">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_one</span><span>Un expert élabore le projet, dimensionne le tableau, vous fournit le matériel et trace les chemins de câbles sur les murs.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_two</span><span>Vous faites la "sale besogne" : creuser les saignées, placer les boîtiers d'encastrement, passer les gaines, reboucher les trous.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_3</span><span>L'électricien professionnel revient pour la phase technique : connecter les prises, assembler le tableau, réaliser la mise à la terre, dessiner les schémas certifiés et organiser la réception.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Faire son électricité soi-même</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Dois-je être certifié pour remplacer une simple prise ou un interrupteur ?</h3>
+        <p>Non. Le remplacement à l'identique de petit appareillage s'apparente à de l'entretien courant. Il n'est pas nécessaire de faire repasser un organisme de contrôle, à condition de travailler hors tension et de remettre exactement les mêmes fils aux mêmes endroits.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Un électricien peut-il vérifier mon travail et le valider pour moi ?</h3>
+        <p>Non. La validation légale de conformité ne peut être délivrée que par un "Organisme de Contrôle Agréé" (OCA), et non par un électricien privé. L'approbation finale revient toujours à l'inspecteur indépendant mandaté par l'État.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Peut-on demander les Primes RENOLUTION si on fait les travaux soi-même ?</h3>
+        <p>Non. À Bruxelles, les travaux réalisés par le propriétaire lui-même ne sont <strong class="text-white">jamais subsidiés</strong>. Les travaux doivent impérativement être facturés par un entrepreneur enregistré à la Banque-Carrefour des Entreprises. Souvent, la prime accordée compense largement le coût de l'appel à un professionnel.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">🔒 Vous ne voulez pas prendre de risques avec l'électricité ?</p>
+          <p class="text-sm">Assurez la sécurité de votre famille et de votre maison. Confiez votre rénovation à des experts certifiés qui maîtrisent le RGIE sur le bout des doigts. <a href="/contact" class="text-primary underline font-bold">Contactez Allo Electricien →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

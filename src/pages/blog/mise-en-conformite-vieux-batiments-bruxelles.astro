@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien de temps dure la rénovation électrique d'une maison bruxelloise ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pour une maison de maître typique de 3 étages, comptez entre 2 et 4 semaines de travail complet, sans inclure les finitions (replafonnage, peinture)." }
+    },
+    {
+      "@type": "Question",
+      "name": "La rénovation électrique donne-t-elle droit à des primes à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui ! En Région de Bruxelles-Capitale, la rénovation complète de l'installation électrique est couverte par les primes RENOLUTION. Le montant dépend de votre catégorie de revenus et peut couvrir une part significative de votre facture." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment créer une prise de terre dans une maison de ville sans jardin ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "L'électricien devra utiliser la technique de la mise à la terre verticale : enfoncer des piquets de terre en cuivre galvanisé profondément dans le sol (souvent dans la cave), jusqu'à atteindre une couche géologique offrant une résistance inférieure à 30 ohms." }
+    }
+  ]
+};
+---
+
+<Layout title="Mise en Conformité Électrique : Rénover les Vieux Bâtiments Bruxellois" description="Maisons de maître ou vieux appartements bruxellois : découvrez les étapes clés et les défis de la mise en conformité électrique pour les bâtiments anciens." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Rénovation Électrique Ancien</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Rénovation</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Mise en conformité électrique : comment rénover les installations des vieux bâtiments bruxellois
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>8 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Rénover l'installation électrique d'un vieux bâtiment à Bruxelles (maison de maître, hôtel de maître ou ancien appartement) est un défi technique. La <strong class="text-white">mise en conformité électrique</strong> exige souvent de refaire la mise à la terre, de remplacer les vieux câbles en tissu, d'installer de nouveaux tableaux avec disjoncteurs différentiels et de dessiner des schémas précis.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les défis spécifiques des vieilles maisons bruxelloises</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">1. Préserver les moulures et les boiseries</h3>
+        <p>L'enjeu majeur est de faire passer de nouveaux câbles sans détruire le cachet historique. Dans une vieille maison bruxelloise, saigner un mur recouvert de lambris centenaires ou trouer un plafond orné de rosaces en plâtre est impensable.</p>
+        <p class="mt-3"><strong class="text-white">Les solutions techniques :</strong> utiliser les plinthes existantes (ou poser des plinthes techniques passe-câbles), passer sous les planchers, utiliser les anciennes cheminées condamnées comme gaines techniques, ou opter pour une électricité encastrée uniquement là où les murs devront être replafonnés.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">2. Le remplacement des câbles en plomb ou en tissu</h3>
+        <p>Jusque dans les années 60, il n'était pas rare d'utiliser des fils électriques recouverts de tissu, voire insérés dans des canalisations en plomb. Avec le temps, ce tissu s'effrite et le risque de court-circuit devient extrême. Le RGIE interdit formellement de conserver ces câbles actifs. <strong class="text-white">L'intégralité du câblage doit être tirée à nouveau</strong> avec du fil VOB sous gaine ou du câble XVB.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">3. La création d'une véritable mise à la terre</h3>
+        <p>Dans beaucoup de vieux immeubles bruxellois, la mise à la terre est tout simplement inexistante. Créer une prise de terre efficace (résistance inférieure à 30 ohms) en pleine ville, sans toujours avoir accès à un jardin, demande de l'expertise (enfoncement de piquets de terre en profondeur dans les caves).</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les 4 étapes d'une rénovation électrique complète</h2>
+
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 bg-navy-light border border-white/10 rounded-xl p-4">
+            <span class="text-primary font-bold text-lg">1</span>
+            <div><strong class="text-white">Le diagnostic (audit électrique) :</strong><p class="mt-1 text-sm">Un électricien certifié évalue la puissance nécessaire, repère les trajets possibles pour les câbles, et dimensionne le futur tableau électrique.</p></div>
+          </li>
+          <li class="flex items-start gap-3 bg-navy-light border border-white/10 rounded-xl p-4">
+            <span class="text-primary font-bold text-lg">2</span>
+            <div><strong class="text-white">Le démontage et le rainurage :</strong><p class="mt-1 text-sm">Le vieux tableau à fusibles est démonté. Les anciens fils dangereux sont coupés et retirés. L'électricien réalise les saignées pour faire passer les nouvelles gaines annelées.</p></div>
+          </li>
+          <li class="flex items-start gap-3 bg-navy-light border border-white/10 rounded-xl p-4">
+            <span class="text-primary font-bold text-lg">3</span>
+            <div><strong class="text-white">Le câblage et l'installation du tableau :</strong><p class="mt-1 text-sm">Les fils neufs sont tirés. Un tableau électrique moderne est installé avec disjoncteurs automatiques, différentiel général 300 mA, et différentiel 30 mA pour les pièces humides.</p></div>
+          </li>
+          <li class="flex items-start gap-3 bg-navy-light border border-white/10 rounded-xl p-4">
+            <span class="text-primary font-bold text-lg">4</span>
+            <div><strong class="text-white">Les schémas et le contrôle final :</strong><p class="mt-1 text-sm">L'électricien dessine les schémas unifilaires et plans de position, puis présente ces documents à un organisme de contrôle agréé. Une fois le PV positif délivré, la maison est conforme pour 25 ans.</p></div>
+          </li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les exceptions et dérogations du RGIE pour l'ancien</h2>
+        <p>Pour les installations d'avant 1981, certaines "dérogations" sont tolérées lors du contrôle, à condition qu'elles ne compromettent pas la sécurité immédiate :</p>
+        <ul class="space-y-2 mt-4">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">info</span><span><strong class="text-white">Les prises sans broche de terre :</strong> Si vous remplacez le tableau et ajoutez un différentiel de 30mA pour l'ensemble de l'installation, certaines vieilles prises sans terre peuvent parfois être tolérées.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">info</span><span><strong class="text-white">Les couleurs de fils :</strong> Si d'anciens fils ne respectent pas le code couleur actuel mais sont en bon état et correctement isolés, l'inspecteur peut le consigner comme remarque sans refuser le contrôle.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Rénover l'électricité dans l'ancien à Bruxelles</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Combien de temps dure la rénovation électrique d'une maison bruxelloise ?</h3>
+        <p>Pour une maison de maître typique de 3 étages, comptez entre <strong class="text-white">2 et 4 semaines</strong> de travail complet, sans inclure les finitions (replafonnage, peinture).</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Faut-il quitter son logement pendant les travaux électriques ?</h3>
+        <p>Il est fortement recommandé de ne pas habiter sur place. Une rénovation complète implique des coupures de courant longues, beaucoup de poussière et du bruit. Si déménager est impossible, l'électricien devra procéder pièce par pièce, ce qui rallonge la durée et le coût du chantier.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">La rénovation électrique donne-t-elle droit à des primes à Bruxelles ?</h3>
+        <p>Oui ! En Région de Bruxelles-Capitale, la rénovation complète de l'installation électrique est couverte par les primes <strong class="text-white">RENOLUTION</strong>. Le montant dépend de votre catégorie de revenus et peut couvrir une part significative de votre facture. Votre électricien doit être un entrepreneur enregistré.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Comment créer une prise de terre dans une maison de ville sans jardin ?</h3>
+        <p>L'électricien devra utiliser la technique de la <strong class="text-white">mise à la terre verticale</strong> : enfoncer des piquets de terre en cuivre galvanisé profondément dans le sol (souvent dans la cave), jusqu'à atteindre une couche géologique suffisamment humide pour offrir une résistance inférieure à 30 ohms.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">🏛️ Un projet de rénovation ou de mise en conformité ?</p>
+          <p class="text-sm">Ne confiez pas les murs de votre bâtiment historique à n'importe qui. Nos électriciens spécialisés dans la rénovation du patrimoine bruxellois vous garantissent un travail soigné, sécurisé et conforme. <a href="/contact" class="text-primary underline font-bold">Contactez-nous →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

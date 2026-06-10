@@ -1,0 +1,716 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte une mise en conformité électrique à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le coût mise en conformité électrique Bruxelles dépend de l'état de votre installation. Remise aux normes partielle (tableau + différentiel) : 500€ à 2 000€. Rénovation complète des circuits : 2 000€ à 6 000€. Rénovation totale d'une maison : 5 000€ à 12 000€. Diagnostic et devis gratuit chez Allo Electricien." }
+    },
+    {
+      "@type": "Question",
+      "name": "Le contrôle électrique est-il obligatoire pour vendre une maison en Belgique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, depuis 2008, tout bien immobilier vendu en Belgique doit être accompagné d'un rapport de contrôle électrique Bruxelles valide (25 ans max). Si l'installation est non conforme, l'acheteur dispose de 18 mois pour effectuer la mise en conformité électrique Bruxelles. Allo Electricien vous accompagne de A à Z." }
+    },
+    {
+      "@type": "Question",
+      "name": "Qu'est-ce que le RGIE et pourquoi faut-il s'y conformer ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le RGIE (Règlement Général sur les Installations Électriques) est la réglementation belge qui définit les normes de sécurité pour toutes les installations électriques. La remise aux normes RGIE Bruxelles est obligatoire pour protéger les personnes contre les risques d'électrocution et d'incendie. Non-conformité = amendes et refus d'assurance." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps prend une mise en conformité électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Remise aux normes simple (tableau + différentiel) : 1 jour. Rénovation partielle (quelques circuits) : 2-3 jours. Rénovation complète appartement : 3-5 jours. Rénovation complète maison : 5-10 jours. Allo Electricien fournit un planning précis après le diagnostic gratuit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment obtenir une attestation de conformité électrique à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pour obtenir une attestation conformité électrique Bruxelles : 1) Allo Electricien réalise les travaux de mise aux normes. 2) Nous préparons les schémas unifilaires et plans de position. 3) Un organisme agréé (Vinçotte, AIB, BTV) effectue le contrôle. 4) Si conforme, vous recevez l'attestation valable 25 ans." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont les infractions les plus courantes lors d'un contrôle électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Les infractions les plus fréquentes lors d'un contrôle électrique Bruxelles : absence de différentiel 30mA, mise à la terre inexistante ou défectueuse, câbles non protégés, tableau électrique vétuste, absence de schémas unifilaires, prises non conformes dans les pièces humides. Allo Electricien corrige toutes ces infractions." }
+    },
+    {
+      "@type": "Question",
+      "name": "La mise en conformité bénéficie-t-elle de la TVA à 6% ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, pour les logements de plus de 10 ans, les travaux de mise en conformité électrique Bruxelles bénéficient du taux de TVA réduit à 6% au lieu de 21%. Allo Electricien prépare l'attestation TVA pour vous. Cette réduction représente une économie significative sur le coût total." }
+    },
+    {
+      "@type": "Question",
+      "name": "Dans quelles communes de Bruxelles intervenez-vous pour la mise en conformité ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Allo Electricien réalise la mise en conformité électrique dans les 19 communes de Bruxelles-Capitale : Bruxelles-Ville, Ixelles, Uccle, Schaerbeek, Anderlecht, Etterbeek, Saint-Gilles, Forest, Watermael-Boitsfort, Woluwe-Saint-Lambert, Woluwe-Saint-Pierre, Auderghem, Jette, Evere, Koekelberg, Molenbeek, Ganshoren, Berchem-Sainte-Agathe, Saint-Josse-ten-Noode, ainsi que la périphérie." }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Mise en Conformité Électrique RGIE",
+  "provider": { "@type": "Electrician", "name": "Allo Electricien", "telephone": "+32465732348" },
+  "areaServed": { "@type": "City", "name": "Bruxelles" },
+  "offers": [
+    { "@type": "Offer", "name": "Diagnostic + Devis", "price": "0", "priceCurrency": "EUR", "description": "Diagnostic gratuit de votre installation" },
+    { "@type": "Offer", "name": "Remise aux normes partielle", "price": "500", "priceCurrency": "EUR", "description": "À partir de 500€" },
+    { "@type": "Offer", "name": "Rénovation complète", "price": "2000", "priceCurrency": "EUR", "description": "À partir de 2000€" }
+  ]
+};
+---
+
+<Layout title="Mise en Conformité Électrique Bruxelles — Remise aux Normes RGIE | Allo Electricien" description="Mise en conformité électrique Bruxelles : remise aux normes RGIE, contrôle électrique, attestation de conformité. Électricien agréé. Devis gratuit. ☎ 0465 73 23 48. TVA 6% pour logements +10 ans." schema={faqSchema}>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+  <!-- HERO -->
+  <header class="relative bg-navy overflow-hidden pt-12 pb-28 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+    <div class="absolute left-0 bottom-0 w-1/4 h-1/2 bg-gradient-to-t from-blue-500/5 to-transparent"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/services">Services</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Mise en Conformité</li>
+        </ol>
+      </nav>
+      <div class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 text-primary text-sm font-bold px-4 py-2 rounded-full mb-6">
+        <span class="material-icons text-base">verified_user</span>OBLIGATION LÉGALE — NORMES RGIE
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+        Mise en <span class="text-primary">Conformité</span> Électrique Bruxelles
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
+        <strong class="text-white">Remise aux normes RGIE Bruxelles</strong> par électricien agréé. Contrôle électrique, schémas unifilaires, attestation de conformité. Diagnostic gratuit. TVA 6% pour logements de +10 ans.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="/contact" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 text-lg">
+          <span class="material-icons text-2xl">description</span>Devis Gratuit
+        </a>
+        <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 transition-all hover:-translate-y-1">
+          <span class="material-icons">call</span>0465 73 23 48
+        </a>
+        <a href="https://wa.me/32465732348" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-1">
+          <span class="material-icons">chat</span>WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-20 -mt-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+    <!-- KEY STATS -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">engineering</span>
+        <p class="text-3xl font-bold text-primary">500+</p>
+        <p class="text-gray-400 text-sm mt-1">Mises en conformité réalisées</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">task_alt</span>
+        <p class="text-3xl font-bold text-primary">98%</p>
+        <p class="text-gray-400 text-sm mt-1">Taux de conformité au 1er contrôle</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">savings</span>
+        <p class="text-3xl font-bold text-primary">TVA 6%</p>
+        <p class="text-gray-400 text-sm mt-1">Pour logements de +10 ans</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">star</span>
+        <p class="text-3xl font-bold text-primary">4.9/5</p>
+        <p class="text-gray-400 text-sm mt-1">Note Google (127 avis)</p>
+      </div>
+    </div>
+
+    <!-- SECTION 1: WHAT'S INCLUDED -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Service Complet</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Ce Que Comprend Notre Mise en Conformité Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">search</span>
+          <h3 class="text-lg font-bold text-white mb-2">Diagnostic Complet Gratuit</h3>
+          <p class="text-gray-400 text-sm">Inspection de l'ensemble de votre installation électrique : tableau, circuits, prises, interrupteurs, mise à la terre, câblage. Rapport détaillé des non-conformités identifiées.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">swap_horiz</span>
+          <h3 class="text-lg font-bold text-white mb-2">Remplacement Tableau Électrique</h3>
+          <p class="text-gray-400 text-sm">Installation d'un tableau conforme aux normes RGIE avec disjoncteurs divisionnaires calibrés, différentiels 30mA de type A et AC pour la protection des personnes.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">grounding</span>
+          <h3 class="text-lg font-bold text-white mb-2">Mise à la Terre</h3>
+          <p class="text-gray-400 text-sm">Installation ou correction du circuit de mise à la terre : piquet de terre, boucle de fond de fouille, liaison équipotentielle. Résistance de terre mesurée et conforme (≤ 30Ω).</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">cable</span>
+          <h3 class="text-lg font-bold text-white mb-2">Câblage & Circuits</h3>
+          <p class="text-gray-400 text-sm">Remplacement des câbles vétustes (ancien câblage en aluminium, gaines abîmées), ajout de circuits dédiés pour gros appareils, séparation des circuits humides.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">architecture</span>
+          <h3 class="text-lg font-bold text-white mb-2">Schémas Unifilaires & Plans</h3>
+          <p class="text-gray-400 text-sm">Réalisation des schémas unifilaires et plans de position obligatoires. Documents indispensables pour le contrôle électrique et à conserver à côté du tableau.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">verified</span>
+          <h3 class="text-lg font-bold text-white mb-2">Accompagnement Contrôle</h3>
+          <p class="text-gray-400 text-sm">Nous planifions et accompagnons le passage de l'organisme agréé (Vinçotte, AIB, BTV). Nous garantissons l'obtention de votre attestation conformité électrique Bruxelles.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">outlet</span>
+          <h3 class="text-lg font-bold text-white mb-2">Prises & Interrupteurs</h3>
+          <p class="text-gray-400 text-sm">Remplacement des prises non sécurisées, installation d'obturateurs enfant, mise aux normes des prises dans les zones humides (salle de bain, cuisine) selon les volumes RGIE.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">receipt_long</span>
+          <h3 class="text-lg font-bold text-white mb-2">Attestation TVA 6%</h3>
+          <p class="text-gray-400 text-sm">Pour les logements de plus de 10 ans, vous bénéficiez du taux réduit de TVA à 6%. Nous préparons tous les documents nécessaires. Économie significative sur le coût total.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-4">shield</span>
+          <h3 class="text-lg font-bold text-white mb-2">Garantie 2 Ans</h3>
+          <p class="text-gray-400 text-sm">Tous nos travaux de remise aux normes RGIE Bruxelles sont garantis 2 ans pièces et main-d'œuvre. Assurance responsabilité civile professionnelle incluse.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: COMMON PROBLEMS -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Non-Conformités</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Infractions Courantes Lors d'un Contrôle Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Voici les infractions les plus fréquentes que nous constatons et corrigeons lors de nos interventions de <strong class="text-white">mise en conformité électrique Bruxelles</strong>.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-red-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">dangerous</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Absence de Différentiel 30mA</h3>
+            <p class="text-gray-400 text-sm">L'infraction n°1 en Belgique. Le différentiel 30mA protège contre l'électrocution. Obligatoire sur tous les circuits depuis les normes RGIE actuelles.</p>
+            <p class="text-red-400 text-xs mt-2 font-semibold">⚠ Infraction grave — Risque d'électrocution</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-red-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-red-400 text-2xl">power_off</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Mise à la Terre Défectueuse</h3>
+            <p class="text-gray-400 text-sm">Terre inexistante, déconnectée ou avec une résistance trop élevée (> 30Ω). Sans mise à la terre correcte, les protections différentielles ne fonctionnent pas.</p>
+            <p class="text-red-400 text-xs mt-2 font-semibold">⚠ Infraction grave — Protection inefficace</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-orange-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-orange-400 text-2xl">description</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Schémas Unifilaires Manquants</h3>
+            <p class="text-gray-400 text-sm">Les schémas unifilaires et plans de position sont obligatoires et doivent être affichés à côté du tableau. Leur absence est une non-conformité automatique.</p>
+            <p class="text-orange-400 text-xs mt-2 font-semibold">⚠ Non-conformité systématique</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-orange-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-orange-400 text-2xl">settings_input_component</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Tableau Électrique Vétuste</h3>
+            <p class="text-gray-400 text-sm">Ancien tableau avec fusibles à fil ou à cartouche, absence de repérage des circuits, calibre des protections inadapté aux sections de câbles.</p>
+            <p class="text-orange-400 text-xs mt-2 font-semibold">⚠ Sécurité insuffisante</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-yellow-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-yellow-400 text-2xl">water_damage</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Non-Conformité Zones Humides</h3>
+            <p class="text-gray-400 text-sm">Prises non protégées dans la salle de bain, non-respect des volumes de sécurité autour de la baignoire/douche, appareillage inadapté en cuisine.</p>
+            <p class="text-yellow-400 text-xs mt-2 font-semibold">⚠ Volumes RGIE non respectés</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-yellow-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-yellow-400 text-2xl">cable</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Câblage Non Protégé</h3>
+            <p class="text-gray-400 text-sm">Câbles apparents, gaines détériorées, jonctions hors boîtes de dérivation, fils dénudés accessibles. Risque d'incendie et de court-circuit.</p>
+            <p class="text-yellow-400 text-xs mt-2 font-semibold">⚠ Risque d'incendie</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR PROCESS -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Étape par Étape</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Processus de Mise en Conformité Électrique</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="relative">
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2 z-0 border-t-2 border-dotted border-gray-600"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 relative z-10">
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">1</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Prise de Contact</h3>
+            <p class="text-gray-400 text-xs">Appelez ou demandez un devis en ligne. Nous planifions une visite dans les <strong class="text-white">48h</strong>.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">2</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Diagnostic Gratuit</h3>
+            <p class="text-gray-400 text-xs">Inspection complète de votre installation. Identification des non-conformités RGIE.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">3</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Devis Détaillé</h3>
+            <p class="text-gray-400 text-xs">Devis clair avec le <strong class="text-white">coût mise en conformité</strong> détaillé poste par poste. Sans engagement.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">4</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Travaux</h3>
+            <p class="text-gray-400 text-xs">Réalisation des travaux de <strong class="text-white">remise aux normes RGIE Bruxelles</strong>. Planning respecté.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">5</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Contrôle Agréé</h3>
+            <p class="text-gray-400 text-xs">Nous planifions le <strong class="text-white">contrôle électrique Bruxelles</strong> par organisme agréé et vous accompagnons.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-primary font-bold text-xl">6</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Attestation</h3>
+            <p class="text-gray-400 text-xs">Obtention de votre <strong class="text-white">attestation conformité électrique</strong> valable 25 ans.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: WHEN IS IT OBLIGATORY -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Obligation Légale</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Quand la Mise en Conformité Est-Elle Obligatoire ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-red-400 text-2xl">gavel</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Vente Immobilière</h3>
+          </div>
+          <p class="text-gray-400">Depuis 2008, tout bien vendu en Belgique doit disposer d'un rapport de <strong class="text-white">contrôle électrique Bruxelles</strong> valide. Si le rapport est non conforme, l'acheteur a <strong class="text-white">18 mois</strong> pour effectuer les travaux de mise en conformité.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-orange-400 text-2xl">schedule</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Installation de + 25 Ans</h3>
+          </div>
+          <p class="text-gray-400">Le RGIE impose un contrôle périodique obligatoire tous les 25 ans. Si votre installation date d'avant 1981, un contrôle devait déjà avoir été effectué. En cas de non-conformité, la <strong class="text-white">remise aux normes RGIE Bruxelles</strong> est obligatoire.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-yellow-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-yellow-400 text-2xl">construction</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Rénovation Importante</h3>
+          </div>
+          <p class="text-gray-400">Toute modification substantielle de l'installation électrique (ajout de circuits, déplacement du tableau, extension) nécessite un nouveau contrôle et potentiellement une <strong class="text-white">mise en conformité électrique Bruxelles</strong>.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-purple-400 text-2xl">warning</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Rapport Non Conforme Existant</h3>
+          </div>
+          <p class="text-gray-400">Si vous avez reçu un rapport de contrôle non conforme, vous disposez de <strong class="text-white">18 mois</strong> pour corriger les infractions. Passé ce délai, votre assureur peut refuser de couvrir un sinistre électrique.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE US -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Engagements</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Pourquoi Choisir Allo Electricien Pour Votre Remise aux Normes ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">task_alt</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">98% de Réussite au 1er Contrôle</h3>
+          </div>
+          <p class="text-gray-400">Notre taux de réussite exceptionnel garantit que votre installation passera le contrôle du premier coup. Nous connaissons parfaitement les exigences des organismes agréés et anticipons chaque point de vérification.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">euro</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Devis Transparent & TVA 6%</h3>
+          </div>
+          <p class="text-gray-400">Le <strong class="text-white">coût mise en conformité électrique Bruxelles</strong> est détaillé poste par poste, sans surprise. Pour les logements de +10 ans : TVA réduite à 6%, soit une économie de 15% sur la facture totale.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">workspace_premium</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Électriciens Agréés RGIE</h3>
+          </div>
+          <p class="text-gray-400">Nos techniciens sont certifiés et formés aux dernières évolutions du RGIE. Plus de 500 mises en conformité réalisées à Bruxelles. Expertise reconnue dans les 19 communes.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-primary/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-primary text-2xl">handshake</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Accompagnement Complet</h3>
+          </div>
+          <p class="text-gray-400">Du diagnostic gratuit à l'obtention de l'<strong class="text-white">attestation conformité électrique Bruxelles</strong>, nous gérons tout : travaux, schémas, planification du contrôle, accompagnement le jour J. Vous n'avez rien à gérer.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PRICING -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Tarifs Transparents</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Coût Mise en Conformité Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Prix indicatifs pour une <strong class="text-white">mise en conformité électrique Bruxelles</strong>. Chaque devis est personnalisé après le diagnostic gratuit de votre installation.</p>
+      </div>
+      <div class="bg-navy border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+        <table class="w-full">
+          <thead>
+            <tr class="bg-white/5">
+              <th class="text-left p-5 text-white font-bold">Type de prestation</th>
+              <th class="text-left p-5 text-white font-bold hidden md:table-cell">Détails</th>
+              <th class="text-right p-5 text-white font-bold">Prix indicatif</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-5">
+                <div class="flex items-center gap-3">
+                  <span class="material-icons text-green-400">check_circle</span>
+                  <span class="font-semibold text-white">Diagnostic + Devis</span>
+                </div>
+              </td>
+              <td class="p-5 text-gray-400 text-sm hidden md:table-cell">Inspection complète, rapport des non-conformités</td>
+              <td class="p-5 text-right text-green-400 font-bold text-lg">Gratuit</td>
+            </tr>
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-5">
+                <div class="flex items-center gap-3">
+                  <span class="material-icons text-primary">build</span>
+                  <span class="font-semibold text-white">Schémas Unifilaires</span>
+                </div>
+              </td>
+              <td class="p-5 text-gray-400 text-sm hidden md:table-cell">Schéma unifilaire + plan de position</td>
+              <td class="p-5 text-right text-primary font-bold text-lg">150€ — 350€</td>
+            </tr>
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-5">
+                <div class="flex items-center gap-3">
+                  <span class="material-icons text-primary">handyman</span>
+                  <span class="font-semibold text-white">Remise aux Normes Partielle</span>
+                </div>
+              </td>
+              <td class="p-5 text-gray-400 text-sm hidden md:table-cell">Tableau + différentiel + terre (corrections ciblées)</td>
+              <td class="p-5 text-right text-primary font-bold text-lg">500€ — 2 000€</td>
+            </tr>
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-5">
+                <div class="flex items-center gap-3">
+                  <span class="material-icons text-primary">settings_input_component</span>
+                  <span class="font-semibold text-white">Rénovation Tableau + Circuits</span>
+                </div>
+              </td>
+              <td class="p-5 text-gray-400 text-sm hidden md:table-cell">Nouveau tableau complet + rénovation circuits principaux</td>
+              <td class="p-5 text-right text-primary font-bold text-lg">2 000€ — 6 000€</td>
+            </tr>
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-5">
+                <div class="flex items-center gap-3">
+                  <span class="material-icons text-primary">home</span>
+                  <span class="font-semibold text-white">Rénovation Complète (Maison)</span>
+                </div>
+              </td>
+              <td class="p-5 text-gray-400 text-sm hidden md:table-cell">Remplacement intégral de l'installation</td>
+              <td class="p-5 text-right text-primary font-bold text-lg">5 000€ — 12 000€</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="bg-navy-light border border-primary/20 rounded-xl p-6 mt-6 text-center">
+        <p class="text-gray-300"><strong class="text-white">💡 Bon à savoir :</strong> Pour les logements de <strong class="text-white">plus de 10 ans</strong>, le taux de TVA est réduit à <strong class="text-primary">6% au lieu de 21%</strong>. Nous préparons l'attestation TVA pour vous. <a href="/contact" class="text-primary font-bold hover:underline">Demandez un devis gratuit →</a></p>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FAQ -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Questions Fréquentes — Mise en Conformité Électrique Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien coûte une mise en conformité électrique à Bruxelles ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Le <strong class="text-white">coût mise en conformité électrique Bruxelles</strong> dépend de l'état de votre installation. Remise aux normes partielle (tableau + différentiel) : <strong class="text-white">500€ à 2 000€</strong>. Rénovation complète des circuits : <strong class="text-white">2 000€ à 6 000€</strong>. Rénovation totale d'une maison : <strong class="text-white">5 000€ à 12 000€</strong>. Diagnostic et devis gratuit.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Le contrôle électrique est-il obligatoire pour vendre ma maison ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui, depuis 2008, tout bien immobilier vendu en Belgique doit être accompagné d'un rapport de <strong class="text-white">contrôle électrique Bruxelles</strong> valide (25 ans max). Si l'installation est non conforme, l'acheteur a 18 mois pour effectuer la <strong class="text-white">mise en conformité électrique Bruxelles</strong>. Allo Electricien vous accompagne de A à Z.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Qu'est-ce que le RGIE et pourquoi faut-il s'y conformer ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Le <strong class="text-white">RGIE</strong> (Règlement Général sur les Installations Électriques) est la réglementation belge définissant les normes de sécurité pour toutes les installations électriques. La <strong class="text-white">remise aux normes RGIE Bruxelles</strong> protège contre l'électrocution et l'incendie. En cas de non-conformité : risque d'amendes et refus de couverture par l'assureur.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Comment obtenir une attestation de conformité électrique ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Pour obtenir votre <strong class="text-white">attestation conformité électrique Bruxelles</strong> : 1) Allo Electricien réalise les travaux de mise aux normes. 2) Nous préparons les schémas unifilaires et plans de position. 3) Un organisme agréé (Vinçotte, AIB, BTV) effectue le contrôle. 4) Si conforme, vous recevez l'attestation valable <strong class="text-white">25 ans</strong>.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien de temps prend une mise en conformité ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Remise aux normes simple (tableau + différentiel) : <strong class="text-white">1 jour</strong>. Rénovation partielle : <strong class="text-white">2-3 jours</strong>. Rénovation complète appartement : <strong class="text-white">3-5 jours</strong>. Rénovation complète maison : <strong class="text-white">5-10 jours</strong>. Allo Electricien fournit un planning précis après le diagnostic gratuit.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>La mise en conformité bénéficie-t-elle de la TVA à 6% ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui ! Pour les logements de <strong class="text-white">plus de 10 ans</strong>, les travaux de mise en conformité électrique bénéficient du taux de TVA réduit à <strong class="text-white">6% au lieu de 21%</strong>. Allo Electricien prépare l'attestation TVA pour vous. Cette réduction représente une économie significative de ~15% sur le <strong class="text-white">coût mise en conformité électrique Bruxelles</strong>.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Quelles sont les infractions les plus courantes ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Les infractions les plus fréquentes lors d'un <strong class="text-white">contrôle électrique Bruxelles</strong> : absence de différentiel 30mA, mise à la terre inexistante ou défectueuse, câbles non protégés, tableau électrique vétuste, absence de schémas unifilaires, prises non conformes dans les pièces humides. Allo Electricien corrige toutes ces infractions.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Que se passe-t-il si je ne fais pas la mise en conformité ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Sans <strong class="text-white">mise en conformité électrique Bruxelles</strong>, vous risquez : 1) Refus de couverture par votre assureur en cas de sinistre électrique. 2) Impossibilité de vendre votre bien. 3) Risques d'électrocution et d'incendie pour les occupants. 4) Sanctions administratives. N'attendez pas — <a href="/contact" class="text-primary hover:underline">demandez un diagnostic gratuit</a>.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SERVICE AREA -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Zone de Couverture</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Mise en Conformité dans les 19 Communes de Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Notre service de <strong class="text-white">mise en conformité électrique Bruxelles</strong> couvre l'intégralité de la Région de Bruxelles-Capitale. Diagnostic gratuit sur rendez-vous dans les 48h.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <a href="/electricien-anderlecht" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Anderlecht</span>
+        </a>
+        <a href="/electricien-auderghem" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Auderghem</span>
+        </a>
+        <a href="/electricien-berchem-sainte-agathe" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Berchem-Ste-Agathe</span>
+        </a>
+        <a href="/electricien-bruxelles-ville" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Bruxelles-Ville</span>
+        </a>
+        <a href="/electricien-etterbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Etterbeek</span>
+        </a>
+        <a href="/electricien-evere" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Evere</span>
+        </a>
+        <a href="/electricien-forest" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Forest</span>
+        </a>
+        <a href="/electricien-ganshoren" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Ganshoren</span>
+        </a>
+        <a href="/electricien-ixelles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Ixelles</span>
+        </a>
+        <a href="/electricien-jette" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Jette</span>
+        </a>
+        <a href="/electricien-koekelberg" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Koekelberg</span>
+        </a>
+        <a href="/electricien-molenbeek-saint-jean" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Molenbeek</span>
+        </a>
+        <a href="/electricien-saint-gilles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Saint-Gilles</span>
+        </a>
+        <a href="/electricien-saint-josse-ten-noode" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Saint-Josse</span>
+        </a>
+        <a href="/electricien-schaerbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Schaerbeek</span>
+        </a>
+        <a href="/electricien-uccle" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Uccle</span>
+        </a>
+        <a href="/electricien-watermael-boitsfort" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Watermael-Boitsfort</span>
+        </a>
+        <a href="/electricien-woluwe-saint-lambert" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Woluwe-St-Lambert</span>
+        </a>
+        <a href="/electricien-woluwe-saint-pierre" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-primary/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-primary transition-colors font-medium">Woluwe-St-Pierre</span>
+        </a>
+      </div>
+      <p class="text-center text-gray-400 mt-6">Nous intervenons aussi en <strong class="text-white">périphérie de Bruxelles</strong> : Zaventem, Tervuren, Waterloo, Nivelles, Wavre, Vilvoorde. <a href="/zones" class="text-primary hover:underline">Voir toutes nos zones →</a></p>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="bg-gradient-to-r from-primary/10 to-navy-light rounded-2xl border border-primary/20 p-8 md:p-12 mb-16">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-primary text-navy text-sm font-bold px-4 py-2 rounded-full mb-4">
+            <span class="material-icons text-base">verified_user</span>DIAGNOSTIC GRATUIT
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Votre Installation Est-Elle Conforme ?</h2>
+          <p class="text-gray-300 text-lg max-w-xl">Ne prenez pas de risques avec votre sécurité. Diagnostic gratuit, devis détaillé sans engagement, accompagnement jusqu'à l'<strong class="text-white">attestation conformité électrique Bruxelles</strong>.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="/contact" class="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-navy font-black text-lg px-8 py-5 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 whitespace-nowrap">
+            <span class="material-icons text-2xl">description</span>Devis Gratuit
+          </a>
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-3 rounded-xl border border-white/20 transition-all text-center">
+            <span class="material-icons">phone</span>0465 73 23 48
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKS -->
+    <section class="mb-16">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Nos Autres Services Électriques</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="/services/depannage-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">bolt</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Dépannage Urgent 24/7</p>
+            <p class="text-gray-400 text-sm">Intervention en 45 min</p>
+          </div>
+        </a>
+        <a href="/services/tableau-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">settings_input_component</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Tableau Électrique</p>
+            <p class="text-gray-400 text-sm">Remplacement & installation</p>
+          </div>
+        </a>
+        <a href="/services/borne-de-recharge" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">ev_station</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Borne de Recharge</p>
+            <p class="text-gray-400 text-sm">Voiture électrique</p>
+          </div>
+        </a>
+        <a href="/services/domotique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">touch_app</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Domotique</p>
+            <p class="text-gray-400 text-sm">Maison intelligente</p>
+          </div>
+        </a>
+        <a href="/services/installation-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">lightbulb</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Éclairage LED</p>
+            <p class="text-gray-400 text-sm">Intérieur & extérieur</p>
+          </div>
+        </a>
+        <a href="/blog" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">article</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Blog & Guides</p>
+            <p class="text-gray-400 text-sm">Conseils électricité</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+</Layout>

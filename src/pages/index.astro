@@ -1,9 +1,58 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero-electricien.jpg';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte un électricien à Bruxelles ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le tarif d'un électricien à Bruxelles dépend du type d'intervention. Chez Allo Electricien, nos tarifs sont transparents : déplacement + première heure à tarif fixe. Standard : 65€/h, soirée/samedi : 95€/h, nuit/dimanche/férié : 130€/h. Devis gratuit pour les installations et mises en conformité."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment trouver un électricien agréé et fiable à Bruxelles ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour trouver un électricien agréé à Bruxelles, vérifiez sa certification RGIE, ses avis clients et son expérience. Allo Electricien est un électricien recommandé à Bruxelles avec plus de 15 ans d'expérience, des certifications à jour et plus de 2000 clients satisfaits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Votre électricien intervient-il le week-end et les jours fériés à Bruxelles ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, notre service d'électricien à Bruxelles est disponible 24h/24 et 7j/7, y compris les week-ends et jours fériés. Nos équipes de garde assurent une intervention rapide en moins de 45 minutes dans les 19 communes de Bruxelles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles garanties offre votre électricien à Bruxelles ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Toutes nos installations et réparations sont garanties 2 ans. En tant qu'électricien agréé à Bruxelles, nous utilisons uniquement du matériel certifié CE et respectons strictement les normes RGIE. Nous sommes assurés en responsabilité civile professionnelle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi choisir Allo Electricien comme électricien à Bruxelles ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Allo Electricien est le meilleur électricien à Bruxelles grâce à son intervention en moins de 45 minutes, ses prix transparents sans surprise, sa certification RGIE et ses 15+ années d'expérience. Consultez nos avis clients 5 étoiles pour vous en convaincre."
+      }
+    }
+  ]
+};
 ---
 
-<Layout title="Accueil" description="BE-ELEC - Électricien professionnel à Bruxelles. Dépannage urgent 24/7, installation électrique, mise en conformité RGIE.">
+<Layout title="Électricien Bruxelles — Dépannage Urgent 24/7 | Allo Electricien" description="Allo Electricien, électricien agréé à Bruxelles. Meilleur électricien recommandé : dépannage urgent 24/7, installation, mise en conformité RGIE. Intervention en -45min. Avis 5★. ☎ 0465 73 23 48" schema={faqSchema}>
 
   <!-- Hero -->
   <section class="relative bg-navy overflow-hidden">
@@ -16,14 +65,13 @@ import '../styles/global.css';
           DISPONIBLE MAINTENANT
         </div>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-          Urgence Électrique <br/>
-          <span class="text-primary">24/7 à Bruxelles</span>
+          Votre <span class="text-primary">Électricien à Bruxelles</span> <br/>Disponible 24/7
         </h1>
-        <p class="text-lg text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
-          Intervention rapide en moins de 45 minutes pour vos pannes, installations et mises en conformité. Électriciens agréés et expérimentés.
+        <p class="text-lg text-gray-200 mb-8 max-w-lg mx-auto md:mx-0">
+          <strong class="text-white">Électricien agréé à Bruxelles</strong> — intervention rapide en moins de 45 minutes. Dépannage, installation, mise en conformité RGIE. L'électricien fiable et recommandé par plus de 2000 clients bruxellois.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="tel:+32470000000" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy text-lg font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(253,186,18,0.4)] transition-all hover:-translate-y-1">
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy text-lg font-bold px-8 py-4 rounded-xl shadow-[0_0_20px_rgba(253,186,18,0.4)] transition-all hover:-translate-y-1">
             <span class="material-icons">call</span>
             Appeler Maintenant
           </a>
@@ -33,7 +81,15 @@ import '../styles/global.css';
         </div>
       </div>
       <div class="w-full md:w-1/2 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-navy-light/50">
-        <img alt="Électricien professionnel au travail" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8wrs8t-IQKlkTIV25wgeygC-QuFjVThkN7YJp151bzlPu6Hhn-uF5CKyIRN_Ewz2pbmHWwUoEEcOLkQKZD1E5bUfgs1YRDCmuA_ZDkgu53HrNx9CaGksUtFK_AvjuYtW22XZgn0eRgjx5hxdTlJ5m9BrTCuZW9QHC48XVzr9it0L_FlzzFrv-yMBV4Yy6XEAmIeuegjVVBgRSRnl5fUNq06lvIlbGhGDBh_Hz4iTOcRIFGg29X8bZwvFQPqKgi0vOh2xt_V_Fqek" />
+        <Image 
+          src={heroImage} 
+          alt="Électricien professionnel au travail" 
+          class="absolute inset-0 w-full h-full object-cover"
+          widths={[400, 640, 800, 1024, heroImage.width]}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          loading="eager"
+          fetchpriority="high"
+        />
         <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent opacity-60"></div>
         <div class="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 flex items-center gap-4">
           <div class="bg-green-500 rounded-full p-2">
@@ -76,8 +132,10 @@ import '../styles/global.css';
   <section class="py-20 bg-bg-dark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Pourquoi nous choisir ?</h2>
-        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Électricien Fiable Bruxelles</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Pourquoi Choisir Allo Electricien ?</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mt-3">Découvrez ce qui fait de nous le <strong class="text-white">meilleur électricien à Bruxelles</strong> — agréé, rapide et recommandé par des milliers de clients.</p>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full mt-4"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="bg-navy p-8 rounded-xl shadow-lg border-b-4 border-primary hover:-translate-y-2 transition-transform duration-300">
@@ -85,28 +143,28 @@ import '../styles/global.css';
             <span class="material-icons text-3xl text-primary">timer</span>
           </div>
           <h3 class="text-xl font-bold text-white text-center mb-3">Intervention Rapide</h3>
-          <p class="text-gray-400 text-center text-sm">Nous arrivons chez vous en moins de 45 minutes pour les urgences critiques.</p>
+          <p class="text-gray-300 text-center text-sm">Nous arrivons chez vous en moins de 45 minutes pour les urgences critiques.</p>
         </div>
         <div class="bg-navy p-8 rounded-xl shadow-lg border-b-4 border-primary hover:-translate-y-2 transition-transform duration-300">
           <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
             <span class="material-icons text-3xl text-primary">verified</span>
           </div>
-          <h3 class="text-xl font-bold text-white text-center mb-3">Certifié & Agréé</h3>
-          <p class="text-gray-400 text-center text-sm">Tous nos électriciens sont certifiés et respectent les normes RGIE en vigueur.</p>
+          <h3 class="text-xl font-bold text-white text-center mb-3">Électricien Agréé</h3>
+          <p class="text-gray-300 text-center text-sm">Électricien agréé à Bruxelles, certifié RGIE. Chaque intervention respecte strictement les normes belges en vigueur.</p>
         </div>
         <div class="bg-navy p-8 rounded-xl shadow-lg border-b-4 border-primary hover:-translate-y-2 transition-transform duration-300">
           <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
             <span class="material-icons text-3xl text-primary">euro</span>
           </div>
           <h3 class="text-xl font-bold text-white text-center mb-3">Prix Transparents</h3>
-          <p class="text-gray-400 text-center text-sm">Devis clair et détaillé avant toute intervention. Pas de surprise sur la facture.</p>
+          <p class="text-gray-300 text-center text-sm">Devis clair et détaillé avant toute intervention. Pas de surprise sur la facture.</p>
         </div>
         <div class="bg-navy p-8 rounded-xl shadow-lg border-b-4 border-primary hover:-translate-y-2 transition-transform duration-300">
           <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
             <span class="material-icons text-3xl text-primary">handshake</span>
           </div>
           <h3 class="text-xl font-bold text-white text-center mb-3">Travail Garanti</h3>
-          <p class="text-gray-400 text-center text-sm">Nous garantissons nos réparations et installations pour votre tranquillité d'esprit.</p>
+          <p class="text-gray-300 text-center text-sm">Nous garantissons nos réparations et installations pour votre tranquillité d'esprit.</p>
         </div>
       </div>
     </div>
@@ -118,7 +176,7 @@ import '../styles/global.css';
       <div class="flex flex-col md:flex-row justify-between items-end mb-12">
         <div>
           <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Expertises</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-white">Services Électriques Complets</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-white">Tous les Services de Votre Électricien à Bruxelles</h2>
         </div>
         <a href="/services" class="hidden md:inline-flex items-center gap-2 text-primary font-semibold hover:text-white transition-colors mt-4 md:mt-0">
           Voir tous les services <span class="material-icons text-sm">arrow_forward</span>
@@ -130,7 +188,7 @@ import '../styles/global.css';
             <span class="material-icons text-navy text-3xl">bolt</span>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Dépannage d'Urgence</h3>
-          <p class="text-gray-400 text-sm mb-4">Coupure de courant, court-circuit ou panne générale. Intervention immédiate 24h/24 et 7j/7.</p>
+          <p class="text-gray-300 text-sm mb-4">Coupure de courant, court-circuit ou panne générale. Intervention immédiate 24h/24 et 7j/7.</p>
           <a href="/services" class="text-accent-blue text-sm font-bold flex items-center gap-1 group-hover:translate-x-2 transition-transform">En savoir plus <span class="material-icons text-xs">arrow_forward_ios</span></a>
         </div>
         <div class="group bg-navy p-8 rounded-xl shadow-md border border-white/5 glow-hover transition-all duration-300">
@@ -138,7 +196,7 @@ import '../styles/global.css';
             <span class="material-icons text-navy text-3xl">home</span>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Installation Domestique</h3>
-          <p class="text-gray-400 text-sm mb-4">Rénovation électrique complète, ajout de prises, tableaux électriques et câblage neuf.</p>
+          <p class="text-gray-300 text-sm mb-4">Rénovation électrique complète, ajout de prises, tableaux électriques et câblage neuf.</p>
           <a href="/services" class="text-accent-blue text-sm font-bold flex items-center gap-1 group-hover:translate-x-2 transition-transform">En savoir plus <span class="material-icons text-xs">arrow_forward_ios</span></a>
         </div>
         <div class="group bg-navy p-8 rounded-xl shadow-md border border-white/5 glow-hover transition-all duration-300">
@@ -146,7 +204,7 @@ import '../styles/global.css';
             <span class="material-icons text-navy text-3xl">check_circle</span>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Mise en Conformité</h3>
-          <p class="text-gray-400 text-sm mb-4">Préparation aux contrôles, schémas unifilaires et mise aux normes RGIE pour la vente.</p>
+          <p class="text-gray-300 text-sm mb-4">Préparation aux contrôles, schémas unifilaires et mise aux normes RGIE pour la vente.</p>
           <a href="/services" class="text-accent-blue text-sm font-bold flex items-center gap-1 group-hover:translate-x-2 transition-transform">En savoir plus <span class="material-icons text-xs">arrow_forward_ios</span></a>
         </div>
         <div class="group bg-navy p-8 rounded-xl shadow-md border border-white/5 glow-hover transition-all duration-300">
@@ -154,7 +212,7 @@ import '../styles/global.css';
             <span class="material-icons text-navy text-3xl">lightbulb</span>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Éclairage LED</h3>
-          <p class="text-gray-400 text-sm mb-4">Solutions d'éclairage intérieur et extérieur économiques et esthétiques pour votre habitat.</p>
+          <p class="text-gray-300 text-sm mb-4">Solutions d'éclairage intérieur et extérieur économiques et esthétiques pour votre habitat.</p>
           <a href="/services" class="text-accent-blue text-sm font-bold flex items-center gap-1 group-hover:translate-x-2 transition-transform">En savoir plus <span class="material-icons text-xs">arrow_forward_ios</span></a>
         </div>
         <div class="group bg-navy p-8 rounded-xl shadow-md border border-white/5 glow-hover transition-all duration-300">
@@ -162,7 +220,7 @@ import '../styles/global.css';
             <span class="material-icons text-navy text-3xl">router</span>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Domotique</h3>
-          <p class="text-gray-400 text-sm mb-4">Installation de systèmes intelligents pour le contrôle à distance de votre maison.</p>
+          <p class="text-gray-300 text-sm mb-4">Installation de systèmes intelligents pour le contrôle à distance de votre maison.</p>
           <a href="/services" class="text-accent-blue text-sm font-bold flex items-center gap-1 group-hover:translate-x-2 transition-transform">En savoir plus <span class="material-icons text-xs">arrow_forward_ios</span></a>
         </div>
         <div class="group bg-navy p-8 rounded-xl shadow-md border border-white/5 glow-hover transition-all duration-300">
@@ -170,7 +228,7 @@ import '../styles/global.css';
             <span class="material-icons text-navy text-3xl">electric_car</span>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Bornes de Recharge</h3>
-          <p class="text-gray-400 text-sm mb-4">Installation certifiée de bornes de recharge pour véhicules électriques à domicile.</p>
+          <p class="text-gray-300 text-sm mb-4">Installation certifiée de bornes de recharge pour véhicules électriques à domicile.</p>
           <a href="/services" class="text-accent-blue text-sm font-bold flex items-center gap-1 group-hover:translate-x-2 transition-transform">En savoir plus <span class="material-icons text-xs">arrow_forward_ios</span></a>
         </div>
       </div>
@@ -183,7 +241,8 @@ import '../styles/global.css';
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <!-- Avis -->
         <div>
-          <h2 class="text-3xl font-bold text-white mb-6">Avis Clients</h2>
+          <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Électricien Bruxelles Avis</span>
+          <h2 class="text-3xl font-bold text-white mb-6">Ce Que Disent Nos Clients</h2>
           <div class="space-y-6">
             <div class="bg-white text-navy p-6 rounded-xl shadow-lg relative">
               <div class="absolute -top-3 -right-3 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-navy font-bold shadow-md">
@@ -196,8 +255,8 @@ import '../styles/global.css';
                 <span class="material-icons text-sm">star</span>
                 <span class="material-icons text-sm">star</span>
               </div>
-              <p class="text-sm italic mb-4">"Intervention super rapide un dimanche soir. L'électricien était très professionnel et a résolu notre panne de courant en 20 minutes. Je recommande vivement !"</p>
-              <span class="font-bold text-sm">Thomas D. <span class="text-gray-400 font-normal text-xs">- Bruxelles</span></span>
+              <p class="text-sm italic mb-4">"Le meilleur électricien à Bruxelles que j'ai trouvé ! Intervention super rapide un dimanche soir en moins de 30 minutes. Très professionnel, a résolu notre panne de courant en 20 minutes. Un électricien fiable que je recommande vivement !"</p>
+              <span class="font-bold text-sm">Thomas D. <span class="text-gray-300 font-normal text-xs">- Bruxelles</span></span>
             </div>
             <div class="bg-white text-navy p-6 rounded-xl shadow-lg opacity-90 scale-95 origin-left">
               <div class="flex text-primary mb-3">
@@ -207,41 +266,41 @@ import '../styles/global.css';
                 <span class="material-icons text-sm">star</span>
                 <span class="material-icons text-sm">star_half</span>
               </div>
-              <p class="text-sm italic mb-4">"Mise en conformité réalisée avec succès. Le dossier était complet et le contrôle a été validé du premier coup. Merci pour le sérieux."</p>
-              <span class="font-bold text-sm">Sarah L. <span class="text-gray-400 font-normal text-xs">- Ixelles</span></span>
+              <p class="text-sm italic mb-4">"Électricien agréé et très sérieux. Mise en conformité réalisée avec succès, dossier complet et contrôle validé du premier coup. Le meilleur électricien recommandé à Bruxelles pour les travaux RGIE."</p>
+              <span class="font-bold text-sm">Sarah L. <span class="text-gray-300 font-normal text-xs">- Ixelles</span></span>
             </div>
           </div>
         </div>
 
         <!-- FAQ -->
         <div>
-          <h2 class="text-3xl font-bold text-white mb-6">Questions Fréquentes</h2>
+          <h2 class="text-3xl font-bold text-white mb-6">Questions Fréquentes — Électricien Bruxelles</h2>
           <div class="space-y-4">
             <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
               <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold text-lg hover:bg-opacity-80 transition-colors">
-                <span class="flex items-center gap-3"><span class="material-icons text-primary">euro</span>Tarifs d'urgence</span>
+                <span class="flex items-center gap-3"><span class="material-icons text-primary">euro</span>Combien coûte un électricien à Bruxelles ?</span>
                 <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary text-2xl">expand_more</span>
               </summary>
               <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
-                <p>Nos tarifs d'urgence sont transparents. Un forfait de déplacement et la première heure sont fixes. Une majoration s'applique uniquement pour les interventions de nuit et les week-ends.</p>
+                <p>Le tarif d'un <strong class="text-white">électricien à Bruxelles</strong> dépend de l'intervention. Chez Allo Electricien : standard 65€/h, soirée/samedi 95€/h, nuit/dimanche 130€/h. Déplacement + première heure à tarif fixe. Devis gratuit pour installations et mises en conformité.</p>
               </div>
             </details>
             <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
               <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold text-lg hover:bg-opacity-80 transition-colors">
-                <span class="flex items-center gap-3"><span class="material-icons text-primary">event_available</span>Disponibilité week-end</span>
+                <span class="flex items-center gap-3"><span class="material-icons text-primary">event_available</span>Votre électricien est-il disponible le week-end ?</span>
                 <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary text-2xl">expand_more</span>
               </summary>
               <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
-                <p>Oui, nous sommes disponibles le samedi et le dimanche, ainsi que les jours fériés. Nos équipes de garde assurent une rotation pour garantir une intervention rapide 24h/24 et 7j/7.</p>
+                <p>Oui, notre service d'<strong class="text-white">électricien à Bruxelles</strong> est disponible 24h/24 et 7j/7, y compris les week-ends et jours fériés. Intervention en moins de 45 minutes dans les 19 communes.</p>
               </div>
             </details>
             <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
               <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold text-lg hover:bg-opacity-80 transition-colors">
-                <span class="flex items-center gap-3"><span class="material-icons text-primary">verified_user</span>Garanties</span>
+                <span class="flex items-center gap-3"><span class="material-icons text-primary">verified_user</span>Quelles garanties offre votre électricien agréé ?</span>
                 <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary text-2xl">expand_more</span>
               </summary>
               <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
-                <p>Toutes nos installations et réparations sont garanties. Nous utilisons uniquement du matériel agréé CE et respectons strictement les normes du RGIE.</p>
+                <p>En tant qu'<strong class="text-white">électricien agréé à Bruxelles</strong>, toutes nos installations sont garanties 2 ans. Matériel certifié CE, normes RGIE strictement respectées, assurance RC professionnelle incluse.</p>
               </div>
             </details>
           </div>
@@ -250,13 +309,122 @@ import '../styles/global.css';
     </div>
   </section>
 
+  <!-- Response Time Stats -->
+  <section class="py-20 bg-navy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Performance Garantie</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Nos Engagements en Chiffres</h2>
+        <p class="text-gray-300 max-w-2xl mx-auto">Des résultats concrets qui font de nous l'électricien le plus fiable de Bruxelles.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-navy-light rounded-2xl p-8 border border-white/10 text-center group hover:border-primary/30 transition-colors">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <span class="material-icons text-3xl text-primary">timer</span>
+          </div>
+          <div class="text-4xl font-extrabold text-primary mb-2">&lt;45<span class="text-lg">min</span></div>
+          <p class="text-gray-300 text-sm font-medium">Temps d'intervention moyen</p>
+          <p class="text-gray-500 text-xs mt-1">Pour les urgences à Bruxelles</p>
+        </div>
+        <div class="bg-navy-light rounded-2xl p-8 border border-white/10 text-center group hover:border-primary/30 transition-colors">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <span class="material-icons text-3xl text-primary">trending_up</span>
+          </div>
+          <div class="text-4xl font-extrabold text-primary mb-2">98<span class="text-lg">%</span></div>
+          <p class="text-gray-300 text-sm font-medium">Taux de résolution</p>
+          <p class="text-gray-500 text-xs mt-1">Dès la première intervention</p>
+        </div>
+        <div class="bg-navy-light rounded-2xl p-8 border border-white/10 text-center group hover:border-primary/30 transition-colors">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <span class="material-icons text-3xl text-primary">thumb_up</span>
+          </div>
+          <div class="text-4xl font-extrabold text-primary mb-2">4.9<span class="text-lg">/5</span></div>
+          <p class="text-gray-300 text-sm font-medium">Note moyenne Google</p>
+          <p class="text-gray-500 text-xs mt-1">Basé sur 127 avis vérifiés</p>
+        </div>
+        <div class="bg-navy-light rounded-2xl p-8 border border-white/10 text-center group hover:border-primary/30 transition-colors">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <span class="material-icons text-3xl text-primary">schedule</span>
+          </div>
+          <div class="text-4xl font-extrabold text-primary mb-2">2<span class="text-lg">h</span></div>
+          <p class="text-gray-300 text-sm font-medium">Délai de réponse devis</p>
+          <p class="text-gray-500 text-xs mt-1">Réponse garantie 7j/7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Service Area Map -->
+  <section class="py-20 bg-navy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Zone d'Intervention</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Électricien dans les 19 Communes de Bruxelles</h2>
+          <p class="text-gray-300 mb-8">Nous intervenons en moins de 45 minutes dans toute la Région de Bruxelles-Capitale. Urgences 24/7, installations et mises en conformité.</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+            <a href="/electricien-ixelles" class="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <span class="material-icons text-primary text-xs">place</span>Ixelles
+            </a>
+            <a href="/electricien-uccle" class="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <span class="material-icons text-primary text-xs">place</span>Uccle
+            </a>
+            <a href="/electricien-schaerbeek" class="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <span class="material-icons text-primary text-xs">place</span>Schaerbeek
+            </a>
+            <a href="/electricien-etterbeek" class="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <span class="material-icons text-primary text-xs">place</span>Etterbeek
+            </a>
+            <a href="/electricien-saint-gilles" class="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <span class="material-icons text-primary text-xs">place</span>Saint-Gilles
+            </a>
+            <a href="/electricien-forest" class="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <span class="material-icons text-primary text-xs">place</span>Forest
+            </a>
+            <a href="/electricien-anderlecht" class="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <span class="material-icons text-primary text-xs">place</span>Anderlecht
+            </a>
+            <a href="/electricien-woluwe-saint-lambert" class="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <span class="material-icons text-primary text-xs">place</span>Woluwe-St-L
+            </a>
+            <a href="/electricien-woluwe-saint-pierre" class="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition-colors">
+              <span class="material-icons text-primary text-xs">place</span>Woluwe-St-P
+            </a>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-6 py-3 rounded-lg transition-colors shadow-lg shadow-primary/20">
+              <span class="material-icons">call</span>Appeler maintenant
+            </a>
+            <a href="/zones" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3 rounded-lg border border-white/20 transition-colors">
+              Toutes les communes <span class="material-icons text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-white/10 shadow-xl h-[400px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2260.1178826699347!2d4.338102176056944!3d50.844858858888074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d9aeb9fffb47ec5%3A0x6bb58db0c93fc5b7!2sAllo%20Electricien!5e1!3m2!1sen!2sbe!4v1771042369603!5m2!1sen!2sbe"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Allo Electricien - Électricien Bruxelles"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="bg-navy py-24 text-center">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Besoin d'un Électricien ?</h2>
-      <p class="text-xl text-gray-300 mb-10">Ne laissez pas vos problèmes électriques traîner. Nos experts sont prêts à intervenir.</p>
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Besoin d'un Électricien à Bruxelles ?</h2>
+      <p class="text-xl text-gray-300 mb-10">Ne laissez pas vos problèmes électriques traîner. Faites confiance au <strong class="text-white">meilleur électricien recommandé à Bruxelles</strong> — intervention rapide, prix transparents, travail garanti.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="tel:+32470000000" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold text-lg px-8 py-4 rounded-lg transition-colors shadow-lg shadow-primary/20">
+        <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold text-lg px-8 py-4 rounded-lg transition-colors shadow-lg shadow-primary/20">
           <span class="material-icons">phone</span>
           Appeler maintenant
         </a>

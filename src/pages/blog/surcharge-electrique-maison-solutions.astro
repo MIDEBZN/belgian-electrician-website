@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment savoir si mon circuit est surchargé ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si le disjoncteur saute après quelques minutes d'utilisation intensive (et qu'il est chaud), c'est une surcharge. Si vous devez débrancher un appareil pour pouvoir en utiliser un autre, vous êtes en surcharge." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien d'appareils sur une seule prise ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La règle est la puissance totale. Une prise standard supporte max 3680W. Mais attention, toutes les prises d'un même mur sont souvent sur le même fusible ! C'est le total de la pièce qui compte." }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce dangereux ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, la surcharge fait chauffer les câbles dans les murs. À la longue, l'isolant fond et c'est l'incendie. C'est pour ça que les disjoncteurs sont calibrés pour couper avant que le fil ne brûle." }
+    }
+  ]
+};
+---
+
+<Layout title="Surcharge Électrique Maison : Solutions pour Éviter la Panne" description="Vous ne pouvez pas allumer le four et le lave-linge en même temps ? Votre installation est surchargée. Découvrez comment mieux répartir vos appareils." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Surcharge</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full">Conseils Pratiques</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Surcharge Électrique : Comment Éviter que les Plombs Sautent ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Nous avons de plus en plus d'appareils électriques, mais nos maisons ont souvent la même installation qu'il y a 20 ans. Résultat : la <strong>surcharge électrique</strong>. C'est quand vous demandez à un tuyau d'arrosage de remplir une piscine olympique en 10 minutes. Ça coince.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comprendre les Watts et les Ampères</h2>
+        <p>C'est une simple addition. Chaque circuit de prises est protégé par un disjoncteur de 20 Ampères (ou 16A).
+        <br>La formule : <strong>20 Ampères x 230 Volts = 4600 Watts.</strong></p>
+        <p>C'est votre budget maximum sur ce circuit.
+        <br>- Un radiateur = 2000W
+        <br>- Un sèche-cheveux = 1800W
+        <br>- Un fer à repasser = 2400W</p>
+        <p>Si vous branchez le radiateur (2000) + le fer à repasser (2400) sur des prises du même circuit, vous êtes à 4400W. C'est limite. Ajoutez la TV, et CLAC, le disjoncteur saute.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">L'erreur classique : La Cuisine</h2>
+        <p>La cuisine est la pièce la plus gourmande. Souvent, dans les anciennes cuisines, toutes les prises sont sur le même fusible.
+        <br>Machine à café + Grille-pain + Bouilloire + Micro-ondes.
+        <br>Si vous prenez votre petit-déjeuner en famille et que tout fonctionne en même temps, c'est la surcharge assurée.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Solution 1 : Répartir la charge</h2>
+        <p>Identifiez quels appareils sont sur quel disjoncteur. Si vous savez que les prises du salon et de la salle à manger sont séparées, branchez l'aspirateur dans le couloir plutôt que dans le salon où la TV et le chauffage tournent déjà.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Solution 2 : Tirer des Lignes Dédiées (Recommandé)</h2>
+        <p>Pour les gros consommateurs, la norme impose des circuits séparés :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Lave-linge : Seul sur son disjoncteur.</li>
+            <li>Séchoir : Seul.</li>
+            <li>Lave-vaisselle : Seul.</li>
+            <li>Four : Seul.</li>
+        </ul>
+        <p>Si ce n'est pas le cas chez vous (fréquent en rénovation rapide), il faut tirer de nouveaux câbles depuis le tableau pour soulager le circuit principal.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Ajout de Circuits Électriques</h3>
+            <p class="mb-4">Marre de jongler avec les prises ? Nous installons de nouveaux circuits dédiés pour votre cuisine ou buanderie. Travail soigné.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Nouveaux circuits</span>
+                    <span class="block text-white font-bold">Devis Gratuit</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

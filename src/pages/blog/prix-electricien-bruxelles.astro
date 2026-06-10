@@ -1,0 +1,137 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le tarif horaire d'un électricien à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le tarif horaire moyen d'un électricien à Bruxelles est de 35€ à 55€/h en journée (hors TVA). Ce tarif peut monter à 75€/h le soir/samedi et 95€/h la nuit/dimanche pour les urgences. Un forfait de déplacement de 25€ à 40€ s'ajoute généralement." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte une rénovation électrique complète à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le coût d'une rénovation électrique complète à Bruxelles varie de 80€ à 120€ par m². Pour un appartement de 80 m² : 6 400€ à 9 600€. Pour une maison de 150 m² : 12 000€ à 18 000€. Ces prix incluent le tableau, les circuits, prises, interrupteurs et main-d'œuvre." }
+    }
+  ]
+};
+---
+
+<Layout title="Prix d'un Électricien à Bruxelles en 2025 : Guide Complet" description="Découvrez les tarifs moyens d'un électricien à Bruxelles en 2025. Dépannage (65€/h), installation, mise en conformité : tous les prix détaillés et conseils pour économiser." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Prix Électricien Bruxelles</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Guide</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Prix d'un Électricien à Bruxelles en 2025 : Guide Complet des Tarifs
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 février 2025</span>
+        <span>•</span>
+        <span>8 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Vous avez besoin d'un <strong class="text-white">électricien à Bruxelles</strong> mais vous ne savez pas combien ça coûte ? Ce guide complet détaille tous les tarifs pratiqués en 2025, du simple dépannage à la rénovation complète, pour vous aider à budgéter vos travaux électriques.</p>
+
+        <div class="bg-navy-light border border-primary/20 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2 flex items-center gap-2"><span class="material-icons">info</span>En résumé</p>
+          <ul class="space-y-1 text-sm">
+            <li>• Tarif horaire standard : <strong class="text-white">35€ à 55€/h</strong></li>
+            <li>• Dépannage urgent : <strong class="text-white">65€ à 95€/h</strong> (selon horaire)</li>
+            <li>• Mise en conformité : <strong class="text-white">500€ à 6 000€</strong></li>
+            <li>• Rénovation complète : <strong class="text-white">80€ à 120€/m²</strong></li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. Tarif horaire d'un électricien à Bruxelles</h2>
+        <p>Le tarif horaire d'un électricien qualifié à Bruxelles varie selon plusieurs facteurs : l'heure d'intervention, le type de travaux, et l'expérience du technicien.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Créneau</th><th class="text-right p-4 text-white">Tarif horaire (HTVA)</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Standard (24/7)</td><td class="p-4 text-right text-primary font-bold">35€ — 55€</td></tr>
+              <tr><td class="p-4">Soirée / Week-end</td><td class="p-4 text-right text-primary font-bold">55€ — 75€</td></tr>
+              <tr><td class="p-4">Nuit / Dimanche / Férié</td><td class="p-4 text-right text-primary font-bold">75€ — 95€</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>À ces tarifs s'ajoute généralement un <strong class="text-white">forfait de déplacement</strong> de 25€ à 45€ (quel que soit le quartier de Bruxelles).</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. Prix par type d'intervention</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Dépannage électrique</h3>
+        <p>Le prix d'un <a href="/services/depannage-electrique" class="text-primary hover:underline">dépannage électrique</a> dépend de la complexité de la panne :</p>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Intervention</th><th class="text-right p-4 text-white">Prix moyen</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Remplacement prise / interrupteur</td><td class="p-4 text-right text-primary font-bold">80€ — 120€</td></tr>
+              <tr><td class="p-4">Disjoncteur qui saute</td><td class="p-4 text-right text-primary font-bold">100€ — 200€</td></tr>
+              <tr><td class="p-4">Recherche court-circuit</td><td class="p-4 text-right text-primary font-bold">150€ — 350€</td></tr>
+              <tr><td class="p-4">Panne totale</td><td class="p-4 text-right text-primary font-bold">150€ — 400€</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Mise en conformité RGIE</h3>
+        <p>La <a href="/services/mise-en-conformite" class="text-primary hover:underline">mise en conformité électrique</a> est obligatoire pour la vente d'un bien en Belgique :</p>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Prestation</th><th class="text-right p-4 text-white">Prix moyen</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Schémas unifilaires</td><td class="p-4 text-right text-primary font-bold">150€ — 350€</td></tr>
+              <tr><td class="p-4">Remise aux normes partielle</td><td class="p-4 text-right text-primary font-bold">500€ — 2 000€</td></tr>
+              <tr><td class="p-4">Rénovation tableau + circuits</td><td class="p-4 text-right text-primary font-bold">2 000€ — 6 000€</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Installation neuve et rénovation</h3>
+        <p>Pour une rénovation électrique complète, comptez <strong class="text-white">80€ à 120€ par m²</strong>. Cela comprend le <a href="/services/tableau-electrique" class="text-primary hover:underline">tableau électrique</a>, tous les circuits, prises, interrupteurs et la main-d'œuvre.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. Comment réduire vos coûts ?</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Demandez plusieurs devis</strong> — comparez au moins 3 offres avant de vous décider</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Planifiez en semaine</strong> — les tarifs journée sont 30-50% moins chers que les urgences</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Groupez les travaux</strong> — un forfait global coûte moins que des interventions séparées</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Vérifiez les primes</strong> — la Région bruxelloise offre des subsides pour certains travaux</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">4. Comment choisir son électricien ?</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span>Vérifiez qu'il est <strong class="text-white">agréé et assuré</strong> (RC professionnelle)</li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span>Demandez un <strong class="text-white">devis écrit détaillé</strong> avant toute intervention</li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span>Vérifiez les <strong class="text-white">avis Google</strong> (minimum 4.5/5 avec 50+ avis)</li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span>Assurez-vous que les travaux sont <strong class="text-white">garantis minimum 2 ans</strong></li>
+        </ul>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">💡 Chez Allo Electricien, le devis est toujours gratuit</p>
+          <p class="text-sm">Nous vous envoyons un devis détaillé sous 24h. Pas de surprise, pas de frais cachés. <a href="/contact" class="text-primary underline font-bold">Demandez votre devis →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

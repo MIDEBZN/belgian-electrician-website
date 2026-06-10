@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi mes lumières baissent d'intensité quand j'allume le four ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est une chute de tension. Votre installation n'est pas assez puissante pour fournir tout le monde, ou (plus grave) il y a une connexion desserrée (mauvais contact) dans votre tableau qui chauffe et résiste au passage du courant." }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce dangereux pour mes appareils ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui ! Une tension trop basse (ex: 200V au lieu de 230V) fait forcer les moteurs (frigo, pompe) qui surchauffent et peuvent griller. L'électronique sensible peut aussi planter." }
+    },
+    {
+      "@type": "Question",
+      "name": "Qui est responsable : Sibelga ou moi ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si le problème est constant chez vos voisins aussi, c'est le réseau (Sibelga). Si c'est juste chez vous, surtout quand vous consommez beaucoup, c'est votre installation (souvent le câble d'arrivée ou le tableau)." }
+    }
+  ]
+};
+---
+
+<Layout title="Baisse de Tension Électrique Maison : Causes et Dangers" description="Vos lumières faiblissent ? Vos appareils manquent de puissance ? La baisse de tension est un signe de mauvaise connexion ou de réseau surchargé." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Baisse de Tension</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-yellow-500 bg-yellow-500/10 px-3 py-1 rounded-full">Diagnostic</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Baisse de Tension à la Maison : Pourquoi mes Lumières Faiblissent ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Vous avez remarqué que lorsque votre machine à laver se lance ou que vous allumez la taque électrique, <strong>l'intensité des ampoules du salon diminue</strong> légèrement ? C'est ce qu'on appelle une chute de tension. C'est un phénomène courant mais qui ne doit pas être ignoré s'il est prononcé.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le problème du Neutre Flottant (Danger !)</h2>
+        <p>Si la tension baisse sur certains appareils mais <strong>augmente</strong> sur d'autres (les lumières deviennent très fortes, prêtes à exploser), c'est une <strong>rupture de neutre</strong>. C'est une urgence critique. Coupez tout immédiatement ! Vous risquez de griller tous vos appareils en quelques secondes (surtension de 400V).</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Cause 1 : Mauvais Serrage dans le Tableau</h2>
+        <p>C'est la cause interne la plus fréquente. Le gros câble qui arrive du compteur est mal serré dans votre disjoncteur principal. Avec les années, le cuivre s'écrase un peu, la vis a du jeu.</p>
+        <p>Quand vous tirez du courant, le courant a du mal à passer à travers ce mauvais contact (résistance). Cela crée une chute de tension pour vous... et beaucoup de chaleur dans le tableau (risque d'incendie).</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Cause 2 : Câble d'alimentation trop fin</h2>
+        <p>Si vous avez ajouté beaucoup d'appareils puissants (sauna, borne de recharge voiture, jacuzzi) sans changer votre installation, votre câble d'arrivée est peut-être trop fin pour supporter la charge. Il agit comme un goulot d'étranglement.</p>
+        <p>Il faut alors demander un <strong>renforcement de compteur</strong> à Sibelga et changer votre câble de colonne.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Cause 3 : Problème sur le réseau</h2>
+        <p>Parfois, c'est tout le quartier qui souffre. Si vous êtes en bout de ligne rurale (plus rare à Bruxelles) ou si le transformateur de la rue est fatigué, la tension peut chuter aux heures de pointe (le soir en hiver).</p>
+        <p><em>Test :</em> Demandez à vos voisins s'ils ont le même souci aux mêmes heures.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Contrôle de l'Installation</h3>
+            <p class="mb-4">Nous vérifions le serrage de votre tableau (au couple dynamométrique) et mesurons la tension en charge pour identifier le goulot d'étranglement.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Vérification Tableau</span>
+                    <span class="block text-white font-bold">Maintenance Préventive</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

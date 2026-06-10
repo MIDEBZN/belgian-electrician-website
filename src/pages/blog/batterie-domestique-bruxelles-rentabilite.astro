@@ -1,0 +1,136 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Les primes pour les batteries domestiques existent-elles encore à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non. La Région de Bruxelles-Capitale n'octroie pas de prime spécifique pour l'achat exclusif d'une batterie domestique en 2025. L'accent régional est mis sur la performance énergétique du bâtiment (isolation)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Où peut-on installer la batterie physiquement ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "L'endroit idéal est une cave sèche, une buanderie ou un garage tempéré. La batterie ne doit pas être installée à l'extérieur sans protection, ni dans un grenier non isolé où il ferait 45°C en été." }
+    },
+    {
+      "@type": "Question",
+      "name": "Mon installation avec batterie doit-elle repasser un contrôle RGIE ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolument. L'ajout d'une batterie domestique est considéré comme une modification importante de l'installation électrique. Un électricien qualifié devra réaliser de nouveaux schémas unifilaires et faire venir un organisme de contrôle agréé." }
+    },
+    {
+      "@type": "Question",
+      "name": "En combien d'années une batterie domestique est-elle rentabilisée ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Avec un gain quotidien moyen de 1,35€/jour et une batterie à 4 500€, le retour sur investissement brut est d'environ 11 ans. Ce calcul s'améliore avec la hausse des prix de l'électricité." }
+    }
+  ]
+};
+---
+
+<Layout title="Batterie Domestique Bruxelles : Est-ce Rentable en 2025 ?" description="Avec la fin du compteur qui tourne à l'envers, la batterie domestique est-elle rentable à Bruxelles en 2025 ? Prix, avantages, et analyse de rentabilité pour vos panneaux." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Batterie Domestique Bruxelles</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Énergie Solaire</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Batterie domestique à Bruxelles : est-ce vraiment rentable avec la fin du compteur qui tourne à l'envers ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>8 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">La fin du "compteur qui tourne à l'envers" à Bruxelles a bouleversé la rentabilité des panneaux solaires. En stockant votre surplus solaire de la journée pour l'utiliser le soir, une <strong class="text-white">batterie domestique</strong> augmente votre autoconsommation de 30% à parfois plus de 70%. Mais avec un coût d'installation entre 4 000€ et 8 000€, est-ce rentable en 2025 ?</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Pourquoi la fin du compteur qui tourne à l'envers change tout</h2>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Flux d'énergie</th><th class="text-right p-4 text-white">Prix 2025</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Électricité achetée au réseau le soir (prélèvement)</td><td class="p-4 text-right text-primary font-bold">~0,35 €/kWh</td></tr>
+              <tr><td class="p-4">Électricité solaire injectée sur le réseau (injection)</td><td class="p-4 text-right text-yellow-400 font-bold">~0,08 €/kWh</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Sans batterie, un ménage bruxellois moyen n'autoconsomme qu'environ <strong class="text-white">30% de sa propre production solaire</strong>. Il vend son électricité pour des clopinettes à midi et la rachète au prix fort le soir.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comment la batterie améliore votre rentabilité</h2>
+        <p>Le soir, l'onduleur puise l'énergie gratuite stockée dans la batterie au lieu de l'acheter au réseau à 0,35€/kWh. Avec une batterie correctement dimensionnée (5 à 10 kWh), <strong class="text-white">votre taux d'autoconsommation peut grimper à 70% ou 80%</strong> en été.</p>
+        <p>Bonus : de nombreuses batteries modernes (Tesla Powerwall, Huawei LUNA) intègrent une fonction <strong class="text-white">back-up (EPS)</strong>. Si le réseau Sibelga subit une coupure, votre maison bascule automatiquement sur la batterie en une fraction de seconde.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Prix d'une batterie domestique à Bruxelles en 2025</h2>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Capacité</th><th class="text-right p-4 text-white">Prix installé (TVA 6% incl.)</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Petite (4 à 5 kWh) — couple consommant peu</td><td class="p-4 text-right text-primary font-bold">3 500€ — 4 500€</td></tr>
+              <tr><td class="p-4">Moyenne (7 à 10 kWh) — famille de 4 personnes</td><td class="p-4 text-right text-primary font-bold">5 500€ — 7 000€</td></tr>
+              <tr><td class="p-4">Grande (+ de 10 kWh)</td><td class="p-4 text-right text-primary font-bold">à partir de 8 000€</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le calcul de rentabilité</h2>
+        <div class="bg-navy-light border border-primary/20 rounded-xl p-6 my-6">
+          <p class="text-primary font-bold mb-3">Simulation pour 5 kWh stockés/jour</p>
+          <ul class="space-y-2 text-sm">
+            <li>• Gain quotidien net : 5 kWh × (0,35€ − 0,08€) = <strong class="text-white">1,35 €/jour</strong></li>
+            <li>• Gain annuel : 1,35 € × 300 jours utiles = <strong class="text-white">405 €/an</strong></li>
+            <li>• Batterie à 4 500€ → retour sur investissement brut : <strong class="text-white">~11 ans</strong></li>
+          </ul>
+        </div>
+        <p>Ce calcul s'améliore significativement si le prix de l'électricité monte à 0,50€/kWh : la rentabilité passe sous <strong class="text-white">8 ans</strong>. La batterie est avant tout un <strong class="text-white">bouclier contre l'inflation énergétique</strong>.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Devez-vous investir maintenant ?</h2>
+        <p>La batterie est très intéressante si vous :</p>
+        <ul class="space-y-2 mt-4">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Installez une nouvelle installation photovoltaïque complète (le surcoût de l'onduleur hybride est marginal).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Possédez une voiture électrique et travaillez de la maison.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Souhaitez vous prémunir contre la hausse fulgurante des prix de l'électricité.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span>Vivez dans un quartier sujet à de fréquentes pannes de courant et valorisez le mode "back-up".</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Batterie domestique Sibelga</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Les primes pour les batteries domestiques existent-elles encore à Bruxelles ?</h3>
+        <p>Non. Contrairement à la Flandre, la Région de Bruxelles-Capitale n'octroie pas de prime spécifique pour l'achat exclusif d'une batterie domestique en 2025. L'accent régional est mis sur l'isolation du bâtiment.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Où peut-on installer la batterie physiquement ?</h3>
+        <p>L'endroit idéal est une cave sèche, une buanderie ou un garage tempéré, à proximité relative de votre tableau électrique et de votre compteur Sibelga. Évitez les greniers non isolés (chaleur extrême) et l'extérieur sans protection.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Mon installation avec batterie doit-elle repasser un contrôle RGIE ?</h3>
+        <p>Absolument. L'ajout d'une batterie est considéré comme une modification importante. Un <a href="/urgence/bruxelles/" class="text-primary hover:underline">électricien qualifié</a> devra réaliser de nouveaux schémas unifilaires et faire venir un organisme de contrôle agréé pour un nouveau certificat RGIE.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Faut-il modifier mon contrat d'énergie ?</h3>
+        <p>Certains fournisseurs proposent des contrats "dynamiques" où le prix varie d'heure en heure. Avec une batterie intelligente, vous pouvez configurer le système pour recharger la batterie depuis le réseau la nuit (prix quasi nul) et utiliser cette électricité le jour quand les prix flambent.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">☀️ Vous envisagez l'installation d'une batterie à Bruxelles ?</p>
+          <p class="text-sm">Nos techniciens spécialisés réalisent l'étude de dimensionnement, la pose de l'onduleur hybride et la mise en conformité RGIE de votre nouveau système. <a href="/contact" class="text-primary underline font-bold">Demandez votre étude gratuite →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

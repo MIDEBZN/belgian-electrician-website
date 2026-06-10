@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Est-il interdit d'avoir des fils apparents ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le RGIE interdit formellement les fils conducteurs (VOB) apparents sans protection mécanique. Ils doivent être sous gaine, tube ou goulotte. Un câble (XVB) avec sa double isolation peut être apparent s'il est fixé correctement, mais c'est rarement esthétique." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment cacher des fils sans faire de saignées ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Les solutions les plus courantes sont les plinthes électriques, les goulottes (moulures) en PVC, ou le passage derrière des cloisons doublées (Gyproc)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce dangereux de laisser des fils (dominos) sortir du mur ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "OUI. C'est un risque d'électrocution direct, surtout pour les enfants ou animaux. Tirez sur le fil par accident et le contact se rompt ou crée un court-circuit. Il faut impérativement poser une boîte de dérivation ou un luminaire." }
+    }
+  ]
+};
+---
+
+<Layout title="Fils Électriques Apparents : Danger et Solutions Esthétiques" description="Des fils qui pendent du plafond ou sortent du mur ? C'est moche et dangereux. Découvrez nos solutions pour cacher vos fils électriques apparents à Bruxelles." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Fils Apparents</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full">Sécurité & Esthétique</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Fils Électriques Apparents : Quelles Solutions ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>6 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Lors d'une rénovation inachevée ou dans un logement ancien, il n'est pas rare de tomber sur des <strong>fils électriques apparents</strong>. Une ampoule qui pendouille au bout d'un fil, un domino qui sort du mur... Au-delà de l'aspect négligé, c'est une <strong>infraction au RGIE</strong> et un danger réel.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Pourquoi est-ce dangereux ?</h2>
+        <p>Un fil électrique est conçu pour être protégé. S'il est apparent :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Risque mécanique :</strong> On peut l'accrocher, l'arracher ou l'écraser en déplaçant un meuble.</li>
+            <li><strong>Risque d'électrocution :</strong> Si l'isolant s'abîme ou si les connexions (dominos) sont accessibles, un contact direct est possible.</li>
+            <li><strong>Risque incendie :</strong> La poussière s'accumule sur les connexions nues. Une étincelle suffit à l'enflammer.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Solution 1 : L'Encastrement (Le plus propre)</h2>
+        <p>C'est la solution royale, mais la plus lourde. On creuse des saignées dans le mur (rainurage), on place des tubes, on rebouche au plâtre, on ponce et on peint. Le résultat est invisible.</p>
+        <p><em>Idéal lors d'une rénovation complète avant de refaire les peintures.</em></p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Solution 2 : Les Goulottes et Moulures (Le plus simple)</h2>
+        <p>Si vous ne voulez pas casser les murs, les goulottes PVC sont la solution. Aujourd'hui, on trouve des modèles très discrets, voire design :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Plinthes électriques :</strong> Elles remplacent vos plinthes en bois et cachent les câbles en bas des murs.</li>
+            <li><strong>Moulures plafond :</strong> Elles imitent les corniches décoratives.</li>
+            <li><strong>Goulottes clipsables :</strong> Pratiques pour ajouter une prise rapidement.</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Solution 3 : Le Style Industriel (Tube apparent)</h2>
+        <p>Dans les lofts ou les intérieurs modernes, on assume ! On utilise des tubes en acier galvanisé ou en cuivre pour faire passer les fils. L'installation électrique devient un élément de décoration à part entière. C'est très tendance à Bruxelles.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Que faire des "queues de cochon" au plafond ?</h2>
+        <p>Vous avez des fils qui sortent au plafond pour un lustre que vous n'avez pas encore ? Ne laissez jamais des fils dénudés ou un simple domino.</p>
+        <p><strong>La règle :</strong> Installez une douille de chantier (provisoire) avec une ampoule, ou posez un couvercle de boîte (obturateur) pour fermer l'accès aux fils.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Sécurisez vos installations</h3>
+            <p class="mb-4">Besoin de cacher des câbles ou de finaliser une installation ? Nous proposons des finitions soignées (encastré ou apparent design).</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Finitions Électriques</span>
+                    <span class="block text-white font-bold">Devis sur mesure</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

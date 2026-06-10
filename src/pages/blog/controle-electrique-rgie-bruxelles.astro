@@ -1,0 +1,141 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le prix d'un contrôle électrique RGIE à Bruxelles en 2025 ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pour un logement standard à Bruxelles, le prix moyen est entre 150€ et 200€ TVAC. Pour les maisons avec plusieurs compteurs, comptez environ 120€ à 150€ par compteur supplémentaire." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je vendre ma maison avec un rapport de contrôle négatif ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, il est tout à fait légal de vendre un bien avec une installation électrique déclarée non-conforme (PV négatif). Le notaire annexe le PV négatif à l'acte de vente. L'acheteur dispose de 18 mois pour réaliser les travaux de mise en conformité." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je faire les schémas électriques moi-même ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, la loi vous autorise à dessiner vous-même vos schémas électriques, à condition qu'ils respectent scrupuleusement la symbologie officielle du RGIE et qu'ils reflètent parfaitement la réalité de l'installation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte une mise en conformité électrique à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "S'il s'agit juste de dessiner les plans et changer un différentiel, le coût peut être inférieur à 500€. S'il faut refaire entièrement le tableau et tirer de nouvelles lignes, le budget peut varier de 3 000€ à 8 000€ pour une maison complète." }
+    }
+  ]
+};
+---
+
+<Layout title="Contrôle Électrique RGIE à Bruxelles : Guide Complet Prix & Procédure" description="Tout savoir sur le contrôle électrique RGIE à Bruxelles : prix, procédure, validité et mise en conformité. Préparez la vente de votre bien sereinement." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Contrôle RGIE Bruxelles</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Conformité RGIE</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Le guide complet du contrôle électrique RGIE à Bruxelles : prix et procédure
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>9 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Vous vendez votre bien immobilier ou vous achetez une maison bruxelloise ancienne ? Le <strong class="text-white">contrôle électrique RGIE</strong> est un passage obligé. Ce contrôle coûte entre 150€ et 200€. S'il est négatif, l'acheteur dispose de 18 mois pour mettre l'installation en conformité.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Quand le contrôle électrique est-il obligatoire ?</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">À la vente d'une habitation :</strong> Si l'installation date d'avant le 1er octobre 1981, le vendeur a l'obligation légale de fournir un certificat de contrôle.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Lors d'une nouvelle installation :</strong> Avant la mise en service par le gestionnaire de réseau (Sibelga à Bruxelles).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Après une modification importante :</strong> Comme un renforcement de compteur ou l'ajout d'une extension significative.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">check_circle</span><span><strong class="text-white">Tous les 25 ans :</strong> Un contrôle périodique est obligatoire pour vérifier l'état de l'installation.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Prix d'un contrôle électrique à Bruxelles en 2025</h2>
+        <div class="bg-navy border border-white/10 rounded-xl overflow-hidden my-6">
+          <table class="w-full">
+            <thead><tr class="bg-white/5"><th class="text-left p-4 text-white">Type de logement</th><th class="text-right p-4 text-white">Prix moyen TVAC</th></tr></thead>
+            <tbody class="divide-y divide-white/5">
+              <tr><td class="p-4">Appartement ou maison unifamiliale (1 compteur)</td><td class="p-4 text-right text-primary font-bold">150€ — 200€</td></tr>
+              <tr><td class="p-4">Compteur supplémentaire (maison de rapport)</td><td class="p-4 text-right text-primary font-bold">+120€ — 150€/unité</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comment se déroule la procédure de contrôle ?</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">1. La vérification des documents</h3>
+        <p>L'inspecteur vous demandera d'abord deux documents obligatoires :</p>
+        <ul class="space-y-1 mt-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">description</span><span><strong class="text-white">Le schéma unifilaire</strong> — représentation graphique de votre installation (circuits, câbles, disjoncteurs).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">description</span><span><strong class="text-white">Le plan de position</strong> — le plan de votre maison avec l'emplacement exact de chaque prise et interrupteur.</span></li>
+        </ul>
+        <div class="bg-navy-light border border-yellow-500/20 rounded-xl p-4 my-4">
+          <p class="text-yellow-400 text-sm font-bold">⚠️ Sans ces documents, le contrôle sera automatiquement déclaré négatif, même si votre installation est parfaite techniquement.</p>
+        </div>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">2. Le contrôle visuel</h3>
+        <p>L'expert vérifie l'état du tableau, le calibrage des disjoncteurs, l'absence de fils dénudés, et l'adéquation du matériel pour les zones humides (salles de bain).</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">3. Les mesures de sécurité</h3>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">analytics</span><span><strong class="text-white">Résistance de la prise de terre :</strong> Doit être inférieure à 30 ohms.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">analytics</span><span><strong class="text-white">Test d'isolement :</strong> Vérification qu'il n'y a pas de fuite de courant entre les conducteurs.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">analytics</span><span><strong class="text-white">Test des disjoncteurs différentiels :</strong> Le 300mA et le 30mA pour les pièces humides.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le rapport est négatif : que faire ?</h2>
+        <p>Dans plus de <strong class="text-white">80% des cas de vente de logements anciens à Bruxelles</strong>, le rapport initial est négatif. Pas de panique !</p>
+        <p class="mt-3">La vente a tout de même lieu. Le notaire annexe le PV négatif à l'acte de vente, et l'acheteur dispose d'un délai de <strong class="text-white">18 mois</strong> pour faire réaliser les travaux et demander une nouvelle visite de contrôle.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Les infractions les plus courantes à Bruxelles</h3>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-yellow-400 text-sm mt-1">warning</span><span>Absence ou inefficacité de la prise de terre (très fréquent dans le centre de Bruxelles).</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-yellow-400 text-sm mt-1">warning</span><span>Absence des schémas unifilaires et plans de position.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-yellow-400 text-sm mt-1">warning</span><span>Prises de courant sans broche de terre dans des pièces où c'est obligatoire.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-yellow-400 text-sm mt-1">warning</span><span>Utilisation d'anciennes canalisations métalliques non isolées.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Contrôle électrique RGIE</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Puis-je faire les schémas électriques moi-même ?</h3>
+        <p>Oui, la loi vous autorise à dessiner vous-même vos schémas électriques, à condition qu'ils respectent scrupuleusement la symbologie officielle du RGIE et qu'ils reflètent parfaitement la réalité de l'installation.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Le contrôle est-il obligatoire pour une location ?</h3>
+        <p>La loi n'impose pas explicitement de certificat pour un bail locatif. Toutefois, le propriétaire a l'obligation de louer un logement "répondant aux exigences élémentaires de sécurité". Sa responsabilité pénale peut être engagée en cas d'incendie électrique.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Qui de l'acheteur ou du vendeur paie la mise en conformité ?</h3>
+        <p>En général, le bien est vendu "en l'état" avec le PV négatif, et c'est l'acquéreur qui finance les travaux dans le délai légal de 18 mois. Le vendeur doit simplement payer la visite de contrôle initiale pour obtenir le PV.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Combien coûte une mise en conformité électrique ?</h3>
+        <p>C'est très variable. S'il s'agit juste de dessiner les plans et changer un différentiel, le coût peut être inférieur à 500€. S'il faut refaire entièrement le tableau et tirer de nouvelles lignes, le budget peut varier de 3 000€ à 8 000€ pour une maison complète.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">📋 Besoin d'une mise en conformité à Bruxelles ?</p>
+          <p class="text-sm">Nos électriciens vous accompagnent de A à Z : diagnostic, remise aux normes, création des schémas et passage de l'organisme de contrôle. <a href="/contact" class="text-primary underline font-bold">Demandez un devis gratuit →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

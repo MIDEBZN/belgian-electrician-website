@@ -1,0 +1,261 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const articles = [
+  {
+    slug: "surtension-electrique-protection",
+    title: "Surtension Électrique : Comment Protéger vos Appareils ?",
+    description: "Vos appareils ont grillé après un orage ? C'est une surtension. Découvrez les causes, les risques et comment protéger efficacement votre maison.",
+    date: "2025-02-15",
+    category: "Protection",
+    readTime: "8 min",
+    icon: "flash_on"
+  },
+  {
+    slug: "probleme-electrique-maison-ancienne",
+    title: "Problèmes Électriques Maison Ancienne",
+    description: "Fils en tissu, plombs qui sautent, absence de terre... Découvrez les dangers des vieilles installations et comment rénover.",
+    date: "2025-02-15",
+    category: "Rénovation",
+    readTime: "9 min",
+    icon: "home"
+  },
+  {
+    slug: "fils-electriques-apparents-solution",
+    title: "Fils Électriques Apparents : Des Solutions Esthétiques",
+    description: "Des fils qui pendent ou sortent du mur ? C'est dangereux et moche. Voici nos solutions pour les cacher (goulottes, saignées, plinthes).",
+    date: "2025-02-15",
+    category: "Esthétique",
+    readTime: "6 min",
+    icon: "visibility_off"
+  },
+  {
+    slug: "fusible-qui-saute-tout-le-temps",
+    title: "Fusible qui Saute Tout le Temps : Que Faire ?",
+    description: "Votre plomb n'arrête pas de sauter ? Ne mettez pas un plus gros ! Risque d'incendie. Comprenez la cause (surcharge, court-circuit).",
+    date: "2025-02-15",
+    category: "Dépannage",
+    readTime: "7 min",
+    icon: "offline_bolt"
+  },
+  {
+    slug: "prise-electrique-bruit-bourdonnement",
+    title: "Prise qui fait du Bruit (Grésillement) : Danger !",
+    description: "Votre prise bourdonne ou crépite ? C'est le son d'un arc électrique. Risque d'incendie imminent. Débranchez tout !",
+    date: "2025-02-15",
+    category: "Sécurité",
+    readTime: "6 min",
+    icon: "volume_up"
+  },
+  {
+    slug: "pas-electricite-dans-une-piece",
+    title: "Plus de Courant dans une Seule Pièce",
+    description: "Le salon marche mais la cuisine est dans le noir ? Disjoncteur sauté ou fil déconnecté ? Guide pour trouver la panne locale.",
+    date: "2025-02-15",
+    category: "Dépannage",
+    readTime: "6 min",
+    icon: "power_off"
+  },
+  {
+    slug: "interrupteur-ne-marche-plus",
+    title: "Interrupteur HS : Diagnostic et Remplacement",
+    description: "La lumière ne s'allume plus ? Mécanisme cassé, fil desserré ou ampoule grillée ? Apprenez à tester votre interrupteur.",
+    date: "2025-02-15",
+    category: "Dépannage",
+    readTime: "5 min",
+    icon: "toggle_off"
+  },
+  {
+    slug: "differentiel-qui-saute-causes",
+    title: "Différentiel qui Saute : Causes et Solutions",
+    description: "Votre différentiel coupe tout ? C'est une fuite à la terre. Humidité, appareil défectueux ? Comment trouver le coupable.",
+    date: "2025-02-15",
+    category: "Dépannage",
+    readTime: "8 min",
+    icon: "settings_power"
+  },
+  {
+    slug: "baisse-tension-electrique-maison",
+    title: "Baisse de Tension : Pourquoi la Lumière Faiblit ?",
+    description: "Vos lumières baissent quand le four s'allume ? C'est une chute de tension. Attention aux mauvais contacts et au risque d'incendie.",
+    date: "2025-02-15",
+    category: "Diagnostic",
+    readTime: "7 min",
+    icon: "battery_alert"
+  },
+  {
+    slug: "branchement-electrique-chauffe",
+    title: "Branchement qui Chauffe : Risque d'Incendie",
+    description: "Une prise ou un câble chaud ? C'est anormal. Mauvais serrage ou surcharge ? Agissez avant que le plastique ne fonde.",
+    date: "2025-02-15",
+    category: "Sécurité",
+    readTime: "6 min",
+    icon: "whatshot"
+  },
+  {
+    slug: "electricite-saute-quand-il-pleut",
+    title: "L'Électricité Saute Quand il Pleut",
+    description: "Panne de courant à chaque averse ? L'eau s'infiltre dans vos éclairages extérieurs. Comment isoler le circuit jardin.",
+    date: "2025-02-15",
+    category: "Météo",
+    readTime: "5 min",
+    icon: "umbrella"
+  },
+  {
+    slug: "compteur-qui-disjoncte",
+    title: "Compteur Sibelga qui Disjoncte",
+    description: "Tout saute au compteur général ? Vous dépassez votre puissance souscrite. Délestage ou renforcement de compteur ?",
+    date: "2025-02-15",
+    category: "Réseau",
+    readTime: "6 min",
+    icon: "speed"
+  },
+  {
+    slug: "surcharge-electrique-maison-solutions",
+    title: "Surcharge Électrique : Solutions",
+    description: "Vos plombs sautent quand vous cuisinez ? Trop d'appareils sur le même circuit. Découvrez comment mieux répartir la charge.",
+    date: "2025-02-15",
+    category: "Conseils",
+    readTime: "7 min",
+    icon: "scale"
+  },
+  {
+    slug: "odeur-brule-prise-electrique",
+    title: "Odeur de Brûlé dans une Prise",
+    description: "Ça sent le poisson pourri ? C'est du plastique qui fond ! Coupez tout. Urgence incendie électrique.",
+    date: "2025-02-15",
+    category: "Urgence",
+    readTime: "5 min",
+    icon: "fire_extinguisher"
+  },
+  {
+    slug: "etincelles-prise-electrique-danger",
+    title: "Étincelles dans la Prise : Grave ou Pas ?",
+    description: "Un flash bleu en branchant ? C'est souvent normal. Mais si c'est jaune et bruyant, attention au court-circuit.",
+    date: "2025-02-15",
+    category: "Sécurité",
+    readTime: "5 min",
+    icon: "electric_bolt"
+  },
+  {
+    slug: "disjoncteur-qui-saute-causes-solutions",
+    title: "Disjoncteur qui saute : Causes & Solutions",
+    description: "Votre disjoncteur saute tout le temps ? Découvrez les 5 causes principales (surcharge, court-circuit) et nos solutions expert.",
+    date: "2025-02-15",
+    category: "Dépannage",
+    readTime: "10 min",
+    icon: "flash_off"
+  },
+  {
+    slug: "prise-electrique-qui-chauffe-danger",
+    title: "Prise qui Chauffe : DANGER Incendie !",
+    description: "Une prise bouillante ou qui sent le brûlé ? C'est un signe avant-coureur d'incendie. Découvrez comment réagir immédiatement.",
+    date: "2025-02-15",
+    category: "Sécurité",
+    readTime: "8 min",
+    icon: "local_fire_department"
+  },
+  {
+    slug: "lumiere-qui-clignote-que-faire",
+    title: "Lumière qui Clignote : Que Faire ?",
+    description: "Vos lumières scintillent ? Ampoule mal vissée, LED incompatible ou problème de câblage dangereux ? Le diagnostic complet.",
+    date: "2025-02-15",
+    category: "Diagnostic",
+    readTime: "7 min",
+    icon: "lightbulb"
+  },
+  {
+    slug: "prise-electrique-ne-fonctionne-plus",
+    title: "Prise Électrique HS : Guide Dépannage",
+    description: "Une prise ne fonctionne plus ? Fusible sauté, fil déconnecté ou mécanisme cassé ? Trouvez la panne en 5 étapes.",
+    date: "2025-02-15",
+    category: "Dépannage",
+    readTime: "6 min",
+    icon: "power"
+  },
+  {
+    slug: "court-circuit-maison-que-faire",
+    title: "Court-Circuit : Causes et Dangers",
+    description: "Panne de courant brutale ? Odeur de brûlé ? Apprenez à isoler un court-circuit et à sécuriser votre installation électrique.",
+    date: "2025-02-15",
+    category: "Urgence",
+    readTime: "9 min",
+    icon: "bolt"
+  },
+  {
+    slug: "prix-electricien-bruxelles",
+    title: "Prix d'un Électricien à Bruxelles en 2025 : Guide Complet",
+    description: "Découvrez les tarifs moyens d'un électricien à Bruxelles. Dépannage, installation, mise en conformité : tous les prix détaillés.",
+    date: "2025-02-10",
+    category: "Guide",
+    readTime: "8 min",
+    icon: "euro"
+  },
+  {
+    slug: "mise-en-conformite-electrique-guide",
+    title: "Mise en Conformité Électrique : Tout Ce Qu'il Faut Savoir",
+    description: "Le guide complet de la mise en conformité RGIE en Belgique. Obligations, processus, coûts et conseils.",
+    date: "2025-02-05",
+    category: "Réglementation",
+    readTime: "10 min",
+    icon: "gavel"
+  },
+  {
+    slug: "signes-installation-electrique-dangereuse",
+    title: "10 Signes Que Votre Installation Électrique Est Dangereuse",
+    description: "Apprenez à reconnaître les signes d'une installation électrique vétuste ou dangereuse. Prévention des risques d'incendie et d'électrocution.",
+    date: "2025-01-28",
+    category: "Sécurité",
+    readTime: "6 min",
+    icon: "warning"
+  }
+];
+---
+
+<Layout title="Blog Électricité Bruxelles — Conseils & Guides" description="Blog Allo Electricien : guides, conseils et actualités sur l'électricité à Bruxelles. Prix, normes RGIE, sécurité, domotique, bornes de recharge et plus.">
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-24 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Blog</li>
+        </ol>
+      </nav>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+        Notre <span class="text-primary">Blog</span>
+      </h1>
+      <p class="text-xl text-gray-300 max-w-2xl mt-4 leading-relaxed">
+        Guides, conseils et actualités sur l'électricité à Bruxelles. Tout ce que vous devez savoir pour votre installation.
+      </p>
+    </div>
+  </header>
+
+  <main class="relative z-20 -mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {articles.map(article => (
+        <a href={`/blog/${article.slug}`} class="group bg-navy rounded-2xl border border-white/10 overflow-hidden hover:border-primary/50 transition-all hover:-translate-y-1 shadow-xl">
+          <div class="bg-navy-light p-8 flex items-center justify-center min-h-[200px]">
+            <span class="material-icons text-primary text-6xl group-hover:scale-110 transition-transform">{article.icon}</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">{article.category}</span>
+              <span class="text-xs text-gray-500">{article.readTime}</span>
+            </div>
+            <h2 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">{article.title}</h2>
+            <p class="text-sm text-gray-400 leading-relaxed">{article.description}</p>
+            <div class="mt-4 flex items-center justify-between text-xs text-gray-500">
+              <span>{new Date(article.date).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+              <span class="text-primary group-hover:translate-x-1 transition-transform material-icons text-sm">arrow_forward</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </main>
+
+</Layout>

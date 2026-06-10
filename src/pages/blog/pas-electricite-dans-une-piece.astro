@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi je n'ai plus d'électricité dans une seule pièce ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le plus probable est qu'un disjoncteur spécifique à cette pièce a sauté au tableau électrique. Si tous les disjoncteurs sont relevés, il s'agit peut-être d'un fil neutre déconnecté ou coupé." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment savoir quel disjoncteur correspond à quelle pièce ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Idéalement, votre tableau est étiqueté. Sinon, vous pouvez baisser les disjoncteurs un par un (quand tout fonctionne) pour identifier les circuits. Si vous n'avez plus de courant dans la chambre, cherchez le disjoncteur baissé." }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce un problème de fusible ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si vous avez une ancienne installation à fusibles, oui, le fusible de ce circuit est probablement grillé. Il faut le tester et le remplacer." }
+    }
+  ]
+};
+---
+
+<Layout title="Pas d'Électricité dans une Pièce ? Diagnostic et Solutions" description="Plus de courant dans la chambre ou le salon, mais le reste de la maison fonctionne ? Disjoncteur sauté ou panne locale ? Voici comment trouver la cause." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Panne une pièce</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full">Dépannage</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Plus de Courant dans une Seule Pièce : Que Faire ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>6 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Scénario classique : vous êtes dans le salon, tout va bien. Vous allez dans la cuisine : noir complet. Le frigo est éteint, la lumière ne s'allume pas. Pourtant, la télé fonctionne toujours dans la pièce d'à côté. Vous avez une <strong>panne partielle</strong>.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Étape 1 : Le Tableau Électrique (Check-up)</h2>
+        <p>Allez vérifier votre tableau. Si c'est une panne localisée, le disjoncteur général n'a pas sauté. Cherchez un <strong>petit disjoncteur divisionnaire</strong> qui serait en position basse (OFF).</p>
+        <p>Si vous en trouvez un : essayez de le remonter.
+        <ul class="list-disc pl-6">
+            <li><strong>Il tient :</strong> C'était peut-être une surcharge passagère.</li>
+            <li><strong>Il ressaute :</strong> Il y a un court-circuit franc sur ce circuit précis. Débranchez tous les appareils de la pièce et réessayez.</li>
+        </ul
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Étape 2 : Le Disjoncteur est ON mais pas de courant</h2>
+        <p>C'est le cas le plus énervant. Tous les disjoncteurs sont levés, mais la pièce est sans électricité. Cela signifie que le circuit est coupé quelque part, mais pas par le disjoncteur.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">La Cause probable : Une connexion desserrée</h3>
+        <p>L'électricité arrive dans la pièce par une première prise ou un interrupteur, puis repart vers les suivantes (repiquage). Si le fil se déconnecte au niveau du premier point, tout le reste de la pièce est coupé.</p>
+        <p>Il faut ouvrir les prises et les interrupteurs (courant coupé !) pour vérifier si un fil ne s'est pas fait la malle.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Étape 3 : Le Neutre Coupé</h2>
+        <p>Parfois, vous avez de la tension (si vous testez avec un tournevis testeur, il s'allume), mais les appareils ne fonctionnent pas. C'est le signe que le <strong>fil neutre (bleu)</strong> est coupé quelque part. Le courant arrive mais ne peut pas repartir. C'est une panne vicieuse qui nécessite souvent un électricien pour tracer le câble.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Recherche de Panne Locale</h3>
+            <p class="mb-4">Nous localisons la coupure sans casser vos murs grâce à nos outils de diagnostic. Dépannage rapide à Bruxelles.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Panne partielle</span>
+                    <span class="block text-white font-bold">Intervention Forfaitaire</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

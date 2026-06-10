@@ -1,0 +1,691 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combien coûte l'installation d'une borne de recharge à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le prix installation borne de recharge Belgique dépend de la puissance et de la distance au tableau. Borne 7,4 kW monophasé : 1 200€ à 1 600€. Borne 11 kW triphasé : 1 800€ à 2 200€. Borne 22 kW triphasé : 2 500€ à 3 500€. Diagnostic et devis gratuit chez Allo Electricien." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ma maison peut-elle supporter une borne de recharge ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nous vérifions cela lors du diagnostic gratuit. En monophasé (7,4 kW), la plupart des installations domestiques sont compatibles. Pour du triphasé (11-22 kW), un renforcement du raccordement via Sibelga peut être nécessaire. Allo Electricien s'occupe de toutes les démarches." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle puissance de borne de recharge choisir pour ma voiture électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Pour une borne recharge voiture électrique maison Bruxelles : 7,4 kW monophasé suffit pour une recharge nocturne complète (6-8h). 11 kW triphasé est idéal pour les grandes batteries ou les PHEV. 22 kW pour les flottes ou usage intensif. 90% de nos clients choisissent 7,4 ou 11 kW." }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps prend l'installation d'une borne ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "L'installation borne de recharge Bruxelles prend en moyenne une demi-journée à une journée. Installation standard : 4 à 6 heures. Installation avec tirage de câble long : 6 à 8 heures. Installation avec renforcement tableau : 1 journée complète." }
+    },
+    {
+      "@type": "Question",
+      "name": "Y a-t-il des primes pour l'installation d'une borne de recharge à Bruxelles ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Des incitants existent via Bruxelles Environnement et certains fournisseurs d'énergie. La déductibilité fiscale peut atteindre 150% pour les entreprises (jusqu'en 2024). Pour les particuliers, vérifiez les primes régionales en cours. Allo Electricien vous informe des aides disponibles." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je recharger avec mes panneaux solaires ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui ! Nos bornes intelligentes (Wallbox, Smappee) peuvent être configurées pour prioriser la recharge solaire. La borne ajuste automatiquement la puissance en fonction de la production photovoltaïque. Économie maximale sur le coût de recharge." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles marques de bornes installez-vous ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Allo Electricien installe les marques leaders du marché : Wallbox (Pulsar Plus, Commander 2), Alfen (Eve Single/Double), Smappee (EV Wall), EVBox (Elvi). Toutes certifiées, connectées et compatibles avec tous les véhicules électriques (Type 2)." }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il un contrôle électrique après l'installation d'une borne ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un contrôle par organisme agréé est recommandé après l'installation d'une borne de recharge (modification de l'installation). Allo Electricien planifie ce contrôle et garantit la conformité — 98% de réussite au premier passage." }
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Installation Borne de Recharge Véhicule Électrique",
+  "provider": { "@type": "Electrician", "name": "Allo Electricien", "telephone": "+32465732348" },
+  "areaServed": { "@type": "City", "name": "Bruxelles" },
+  "offers": [
+    { "@type": "Offer", "name": "Essentiel 7,4 kW", "price": "1200", "priceCurrency": "EUR", "description": "Borne monophasé 7,4 kW, installation complète" },
+    { "@type": "Offer", "name": "Confort 11 kW", "price": "1800", "priceCurrency": "EUR", "description": "Borne triphasé 11 kW intelligente" },
+    { "@type": "Offer", "name": "Premium 22 kW", "price": "2500", "priceCurrency": "EUR", "description": "Borne triphasé 22 kW charge rapide" }
+  ]
+};
+---
+
+<Layout title="Installation Borne de Recharge Bruxelles — Voiture Électrique Maison | Allo Electricien" description="Installation borne de recharge Bruxelles pour voiture électrique. Wallbox, Alfen, Smappee. À partir de 1 200€. Installateur agréé. Devis gratuit. ☎ 0465 73 23 48. TVA 6% pour logements +10 ans." schema={faqSchema}>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+  <!-- HERO -->
+  <header class="relative bg-navy overflow-hidden pt-12 pb-28 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-green-500/5 to-transparent"></div>
+    <div class="absolute left-0 bottom-0 w-1/4 h-1/2 bg-gradient-to-t from-primary/5 to-transparent"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/services">Services</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Borne de Recharge</li>
+        </ol>
+      </nav>
+      <div class="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/30 text-green-400 text-sm font-bold px-4 py-2 rounded-full mb-6">
+        <span class="material-icons text-base">ev_station</span>MOBILITÉ ÉLECTRIQUE — INSTALLATEUR AGRÉÉ
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+        Installation <span class="text-primary">Borne de Recharge</span> Bruxelles
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mt-4 leading-relaxed">
+        <strong class="text-white">Borne recharge voiture électrique maison Bruxelles</strong> — Wallbox, Alfen, Smappee, EVBox. Installation par électricien agréé. À partir de 1 200€. Devis gratuit sous 24h.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a href="/contact" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 text-lg">
+          <span class="material-icons text-2xl">description</span>Devis Gratuit
+        </a>
+        <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 transition-all hover:-translate-y-1">
+          <span class="material-icons">call</span>0465 73 23 48
+        </a>
+        <a href="https://wa.me/32465732348" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-1">
+          <span class="material-icons">chat</span>WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-20 -mt-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+    <!-- KEY STATS -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-green-500/30 transition-colors">
+        <span class="material-icons text-green-400 text-3xl mb-2">savings</span>
+        <p class="text-3xl font-bold text-green-400">4x</p>
+        <p class="text-gray-400 text-sm mt-1">Moins cher qu'en borne publique</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-green-500/30 transition-colors">
+        <span class="material-icons text-green-400 text-3xl mb-2">speed</span>
+        <p class="text-3xl font-bold text-green-400">5x</p>
+        <p class="text-gray-400 text-sm mt-1">Plus rapide qu'une prise standard</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">schedule</span>
+        <p class="text-3xl font-bold text-primary">½ jour</p>
+        <p class="text-gray-400 text-sm mt-1">Installation standard</p>
+      </div>
+      <div class="bg-navy rounded-xl border border-white/10 p-6 text-center shadow-xl hover:border-primary/30 transition-colors">
+        <span class="material-icons text-primary text-3xl mb-2">shield</span>
+        <p class="text-3xl font-bold text-primary">2-5 ans</p>
+        <p class="text-gray-400 text-sm mt-1">Garantie selon formule</p>
+      </div>
+    </div>
+
+    <!-- SECTION 1: WHAT'S INCLUDED -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Service Complet</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Ce Que Comprend Notre Installation Borne de Recharge Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-4">search</span>
+          <h3 class="text-lg font-bold text-white mb-2">Diagnostic Gratuit Sur Place</h3>
+          <p class="text-gray-400 text-sm">Visite de votre installation électrique, vérification de la puissance disponible, distance tableau-garage, type de raccordement (mono/triphasé). Rapport complet avec recommandations.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-4">ev_station</span>
+          <h3 class="text-lg font-bold text-white mb-2">Borne Certifiée Fournie</h3>
+          <p class="text-gray-400 text-sm">Borne de marque premium : Wallbox Pulsar Plus, Alfen Eve, Smappee EV Wall ou EVBox Elvi. Toutes certifiées, connecteur Type 2, compatible avec tous les véhicules électriques et hybrides.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-4">cable</span>
+          <h3 class="text-lg font-bold text-white mb-2">Câblage Dédié</h3>
+          <p class="text-gray-400 text-sm">Tirage d'un câble dédié depuis le tableau électrique jusqu'à l'emplacement de la borne. Section adaptée à la puissance (6mm² ou 10mm²), gaine protectrice, chemin de câble propre.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-4">security</span>
+          <h3 class="text-lg font-bold text-white mb-2">Protection Électrique Dédiée</h3>
+          <p class="text-gray-400 text-sm">Installation d'un disjoncteur dédié et d'un différentiel type A (obligatoire pour les bornes). Protection parafoudre si nécessaire. Circuit 100% indépendant du reste de la maison.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-4">build</span>
+          <h3 class="text-lg font-bold text-white mb-2">Fixation & Installation</h3>
+          <p class="text-gray-400 text-sm">Fixation murale ou sur pied (intérieur/extérieur). Raccordement électrique, configuration de la borne, connexion WiFi, paramétrage de l'application smartphone.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-4">checklist</span>
+          <h3 class="text-lg font-bold text-white mb-2">Tests & Mise en Service</h3>
+          <p class="text-gray-400 text-sm">Test de charge complet avec votre véhicule, vérification de la communication borne-voiture, démonstration de l'application, explication du fonctionnement et de la programmation.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-4">architecture</span>
+          <h3 class="text-lg font-bold text-white mb-2">Schéma Unifilaire Mis à Jour</h3>
+          <p class="text-gray-400 text-sm">Mise à jour du schéma unifilaire de votre installation avec le nouveau circuit borne de recharge. Document obligatoire pour le contrôle de conformité.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-4">support_agent</span>
+          <h3 class="text-lg font-bold text-white mb-2">Démarches Administratives</h3>
+          <p class="text-gray-400 text-sm">Aide pour les demandes de primes régionales, attestation TVA 6% (logements +10 ans), démarches Sibelga si renforcement nécessaire. Nous gérons la paperasse.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-4">shield</span>
+          <h3 class="text-lg font-bold text-white mb-2">Garantie 2 à 5 Ans</h3>
+          <p class="text-gray-400 text-sm">Garantie sur la borne (fabricant) + garantie sur l'installation (Allo Electricien). Support technique en cas de problème. Intervention rapide en cas de panne.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WHY A HOME CHARGER -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Avantages</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Pourquoi Installer une Borne Recharge Voiture Électrique Maison ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-green-400 text-2xl">savings</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">4x Moins Cher que la Recharge Publique</h3>
+            <p class="text-gray-400 text-sm">Recharger à domicile coûte <strong class="text-white">3-5€ pour 100 km</strong> vs 15-20€ en borne publique. Sur 15 000 km/an, vous économisez <strong class="text-white">1 500€ à 2 000€</strong> par an. La borne s'amortit en moins d'un an.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-green-400 text-2xl">speed</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">5x Plus Rapide qu'une Prise Domestique</h3>
+            <p class="text-gray-400 text-sm">Une <strong class="text-white">borne 7,4 kW</strong> charge votre voiture en 6-8h (une nuit). Une prise standard de 2,3 kW prend 20-30h. Branchez le soir, repartez le matin avec une batterie pleine.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-green-400 text-2xl">security</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Sécurité Maximale</h3>
+            <p class="text-gray-400 text-sm">Charger sur une prise domestique pendant des heures crée un risque de <strong class="text-white">surchauffe et d'incendie</strong>. Une borne dédiée avec protection électrique propre élimine ce risque. Circuit indépendant, différentiel type A.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-green-400 text-2xl">trending_up</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Plus-Value Immobilière</h3>
+            <p class="text-gray-400 text-sm">Avec l'interdiction diesel (2030) et essence (2035) à Bruxelles (LEZ), une <strong class="text-white">borne recharge voiture électrique maison Bruxelles</strong> augmente significativement la valeur de votre bien.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-green-400 text-2xl">phone_iphone</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Recharge Intelligente (App)</h3>
+            <p class="text-gray-400 text-sm">Programmez la recharge aux <strong class="text-white">heures creuses</strong> (tarif nuit), suivez votre consommation, historique des charges, et même priorisez l'énergie solaire si vous avez des panneaux.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-navy rounded-xl border border-white/10 p-6 hover:border-green-500/30 transition-colors">
+          <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-icons text-green-400 text-2xl">eco</span>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Impact Écologique Réduit</h3>
+            <p class="text-gray-400 text-sm">En rechargeant la nuit (mix énergétique plus propre) ou avec vos panneaux solaires, votre empreinte carbone est minimale. Mobilité verte, énergie verte.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR PROCESS -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Étape par Étape</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Processus d'Installation Borne de Recharge</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="relative">
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2 z-0 border-t-2 border-dotted border-gray-600"></div>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative z-10">
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-green-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-green-400 font-bold text-xl">1</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Contact & Conseil</h3>
+            <p class="text-gray-400 text-xs">Appelez ou demandez un devis. Nous vous conseillons la borne et la puissance idéales pour votre véhicule.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-green-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-green-400 font-bold text-xl">2</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Diagnostic Gratuit</h3>
+            <p class="text-gray-400 text-xs">Visite sur place : vérification de l'installation, puissance disponible, emplacement optimal de la borne.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-green-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-green-400 font-bold text-xl">3</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Devis Détaillé</h3>
+            <p class="text-gray-400 text-xs"><strong class="text-white">Prix installation borne de recharge</strong> détaillé : borne + câblage + protection + main d'œuvre. Sans engagement.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-green-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-green-400 font-bold text-xl">4</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Installation</h3>
+            <p class="text-gray-400 text-xs"><strong class="text-white">Installation borne de recharge Bruxelles</strong> en demi-journée à 1 journée. Câblage, fixation, raccordement.</p>
+          </div>
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 bg-navy border-2 border-green-400 rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+              <span class="text-green-400 font-bold text-xl">5</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Test & Formation</h3>
+            <p class="text-gray-400 text-xs">Test de charge avec votre véhicule, configuration de l'app, explication du fonctionnement. Vous êtes prêt !</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PRICING -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Offres</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Prix Installation Borne de Recharge Belgique</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Trois formules tout compris pour votre <strong class="text-white">borne recharge voiture électrique maison Bruxelles</strong>. Borne + installation + protection + mise en service inclus.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-navy rounded-2xl border border-white/10 p-8 hover:border-green-500/30 transition-colors">
+          <div class="text-center mb-6">
+            <span class="material-icons text-green-400 text-4xl mb-2">electrical_services</span>
+            <h3 class="text-2xl font-bold text-white">Essentiel</h3>
+            <p class="text-gray-400 text-sm mt-1">Monophasé • 7,4 kW</p>
+          </div>
+          <p class="text-center text-4xl font-bold text-primary mb-6">1 200€</p>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Borne certifiée 7,4 kW</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Charge complète en 6-8h</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Câblage dédié (≤10m)</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Protection disjoncteur + diff. type A</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Installation & mise en service</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Garantie 2 ans</li>
+          </ul>
+          <div class="border-t border-white/10 pt-4 text-center">
+            <p class="text-gray-400 text-xs mb-3">Idéal pour : usage quotidien standard</p>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary font-bold px-6 py-3 rounded-xl transition-colors border border-primary/30">Devis Gratuit</a>
+          </div>
+        </div>
+        <div class="bg-navy rounded-2xl border-2 border-primary p-8 relative shadow-lg shadow-primary/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-navy text-xs font-bold px-4 py-1 rounded-full">LE PLUS POPULAIRE</div>
+          <div class="text-center mb-6">
+            <span class="material-icons text-primary text-4xl mb-2">ev_station</span>
+            <h3 class="text-2xl font-bold text-white">Confort</h3>
+            <p class="text-gray-400 text-sm mt-1">Triphasé • 11 kW</p>
+          </div>
+          <p class="text-center text-4xl font-bold text-primary mb-6">1 800€</p>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Borne intelligente 11 kW</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Charge complète en 3-5h</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Câblage dédié (≤15m)</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Application smartphone</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Programmation heures creuses</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Suivi consommation</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-primary text-base mt-0.5">check</span>Garantie 3 ans</li>
+          </ul>
+          <div class="border-t border-primary/30 pt-4 text-center">
+            <p class="text-gray-400 text-xs mb-3">Idéal pour : grosses batteries & PHEV</p>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-6 py-3 rounded-xl transition-colors shadow-lg shadow-primary/20">Devis Gratuit</a>
+          </div>
+        </div>
+        <div class="bg-navy rounded-2xl border border-white/10 p-8 hover:border-green-500/30 transition-colors">
+          <div class="text-center mb-6">
+            <span class="material-icons text-green-400 text-4xl mb-2">bolt</span>
+            <h3 class="text-2xl font-bold text-white">Premium</h3>
+            <p class="text-gray-400 text-sm mt-1">Triphasé • 22 kW</p>
+          </div>
+          <p class="text-center text-4xl font-bold text-primary mb-6">2 500€</p>
+          <ul class="space-y-3 text-gray-400 text-sm mb-6">
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Borne charge rapide 22 kW</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Charge complète en 1-3h</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Gestion dynamique puissance</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Compatible panneaux solaires</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Toutes fonctions Confort incluses</li>
+            <li class="flex items-start gap-2"><span class="material-icons text-green-400 text-base mt-0.5">check</span>Garantie 5 ans</li>
+          </ul>
+          <div class="border-t border-white/10 pt-4 text-center">
+            <p class="text-gray-400 text-xs mb-3">Idéal pour : flottes & usage intensif</p>
+            <a href="/contact" class="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary font-bold px-6 py-3 rounded-xl transition-colors border border-primary/30">Devis Gratuit</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-navy-light border border-green-500/20 rounded-xl p-6 mt-6 text-center">
+        <p class="text-gray-300"><strong class="text-white">💡 Bon à savoir :</strong> Pour les logements de <strong class="text-white">plus de 10 ans</strong>, le <strong class="text-white">prix installation borne de recharge Belgique</strong> bénéficie de la TVA réduite à <strong class="text-primary">6% au lieu de 21%</strong>. <a href="/contact" class="text-primary font-bold hover:underline">Demandez un devis gratuit →</a></p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE US -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Nos Engagements</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Pourquoi Choisir Allo Electricien pour Votre Borne ?</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-green-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-green-400 text-2xl">workspace_premium</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Marques Leaders Certifiées</h3>
+          </div>
+          <p class="text-gray-400">Nous installons exclusivement des bornes <strong class="text-white">Wallbox, Alfen, Smappee et EVBox</strong>. Toutes certifiées CE, connecteur Type 2 universel, connectées (WiFi/4G), compatible avec tous les VE.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-green-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-green-400 text-2xl">engineering</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Installateur Agréé & Expérimenté</h3>
+          </div>
+          <p class="text-gray-400">Nos électriciens sont formés et certifiés pour l'<strong class="text-white">installation borne de recharge Bruxelles</strong>. Plus de 200 bornes installées dans les 19 communes. Nous connaissons toutes les configurations.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-green-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-green-400 text-2xl">euro</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Prix Tout Compris & TVA 6%</h3>
+          </div>
+          <p class="text-gray-400">Le <strong class="text-white">prix installation borne de recharge Belgique</strong> inclut tout : borne, câblage, protection, main-d'œuvre, mise en service. Pas de surprise. TVA 6% pour logements de +10 ans.</p>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-8 hover:border-green-500/30 transition-colors">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
+              <span class="material-icons text-green-400 text-2xl">support_agent</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">Accompagnement Complet</h3>
+          </div>
+          <p class="text-gray-400">Du conseil personnalisé aux démarches administratives (primes, Sibelga, TVA), en passant par la formation à l'utilisation. Nous vous accompagnons à chaque étape du projet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: AVAILABILITY -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Disponibilité</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Notre Disponibilité Pour Votre Borne de Recharge</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-green-500/30 transition-colors">
+          <span class="material-icons text-green-400 text-3xl mb-3">schedule</span>
+          <h3 class="text-white font-bold mb-1">Disponible 24/7</h3>
+          <p class="text-gray-400 text-sm">Tous les jours, toute l'année</p>
+          <span class="inline-block mt-3 bg-green-400/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full">7j/7 — 24h/24</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">bolt</span>
+          <h3 class="text-white font-bold mb-1">Dépannage Borne</h3>
+          <p class="text-gray-400 text-sm">Intervention rapide</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Borne en panne</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">event_available</span>
+          <h3 class="text-white font-bold mb-1">Rendez-vous Rapide</h3>
+          <p class="text-gray-400 text-sm">Disponible 7j/7</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Installation planifiée</span>
+        </div>
+        <div class="bg-navy rounded-xl border border-white/10 p-6 text-center hover:border-primary/30 transition-colors">
+          <span class="material-icons text-primary text-3xl mb-3">speed</span>
+          <h3 class="text-white font-bold mb-1">Diagnostic Gratuit</h3>
+          <p class="text-gray-400 text-sm">48h maximum</p>
+          <span class="inline-block mt-3 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">Devis offert</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FAQ -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">FAQ</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Questions Fréquentes — Borne de Recharge Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+      </div>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien coûte l'installation d'une borne de recharge à Bruxelles ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Le <strong class="text-white">prix installation borne de recharge Belgique</strong> dépend de la puissance et de la distance au tableau. <strong class="text-white">Borne 7,4 kW</strong> : 1 200€ à 1 600€. <strong class="text-white">Borne 11 kW</strong> : 1 800€ à 2 200€. <strong class="text-white">Borne 22 kW</strong> : 2 500€ à 3 500€. Tout compris : borne + câblage + protection + mise en service. Diagnostic et devis gratuit.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Ma maison peut-elle supporter une borne de recharge ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Nous vérifions cela lors du <strong class="text-white">diagnostic gratuit</strong>. En monophasé (7,4 kW), la plupart des installations domestiques sont compatibles. Pour du triphasé (11-22 kW), un <strong class="text-white">renforcement du raccordement via Sibelga</strong> peut être nécessaire. Allo Electricien s'occupe de toutes les démarches.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Quelle puissance de borne choisir pour ma voiture électrique ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Pour une <strong class="text-white">borne recharge voiture électrique maison Bruxelles</strong> : <strong class="text-white">7,4 kW monophasé</strong> suffit pour une recharge nocturne complète (6-8h). <strong class="text-white">11 kW triphasé</strong> est idéal pour les grandes batteries. <strong class="text-white">22 kW</strong> pour les flottes ou usage intensif. 90% de nos clients choisissent 7,4 ou 11 kW.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Combien de temps prend l'installation ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>L'<strong class="text-white">installation borne de recharge Bruxelles</strong> prend en moyenne une demi-journée à une journée. Installation standard : <strong class="text-white">4 à 6 heures</strong>. Installation avec tirage de câble long : <strong class="text-white">6 à 8 heures</strong>. Avec renforcement tableau : <strong class="text-white">1 journée complète</strong>.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Y a-t-il des primes pour l'installation d'une borne ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Des incitants existent via <strong class="text-white">Bruxelles Environnement</strong> et certains fournisseurs d'énergie. La <strong class="text-white">déductibilité fiscale</strong> peut être avantageuse pour les entreprises. Pour les logements de +10 ans, la <strong class="text-white">TVA à 6%</strong> réduit significativement le coût. Allo Electricien vous informe des aides disponibles.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Puis-je recharger avec mes panneaux solaires ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Oui ! Nos bornes intelligentes (<strong class="text-white">Wallbox, Smappee</strong>) peuvent prioriser la <strong class="text-white">recharge solaire</strong>. La borne ajuste automatiquement la puissance en fonction de la production photovoltaïque. Économie maximale sur le coût de recharge et empreinte carbone proche de zéro.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Quelles marques de bornes installez-vous ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Allo Electricien installe les marques leaders : <strong class="text-white">Wallbox</strong> (Pulsar Plus, Commander 2), <strong class="text-white">Alfen</strong> (Eve Single/Double), <strong class="text-white">Smappee</strong> (EV Wall), <strong class="text-white">EVBox</strong> (Elvi). Toutes certifiées CE, connecteur Type 2 universel, compatible avec <strong class="text-white">tous les véhicules électriques</strong>.</p>
+          </div>
+        </details>
+        <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
+          <summary class="flex justify-between items-center p-6 cursor-pointer bg-navy-light text-white font-semibold hover:bg-opacity-80 transition-colors">
+            <span>Faut-il un contrôle électrique après l'installation ?</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
+          </summary>
+          <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
+            <p>Un <strong class="text-white">contrôle par organisme agréé</strong> (Vinçotte, AIB, BTV) est recommandé après l'installation d'une borne de recharge. Allo Electricien planifie ce contrôle et garantit la conformité — <strong class="text-white">98% de réussite au premier passage</strong>.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SERVICE AREA -->
+    <section class="mb-16">
+      <div class="text-center mb-10">
+        <span class="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Zone de Couverture</span>
+        <h2 class="text-3xl font-bold text-white mb-4">Installation Borne de Recharge dans les 19 Communes de Bruxelles</h2>
+        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Notre service d'<strong class="text-white">installation borne de recharge Bruxelles</strong> couvre l'intégralité de la Région de Bruxelles-Capitale. Diagnostic gratuit sur rendez-vous dans les 48h.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <a href="/electricien-anderlecht" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Anderlecht</span>
+        </a>
+        <a href="/electricien-auderghem" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Auderghem</span>
+        </a>
+        <a href="/electricien-berchem-sainte-agathe" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Berchem-Ste-Agathe</span>
+        </a>
+        <a href="/electricien-bruxelles-ville" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Bruxelles-Ville</span>
+        </a>
+        <a href="/electricien-etterbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Etterbeek</span>
+        </a>
+        <a href="/electricien-evere" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Evere</span>
+        </a>
+        <a href="/electricien-forest" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Forest</span>
+        </a>
+        <a href="/electricien-ganshoren" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Ganshoren</span>
+        </a>
+        <a href="/electricien-ixelles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Ixelles</span>
+        </a>
+        <a href="/electricien-jette" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Jette</span>
+        </a>
+        <a href="/electricien-koekelberg" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Koekelberg</span>
+        </a>
+        <a href="/electricien-molenbeek-saint-jean" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Molenbeek</span>
+        </a>
+        <a href="/electricien-saint-gilles" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Saint-Gilles</span>
+        </a>
+        <a href="/electricien-saint-josse-ten-noode" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Saint-Josse</span>
+        </a>
+        <a href="/electricien-schaerbeek" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Schaerbeek</span>
+        </a>
+        <a href="/electricien-uccle" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Uccle</span>
+        </a>
+        <a href="/electricien-watermael-boitsfort" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Watermael-Boitsfort</span>
+        </a>
+        <a href="/electricien-woluwe-saint-lambert" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Woluwe-St-Lambert</span>
+        </a>
+        <a href="/electricien-woluwe-saint-pierre" class="bg-navy border border-white/10 rounded-lg p-4 text-center hover:border-green-500/50 hover:bg-navy-light transition-all group">
+          <span class="text-white group-hover:text-green-400 transition-colors font-medium">Woluwe-St-Pierre</span>
+        </a>
+      </div>
+      <p class="text-center text-gray-400 mt-6">Nous intervenons aussi en <strong class="text-white">périphérie de Bruxelles</strong> : Zaventem, Tervuren, Waterloo, Nivelles, Wavre, Vilvoorde. <a href="/zones" class="text-primary hover:underline">Voir toutes nos zones →</a></p>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="bg-gradient-to-r from-green-500/10 to-navy-light rounded-2xl border border-green-500/20 p-8 md:p-12 mb-16">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full mb-4">
+            <span class="material-icons text-base">ev_station</span>PRÊT POUR LA MOBILITÉ ÉLECTRIQUE ?
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Diagnostic Gratuit Pour Votre Borne de Recharge</h2>
+          <p class="text-gray-300 text-lg max-w-xl"><strong class="text-white">Installation borne de recharge Bruxelles</strong> à partir de 1 200€. Diagnostic gratuit, devis sous 24h, installation en demi-journée. TVA 6% pour logements +10 ans.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="/contact" class="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-navy font-black text-lg px-8 py-5 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 whitespace-nowrap">
+            <span class="material-icons text-2xl">description</span>Devis Gratuit
+          </a>
+          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-3 rounded-xl border border-white/20 transition-all text-center">
+            <span class="material-icons">phone</span>0465 73 23 48
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNAL LINKS -->
+    <section class="mb-16">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Nos Autres Services Électriques</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a href="/services/depannage-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">bolt</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Dépannage Urgent 24/7</p>
+            <p class="text-gray-400 text-sm">Intervention en 45 min</p>
+          </div>
+        </a>
+        <a href="/services/mise-en-conformite" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">verified_user</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Mise en Conformité</p>
+            <p class="text-gray-400 text-sm">Remise aux normes RGIE</p>
+          </div>
+        </a>
+        <a href="/services/tableau-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">settings_input_component</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Tableau Électrique</p>
+            <p class="text-gray-400 text-sm">Installation & remplacement</p>
+          </div>
+        </a>
+        <a href="/services/domotique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">touch_app</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Domotique</p>
+            <p class="text-gray-400 text-sm">Maison intelligente</p>
+          </div>
+        </a>
+        <a href="/services/installation-electrique" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">lightbulb</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Éclairage LED</p>
+            <p class="text-gray-400 text-sm">Intérieur & extérieur</p>
+          </div>
+        </a>
+        <a href="/blog" class="bg-navy border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all group flex items-center gap-4">
+          <span class="material-icons text-primary text-2xl">article</span>
+          <div>
+            <p class="text-white font-bold group-hover:text-primary transition-colors">Blog & Guides</p>
+            <p class="text-gray-400 text-sm">Conseils électricité</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+</Layout>

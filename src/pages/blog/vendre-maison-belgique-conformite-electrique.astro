@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quand le certificat de conformité doit-il être présenté lors d'une vente ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le vendeur doit idéalement disposer du certificat dès la mise en vente du bien. Au plus tard, le document officiel doit être présent lors de la signature du compromis de vente." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la durée de validité d'un certificat électrique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un certificat de conformité positif (sans infraction) est valable pendant 25 ans, à condition qu'aucune modification majeure ou extension importante n'ait été apportée à l'installation pendant cette période." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que risque-t-on si on vend sans certificat électrique en Belgique ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La vente ne pourra tout simplement pas aboutir. Le notaire a l'obligation stricte de vérifier la présence de ce document pour passer l'acte authentique. L'absence de certificat bloquera la transaction immobilière." }
+    },
+    {
+      "@type": "Question",
+      "name": "Qui de l'acheteur ou du vendeur paie la visite de contrôle ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le coût de la visite de l'organisme de contrôle agréé pour obtenir le certificat initial est à la charge exclusive du vendeur. En revanche, les frais de travaux de mise en conformité incombent généralement à l'acheteur." }
+    }
+  ]
+};
+---
+
+<Layout title="Vendre Sa Maison en Belgique : Le Certificat Électrique est-il Obligatoire ?" description="Vente immobilière à Bruxelles : le certificat de conformité électrique est-il vraiment obligatoire ? Découvrez la législation, les exceptions et qui doit payer." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Conformité Électrique Vente</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">Vente Immobilière</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Vendre sa maison en Belgique : le certificat de conformité électrique est-il obligatoire ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>10 juin 2025</span>
+        <span>•</span>
+        <span>6 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Vous vous apprêtez à vendre votre maison ou votre appartement à Bruxelles ? La réponse est claire : <strong class="text-white">oui, la fourniture d'un certificat de conformité électrique (PV de contrôle RGIE) est une obligation légale</strong> pour conclure la vente, sauf si votre installation date entièrement d'après octobre 1981. Ce document doit être remis à l'acheteur au plus tard le jour de la signature de l'acte authentique chez le notaire, que le résultat du contrôle soit positif ou négatif.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Que dit la loi belge (RGIE) sur la vente immobilière ?</h2>
+        <p>Le RGIE impose au vendeur de faire réaliser un contrôle de l'installation électrique si celle-ci (ou une partie importante) a été mise en service <strong class="text-white">avant le 1er octobre 1981</strong>.</p>
+        <p class="mt-3"><strong class="text-white">Pourquoi cette date de 1981 ?</strong> C'est à cette date que le RGIE original est entré en vigueur en Belgique. L'objectif de la législation n'est pas d'obliger le vendeur à livrer une maison "parfaite", mais d'assurer la <strong class="text-white">transparence</strong> : l'acheteur doit être informé de l'état exact de la sécurité électrique du bien qu'il acquiert.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comment obtenir ce certificat pour la vente ?</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_one</span><span><strong class="text-white">La préparation (recommandée) :</strong> Faire appel à un <a href="/urgence/bruxelles/" class="text-primary hover:underline">électricien à Bruxelles</a> pour vérifier la présence des schémas unifilaires et de position. Sans ces documents, le contrôle sera de toute façon négatif.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_two</span><span><strong class="text-white">L'intervention de l'organisme de contrôle :</strong> Mandatez un organisme agréé par le SPF Économie (Vinçotte, BTV, ACEG...). Un inspecteur viendra examiner le tableau, les prises, l'isolement et la prise de terre.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">looks_3</span><span><strong class="text-white">Le rapport officiel :</strong> À l'issue de la visite (qui coûte environ 150€ à 200€), vous recevez le procès-verbal. C'est ce document qui doit être transmis au notaire.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le rapport est négatif : puis-je quand même vendre ma maison ?</h2>
+        <div class="bg-navy-light border border-primary/20 rounded-xl p-6 my-6">
+          <p class="text-primary font-bold mb-2">✅ OUI, vous pouvez vendre avec un PV négatif</p>
+          <p class="text-sm">C'est même le cas pour la grande majorité des maisons anciennes vendues à Bruxelles. Le notaire annexe le PV négatif à l'acte de vente, et l'acheteur dispose d'un délai légal de <strong class="text-white">18 mois</strong> pour faire réaliser les travaux de mise en conformité.</p>
+        </div>
+        <p><strong class="text-white">Faut-il mettre en conformité avant de vendre ?</strong> Vous n'y êtes pas obligé, mais c'est une stratégie commerciale. Une maison vendue "électricité 100% conforme" se vend généralement plus vite et à un meilleur prix, en justifiant moins de marge de négociation.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Les rares exceptions où le certificat n'est pas obligatoire</h2>
+        <ul class="space-y-2">
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">info</span><span><strong class="text-white">Le bien est déclaré inhabitable</strong> et voué à la démolition complète. Cela doit être stipulé clairement dans l'acte de vente.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">info</span><span><strong class="text-white">Rénovation électrique totale par l'acheteur :</strong> Si l'acheteur déclare dans l'acte notarié qu'il va rénover l'ensemble de l'installation. L'accord du notaire sur la formulation est indispensable.</span></li>
+          <li class="flex items-start gap-2"><span class="material-icons text-primary text-sm mt-1">info</span><span><strong class="text-white">L'installation date d'après le 1er octobre 1981</strong> ET vous possédez toujours le procès-verbal de conformité initial.</span></li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">FAQ : Vente immobilière et électricité en Belgique</h2>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Quand le certificat de conformité doit-il être présenté ?</h3>
+        <p>Le vendeur doit idéalement disposer du certificat dès la mise en vente du bien. Au plus tard, le document officiel doit être présent lors de la <strong class="text-white">signature du compromis de vente</strong>.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Quelle est la durée de validité d'un certificat électrique ?</h3>
+        <p>Un certificat de conformité positif (sans infraction) est valable pendant <strong class="text-white">25 ans</strong>, à condition qu'aucune modification majeure n'ait été apportée à l'installation pendant cette période.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Qui de l'acheteur ou du vendeur paie la visite de contrôle ?</h3>
+        <p>Le coût de la visite de l'organisme de contrôle agréé pour obtenir le certificat initial est <strong class="text-white">à la charge exclusive du vendeur</strong>. En revanche, les frais de travaux de mise en conformité et le coût de la seconde visite incombent généralement à l'acheteur.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Que risque-t-on si on vend sans certificat ?</h3>
+        <p>La vente ne pourra tout simplement pas aboutir. Le notaire a l'obligation stricte de vérifier la présence de ce document pour passer l'acte authentique. L'absence de certificat <strong class="text-white">bloquera la transaction immobilière</strong>.</p>
+
+        <h3 class="text-xl font-bold text-white mt-6 mb-3">Les schémas électriques sont-ils obligatoires pour la vente ?</h3>
+        <p>Oui, les schémas unifilaires et les plans de position sont obligatoires lors du contrôle de l'organisme agréé. Si le vendeur ne les possède pas, le contrôleur notera cette infraction dans son rapport, rendant le contrôle négatif.</p>
+
+        <div class="bg-primary/10 border border-primary/30 rounded-xl p-6 my-8">
+          <p class="text-primary font-bold mb-2">🏠 Besoin d'aide pour préparer la vente de votre maison ?</p>
+          <p class="text-sm">Vous souhaitez faire réaliser les schémas manquants ou mettre votre bien aux normes avant la mise sur le marché ? <a href="/contact" class="text-primary underline font-bold">Contactez nos électriciens partenaires à Bruxelles →</a></p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

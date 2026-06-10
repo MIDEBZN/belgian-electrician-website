@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "C'est quoi un interrupteur différentiel ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est le module avec le bouton 'Test' dans votre tableau. Il ne protège pas contre les surcharges, mais contre les fuites de courant vers la terre (électrocution). S'il saute, c'est qu'il vous a protégé d'un contact dangereux." }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi il saute de manière aléatoire ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "C'est souvent lié à l'humidité (pluie, machine à laver) ou à un appareil qui se met en route (frigo, ballon d'eau chaude). C'est la panne la plus difficile à trouver." }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je le réenclencher ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Essayez une fois. S'il tient, surveillez. S'il ressaute, ne forcez pas. Vous devez isoler le circuit en défaut en baissant tous les petits disjoncteurs et en les remontant un par un." }
+    }
+  ]
+};
+---
+
+<Layout title="Différentiel qui Saute : Causes et Recherche de Panne" description="Votre différentiel coupe tout le courant ? C'est une fuite à la terre. Humidité, appareil défectueux ? Découvrez comment trouver le coupable." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Différentiel</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-red-500 bg-red-500/10 px-3 py-1 rounded-full">Dépannage Complexe</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Mon Différentiel Saute Sans Arrêt : Le Guide Expert
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>8 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Quand le <strong>différentiel</strong> (le gros bloc 300mA ou 30mA en tête de tableau) saute, c'est la panique : toute la maison (ou une grande partie) est dans le noir. Contrairement à un petit disjoncteur qui signale une surcharge, le différentiel signale une <strong>fuite de courant</strong>. Quelque part, du courant s'échappe vers la terre.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le Coupable n°1 : L'Eau</h2>
+        <p>L'eau est le pire ennemi de l'électricité. Si votre différentiel saute quand il pleut, cherchez dehors :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>Une prise extérieure mal étanche.</li>
+            <li>Un luminaire de jardin rempli d'eau.</li>
+            <li>Une pompe d'étang défectueuse.</li>
+        </ul>
+        <p>À l'intérieur, c'est souvent la machine à laver, le lave-vaisselle ou le chauffe-eau. Une petite fuite d'eau sur les composants électriques = Disjonction immédiate.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Le Coupable n°2 : La Résistance Blindée</h2>
+        <p>Les appareils qui chauffent (four, machine à laver, boiler) utilisent des résistances blindées. Avec le temps, la gaine de la résistance se corrode et l'eau touche le fil chauffant à l'intérieur. C'est une panne très classique des vieux boilers.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Comment trouver la fuite ? (Méthode par élimination)</h2>
+        <p>Vous n'avez pas besoin d'outils pour faire un premier diagnostic :</p>
+        <ol class="list-decimal pl-6 space-y-2">
+            <li>Baissez <strong>tous</strong> les petits disjoncteurs du tableau.</li>
+            <li>Réenclenchez le Différentiel. (S'il ne tient pas même avec tout baissé, le problème est dans le tableau lui-même -> Appelez-nous).</li>
+            <li>Remontez les petits disjoncteurs un par un, lentement.</li>
+            <li>Dès que vous remontez celui du circuit défectueux, le différentiel va sauter (CLAC !).</li>
+            <li>Laissez ce petit disjoncteur baissé et remontez tous les autres. Vous avez isolé la panne !</li>
+        </ol>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Et si ça saute de manière aléatoire ?</h2>
+        <p>C'est le pire scénario. Ça peut tenir 3 jours puis sauter. C'est souvent le frigo (quand le compresseur démarre) ou un défaut d'isolement qui dépend de l'humidité de l'air. Là, il faut un <strong>mégohmmètre</strong> (un appareil de pro) pour mesurer l'isolement de chaque circuit.</p>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Recherche de Fuite à la Terre</h3>
+            <p class="mb-4">Nos électriciens disposent d'appareils de mesure pour localiser précisément le défaut d'isolement sans démonter toute la maison.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Diagnostic Expert</span>
+                    <span class="block text-white font-bold">Mesure d'isolement</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>

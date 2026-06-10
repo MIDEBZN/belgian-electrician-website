@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Puis-je remplacer un fusible par un plus gros ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "JAMAIS ! Si le fusible est de 16A, ne mettez surtout pas un 20A. Les fils électriques derrière le mur sont dimensionnés pour 16A. Si vous augmentez le calibrage, les fils vont fondre avant le fusible = Incendie." }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre un fusible et un disjoncteur ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le fusible fond (il se détruit) et doit être remplacé. Le disjoncteur est un interrupteur magnétique qui se déclenche et peut être réarmé. Le disjoncteur est plus moderne, plus sûr et plus pratique." }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi mon fusible saute sans rien de branché ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Il y a probablement un défaut d'isolement dans le circuit (un fil touche la terre ou un autre fil) ou le porte-fusible lui-même est carbonisé. C'est une situation dangereuse qui nécessite un électricien." }
+    }
+  ]
+};
+---
+
+<Layout title="Fusible qui Saute Tout le Temps : Causes et Solutions" description="Votre plombs n'arrêtent pas de sauter ? Ne changez pas le fusible sans comprendre pourquoi ! Risque d'incendie. Découvrez les 3 causes et comment réparer." schema={faqSchema}>
+
+  <header class="relative bg-navy overflow-hidden pt-12 pb-16 border-b border-white/5">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4a4a8a 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+      <nav aria-label="Breadcrumb" class="flex text-sm text-gray-400 mb-6">
+        <ol class="flex items-center space-x-2">
+          <li><a class="hover:text-primary" href="/">Accueil</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li><a class="hover:text-primary" href="/blog">Blog</a></li>
+          <li><span class="text-gray-600">/</span></li>
+          <li class="text-primary font-medium">Fusible qui Saute</li>
+        </ol>
+      </nav>
+      <span class="text-xs font-bold text-red-500 bg-red-500/10 px-3 py-1 rounded-full">Dépannage</span>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-4 mb-4 tracking-tight leading-tight">
+        Mon Fusible Saute Tout le Temps : Que Faire ?
+      </h1>
+      <div class="flex items-center gap-4 text-sm text-gray-400">
+        <span>15 février 2025</span>
+        <span>•</span>
+        <span>7 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="prose prose-invert max-w-none">
+      <div class="space-y-6 text-gray-300 leading-relaxed">
+
+        <p class="text-lg">Vous en avez assez d'acheter des boîtes de fusibles ? Si un <strong>fusible saute tout le temps</strong> (ou "claque"), ce n'est pas par hasard. Le fusible est le garde du corps de votre installation. S'il se suicide, c'est pour vous sauver la vie.</p>
+        
+        <p>Dans cet article, nous allons voir pourquoi il ne faut surtout pas insister et comment résoudre le problème définitivement.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">1. La Surcharge (Vous en demandez trop)</h2>
+        <p>Comme pour les disjoncteurs, la cause n°1 est la surcharge. Sur les vieilles installations à fusibles, les circuits n'étaient pas prévus pour nos vies modernes.</p>
+        <p>Exemple classique : Vous avez une ligne protégée par un fusible 10 Ampères (soit max 2300 Watts). Si vous branchez un radiateur d'appoint de 2000W + un sèche-cheveux de 1500W... le fusible fond instantanément.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">2. Le Court-Circuit (L'ennemi violent)</h2>
+        <p>Si le fusible claque avec une étincelle visible à l'intérieur ou si le verre noircit, c'est un court-circuit franc. Le filament fond par explosion.</p>
+        <p>Ne remettez pas de fusible neuf tant que vous n'avez pas trouvé l'appareil défectueux ou la prise cassée, sinon vous allez juste gaspiller des fusibles (et abîmer le porte-fusible).</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">3. Le Fusible Mal Calibré ou Mal Serré</h2>
+        <p>Un mauvais contact génère de la chaleur. Si le fusible n'est pas bien vissé dans son porte-fusible (pour les anciens modèles à broches), ou si le porte-fusible a du jeu, cela crée un échauffement local qui fait fondre le fusible lentement, même sans surcharge.</p>
+        <p>De même, utiliser un fusible de 10A sur un circuit de prises (qui demande normalement 16A ou 20A) le fera sauter régulièrement.</p>
+
+        <h2 class="text-2xl font-bold text-white mt-10 mb-4">Pourquoi remplacer les fusibles par des disjoncteurs ?</h2>
+        <p>Les tableaux à fusibles sont obsolètes. À Bruxelles, nous conseillons vivement de les remplacer par des <strong>disjoncteurs automatiques</strong> :</p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li><strong>Plus sûrs :</strong> Ils coupent les deux pôles (phase et neutre).</li>
+            <li><strong>Plus pratiques :</strong> Une manette à relever, plus besoin d'avoir des fusibles de rechange.</li>
+            <li><strong>Plus précis :</strong> Meilleure détection des défauts.</li>
+        </ul>
+
+        <div class="bg-navy border border-white/10 rounded-xl p-6 my-8 mt-12">
+            <h3 class="text-xl font-bold text-white mb-2">Remplacement de Tableau à Fusibles</h3>
+            <p class="mb-4">Modernisez votre installation pour plus de sécurité et de confort. Nous remplaçons votre vieux coffret à plombs par un tableau moderne aux normes.</p>
+            <div class="flex flex-col sm:flex-row gap-4 items-center justify-between bg-navy/50 p-4 rounded-lg">
+                <div>
+                    <span class="block text-gray-400 text-sm">Devis Mise en Conformité</span>
+                    <span class="block text-white font-bold">Remplacement Tableau</span>
+                </div>
+                <a href="tel:+32465732348" class="bg-primary text-navy font-bold px-6 py-2 rounded-lg hover:bg-primary-hover transition-colors">
+                    Appeler (0465 73 23 48)
+                </a>
+            </div>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+</Layout>
