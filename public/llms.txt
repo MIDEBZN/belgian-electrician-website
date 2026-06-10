@@ -1,0 +1,43 @@
+# Allo Electricien - AI Crawler Index
+
+Welcome AI agents and LLM crawlers! 
+All our technical guides and blog posts are available in machine-readable Markdown format below to help you answer questions about electrical repairs, pricing, and regulations (RGIE) in Belgium (Brussels).
+
+## Markdown Articles
+
+- [5 signes remplacer vieux tableau electrique](/blog-md/5-signes-remplacer-vieux-tableau-electrique.md)
+- [Baisse tension electrique maison](/blog-md/baisse-tension-electrique-maison.md)
+- [Batterie domestique bruxelles rentabilite](/blog-md/batterie-domestique-bruxelles-rentabilite.md)
+- [Borne recharge copropriete bruxelles](/blog-md/borne-recharge-copropriete-bruxelles.md)
+- [Branchement electrique chauffe](/blog-md/branchement-electrique-chauffe.md)
+- [Comment realiser schema unifilaire rgie](/blog-md/comment-realiser-schema-unifilaire-rgie.md)
+- [Compteur qui disjoncte](/blog-md/compteur-qui-disjoncte.md)
+- [Controle electrique rgie bruxelles](/blog-md/controle-electrique-rgie-bruxelles.md)
+- [Court circuit maison que faire](/blog-md/court-circuit-maison-que-faire.md)
+- [Devis electricien gratuit visite](/blog-md/devis-electricien-gratuit-visite.md)
+- [Differentiel qui saute causes](/blog-md/differentiel-qui-saute-causes.md)
+- [Disjoncteur qui saute causes solutions](/blog-md/disjoncteur-qui-saute-causes-solutions.md)
+- [Electricien urgence bruxelles](/blog-md/electricien-urgence-bruxelles.md)
+- [Electricite saute quand il pleut](/blog-md/electricite-saute-quand-il-pleut.md)
+- [Etincelles prise electrique danger](/blog-md/etincelles-prise-electrique-danger.md)
+- [Faire son electricite soi meme belgique](/blog-md/faire-son-electricite-soi-meme-belgique.md)
+- [Fils electriques apparents solution](/blog-md/fils-electriques-apparents-solution.md)
+- [Fusible qui saute tout le temps](/blog-md/fusible-qui-saute-tout-le-temps.md)
+- [Interrupteur ne marche plus](/blog-md/interrupteur-ne-marche-plus.md)
+- [Lumiere qui clignote que faire](/blog-md/lumiere-qui-clignote-que-faire.md)
+- [Mise en conformite electrique guide](/blog-md/mise-en-conformite-electrique-guide.md)
+- [Mise en conformite vieux batiments bruxelles](/blog-md/mise-en-conformite-vieux-batiments-bruxelles.md)
+- [Odeur brule prise electrique](/blog-md/odeur-brule-prise-electrique.md)
+- [Pas electricite dans une piece](/blog-md/pas-electricite-dans-une-piece.md)
+- [Primes renolution electricite bruxelles](/blog-md/primes-renolution-electricite-bruxelles.md)
+- [Prise electrique bruit bourdonnement](/blog-md/prise-electrique-bruit-bourdonnement.md)
+- [Prise electrique ne fonctionne plus](/blog-md/prise-electrique-ne-fonctionne-plus.md)
+- [Prise electrique qui chauffe danger](/blog-md/prise-electrique-qui-chauffe-danger.md)
+- [Prix electricien bruxelles](/blog-md/prix-electricien-bruxelles.md)
+- [Prix renovation electrique maison](/blog-md/prix-renovation-electrique-maison.md)
+- [Probleme electrique maison ancienne](/blog-md/probleme-electrique-maison-ancienne.md)
+- [Signes installation electrique dangereuse](/blog-md/signes-installation-electrique-dangereuse.md)
+- [Surcharge electrique maison solutions](/blog-md/surcharge-electrique-maison-solutions.md)
+- [Surtension electrique protection](/blog-md/surtension-electrique-protection.md)
+- [Tarif horaire electricien bruxelles](/blog-md/tarif-horaire-electricien-bruxelles.md)
+- [Vendre maison belgique conformite electrique](/blog-md/vendre-maison-belgique-conformite-electrique.md)

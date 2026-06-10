@@ -14,5 +14,8 @@
     "astro": "^5.17.1",
     "pdf-parse": "^2.4.5",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "turndown": "^7.2.4"
   }
 }
