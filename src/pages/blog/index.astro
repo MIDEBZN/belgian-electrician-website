@@ -1,9 +1,125 @@
-﻿---
+---
 import Layout from '../../layouts/Layout.astro';
 import '../../styles/global.css';
 
 const articles = [
   {
+    slug: "tarif-horaire-electricien-bruxelles",
+    title: "Tarif Horaire Électricien Bruxelles 2025 : Prix & Majorations",
+    description: "Découvrez le tarif horaire moyen d'un électricien à Bruxelles en 2025. Frais de déplacement, urgences, dépannage : tout ce que vous devez savoir pour éviter les arnaques.",
+    date: "2025-06-10",
+    category: "Tarifs",
+    readTime: "7 min",
+    icon: "euro"
+  },
+  {
+    slug: "5-signes-remplacer-vieux-tableau-electrique",
+    title: "5 Signes pour Remplacer Votre Vieux Tableau Électrique",
+    description: "Fusibles en céramique, disjoncteur qui chauffe ou absence de différentiel ? Découvrez les 5 signes alarmants indiquant qu'il faut changer de tableau électrique à Bruxelles.",
+    date: "2025-06-10",
+    category: "Sécurité",
+    readTime: "7 min",
+    icon: "warning"
+  },
+  {
+    slug: "electricien-urgence-bruxelles",
+    title: "Électricien d'Urgence à Bruxelles 24h/24 : Intervention Rapide",
+    description: "Panne de courant ? Court-circuit ? Découvrez comment trouver un électricien d'urgence fiable à Bruxelles, disponible 24h/24, et éviter les arnaques au dépannage.",
+    date: "2025-06-10",
+    category: "Urgence",
+    readTime: "8 min",
+    icon: "local_fire_department"
+  },
+  {
+    slug: "comment-realiser-schema-unifilaire-rgie",
+    title: "Comment Réaliser un Schéma Unifilaire Conforme pour le RGIE",
+    description: "Le schéma unifilaire est obligatoire pour le contrôle électrique en Belgique. Découvrez comment le dessiner, quels symboles utiliser, et les erreurs à éviter.",
+    date: "2025-06-10",
+    category: "Guide Technique",
+    readTime: "8 min",
+    icon: "architecture"
+  },
+  {
+    slug: "batterie-domestique-bruxelles-rentabilite",
+    title: "Batterie Domestique Bruxelles : Est-ce Rentable en 2025 ?",
+    description: "Avec la fin du compteur qui tourne à l'envers, la batterie domestique est-elle rentable à Bruxelles en 2025 ? Prix, avantages, et analyse de rentabilité pour vos panneaux.",
+    date: "2025-06-10",
+    category: "Énergie Solaire",
+    readTime: "8 min",
+    icon: "battery_charging_full"
+  },
+  {
+    slug: "borne-recharge-copropriete-bruxelles",
+    title: "Borne de Recharge en Copropriété à Bruxelles : Guide Complet Sibelga",
+    description: "Comment installer une borne de recharge électrique dans un parking d'immeuble à Bruxelles ? Suivez notre guide pas à pas avec Sibelga et le syndic.",
+    date: "2025-06-10",
+    category: "Véhicules Électriques",
+    readTime: "7 min",
+    icon: "ev_station"
+  },
+  {
+    slug: "controle-electrique-rgie-bruxelles",
+    title: "Contrôle Électrique RGIE à Bruxelles : Guide Complet Prix & Procédure",
+    description: "Tout savoir sur le contrôle électrique RGIE à Bruxelles : prix, procédure, validité et mise en conformité. Préparez la vente de votre bien sereinement.",
+    date: "2025-06-10",
+    category: "Conformité RGIE",
+    readTime: "9 min",
+    icon: "fact_check"
+  },
+  {
+    slug: "devis-electricien-gratuit-visite",
+    title: "Devis Électricien Gratuit : Pourquoi la Visite sur Place est Indispensable",
+    description: "Demander un devis gratuit à un électricien à Bruxelles ? Découvrez pourquoi l'évaluation sur place est la seule garantie d'un prix juste et sans surprise.",
+    date: "2025-06-10",
+    category: "Conseil",
+    readTime: "6 min",
+    icon: "content_paste_search"
+  },
+  {
+    slug: "faire-son-electricite-soi-meme-belgique",
+    title: "Faire Son Électricité Soi-Même en Belgique : Ce que Dit la Loi RGIE",
+    description: "Faire son électricité soi-même en Belgique, est-ce légal ? Découvrez les règles du RGIE, les limites du bricolage, et quand appeler un électricien agréé.",
+    date: "2025-06-10",
+    category: "Législation",
+    readTime: "7 min",
+    icon: "gavel"
+  },
+  {
+    slug: "mise-en-conformite-vieux-batiments-bruxelles",
+    title: "Mise en Conformité Électrique : Rénover les Vieux Bâtiments Bruxellois",
+    description: "Maisons de maître ou vieux appartements bruxellois : découvrez les étapes clés et les défis de la mise en conformité électrique pour les bâtiments anciens.",
+    date: "2025-06-10",
+    category: "Rénovation",
+    readTime: "8 min",
+    icon: "domain"
+  },
+  {
+    slug: "primes-renolution-electricite-bruxelles",
+    title: "Primes RENOLUTION 2025 : Financer Vos Travaux Électriques à Bruxelles",
+    description: "Mise en conformité, nouveau tableau, domotique : découvrez comment obtenir les primes RENOLUTION 2025 pour financer la rénovation électrique de votre logement.",
+    date: "2025-06-10",
+    category: "Aides Financières",
+    readTime: "7 min",
+    icon: "payments"
+  },
+  {
+    slug: "prix-renovation-electrique-maison",
+    title: "Prix d'une Rénovation Électrique Complète pour une Maison de 3 Chambres",
+    description: "Quel budget prévoir pour refaire toute l'électricité d'une maison de 3 chambres à Bruxelles ? Devis détaillé, prix au mètre carré et primes disponibles.",
+    date: "2025-06-10",
+    category: "Guide Tarifs",
+    readTime: "7 min",
+    icon: "calculate"
+  },
+  {
+    slug: "vendre-maison-belgique-conformite-electrique",
+    title: "Vendre Sa Maison en Belgique : Le Certificat Électrique est-il Obligatoire ?",
+    description: "Vente immobilière à Bruxelles : le certificat de conformité électrique est-il vraiment obligatoire ? Découvrez la législation, les exceptions et qui doit payer.",
+    date: "2025-06-10",
+    category: "Vente Immobilière",
+    readTime: "6 min",
+    icon: "real_estate_agent"
+  },
     slug: "surtension-electrique-protection",
     title: "Surtension Électrique : Comment Protéger vos Appareils ?",
     description: "Vos appareils ont grillé après un orage ? C'est une surtension. Découvrez les causes, les risques et comment protéger efficacement votre maison.",
