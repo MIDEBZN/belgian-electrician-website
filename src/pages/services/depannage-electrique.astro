@@ -14,12 +14,12 @@ const faqSchema = {
     {
       "@type": "Question",
       "name": "Un électricien peut-il intervenir la nuit ou le dimanche à Bruxelles ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Oui, Allo Electricien propose un service d'électricien urgent Bruxelles nuit, dimanche et jours fériés. Notre équipe d'électriciens 24h/24 Bruxelles est disponible 365 jours par an. Appelez le 0465 73 23 48 pour une intervention électrique urgente Bruxelles à toute heure." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, Allo Electricien propose un service d'électricien urgent Bruxelles nuit, dimanche et jours fériés. Notre équipe d'électriciens 24h/24 Bruxelles est disponible 365 jours par an. Appelez le 0465 67 34 62 pour une intervention électrique urgente Bruxelles à toute heure." }
     },
     {
       "@type": "Question",
       "name": "Que faire en cas de coupure de courant dans ma maison à Bruxelles ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Si vous n'avez plus d'électricité maison Bruxelles : 1) Vérifiez le disjoncteur principal et les fusibles. 2) Vérifiez si vos voisins sont touchés (panne réseau Sibelga). 3) Si la panne est isolée, appelez Allo Electricien au 0465 73 23 48 pour un dépannage coupure de courant Bruxelles rapide en moins de 45 minutes." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Si vous n'avez plus d'électricité maison Bruxelles : 1) Vérifiez le disjoncteur principal et les fusibles. 2) Vérifiez si vos voisins sont touchés (panne réseau Sibelga). 3) Si la panne est isolée, appelez Allo Electricien au 0465 67 34 62 pour un dépannage coupure de courant Bruxelles rapide en moins de 45 minutes." }
     },
     {
       "@type": "Question",
@@ -53,9 +53,9 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Dépannage Électrique Urgent",
-  "provider": { "@type": "Electrician", "name": "Allo Electricien", "telephone": "+32465732348" },
+  "provider": { "@type": "Electrician", "name": "Allo Electricien", "telephone": "+32465673462" },
   "areaServed": { "@type": "City", "name": "Bruxelles" },
-  "availableChannel": { "@type": "ServiceChannel", "servicePhone": { "@type": "ContactPoint", "telephone": "+32465732348", "contactType": "customer service", "availableLanguage": ["French", "Dutch"] } },
+  "availableChannel": { "@type": "ServiceChannel", "servicePhone": { "@type": "ContactPoint", "telephone": "+32465673462", "contactType": "customer service", "availableLanguage": ["French", "Dutch"] } },
   "hoursAvailable": { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" },
   "offers": [
     { "@type": "Offer", "name": "Dépannage Journée", "price": "45", "priceCurrency": "EUR", "description": "Tarif horaire 24h/24 â€” 7j/7" },
@@ -65,7 +65,7 @@ const serviceSchema = {
 };
 ---
 
-<Layout title="Dépannage Électrique Bruxelles — Électricien Urgence 24/7 | Allo Electricien" description="Dépannage électrique Bruxelles : électricien urgence 24h/24, 7j/7. Panne de courant, court-circuit, disjoncteur qui saute. Intervention en 45 min. ☎ 0465 73 23 48. Nuit, week-end, jours fériés." schema={faqSchema}>
+<Layout title="Dépannage Électrique Bruxelles — Électricien Urgence 24/7 | Allo Electricien" description="Dépannage électrique Bruxelles : électricien urgence 24h/24, 7j/7. Panne de courant, court-circuit, disjoncteur qui saute. Intervention en 45 min. ☎ 0465 67 34 62. Nuit, week-end, jours fériés." schema={faqSchema}>
 
   <!-- Service Schema -->
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
@@ -95,10 +95,10 @@ const serviceSchema = {
         <strong class="text-white">Électricien urgence Bruxelles</strong> — Intervention en moins de 45 minutes, 24h/24 et 7j/7 dans les 19 communes. Pannes de courant, courts-circuits, disjoncteurs, tableaux électriques.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 mt-8">
-        <a href="tel:+32465732348" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 text-lg">
-          <span class="material-icons text-2xl">call</span>0465 73 23 48
+        <a href="tel:+32465673462" class="flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-navy font-bold px-8 py-4 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 text-lg">
+          <span class="material-icons text-2xl">call</span>0465 67 34 62
         </a>
-        <a href="https://wa.me/32465732348" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-1">
+        <a href="https://wa.me/32465673462" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-1">
           <span class="material-icons">chat</span>WhatsApp Urgence
         </a>
         <a href="/contact" class="flex items-center justify-center gap-2 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-all">
@@ -281,7 +281,7 @@ const serviceSchema = {
               <span class="text-primary font-bold text-xl">1</span>
             </div>
             <h3 class="text-lg font-bold text-white mb-2">Votre Appel</h3>
-            <p class="text-gray-400 text-sm">Appelez le <strong class="text-white">0465 73 23 48</strong>. Décrivez votre panne à notre opérateur. Disponible 24h/24, même la nuit et le dimanche.</p>
+            <p class="text-gray-400 text-sm">Appelez le <strong class="text-white">0465 67 34 62</strong>. Décrivez votre panne à notre opérateur. Disponible 24h/24, même la nuit et le dimanche.</p>
           </div>
           <div class="flex flex-col items-center text-center group">
             <div class="w-16 h-16 bg-navy border-2 border-primary rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
@@ -410,7 +410,7 @@ const serviceSchema = {
       </div>
       </div>
       <div class="bg-navy-light border border-primary/20 rounded-xl p-6 mt-6 text-center">
-        <p class="text-gray-300"><strong class="text-white">💡 Bon à savoir :</strong> Électricien dimanche Bruxelles et jours fériés — nous intervenons <strong class="text-white">365 jours par an</strong>, y compris Noël, Nouvel An et le 21 juillet. Un seul numéro : <a href="tel:+32465732348" class="text-primary font-bold hover:underline">0465 73 23 48</a></p>
+        <p class="text-gray-300"><strong class="text-white">💡 Bon à savoir :</strong> Électricien dimanche Bruxelles et jours fériés — nous intervenons <strong class="text-white">365 jours par an</strong>, y compris Noël, Nouvel An et le 21 juillet. Un seul numéro : <a href="tel:+32465673462" class="text-primary font-bold hover:underline">0465 67 34 62</a></p>
       </div>
     </section>
 
@@ -434,7 +434,7 @@ const serviceSchema = {
             <li class="flex items-center gap-2"><span class="material-icons text-green-500 text-sm">check</span>Attestation TVA 6%</li>
             <li class="flex items-center gap-2"><span class="material-icons text-green-500 text-sm">check</span>Garantie 2 ans</li>
           </ul>
-          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-navy font-bold rounded-lg hover:bg-primary-hover transition-all">
+          <a href="tel:+32465673462" class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-navy font-bold rounded-lg hover:bg-primary-hover transition-all">
             <span class="material-icons">phone</span>Appeler
           </a>
         </div>
@@ -451,7 +451,7 @@ const serviceSchema = {
             <li class="flex items-center gap-2"><span class="material-icons text-primary text-sm">check</span>Tout type de panne</li>
             <li class="flex items-center gap-2"><span class="material-icons text-primary text-sm">check</span>Garantie 2 ans</li>
           </ul>
-          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-navy font-bold rounded-lg hover:bg-primary-hover transition-all">
+          <a href="tel:+32465673462" class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-navy font-bold rounded-lg hover:bg-primary-hover transition-all">
             <span class="material-icons">phone</span>Appeler
           </a>
         </div>
@@ -467,7 +467,7 @@ const serviceSchema = {
             <li class="flex items-center gap-2"><span class="material-icons text-red-500 text-sm">check</span>Assistance téléphonique</li>
             <li class="flex items-center gap-2"><span class="material-icons text-red-500 text-sm">check</span>Garantie 2 ans</li>
           </ul>
-          <a href="tel:+32465732348" class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-navy font-bold rounded-lg hover:bg-primary-hover transition-all">
+          <a href="tel:+32465673462" class="flex items-center justify-center gap-2 w-full py-3 bg-primary text-navy font-bold rounded-lg hover:bg-primary-hover transition-all">
             <span class="material-icons">phone</span>Appeler
           </a>
         </div>
@@ -497,7 +497,7 @@ const serviceSchema = {
             <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
           </summary>
           <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
-            <p>Oui ! Allo Electricien propose un service d'<strong class="text-white">électricien urgent Bruxelles nuit</strong> et un service d'<strong class="text-white">électricien dimanche Bruxelles</strong>. Notre équipe est disponible <strong class="text-white">24h/24, 365 jours par an</strong>. Appelez le 0465 73 23 48 à n'importe quelle heure pour une intervention rapide.</p>
+            <p>Oui ! Allo Electricien propose un service d'<strong class="text-white">électricien urgent Bruxelles nuit</strong> et un service d'<strong class="text-white">électricien dimanche Bruxelles</strong>. Notre équipe est disponible <strong class="text-white">24h/24, 365 jours par an</strong>. Appelez le 0465 67 34 62 à n'importe quelle heure pour une intervention rapide.</p>
           </div>
         </details>
         <details class="group bg-navy border border-white/10 rounded-xl overflow-hidden shadow-lg">
@@ -551,7 +551,7 @@ const serviceSchema = {
             <span class="transition-transform duration-300 group-open:rotate-180 material-icons text-primary">expand_more</span>
           </summary>
           <div class="p-6 bg-navy text-gray-300 border-t border-white/5">
-            <p>Pour un <strong class="text-white">SOS électricien Bruxelles</strong>, appelez le <a href="tel:+32465732348" class="text-primary font-bold hover:underline">0465 73 23 48</a>. Ce numéro unique fonctionne 24h/24, 7j/7, y compris nuits, week-ends et jours fériés. Vous pouvez aussi nous contacter via <a href="https://wa.me/32465732348" class="text-primary hover:underline">WhatsApp</a>.</p>
+            <p>Pour un <strong class="text-white">SOS électricien Bruxelles</strong>, appelez le <a href="tel:+32465673462" class="text-primary font-bold hover:underline">0465 67 34 62</a>. Ce numéro unique fonctionne 24h/24, 7j/7, y compris nuits, week-ends et jours fériés. Vous pouvez aussi nous contacter via <a href="https://wa.me/32465673462" class="text-primary hover:underline">WhatsApp</a>.</p>
           </div>
         </details>
       </div>
@@ -638,10 +638,10 @@ const serviceSchema = {
           <p class="text-gray-300 text-lg max-w-xl">Ne restez pas dans le noir. Nos techniciens certifiés sont prêts à intervenir <strong class="text-white">en moins de 45 minutes</strong>, 24h/24 et 7j/7. Un seul appel suffit.</p>
         </div>
         <div class="flex flex-col gap-3">
-          <a href="tel:+32465732348" class="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-navy font-black text-xl md:text-2xl px-8 py-5 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 whitespace-nowrap">
-            <span class="material-icons text-3xl">phone_in_talk</span>0465 73 23 48
+          <a href="tel:+32465673462" class="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-navy font-black text-xl md:text-2xl px-8 py-5 rounded-xl transition-all hover:-translate-y-1 shadow-lg shadow-primary/20 whitespace-nowrap">
+            <span class="material-icons text-3xl">phone_in_talk</span>0465 67 34 62
           </a>
-          <a href="https://wa.me/32465732348" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-xl transition-all text-center">
+          <a href="https://wa.me/32465673462" class="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-3 rounded-xl transition-all text-center">
             <svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
             WhatsApp Urgence
           </a>

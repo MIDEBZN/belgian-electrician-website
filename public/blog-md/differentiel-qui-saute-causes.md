@@ -41,4 +41,4 @@ Nos électriciens disposent d'appareils de mesure pour localiser précisément l
 
 Diagnostic Expert Mesure d'isolement
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

@@ -11,7 +11,7 @@ Un **disjoncteur qui saute** n'est jamais anodin. C'est le signe que votre insta
 
 Sécurité avant tout
 
-Si votre disjoncteur saute, ne le forcez **jamais** en position "ON" (marche) sans avoir identifié la cause. Si vous sentez une odeur de brûlé, entendez des grésillements ou voyez de la fumée, coupez l'alimentation générale et appelez immédiatement un électricien agréé au [0465 73 23 48](tel:+32465732348).
+Si votre disjoncteur saute, ne le forcez **jamais** en position "ON" (marche) sans avoir identifié la cause. Si vous sentez une odeur de brûlé, entendez des grésillements ou voyez de la fumée, coupez l'alimentation générale et appelez immédiatement un électricien agréé au [0465 67 34 62](tel:+32465673462).
 
 ## 1\. La Surcharge Électrique : Trop d'appareils gourmands
 
@@ -84,6 +84,6 @@ Recherche de Panne Complexe
 
 Sur Devis
 
-[Appeler un électricien (0465 73 23 48)](tel:+32465732348)
+[Appeler un électricien (0465 67 34 62)](tel:+32465673462)
 
 Nos électriciens interviennent dans les 19 communes de Bruxelles (Ixelles, Uccle, Saint-Gilles, Anderlecht, Schaerbeek...) en moins de 45 minutes pour diagnostiquer et réparer votre panne.

@@ -34,4 +34,4 @@ Si vous avez un doute, faites vérifier vos serrages. C'est rapide et ça sauve 
 
 Contrôle de sécurité Bruxelles Urgences
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

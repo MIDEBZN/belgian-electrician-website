@@ -43,4 +43,4 @@ Une prise noircie est une prise risquée. Nous la remplaçons en quelques minute
 
 Petit Entretien Intervention à la demande
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

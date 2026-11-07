@@ -32,4 +32,4 @@ Nous remplaçons vos interrupteurs défectueux par du matériel de qualité. Ins
 
 Petit Dépannage Intervention Express
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

@@ -45,4 +45,4 @@ Vous venez d'acheter ou vous avez un doute ? Nos experts viennent vérifier l'é
 
 Diagnostic & Devis Rénovation Intervention Partout à Bruxelles
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

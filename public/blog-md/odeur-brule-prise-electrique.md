@@ -40,4 +40,4 @@ Nous intervenons pour sécuriser l'installation après un début d'incendie et r
 
 Sécurisation Urgente Appel 24/7
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

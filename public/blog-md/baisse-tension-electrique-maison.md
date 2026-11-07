@@ -35,4 +35,4 @@ Nous vérifions le serrage de votre tableau (au couple dynamométrique) et mesur
 
 Vérification Tableau Maintenance Préventive
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

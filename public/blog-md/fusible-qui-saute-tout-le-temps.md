@@ -41,4 +41,4 @@ Modernisez votre installation pour plus de sécurité et de confort. Nous rempla
 
 Devis Mise en Conformité Remplacement Tableau
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

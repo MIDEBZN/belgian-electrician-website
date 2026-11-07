@@ -60,4 +60,4 @@ Nos électriciens remplacent vos prises défectueuses rapidement et en toute sé
 
 Prise standard ou spécialisée Intervention Journée : 45€/h + Déplacement
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

@@ -40,4 +40,4 @@ Nous préparons votre installation pour le passage de Sibelga : nouveau câble c
 
 Mise en conformité Dossier Sibelga complet
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

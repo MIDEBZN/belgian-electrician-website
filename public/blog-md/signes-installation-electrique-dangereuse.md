@@ -49,4 +49,4 @@ Le différentiel 30 mA est le **dispositif qui sauve des vies**. Il détecte les
 
 ⚡ Vous reconnaissez un ou plusieurs de ces signes ?
 
-N'attendez pas qu'il soit trop tard. Allo Electricien propose un diagnostic gratuit de votre installation. [Prenez rendez-vous →](/contact) ou appelez le [0465 73 23 48](tel:+32465732348)
+N'attendez pas qu'il soit trop tard. Allo Electricien propose un diagnostic gratuit de votre installation. [Prenez rendez-vous →](/contact) ou appelez le [0465 67 34 62](tel:+32465673462)

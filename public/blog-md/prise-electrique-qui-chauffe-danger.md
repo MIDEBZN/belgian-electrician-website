@@ -67,4 +67,4 @@ N'attendez pas que la fumée apparaisse. Si vous avez un doute sur une prise, ap
 
 Remplacement prise défectueuse Intervention forfaitaire
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

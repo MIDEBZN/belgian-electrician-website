@@ -40,4 +40,4 @@ Nous intervenons dans l'heure à Bruxelles pour sécuriser et remplacer vos pris
 
 Dépannage Sécurité Bruxelles & Périphérie
 
-[0465 73 23 48](tel:+32465732348)
+[0465 67 34 62](tel:+32465673462)

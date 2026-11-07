@@ -43,4 +43,4 @@ Nos électriciens installent des parafoudres certifiés dans votre tableau élec
 
 Installation Parafoudre Devis Gratuit sur Photo
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

@@ -44,4 +44,4 @@ Nous remplaçons vos éclairages et prises extérieures par du matériel étanch
 
 Étanchéité circuits Intervention Rapide
 
-[Appeler (0465 73 23 48)](tel:+32465732348)
+[Appeler (0465 67 34 62)](tel:+32465673462)

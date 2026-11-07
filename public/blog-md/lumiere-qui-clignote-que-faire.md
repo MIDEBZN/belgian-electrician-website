@@ -83,4 +83,4 @@ Vous n'êtes pas sûr de la cause ? Décrivez-nous le problème par téléphone.
 
 Électricien Bruxelles Conseil & Dépannage
 
-[0465 73 23 48](tel:+32465732348)
+[0465 67 34 62](tel:+32465673462)
